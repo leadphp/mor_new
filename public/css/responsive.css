@@ -1,0 +1,3026 @@
+@media only screen and (min-width: 1440px){
+    .main-wrapper {
+        min-height: 100vh;
+    }
+    .main-wrapper footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .why-us .heading-container {
+        margin-bottom: 160px;
+    }
+    .why-us::after {
+        height: 350px;
+    }
+    .pay-step-2 .mortgage-offers-border {
+        margin-bottom: 100px;
+    }
+    .pay-step-3 .mortgage-offers-border {
+        margin-bottom: 100px;
+    }
+
+}
+@media(max-width: 1600px) {
+    .page-container {
+        max-width: 1130px;
+    }
+    .advisor-header {
+        padding: 0;
+    }
+    .reg-header .advisor-container {
+        padding: 3px 0;
+    }
+
+    .advisor-image img {
+     
+        max-width: 90px;
+    }
+    .left-icon-h {
+        margin-top: 21px;
+    }
+    ul.nav_reg li a {
+        width: 100px;
+        height: 100px;
+        line-height: 22px;
+        margin: 4px auto;
+        font-size: 13px;
+    }
+    a.logo-container img {
+        max-width: 111px;
+        margin-right: 0;
+    }
+    .advisor-image img {
+        max-width: 80px;
+    }
+    ul.nav_reg {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
+@media(max-width: 1199px) {
+.reg-header ul.nav-main {
+    top: 65px;
+    right: 0;
+    width: 270px;
+    min-height: 165px;
+}
+.fixedheader  ul.nav-main {
+    top: 20px;
+}
+
+.banner-content .banner-buttons {
+    margin-right: 47px;
+}
+.why-us-owl-desktop  .owl-item {
+    width: 33.3% !important;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.owl-bank-desktop .owl-item {
+    max-width: 100%;
+    width: 46% !important;
+    margin-bottom: 200px;
+    margin-left: 2% !important;
+    margin-right: 2%;
+}
+.how_it_works section.service-steps {
+    background: url(../images/banner.png);
+    background-size: cover;
+}
+.owl-bank-desktop .owl-item:nth-child(3) {
+    margin-bottom: 0;
+}
+.owl-bank-desktop .owl-item:nth-child(4) {
+    margin-bottom: 0;
+}
+.owl-bank-desktop .steps-container::before {
+   display: none;
+}
+div#ques_14 input#investment-amount1 {
+    width: 100%;
+}
+.step-4-0 .m-o-s-container-text a {
+    font-size: 16px;
+}
+#algorithm-slider ol.carousel-indicators {
+    position: absolute;
+    bottom: -29px;
+}
+.advisor-image img {
+    max-width: 65px;
+}
+.advisor-container {
+    padding: 13px 0;
+}
+.payment-step ul.steps-bar li:nth-child(1) p {
+    padding: 0 20px;
+}
+
+ul.nav_reg li a {
+    width: 100px;
+    padding-top: 0;
+    HEIGHT: 100px;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    margin: 5px auto;
+}
+.left-icon-h {
+    margin-top: 45px;
+}
+
+
+
+.modal-middle{
+    display: block;
+}
+td .chat-buttons .main-button {
+    min-width: 90px;
+}
+td .chat-buttons a:first-child {
+    min-width: 90px;
+}
+  .navbar-brand {
+    max-width: 130px;
+  }
+  .navbar-nav>li+li {
+    margin-right: 26px;
+  }
+  .navbar-nav>li>a::before {
+    left: -17px;
+  }
+  .navbar-nav>li>a {
+    font-size: 16px;
+  }
+  .steps-icon {
+    width: 180px;
+    height: 180px;
+    top: -150px;
+  }
+  .steps-container::before {
+    width: 50px;
+    height: 50px;
+    left: -40px;
+    top: -30px;
+  }
+  .steps-container {
+    padding: 50px 15px 20px;
+  }
+  .algorithm {
+    padding-bottom: 100px;
+  }
+  .footer-content {
+    justify-content: center;
+  }
+    .footer-nav {
+        margin-bottom: 0;
+    }
+  .algorithm-image {
+      max-width: 270px;
+  }
+  
+  .chat .container {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  
+  .chat-number {
+    font-size: 30px;
+  }
+  .chat-container.entry-month form .form-group + button,
+  .chat-container.incoming-cost-chat form .form-group + button,
+  .chat-container.asset-cost .main-button{
+    margin-right: 0;
+    margin-top: 15px;
+}
+.chat-container.monthly-repayment-chat form .form-group + button  {
+    margin-top: 0;
+    margin-right: 20px;
+}
+.current-loans .form-inline > div:nth-child(3), .current-loans .form-inline > div:last-child,
+.future-loans .form-inline > div:nth-child(3), .future-loans .form-inline > div:last-child {
+    margin-top: 30px!important;
+    margin-right: 0;
+}
+.eligibility-text {
+    width: 100%;
+    flex: 0 0 100%;
+}
+.eligibility-dropdown {
+    width: 240px;
+    flex: 0 0 240px;
+}
+.steps-container {
+    min-height: 360px;
+}
+.steps-text h3 {
+    font-size: 20px;
+}
+/* new css */
+.bank-selected h2,
+.step-3 .mortgage-offers-wrap h2 {
+    font-size: 26px;
+}
+.footer-steps-inner {
+    flex-direction: column;
+}
+
+.footer-steps-inner > * + * {
+    margin-top: 15px;
+}
+.steps .navbar-header {
+    width: 100%;
+}
+
+.steps .navbar-toggle {
+    right: 15px;
+    top: 50%;
+}
+
+.steps .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+/*  070619*/
+.margin-30 td .chat-buttons .main-button {
+    min-width: 90px;
+    padding: 15px 13px
+}
+
+.buttons-group .chat-buttons a:first-child {
+    margin-bottom: 30px;
+}
+
+.buttons-group .chat-buttons a {
+    margin-bottom: 10px;
+}
+
+.step-4_5 .margin-30 .cols-3 .form-group {
+    margin-right: 44px;
+}
+.row-group.text-flex {
+    flex-direction: column;
+}
+.text-flex .align-left label {
+    padding-right: 0;
+    margin-top: 20px;
+}
+.row-group select.align-left {
+    width: 100%;
+}
+.space-btw {
+    margin: 20px 0;
+}
+.offer-compare .row-group.text-flex > div {
+    position: relative;
+}
+.overlay-boxIn p {
+    font-size: 22px;
+}
+.tree ul li {
+    margin: 0 30px;
+}
+.chart-bottom {
+    width: 100%;
+}
+div#algorithm-slider {
+    top: 14px;
+    width: calc(100% - 30px);
+    right: 17px;
+}
+ul.nav-main {
+    bottom: -150px;
+}
+}
+@media(max-width: 991px) {
+.page-contact .advisor-nav {
+    display: none;
+}
+section.how_it_works .toggle_bar {
+    display: none;
+}
+.fixedheader .advisor-header .logo-container {
+    max-height: 27px;
+}
+.main-button.for-mob{
+    display: block;
+}
+a.main-button.for-mob {
+    max-width: 200px;
+}
+.mob-toggle-area{
+    display: none;
+}
+.register-page #formQuestionTwo .message + .message {
+    width: 70%;
+}
+.register-page #formQuestionTwo .form-inline .form-group {
+    width: 100%;
+}
+.register-page form#formQuestionTwo input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page #formQuestionTwo textarea.form-control {
+    max-width: unset;
+    width: 100%;
+}
+.register-page form#formQuestionTwo .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+form#formQuestionTwo .up-fo .placeholder-icon {
+    top: 64px;
+    left: 12px;
+}
+.register-page form#formQuestionTwo .form-inline label {
+    width: 100%;
+}
+form#formQuestionTen {
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.header-area ul li:last-child {
+    min-width: unset;
+    width: 100%;
+    position: unset;
+    border-radius: 0;
+}
+.header-area ul li a {
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+}
+.header-area ul li {
+    min-width: 100%;
+    margin: 0;
+}
+.header-area ul li a {
+    height: 75px;
+    border-bottom: 1px solid #eee;
+}
+#exTab2 {
+    position: absolute;
+    z-index: 99;
+    width: 50%;
+    left: 0;
+    min-width: 240px;
+}
+.header-area ul li a img {
+    margin-right: 20px;
+}
+.header-area ul.bottom-nav li:last-child a {
+    color: #7f7f7f;
+}
+.header-area ul.bottom-nav li:last-child {
+    background: #ffffff;
+    color: #7f7f7f;
+}
+.page-report .level-content.d-f.a-i-c.j-c-s-b {
+    display: none;
+}
+.page-report .bottom-bar .items-list.text-left {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    top: 42px;
+    left: 0;
+}
+.page-report .bottom-bar .items-list.text-left div {
+    display: none;
+}
+.page-report .bottom-bar .items-list.text-left div:first-child {
+    display: block;
+    margin: 0;
+}
+.page-report .bottom-bar p {
+    margin-top: 0;
+}
+.page-report .bottom-bar div img {
+    width: 100px;
+    margin-top: -42px;
+}
+.report-toggle_bar {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.page-report .header-area {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.report-toggle_bar {
+    z-index: 999;
+    cursor: pointer;
+}
+#exTab2{
+    display: none;
+}
+ul.nav.nav-tabs.bottom-nav {
+    display: block;
+}
+.tab-inner-content {
+    padding: 10px 10px;
+}
+.spc-point {
+    padding-right: 0;
+}
+.tab-inner-content.orange-tab table {
+    margin: 0;
+    width: 100%;
+}
+.char-title {
+    width: 100%;
+    position: unset;
+    margin-bottom: 9px;
+}
+.chart-1 p.top-padding {
+    padding: 10px 60px 10px 0;
+}
+.spc-point h3 {
+    padding: 15px 63px 15px 0;
+}
+.tab-inner-content.orange-tab .spc-point h3 {
+    padding: 15px 0 15px 0;
+}
+p.top-padding.w-q:before {
+    right: 0;
+}
+p.top-padding.w-q {
+    padding-right: 60px;
+}
+
+
+img.ul-alarm {
+    display: none;
+}
+
+ul.left-s-list p {
+    font-size: 22px;
+}
+ul.left-s-list li {
+    width: 32%;
+    float: left;
+    font-size: 18px;
+    padding: 30px 0px;
+}
+
+ul.left-s-list li:nth-child(2) {
+    margin: 0 0 20px 0;
+}
+.chart-bottom {
+    border-top: none;
+}
+ul.right-s-list {
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+}
+.chart-info .con {
+    display: flex;
+    float: left;
+    width: 100%;
+}
+.col-md-12.text-center.chart-text {
+    width: 100%;
+    float: left;
+}
+.chart-bottom {
+    margin-top: 30px;
+    float: left;
+}
+.mortgage-offers-border {
+    margin: 0;
+}
+.mortgage-offers-border .mortgage-offers-inner .chat-buttons a {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+section.our-partner > div > div {
+    display: block;
+}
+.light-left {
+    float: left;
+    width: 100%;
+}
+.dark-right {
+    padding: 10px 70px 80px 70px;
+}
+
+.reg.logo {
+    display: none;
+}
+.overlay-boxIn p {
+    font-size: 18px;
+}
+.overlay-boxIn h2 {
+    font-size: 28px;
+}
+.main-form input {
+    margin-bottom: 20px;
+}
+.route-add {
+    width: 100%;
+}
+img.delete-green {
+    margin-left: 0;
+}
+.right-route ul li:nth-child(2) {
+    border-left: none;
+    border-right: none;
+    padding: 0;
+}
+.right-route ul li {
+    display: block;
+    width: 100%;
+    padding: 0 !important;
+    margin: 5px 0 !important;
+}
+.right-route p {
+    font-size: 14px;
+}
+
+.offer-compare .placeholder-icon {
+    top: 55%;
+}
+.pay-step-4 .inner-success-data {
+    width: 98%;
+}
+.payment-step ul.steps-bar li:nth-child(1) p {
+    padding: 0;
+}
+.payment-step .mortgage-offers-border {
+    padding: 15px 0;
+    margin: 0;
+}
+ul.nav_reg {
+    width: 95%;
+    margin: 20px 0 0 0;
+}
+.left-icon-h {
+    margin-top: 15px;
+}
+.register-page .range-form {
+    display: block;
+}
+
+ul.nav_reg {
+    width: 100%;
+    flex-wrap: wrap;
+}
+ul.nav-main {
+    bottom: auto;
+    margin-top: 10px;
+}
+
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-collapse.collapse,
+.navbar-collapse.collapsing  {
+    display: none!important;
+    width: calc(100% - 30px);
+    background: #fff;
+    position: absolute;
+    top: 120px;
+    left: 15px;
+    right: 15px;
+  }
+  .navbar-collapse.collapse.in {
+    display: block!important;
+}
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-toggle {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50px;
+    right: 170px;
+    border-radius: 0;
+  }
+  .icon-bar {
+    background-color: #5dced0;
+  }
+  .navbar-nav li {
+    display: block;
+    width: 100%;
+}
+.navbar-nav>li+li {
+    margin: 0;
+}
+.navbar-nav>li>a::before {
+    display: none;
+}
+.navbar-nav {
+    width: 100%;
+}
+.button-yellow {
+    top: 130px;
+    left: 17px;
+}
+.banner-content {
+    padding-top: 240px;
+}
+.service-steps-content {
+    max-width: 810px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.service-steps-content .col-md-3:not(:last-of-type) {
+    margin-bottom: 300px;
+}
+.steps-container::before {
+    top: auto;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    height: 44px;
+}
+.algorithm-container {
+    max-width: 100%;
+    width: 100%;
+}
+.algorithm-image {
+    max-width: 100%;
+    position: static;
+    width: 400px;
+    margin: 0 auto;
+    transform: none;
+    order: 2;
+    position: relative;
+    left: 0;
+}
+#algorithm-slider ol.carousel-indicators {
+    bottom: -36px;
+}
+.algorithm-separator {
+    max-width: 100%;
+    display: none;
+}
+.algorithm-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.algorithm-row + .algorithm-row {
+    order: 3;
+}
+.algorithm-row + .algorithm-row {
+    margin-top: 40px;
+}
+.algorithm-row {
+    margin-bottom: 40px;
+}
+.qna-left,
+.qna-right {
+    padding: 0;
+}
+.qna-right::before {
+    display: none;
+}
+.qna-right {
+    padding-top: 40px;
+}
+.algorithm-container + .algorithm-container {
+    margin-top: 30px;
+}
+.chat .container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.register-page .container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.appartments-chat .form-inline > * + *,
+.beauty .form-inline > * + *,
+.current-loans .form-inline > * + *,
+.future-loans .form-inline > * + * {
+    margin-right: 0;
+    margin-top: 30px;
+}
+.appartments-chat .form-inline label,
+.beauty .form-inline label,
+.current-loans .form-inline label,
+.future-loans .form-inline label {
+    width: 150px;
+}
+.appartments-chat .message + .message,
+.beauty .message + .message,
+.current-loans .message + .message, 
+.future-loans .message + .message {
+    margin-top: 30px;
+}
+.chat-container.financial-situation form .form-group + button {
+    margin-right: 0;
+    margin-top: 15px;
+}
+.entry-month .form-group.range-group {
+    margin-top: 50px;
+}
+.entry-month .form-group + .main-button {
+    margin-right: 40px!important;
+    margin-top: 0!important;
+}
+.chat-equity-cost {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.chat-container.incoming-cost-chat .main-button {
+    margin-top: 0!important;
+    margin-right: 40px!important;
+}
+.incoming-cost-chat .form-inline + .form-inline {
+    margin-top: 30px;
+}
+.asset-cost .main-button {
+    margin-top: 0!important;
+    margin-right: 40px!important;
+}
+.monthly-repayment-chat .range-form .monthly-refund, .monthly-repayment-chat .range-form .lower-mortgage {
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+.eligibility-text {
+    margin-bottom: 5px;
+}
+.eligibility-dropdown {
+    margin-bottom: 20px;
+}
+/* new css */
+.footer-nav a {
+    font-size: 15px;
+}
+.steps-container {
+    min-height: inherit;
+}
+.report-image {
+    top: 80px;
+}
+.steps .navbar-nav>li>a {
+    color: #60cecf;
+}
+.steps .navbar-nav>li>a:hover,
+.steps .navbar-nav>li>a:focus {
+    color: #d87e00;
+}
+.mortgage-offers-border {
+    padding: 20px 25px;
+}
+.mortgage-offers-wrap {
+    padding: 15px 20px;
+    padding-bottom: 150px;
+}
+.m-o-s-container {
+    padding: 20px 10px;
+}
+.mortgage-offers-steps > .row > div[class*="col-"]::before {
+    width: 55px;
+    height: 50px;
+}
+.m-o-s-container-text p {
+    font-size: 18px;
+}
+.bank-selected h2,
+.step-3 .mortgage-offers-wrap h2 {
+    font-size: 22px;
+}
+.steps header {
+    padding-top: 0;
+}
+.mortgage-offers {
+    padding-top: 150px;
+}
+.mortgage-offers-heading {
+    padding: 10px 20px;
+}
+/*  070619*/
+.margin-30 td .chat-buttons .main-button {
+    min-width: 83px;
+}
+
+.buttons-group .chat-buttons a:first-child {
+    margin-bottom: 84px;
+}
+.step-4_5 .form-group-container .form-group + .form-group {
+    margin-right: 0px;
+}
+
+.step-4_5 .download-button {
+    margin-bottom: 10px;
+}
+
+.form-title-S {
+    position: unset;
+    width: 100%;
+    height: auto;
+}
+
+.step-4_5 .margin-30 .cols-3 .form-group {
+    margin-right: 0px;
+}
+
+.bottom-bg {
+    background-position: top;
+    padding-top: 104px;
+    padding-bottom: 29px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.step-4_6 .mortgage-offers {
+    padding-top: 0;
+}
+.inner-success-data h1 {
+    padding-top: 60px;
+}
+.inner-success-data > p {
+    margin-bottom: 40px;
+}
+a.section-logo {
+    margin: 45px auto 0 auto;
+}
+button.custom4_6 {
+    width: 247px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.inner-success-data > p {
+    font-size: 16px;
+    margin-bottom: 0;
+    line-height: 28px;
+}
+.inner-success-data h1 {
+    font-size: 30px;
+}
+.correct_line:before {
+    width: 260px;
+}
+.step4_7 .bottom-bg {
+    background-size: cover;
+}
+.form-group table td {
+    padding: 10px 15px;
+}
+.margin-30 .chat-group {
+    margin-top: 50px;
+}
+.main-form {
+    padding: 30px 0;
+}
+ul.egally-secure {
+    padding: 0;
+}
+.inner-success-data {
+    width: 98%;
+    margin: 0 1%;
+}
+.file-design {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.offer-compare .main-form {
+    padding: 0;
+}
+.offer-compare .pament-starting-div {
+    max-height: unset;
+    background-position: bottom -130px left 0;
+}
+.steps-container::before {
+    display: none;
+}
+p.top-padding {
+    padding: 0 10px;
+}
+.tab-title h4 {
+    text-align: right;
+    padding: 17px 20px;
+    font-size: 25px;
+    line-height: 24px;
+}
+.register-page #formQuestionseventeen label {
+    width: 87px;
+    height: 45px;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
+    max-width: 95px;
+}
+#formQuestionFourteenDIV input#monthly_refund_input {
+    padding-left: 35px;
+}
+form#formQuestionseventeen button.ok_btn.main-button1 {
+    min-width: 200px;
+}
+.message-pic {
+    width: 45px;
+    height: 45px;
+}
+.chat-number {
+    top: 24px;
+    font-size: 20px;
+    right: -35px;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
+    padding-left: 40px;
+}
+.register-page  .question-ul li input {
+    opacity: 0;
+    position: absolute;
+}
+.register-page #formQuestionseventeen label {
+    width: auto;
+    height: auto;
+}
+.register-page #formQuestionseventeen .form-inline .form-group label {
+    height: 47px;
+    font-size: 13px;
+    width: 64px;
+}
+.register-page .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 160px;
+}
+
+}
+@media(max-width: 767px) {
+.why-us-owl .owl-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.why-us-owl .owl-nav {
+    text-align: center;
+}
+.why-us-owl .owl-stage-outer {
+    padding-top: 10px;
+}
+.owl-carousel .owl-nav button.owl-next, 
+.owl-carousel .owl-nav button.owl-prev, 
+.owl-carousel button.owl-dot {
+    font-size: 35px;
+    margin: 0 10px;
+    color: #000;
+    z-index: 999;
+    cursor: pointer;
+}
+.bank-steps .owl-stage .item {
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+.front-service-con .bank-steps .owl-stage .item {
+    padding-top: 160px;
+    padding-bottom: 10px;
+}
+.front-service-con .bank-steps .owl-nav {
+    margin-bottom: 10px;
+}
+.bank-steps .owl-stage-outer {
+    overflow: hidden;
+}
+.service-steps-content {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.advisor-image img {
+    max-width: 65px;
+}
+.reg-header .advisor-nav {
+    position: relative;
+    right: -240px;
+    background: #fff;
+    padding: 30px 30px;
+    margin-top: 10px;
+}
+.fixedheader .advisor-nav {
+    right: -170px;
+    background: transparent;
+    padding: 0;
+    margin-top: 0;
+}
+.fixedheader  .toggle_bar i.fa.fa-bars {
+    color: #ffffff;
+}
+.reg-header .advisor-header .logo-container {
+    margin-right: 150px;
+}
+ form#formQuestionfourteen .message.d-i-f.f-d-c {
+    margin-bottom: 60px;
+}
+form#formQuestionfourteen > .full-section {
+    margin-top: 20px;
+}
+input#browser-age {
+    width: 100%;
+}
+.register-page #formQuestionseventeen label {
+    width: 100%;
+    height: auto;
+}
+ #formQuestionfifteen .form-inline label {
+    margin-bottom: 0;
+    width: 100%;
+}
+.register-page  #formQuestionfifteen .placeholder-icon {
+    top: 65%;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown > div a.delete-button {
+    margin-right: 50px !important;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown {
+    margin-bottom: 0;
+}
+.register-page .form-inline > * {
+    margin: 0; 
+}
+#formQuestionseventeen select {
+    width: 100%;
+}
+form#formQuestionseventeen .form-inline.multiple-dropdown > div:last-child {
+    margin: 0;
+}
+.register-page #formQuestionseventeen .placeholder-icon {
+    top: 63%;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown > div:last-child {
+    float: right;
+}
+ form#formQuestionsixteen {
+    width: 100%;
+}
+div#formQuestionSixteenDIV ul.question-ul.my_question.click-color-change li {
+    float: left;
+}
+div#formQuestionSixteenDIV ul.question-ul.my_question.click-color-change {
+    margin-bottom: 30px;
+    float: right;
+ }
+ .register-page .form-group.top-m {
+    width: 100%;
+}
+ .register-page .range-group {
+    max-width: 80%;
+}
+.register-page #formQuestionSixteenDIV label {
+    margin-bottom: 0;
+}
+.register-page #formQuestionSixteenDIV .placeholder-icon {
+    top: 66%;
+}
+#formQuestionsixteen .delete-button {
+    margin-right: 49px!important;
+}
+.register-page #formQuestionSixteenDIV .placeholder-icon {
+    top: 75%;
+}
+.register-page #formQuestionSixteenDIV input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page #formQuestionSixteenDIV textarea.form-control {
+    margin-bottom: 0;
+}
+
+ .register-page  .message.no-background.d-i-f.f-d-c {
+    margin: 0 !important;
+    padding-left: 0;
+}
+ .register-page  .chat-container.d-f.f-d-c.a-i-f-s .col-md-offset-5.col-md-7.text-center.five {
+    padding-right: 0;
+    margin-top: 26px;
+}
+ .register-page  .question-ul li {
+    display: block;
+    width: 100%;
+}
+ .register-page  #formQuestionOne .chat-buttons .main-button {
+    min-width: 110px !important;
+    width: 100%;
+    margin: 10px 0;
+}
+ul.question-ul.my_question.click-color-change li:first-child {
+    margin-top: 8px;
+}
+form#formQuestionFivePointOne {
+    width: 100%;
+}
+.register-page .q14 .placeholder-icon {
+    top: 67%;
+}
+.q14 .chat-equity-cost {
+    padding-left: 0;
+}
+
+.q14 .chat-equity-cost .main-button {
+    margin-right: 0;
+    min-width: 204%;
+}
+#formQuestionFourteenDIV input#monthly_refund_input {
+    margin-right: 0;
+}
+.register-page select {
+    min-width: 100%;
+}
+.register-page  .form-inline > * {
+    display: block;
+    width: 100%;
+}
+.register-page div#dlt_16_1 .placeholder-icon {
+    top: 62%;
+}
+.register-page select {
+    padding-left: 0;
+    min-width: 100%;
+}
+form#formQuestionEighteen {
+    width: 100%;
+}
+#formQuestionFourteenDIV input#monthly_refund_input {
+    margin-right: 0;
+}
+.register-page .range-group {
+    margin-bottom: 49PX;
+}
+#formQuestionFourteenDIV input#lower_mortgage_input {
+    margin-right: 0;
+}
+ .register-page  .question2-ul li input {
+    opacity: 0;
+    position: absolute;
+}
+ .register-page   ul.question2-ul.my_question.click-color-change {
+    margin-top: 15px;
+}
+.my_question li input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+}
+.register-page #formQuestionseventeen .form-inline .form-group label {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+}
+.register-page .question6-ul li {
+    display: block;
+    width: 100%;
+}
+.register-page .main-button {
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+.register-page .my_question li {
+    display: block;
+    margin-top: 20px;
+}
+#formQuestionFourteenDIV input#monthly_refund_input {
+    margin-right: 0;
+}
+#formQuestionFourteenDIV input#lower_mortgage_input {
+    margin-right: 0;
+}
+ #formQuestionOne .chat-buttons .main-button {
+    margin-bottom: 0;
+}
+ #formQuestionOne .chat-buttons .main-button {
+    min-width: 110px !important;
+}
+ .register-page .form-inline.multiple-dropdown .form-inline > * {
+    display: block;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
+    max-width: calc(100% - 77px);
+}
+form#formQuestionseventeen .form-inline.multiple-dropdown > div:last-child {
+    margin-right: 0;
+}
+.register-page select {
+    padding-left: 0;
+    min-width: 100%;
+}
+.register-page .form-inline label {
+    width: 100%;
+    margin-bottom: 15px;
+    max-width: unset;
+}
+.register-page #formQuestionTwo .form-inline label {
+    margin-bottom: 0;
+}
+.register-page #formQuestionTwo .message + .message {
+    width: 100%;
+}
+.register-page #formQuestionTwo .form-group {
+    margin-bottom: 0;
+}
+.register-page .message-pic {
+    width: 45px;
+    height: 45px;
+}
+.register-page .message {
+    padding-left: 37px;
+    width: 100%;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.register-page .main-button {
+    margin: 0;
+}
+.register-page .placeholder-icon {
+    top: 39%;
+}
+.register-page .message + .message {
+    min-width: 220px;
+    width: 100%;
+}
+.register-page .message {
+    padding-left: 37px;
+}
+.register-page form#formQuestionFive input.form-control:not([type="checkbox"]):not([type="radio"]) {
+    width: 220px;
+}
+.register-page .form-group.top-m {
+    margin-right: 0;
+}
+img.custom-arrow {
+    left: 10px;
+}
+.reg-header .advisor-header {
+    padding: 0px;
+}
+.register-page form#formQuestionFive input.form-control:not([type="checkbox"]):not([type="radio"]) {
+    width: 100%;
+}
+.step-4-0 .mortgage-offers-border {
+    padding: 5px 5px;
+}
+ul.left-s-list li {
+    width: 100%;
+    float: left;
+}
+.top-call-section {
+    padding: 8px 10px;
+    margin: 5px 0;
+}
+.advisor-nav.t {
+    display: none;
+    position: absolute;
+    left: 40px;
+}
+.level.step-2 {
+    display: none;
+}
+.page-report .level.step-2 {
+    display: block;
+}
+.step-4-0 .best-mix-mortgage h3 span:first-child {
+    width: 100%;
+}
+.step-4-0 .best-mix-mortgage h3 span:last-child {
+    width: 100%;
+}
+.bank-selected {
+    padding: 10px;
+    padding-bottom: 10px;
+}
+.advisor-toggle_bar {
+    color: #fff;
+    margin-right: 20px;
+    margin-top: 35px;
+    display: block;
+    cursor: pointer;
+}
+.privacy-content ol li {
+    padding-right: 0;
+    margin-right: 20px;
+}
+.send-offer .bottom-bg {
+    margin-top: 30px;
+}
+.reg-header .advisor-header {
+    background: transparent;
+}
+.reg-header a.level-call.a-i-c.j-c-c.left-icon-h {
+    float: right;
+}
+h1 {
+    font-size: 30px;
+}
+.form-group table td {
+    width: 100%;
+    float: left;
+}
+.button-big {
+    font-size: 16px;
+    padding: 20px 15px;
+}
+.banner-buttons .button-orange span {
+    width: 85px;
+    height: 85px;
+    transform: translate(50%, -14px);
+}
+.banner-buttons .button-orange span img {
+    max-width: 40px;
+}
+.banner-buttons .button-orange {
+    margin-right: 40px;
+}
+.purchase-content .banner-buttons .button-orange {
+    margin: 0;
+}
+.report-image {
+    margin-top: 40px;
+    margin-right: 20px;
+    top: 0;
+}
+.footer-nav ul li {
+    display: block;
+}
+
+.footer-nav ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-nav {
+    width: 100%;
+}
+
+.footer-nav ul li + li {
+    margin-right: 0;
+    margin-top: 15px;
+}
+
+.footer-nav a::before {
+    display: none;
+}
+.algorithm {
+    padding-bottom: 40px;
+}
+
+.advisor-header {
+    justify-content: right;
+    padding: 40px 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.level-content ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.level ul li + li {
+    margin-right: 0;
+    margin-top: 30px;
+}
+.level-content ul::before {
+    width: 4px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.level-call {
+    margin: 0 auto!important;
+    margin-bottom: 30px;
+}
+.chat .container {
+    max-width: 460px;
+}
+.advisor .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.advisor .row .col-sm-9 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.advisor-container {
+    padding-top: 0;
+}
+.appartments-chat .delete-button {
+    display: block;
+    width: 60px;
+    margin-right: 50px!important;
+}
+.appartments-chat .delete-button.add {
+    width: 220px;
+}
+form input.form-control:not([type="checkbox"]):not([type="radio"]), textarea.form-control {
+    display: inline-block!important;
+}
+.financial-situation .average-savings .form-group {
+    margin-top: 15px;
+    margin-right: 0;
+    margin-left: 10px;
+}
+.chat-buttons,
+.your-status .chat-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.chat-buttons a {
+    margin: initial!important;
+    margin-top: 30px!important;
+}
+.chat-buttons a + a,
+.entry-month .form-group + .main-button,
+.chat-container.incoming-cost-chat .main-button,
+.chat-container form .form-group + button {
+    margin-right: 0!important;
+}
+.entry-month .form-group.range-group {
+    margin-bottom: 30px;
+}
+.double-chat-container > * {
+    width: 100%;
+}
+.double-chat-container .chat-container + .chat-container {
+    margin-top: 80px!important;
+}
+.beauty .delete-button,
+.current-loans .delete-button,
+.future-loans .delete-button {
+    margin-right: 50px!important;
+}
+.banner-content > .main-button {
+    max-width: 180px;
+}
+.heading-container h2 {
+    font-size: 26px;
+}
+/* new css */
+.mortgage-offers-steps > .row > div[class*="col-"] + div[class*="col-"] {
+    margin-top: 30px;
+}
+.mortgage-offers-steps > .row > div[class*="col-"] {
+    width: 100%;
+}
+.m-o-s-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.bank-selected h2,
+.step-3 .mortgage-offers-wrap h2 {
+    line-height: 26px;
+}
+.bank-selected-logo {
+    margin-top: 30px;
+}
+.best-mix-mortgage {
+    padding: 10px 15px;
+}
+.footer-steps-nav ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-steps-nav ul li + li {
+    margin-right: 0;
+    margin-top: 15px;
+}
+
+.footer-steps-nav ul li a::after {
+    display: none;
+}
+.mortgage-offers-steps > .row > div[class*="col-"]::before {
+    top: 0;
+    right: auto;
+    transform: translatex(-50%) translateY(-80%) rotate(-90deg);
+    left: 50%;
+}
+.m-o-s-container {
+    padding: 30px 10px;
+}
+.management-panel {
+    align-self: center;
+    margin-top: 30px;
+}
+.level-content {
+    flex-direction: column;
+}
+.navigate-steps {
+    margin-top: 30px;
+}
+.mortgage-proposal-heading span:first-child {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.mortgage-proposal-heading {
+    text-align: center;
+}
+.mortgage-proposal-heading span + span {
+    margin: 0;
+}
+.mortgage-proposal-content-right {
+    width: 100%;
+    flex: 0 0 100%;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.mortgage-proposal-content-left {
+    width: 100%;
+}
+
+/*  070619*/
+.margin-30 td .chat-buttons .main-button {
+    min-width: 138px;
+    margin-top: 5px !important;
+}
+.chat-group .message {
+    width: 98%;
+}
+
+.buttons-group .chat-buttons a {
+    width: 100%;
+}
+
+.w-input input[type="text"] {
+    width: 100%
+}
+
+.chat-buttons {
+    display: block;
+}
+
+.chat-group.last-div-b a.main-button:first-child {
+    margin-left: 10px !important;
+}
+.chat-group.last-div-b a.main-button {
+    width: unset;
+    Font-size: 19px;
+    Background: #60cecf;
+    Box-shadow: 0px 14px 7px -12px #63616157;
+    Border: none;
+    height: 45px;
+}
+.bottom-bg h3 {
+    font-size: 20px;
+}
+
+.bottom-bg p {
+    font-size: 16px;
+}
+
+.inner-success-data > p {
+    padding: 0 10px;
+}
+.payment-step .mortgage-offers-heading ul li + li {
+    width: 100%;
+    background: #fff !important;
+    margin: 0 0 20px 0;
+}
+ul.steps-bar li.active {
+    width: 100%;
+    background: #70d0d1 !important;
+    margin-bottom: 20px;
+}
+.mortgage-offers-heading ul {
+    margin: 5px 13px;
+}
+.payment-step .mortgage-offers-heading {
+    padding: 20px 0 0 0;
+    background: transparent;
+}
+.group-col {
+    flex-direction: column;
+}
+.group-col .col {
+    margin-bottom: 30px;
+}
+.group-col .col {
+    margin: 0;
+    margin-bottom: 20px;
+}
+.payment-step ul.steps-bar li {
+    width: 100%;
+    background: #fff !important;
+    margin-bottom: 20px ;
+}
+.payment-step ul.steps-bar li.active {
+    background: #60cecf !important;
+}
+.payment-step .mortgage-offers {
+    padding-bottom: 20px;
+}
+.main-form input::placeholder {
+    font-size: 18px;
+}
+.main-form input {
+    font-size: 18px;
+}
+.row-group select {
+    font-size: 18px;
+}
+.pay-step-3 .inner-success-data h1 {
+    font-size: 32px;
+    line-height: 36px;
+}
+.overlay-boxIn {
+    margin-bottom: 50px;
+}
+.inner-banner h1 {
+    font-size: 70px;
+}
+.tree ul li {
+    margin: 0;
+}
+.chat-wrap {
+    width: 100%;
+}
+.last-btns .chat-buttons a {
+    min-width: unset;
+    padding: 20px 10px;
+}
+.step4_7 button.custom4_6 {
+    width: auto;
+    padding: 0 20px 0 15px;
+    Font-size: 17px;
+    Background: #60cecf;
+    Box-shadow: 0px 14px 7px -12px #63616157;
+}
+a.main-button.button-yellow.top-btn_A {
+    padding: 10px 80px 10px 20px;
+    max-width: unset;
+}
+.qna-right h4 {
+    display: none;
+}
+.qna-right p {
+    display: none;
+}
+.qna-right :nth-child(2) {
+    display: block;
+}
+.coupon-code {
+    padding: 16px 10px;
+}
+label.green-botton {
+    margin-right: 0;
+    top: 10px;
+}
+
+a.main-button.button-yellow.top-btn_A {
+    padding: 10px 50px 10px 20px;
+    max-width: unset;
+    width: 170px;
+    min-width: unset;
+}
+a.main-button.button-yellow.top-btn_A img {
+    top: 0;
+    width: 57px;
+}
+.purchase {
+    padding: 0px 0 50px;
+}
+.button-big {
+    font-size: 25px;
+}
+.steps-container::before {
+    display: none;
+}
+.tab-content.full-show .table-responsive>.table>tbody>tr>td, 
+.tab-content.full-show .table-responsive>.table>tbody>tr>th, 
+.tab-content.full-show .table-responsive>.table>tfoot>tr>td, 
+.tab-content.full-show .table-responsive>.table>tfoot>tr>th, 
+.tab-content.full-show .table-responsive>.table>thead>tr>td, 
+.tab-content.full-show .table-responsive>.table>thead>tr>th {
+    white-space: pre-wrap;
+}
+.reg-header a.level-call.a-i-c.j-c-c.left-icon-h {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    left: 4px;
+    border: 1px solid #bbb;
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+}
+a.level-call.a-i-c.j-c-c.left-icon-h.phone_icon img {
+    max-width: 25px;
+}
+
+.register-page div#ques_1 .chat-container.d-f.f-d-c.a-i-f-s .col-md-offset-5.col-md-7.text-center.five {
+    float: none;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+img.custom-arrow {
+    left: -10px;
+    bottom: 41%;
+}
+.register-page .message + .message {
+    margin-top: 15px;
+
+}
+.register-page .my_question li {
+    margin-top: 0;
+}
+.register-page #formQuestionOne .chat-buttons .main-button {
+    margin: 15px 0 0 0;
+}
+ul.question-ul.my_question li:first-child {
+    margin-top: 0;
+}
+.chat-wrap .chat-container:last-of-type {
+    margin-bottom: 40px;
+}
+div#ques_3 {
+    margin-bottom: 10px;
+}
+
+.register-page .ques2 .main-button {
+    margin-bottom: 15px;
+}
+#formQuestionOne div#FOR_RENTAL_ONLY {
+    margin-bottom: 40px;
+}
+.chat-buttons.ques4 ul.question3-ul.my_question{
+    margin-top: 15px;
+}
+.chat-buttons ul.question3-ul.my_question.click-color-change .main-button {
+    padding: 13px 11px;
+    margin-bottom: 15px;
+}
+div#ques_4 {
+    margin-bottom: 10px;
+}
+form#formQuestionThree {
+    margin-top: 20px;
+}
+div#ques_5 {
+    margin-bottom: 50px;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
+    text-align: center;
+}
+ul.question2-ul.my_question li {
+    width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+.chat-buttons.ques2 {
+    margin-top: 20px;
+}
+ul.question2-ul.my_question li:first-child {
+    margin-right: 0;
+}
+.chat-buttons ul.question3-ul.my_question.click-color-change .main-button {
+    padding: 10px 0;
+}
+.register-page .main-button {
+    min-width: 100px;
+}
+.chat-buttons .main-button img {
+    margin-left: 5px;
+    margin-right: 0;
+}
+form#formQuestionSix {
+    margin-top: 60px;
+}
+.chat-buttons.ques6 .main-button {
+    margin-top: 15px;
+}
+
+ul.question3-ul.my_question li {
+    width: 49%;
+    float: right;
+    margin-right: 2%;
+}
+ul.question3-ul.my_question li:first-child {
+    margin-right: 0;
+}
+div#ques_7 {
+    margin-bottom: 50px;
+}
+.ques7 .main-button {
+    margin-top: 15px;
+}
+.q9.chat-container.d-f.f-d-c.a-i-f-s.questionsevenOption {
+    margin-top: 50px;
+}
+div#ques_8 {
+    margin-bottom: 80px;
+}
+.ques9 .main-button {
+    margin-top: 15px;
+}
+.register-page .spinner {
+    max-width: 150px;
+}
+.ques_5 .spinner {
+    margin-top: 20px;
+}
+form#formQuestionEight {
+    margin-bottom: 60px;
+}
+.range-form {
+    margin-top: 15px;
+}
+.register-page .range-group {
+    margin-bottom: 15PX;
+}
+.ques10 .main-button {  
+    margin-top: 15px;
+}
+div#ques_10 {
+    margin-bottom: 50px;
+}
+div#ques_6 .message.no-background.d-i-f.a-i-c span {
+    width: 100%;
+    justify-content: center;
+}
+div#ques_6 form#formQuestionFive .form-group {
+    width: 50%;
+    float: right;
+}
+
+div#ques_6 .chat-container .form-group.top-m form .main-button {
+    margin: 0;
+    width: 48%;
+    float: right;
+    padding: 15px 0;
+    float: left;
+}
+ul.question6-ul.my_question li {
+    width: 31.3%;
+    float: right;
+    margin: 0 1%;
+}
+ul.question6-ul.my_question li .main-button {
+    font-size: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 50px;
+}
+div#ques_11 .form-inline.range-form.cs-r-f > label {
+    margin: 0 !important;
+    justify-content: center;
+}
+form#formQuestionThirteen > div > div {
+    width: 48%;
+    float: left;
+    margin: 0 1%;
+}
+form#formQuestionThirteen label {
+    margin-bottom: 0;
+}
+form#formQuestionThirteen {
+    padding: 0;
+}
+.register-page form#formQuestionThirteen  .placeholder-icon {
+    top: 62%;
+}
+div#formQuestionThirteenDIV .message.no-background.d-i-f {
+    margin-top: 0;
+}
+form#formQuestionThirteen > div > div button.purp_buy.main-button {
+    margin: 0 !important;
+    min-width: 204%;
+}
+form#formQuestionThirteen > div > div .form-group {
+    margin-bottom: 0;
+}
+form#formQuestionThirteen > div > div.d-f {
+    margin-bottom: 20px;
+}
+#formQuestionThirteenDIV .chat-buttons {
+    margin-top: 0;
+}
+#formQuestionThirteenDIV  .chat-buttons a {
+    margin-top: 15px !important;
+}
+#formQuestionfourteen .alert-text.alert-monthly-refund {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+form#formQuestionfourteen .full-section.nd-div-jugaad {
+    margin-top: 0 !important;
+}
+form#formQuestionfourteen .full-section > div:nth-child(2) {
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+form#formQuestionfourteen .full-section.nd-div-jugaad > div:nth-child(2) {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+#formQuestionFourteenDIV input#lower_mortgage_input {
+    margin-bottom: 0;
+}
+#formQuestionfourteen .errMsg {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.register-page .div#formQuestionThirteenDIV .message p {
+    text-align: center;
+}
+div#formQuestionFourteenDIV {
+    margin-bottom: 0;
+}
+div#formQuestionFifteenDIV {
+    margin-top: 60px;
+}
+form#formQuestionfifteen ul.question-ul.my_question {
+    margin-top: 15px;
+}
+div#formQuestionFourteenDIV .chat-buttons .main-button {
+    margin-top: 15px !important;
+}
+form#formQuestionfourteen .form-group.range-group.monthly-refund {
+    margin-top: 15px;
+}
+.sweet-alert {
+    top: 10px !important;
+    margin: 0 !important;
+}
+.sweet-alert h2 {
+    font-size: 23px;
+}
+form#formQuestionfifteen ul.question-ul.my_question li {
+    width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+form#formQuestionfifteen ul.question-ul.my_question li  label{
+    min-width: unset !important;
+}
+form#formQuestionsixteen ul.question-ul.my_question li {
+    width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+
+form#formQuestionfifteen {
+    width: 100%;
+}
+.repeated_div_second_question .form-inline.multiple-dropdown > div {
+    max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+.repeated_div_second_question .form-inline.multiple-dropdown > div  select{
+   padding: 15px 10px;
+}
+.repeated_div_second_question .form-group {
+    margin: 0;
+}
+.repeated_div_second_question .form-group input {
+    margin: 0;
+}
+input#property-value1 {
+    margin-bottom: 0;
+}
+.register-page #formQuestionTwo .form-inline .form-group {
+    float: left;
+}
+.register-page #formQuestionTwo .up-fo a.delete-button {
+    width: 70px;
+    margin: 54px 0 0 0 !important;
+    float: left;
+}
+ 
+
+
+
+.section_13_repeat .form-inline.multiple-dropdown > div {
+    max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+.section_13_repeat .form-inline.multiple-dropdown > div  select{
+   padding: 15px 10px;
+}
+.section_13_repeat .form-group {
+    margin: 0;
+}
+.section_13_repeat .form-group input {
+    margin: 0;
+}
+.second-sec-options.questiontwoOption {
+    margin-bottom: 30px;
+}
+.register-page .bootstrap-select button {
+    font-size: 12px;
+}
+.register-page .form-inline.multiple-dropdown > div select {
+    font-size: 12px;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]),
+.register-page textarea.form-control {
+    font-size: 12px;
+}
+.register-page form input.form-control::placeholder, 
+.register-page textarea.form-control::placeholder {
+    font-size: 12px !important;
+}
+.register-page #formQuestionTwo .up-fo a.delete-button {
+    font-size: 12px;
+}
+.form-inline.multiple-dropdown.up-fo> div {
+    width: 100%;
+    max-width: 100%;
+}
+.form-inline.multiple-dropdown.up-fo > div.second div {
+    width: 48% !important;
+    margin: 0 1%;
+}
+.register-page .questiontwoOption .add {
+    width: calc(100% - 49px);
+    font-size: 12px;
+    margin-right: 49px!important;
+}
+.register-page #formQuestionTwo .up-fo a.delete-button {
+    margin: 0 !important;
+}
+.form-inline.multiple-dropdown.up-fo .third > div {
+    max-width: 48%;
+    margin: 0 1% !important;
+}
+.register-page .form-inline.multiple-dropdown.up-fo > div > select {
+    padding-left: 0;
+    min-width: calc(100% - 126px);
+    height: 48px;
+}
+form#formQuestionEleven_One > div >div {
+    width: 48%;
+    float: left;
+    margin: 0 1% !important;
+}
+form#formQuestionEleven_One > div > p {
+    text-align: center;
+    margin-top: 10px;
+    float: left;
+}
+form#formQuestionEleven_One > div >div > div {
+    margin-bottom: 0;
+}
+form#formQuestionEleven_One > div >div label {
+    margin-bottom: 0;
+}
+
+.register-page .message {
+    padding-left: 30px;
+}
+.register-page .range-form {
+    width: 100%;
+}
+.register-page .range-group {
+    margin-bottom: 35px;
+}
+.register-page .q14 .placeholder-icon {
+    top: 62%;
+}
+.full-section > .form-group:last-child {
+    display: none;
+}
+.full-section > .form-group:nth-child(2) {
+    display: none;
+}
+form#formQuestionfifteen ul.question-ul.my_question li label {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+form#formQuestionsixteen ul.question-ul.my_question li label {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.register-page #formQuestionfifteen .form-inline.multiple-dropdown > div select {
+    height: 48px;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown > div:last-child {
+    float: left;
+    margin-bottom: 10px;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown > div:last-child a {
+    margin-top: 15px;
+}
+#formQuestionfifteen .chat-buttons a {
+    margin-top: 0px!important;
+}
+.register-page #formQuestionfifteen .chat-buttons {
+    margin-bottom: 15px;
+}
+#formQuestionfifteen button.ok_btn.main-button1 {
+    margin-bottom: 20px;
+    width: 100%;
+}
+div#formQuestionSixteenDIV ul.question-ul.my_question{
+    width: 100%;
+    margin-top: 15px;
+}
+#formQuestionsixteen .section-2 {
+    width: 130px;
+}
+#formQuestionsixteen .section-3 {
+    width: calc(100% - 130px);
+}
+.questiontwoOption .form-group.with_mortgage3 select.selectpicker {
+    height: 48px;
+}
+.repeated_div_14 .form-inline.multiple-dropdown > div {
+    max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+#formQuestionfifteen button.ok_btn.main-button1 {
+    margin-bottom: 20px;
+    width: 100%;
+}
+#formQuestionsixteen .chat-buttons a {
+    margin-top: 0px!important;
+}
+#formQuestionSixteenDIV button.ok_btn.main-button1 {
+    width: 100%;
+}
+#formQuestionSixteenDIV .message.no-background.d-i-f.f-d-c {
+    padding-top: 0 !important;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown .section-1 div{
+        margin-bottom: 0;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown .section-2 div{
+        margin-bottom: 0;
+}
+form#formQuestionsixteen .form-inline.multiple-dropdown {
+    width: 100%;
+    float: right;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown div {
+    float: right;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown > div:last-child {
+    margin-top: 50px !important;
+    float: left;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown div {
+    margin-bottom: 0;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown .chat-buttons {
+    margin: 20px 0;
+}
+form#formQuestionseventeen {
+    width: 100%;
+}
+form#formQuestionseventeen .form-inline.multiple-dropdown > div {
+    max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+#formQuestionseventeen select {
+    width: 100%;
+    min-width: unset;
+}
+
+#formQuestionseventeen > .chat-buttons {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#formQuestionseventeen ul.question-ul.my_question li {
+    margin-bottom: 15px;
+}
+
+form#formQuestionseventeen .form-inline.multiple-dropdown > div:nth-child(3) {
+    float: right;
+    min-width: 50%;
+}
+form#formQuestionseventeen button.ok_btn.main-button1 {
+    min-width: 100%;
+}
+form#formQuestionseventeen .repeated_fields_16 .form-group {
+    margin-bottom: 0;
+}
+form#formQuestionseventeen  .chat-buttons a {
+    margin-top: 10px!important;
+}
+form#formQuestionseventeen .repeated_fields_16 .form-group > input {
+    margin-bottom: 0;
+}
+.register-page form#formQuestionseventeen  .placeholder-icon {
+    top: 72%;
+}
+form#formQuestionseventeen .form-inline.multiple-dropdown > div:last-child {
+    margin-right: 0;
+    float: left;
+    margin-left: 12px;
+    margin-top: 40px;
+}
+.register-page #formQuestionEighteen .eligibility-dropdown {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.register-page #formQuestionEighteen .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 210px;
+    margin: 5px 0;
+}
+.register-page  #formQuestionEighteenDIV .message p {
+    text-align: center;
+}
+div#formQuestionSeventeenDIV {
+    margin-bottom: 0;
+}
+div#formQuestionEighteenDIV {
+    margin-bottom: 50px;
+}
+div#ques_18 {
+    margin-top: 60px;
+}
+form#formQuestionEighteen ul {
+    margin-bottom: 10px;
+}
+.register-page div#formQuestionNineteenDIV .message {
+    text-align: center;
+}
+span.chat-icon {
+    top: 7px;
+}
+div#ques_9 .message.d-i-f.f-d-c.spinner.spinner-ques-8 {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+#formQuestionEleven_Two > div  {
+        width: 100%;
+        float: right;
+}
+#formQuestionEleven_Two > div > div {
+    width: 100%;
+    float: right;
+    margin: 0 !important;
+}
+form#formQuestionEleven_Two > div > p {
+    width: 100% !important;
+    float: left;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#formQuestionEleven_Two > div > div > div:nth-child(2) {
+    margin-top: 0;
+}
+#formQuestionEleven_Two > div > div:nth-child(2) button {
+    margin-top: 41px;
+}
+
+form#formQuestionEleven_Two > div >div label {
+    margin-bottom: 0;
+}
+form#formQuestionEleven_Two > div >div > div {
+    margin-bottom: 0;
+}
+div#ques_12_2 .double-chat-container .chat-container + .chat-container {
+    margin-top: 10px!important;
+}
+#formQuestionSixteenDIV div#dlt_15_1 > div:last-child {
+    margin-top: 0 !important;
+}
+.register-page #formQuestionTwo .form-inline .third .form-group {
+    float: right;
+}
+.register-page #formQuestionTwo .form-inline .third div:nth-child(2) {
+    position: absolute;
+    top: -102px;
+    right: 0;
+    width: 47%;
+}
+.register-page #formQuestionTwo .form-inline .third div:nth-child(3) {
+    min-width: 97%;
+    margin-bottom: 20px !important;
+    float: right;
+    margin-top: -5px !important;
+}
+.register-page #formQuestionTwo .form-inline .third  {
+    position: relative;
+} 
+#formQuestionEleven_Two > div > div:first-child > div {
+    width: 48%;
+    float: right;
+    margin: 0 1%;
+    display: -webkit-block;
+    display: block;
+}
+#formQuestionEleven_Two > div > div:first-child  {
+    display: block;
+}
+#formQuestionEleven_Two > div > div:nth-child(2) {
+    width: 100%;
+}
+#formQuestionEleven_Two > div > div:nth-child(2) div {
+    width: 98%;
+    margin: 0 1%;
+}
+div#ques_12_2 button.prop_mark.main-button {
+    min-width: unset;
+    width: 98%;
+    margin: 10px 1% 20px 1% !important;
+}
+.send-offer img.col-img_ {
+    margin-top: 20px;
+    max-width: 50px;
+}
+.send-offer .bottom-bg {
+    padding-top: 40px;
+    padding-bottom: 0;
+    margin-top: 0px;
+}
+.payment-step .mortgage-offers-border {
+    padding: 0 2px 15px 2px;
+    margin: 0;
+}
+button.custom4_6 {
+    margin: 10px 0 10px 0;
+}
+.main-wrapper.steps.payment-step.pay-step-2 .main-form {
+    padding: 0;
+}
+.step-4-0 .mortgage-offers {
+    padding-top: 60px;
+}
+.step-4-0 .mortgage-offers-border {
+    border: none;
+}
+.footer-content {
+    padding: 15px 0 10px;
+}
+.pay-step-3 .last-bt-A > button.custom4_6 {
+    width: auto;
+    margin: 10px 15px;
+    padding: 0 10px;
+}
+.owl-logos .owl-nav button.owl-next, 
+.owl-logos .owl-nav button.owl-prev, 
+.owl-logos button.owl-dot {
+    font-size: 35px;
+    margin: 0 10px;
+    color: #000;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.owl-logos .owl-dots{
+    display: none;
+}
+
+
+}
+@media(max-width: 600px) {
+
+.chat-buttons .main-button {
+    padding: 13px 11px;
+}
+.offer-compare .pament-starting-div {
+    background-position: bottom -60px left 0;
+}
+.tab-title h4 {
+    font-size: 18px;
+    padding: 17px 20px 17px 71px;
+}
+.banner-buttons a {
+    display: block;
+}
+
+.banner-buttons a + a {
+    margin-top: 30px;
+    margin-right: 0;
+}
+.purchase-content .banner-buttons a {
+    right: 0;
+}
+.purchase-content .banner-buttons .button-orange {
+    margin-right: 40px;
+}
+.banner-buttons .button-orange {
+    padding-right: 15px;
+}
+
+.message-pic {
+    width: 50px;
+    height: 50px;
+}
+
+.chat .container {
+    max-width: 400px;
+}
+.chat-container p {
+    font-size: 18px;
+    line-height: 20px;
+}
+form input.form-control:not([type="checkbox"]):not([type="radio"]), textarea.form-control {
+    max-width: 100%;
+}
+.placeholder-icon {
+    top: 67.5%;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+.monthly-income-home .form-inline .main-button {
+    margin-top: 15px;
+}
+.chat-equity-cost > div >div + div {
+    margin-top: 0px;
+}
+.incoming-cost-chat .form-inline + .form-inline {
+    padding-right: 0;
+}
+.slider-icon {
+    width: 80px;
+    height: 80px;
+    top: -20px;
+    padding: 15px;
+}
+.slider-icon img {
+    height: 100%;
+}
+.monthly-repayment-chat .form-group + .form-group {
+    margin: 0;
+}
+
+.monthly-repayment-chat .form-group + .form-group .placeholder-icon {
+    top: 50%;
+}
+.monthly-repayment-chat .form-group + .form-group input {
+    margin: 0!important;
+}
+.chat-container.monthly-repayment-chat form .form-group + button {
+    margin-top: 15px;
+}
+.question {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+}
+.eligibility-text {
+    width: 100%;
+    flex: 0 0 100%;
+}
+.rented-appartment .form-group img,
+.monthly-income-home .form-group img,
+.financial-situation .form-group img {
+    top: 50%;
+}
+.rented-appartment .main-button {
+    margin-top: 15px!important;
+}
+.slider {
+    min-width: 240px;
+}
+.form-inline label {
+    width: auto;
+}
+p {
+    font-size: 18px;
+}
+p.half-disc {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 34px;
+}
+.discounted-p {
+    flex-direction: column;
+}
+.discounted-p p.text-left {
+    text-align: right;
+}
+.Submit-section {
+    flex-direction: column;
+}
+.Submit-section p {
+    width: 100%;
+}
+input.submit-box {
+    float: right;
+    margin-top: 18px;
+}
+.pay-step-3 .inner-success-data.text-center img {
+    margin-bottom: 0;
+}
+.tab-title h4 small {
+    font-size: 12px;
+    margin-top: 14px;
+    float: right;
+}
+
+.img-wrp {
+    width: 70px;
+}
+.tree ul li a {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.infor-design {
+    width: 70px;
+    height: 70px;
+    left: -10px;
+    font-size: 12px;
+    top: 10px;
+}
+.infor-design:before {
+    width: 10px;
+    height: 10px;
+    right: 12px;
+    top: 59px;
+}
+.tree ul li p span {
+    width: 25px;
+    height: 25px;
+    margin-left: 0;
+    font-size: 12px;
+}
+
+.tree ul li p:after {
+    left: 53%;
+}
+.tree ul li p:after {                                                                                                                                                                                                                       
+    left: 53%;                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+}
+.tree ul li:first-child > p:after {
+    left: 50%;
+}
+.tree ul li:last-child > p:after {
+    left: 52%;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+.tree ul li:first-child > p:after {
+    left: 49%;
+}
+.tree ul li p {
+    font-size: 14px;
+}
+.register-page .slider-icon {
+    left: 6px;
+    top: -16px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+}
+.register-page .range-group {
+    max-width: unset;
+    width: 76%;
+}
+}
+@media(max-width: 480px) {
+.reg-header ul.nav-main {
+    width: 240px;
+}
+.qna-container {
+    height: 90px;
+}
+.why-us-container + .why-us-container {
+    margin-right: 0;
+    margin-top: 20px;
+}
+.register-page .range-group {
+    max-width: unset;
+}
+div#formQuestionEleven .q14 {
+    margin-bottom: 0;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown > div {
+    margin-bottom: 0;
+}
+.chat-container + .chat-container {
+    margin-top: 50px;
+}
+.page-report .bottom-bar p {
+    font-size: 15px;                                                                                                          
+}                                                                                                                           
+.page-report .bottom-bar .items-list.text-left div:first-child {      
+    margin: 0;
+    font-size: 14px;
+}
+.page-report .bottom-bar .items-list.text-left {
+    top: 30px;
+}
+#algorithm-slider ol.carousel-indicators {
+    bottom: -37px;
+}
+.page-report .bottom-bar div img {
+    width: 70px;
+    margin-top: -27px;
+}
+.report-toggle_bar {
+    top: 10px;
+}
+ul.nav_reg {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    direction: rtl;                                                             
+}
+.register-page .range-form {
+    width: 100%;
+}
+
+div#formQuestionEleven {
+    margin-top: 40px;
+}
+
+a.logo-container img {
+    max-width: 100px;
+}
+.advisor-header {
+    padding: 40px 0px;
+}
+.advisor-nav.t {
+    left: 0;
+}
+.advisor-nav.t {
+    padding-right: 0;
+}
+.top-call-section p {
+    font-size: 20px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.top-call-section {
+    text-align: center;
+}
+.top-call-section img {
+    float: none;
+}
+.mortgage-offers-steps > .row > div[class*="col-"] + div[class*="col-"] {
+    margin-top: 50px;
+}
+.advisor-toggle_bar {
+    margin-right: 5px;
+    margin-top: 25px;
+}
+.advisor-nav a {
+    margin-left: 8px;
+    font-size: 14px;
+}
+.advisor-toggle_bar {
+    margin-right: 12px;
+}
+.con span {
+    height: 109px;
+    width: 109px;
+    font-size: 13px;
+}
+.light-left ul li {
+    width: 100%;
+}
+.dark-right h2:before {
+    top: 70px;
+}
+.pay-step-3 .inner-success-data h1 {
+    font-size: 18px;
+}
+.offer-compare .pament-starting-div {
+    background-position: bottom -50px left 0;
+}
+.offer-compare .pament-starting-div {
+    padding: 0 10px;
+}
+.file-design > p, .file-design > h3 {
+    width: 84%;
+    text-align: left;
+}
+.file-design:after {
+    width: 20%;
+    height: 50px;
+}
+.file-design {
+    padding: 10px 17px;
+    margin-top: 20px;
+}
+.offer-compare .row-group .add {
+    float: left;
+    width: 100%;
+    margin: 0 !important;
+    justify-content: center;
+}
+input.submit-box {
+    font-size: 14px;
+}
+.chat-group.no-margin .chat-buttons a {
+    min-width: 130px;
+    padding: 16px 0;
+}
+.main-button {
+    padding: 12px;
+    min-width: 130px;
+}
+.chat-group .message {
+    width: 100%;
+}
+.navbar-brand {
+    max-width: 100px;
+}
+.navbar-toggle {
+    right: 130px;
+}
+.copyright-container p {
+    text-align: center;
+}
+.qna-container .qna-answer {
+    min-height: 100px;
+}
+.message-pic {
+    width: 50px;
+    height: 50px;
+    right: auto;
+    transform: translate(-50%, -50%);
+}
+.message {
+    padding-right: 25px;
+}
+.message-pic + .message {
+    padding-top: 30px;
+}
+.message.no-background {
+    padding: 0;
+}
+.chat-container form .form-group + button {
+    margin-top: 15px;
+}
+.oldest-browser form .form-group + button {
+    margin: 0;
+}
+.slider {
+    min-width: 160px;
+}
+.question {
+    right: 15px;
+    top: -5px;
+}
+.chat-number {
+    left: calc(100% + -30px);
+    top: -20px;
+    font-size: 20px;
+    right: -10px;
+}
+.banner-content > .main-button {
+    max-width: 155px;
+}
+.banner-buttons .button-orange span {
+    width: 70px;
+    height: 70px;
+    transform: translate(50%, -12px);
+}
+.banner-buttons .button-orange span img {
+    max-width: 35px;
+}
+.banner-buttons .button-orange {
+    padding-right: 40px;
+}
+.purchase-content .banner-buttons .button-orange,
+.banner-buttons .button-orange {
+    margin-right: 30px;
+}
+.main-button {
+    font-weight: normal;
+}
+/* new css */
+.footer-steps-copyright p,
+.footer-steps-nav ul li a {
+    font-size: 12px;
+}
+.mortgage-offers-border {
+    padding: 4px;
+}
+.mortgage-offers-wrap {
+    padding: 10px;
+    padding-bottom: 150px;
+}
+.bank-selected {
+    padding: 10px;
+    padding-bottom: 10px;
+}
+.bank-selected-container {
+    padding: 10px;
+}
+.bank-selected-text ul li {
+    font-size: 16px;
+}
+.steps-message {
+    padding-right: 10px;
+    width: 100%;
+}
+.margin-30 td .chat-buttons .main-button {
+    width: 100%;
+    margin-bottom: 10px !important;
+}
+
+.step-4_5 .b-i-steps-content * {
+    font-size: 11px;
+}
+
+.step-4_5 .form-group-container .file-upload-container {
+    width: 82%;
+}
+
+.step-4_5 p.show-info {
+    width: 57%;
+}
+
+.step-4_5 .b-i-steps-heading h3 {
+    width: 61%;
+}
+
+p.half-disc {
+    width: 82%;
+}
+
+.step-4_5 .form-group-container label {
+    font-size: 16px;
+}
+
+.step-4_5 .b-i-steps-heading h2 {
+    font-size: 35px;
+}
+
+
+
+
+.bottom-bg h3 {
+    font-size: 18px;
+}
+
+.bottom-bg p {
+    margin-bottom: 10px;
+}
+.step-4_5 .margin-30 .cols-3 .form-group {
+    width: 100%;
+}
+.step-4_5 .form-group-container .file-upload-container {
+    width: 100%;
+}
+.step-4_5 .margin-30 .form-group {
+    width: 100%;
+}
+.pament-starting-div ul li {
+    line-height: 23px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-right: 20px;
+        background-size: 13px;
+}
+.pament-starting-div {
+    padding: 40px 20px;
+}
+.discounted-p p {
+    width: 100%;
+    text-align: right;
+}
+.discounted-p p.text-left span {
+    right: 0;
+}
+.coupon-code label {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.payment-step .mortgage-offers-heading > p {
+    font-size: 18px;
+}
+.row-group select {
+    width: 100%;
+    margin-bottom: 16px;
+}
+.row-group select.align-left {
+    width: 100%;
+    float: left;
+}
+form .group-col .col label img {
+    margin-right: 0;
+    width: 60px;
+    margin-left: 10px;
+}
+form .group-col .col label {
+    width: calc(100% - 40px);
+    font-size: 18px;
+}
+.pay-step-3 button.facebook-button {
+    min-width: 90%;
+}
+button.custom4_6 {
+    width: 90%;
+}
+.last-buttons button.custom4_6 {
+    width: 90%;
+}
+.pay-step-3 .inner-success-data h1 {
+    padding-top: 40px;
+}
+.pay-step-3 .inner-success-data h1 {
+    font-size: 28px;
+    padding: 30px 2px 0 2px;
+}
+.pay-step-3 .inner-success-data.text-center span img {
+    width: 28px;
+}
+.last-buttons button.custom4_6 {
+    font-size: 14px;
+}
+.progress-container {
+    width: 90%;
+    margin: 0 5%;
+}
+.inner-banner h1 {
+    font-size: 40px;
+}
+.privacy-content h1 {
+    font-size: 20px;
+    line-height: 24px;
+}
+.inner-term {
+    padding: 0 20px;
+}
+.inner-term p {
+    font-weight: normal;
+    margin-bottom: 35px;
+    line-height: 26px;
+    word-break: break-all;
+}
+.privacy-content p {
+    padding-right: 0;
+}
+.file-tab .tab-inner-content {
+    padding: 50px 12px;
+}
+
+div#stop {
+    right: 3px;
+}
+footer .created-by span {
+    font-size: 13px;
+}
+ ul.nav_reg li a {
+    width: 76px;
+    padding-top: 0;
+    HEIGHT: 76px;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    margin: 5px auto;
+    padding: 0;
+    line-height: 17px;
+}
+
+}
+@media(max-width: 480px) {
+.advisor-image img {
+    max-width: 68px;
+}   
+.reg-header .advisor-header .logo-container {
+    margin-right: 110px;
+}
+.reg-header .advisor-nav {
+    right: -200px;
+}
+.mobile-h-top {
+    left: -30px;
+}
+.fixedheader .mobile-h-top {
+    left: 0;
+}
+.fixedheader .advisor-nav {
+    right: -120px;
+}
+}   
+@media(max-width: 420px) {
+#algorithm-slider ol.carousel-indicators {
+    bottom: -33px;
+}
+
+}
+@media(max-width: 360px) {
+#algorithm-slider ol.carousel-indicators {
+    bottom: -31px;
+}
+.about-page .navbar-toggle {
+    top: 35px;
+}
+.about-page .navbar-brand {
+    max-width: 80px;
+}
+.about-page .navbar-collapse.collapse, 
+.about-page .navbar-collapse.collapsing {
+    top: 80px;
+}
+.fixedheader .advisor-header .logo-container {
+    margin-right: 70px;
+}
+.fixedheader .advisor-nav {
+    right: -75px;
+}
+}

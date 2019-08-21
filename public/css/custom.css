@@ -1,0 +1,1478 @@
+/********************* 13 May 2019 ********************/
+.main-button.pdf_download a {
+    color: white;
+    padding: 4px;
+}
+/*.modal-backdrop.in {
+    opacity: 0;
+}
+.modal-backdrop{
+	z-index: 10;
+}*/
+button.main-button.log-btn.green.fb_btn_align a {
+    color: white!important;
+    padding: 3px;
+}
+.banner-buttons.register_btn {
+    text-align: center;
+}
+h4.modal-title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 400;
+}
+label.error {
+    color: red;
+    display: none!important;
+}
+label.email_validate {
+    text-align: right;
+    display: block!important;
+    font-size: 18px;
+    margin: 0;
+    color: red;
+}
+.disable_class{
+    display: none;
+}
+.flash-message {
+    color: green;
+}
+/********************* 16 May 2019 ********************/
+.message_data div{
+    margin: 14px 40px;
+    color: #f00;
+    line-height: 35px;
+    position: relative;
+    box-shadow: 0px 0px 7px;
+}
+.suc_reg {
+    color: green;
+    margin: 14px 40px;
+    line-height: 35px;
+    position: relative;
+    box-shadow: 0px 0px 7px;
+}
+.log_suc{
+    color: green;
+    margin: 14px 40px;
+    line-height: 35px;
+    position: relative;
+    box-shadow: 0px 0px 7px;
+}
+.log_err{
+    margin: 14px 40px;
+    color: #f00;
+    line-height: 35px;
+    position: relative;
+    box-shadow: 0px 0px 7px;
+}
+
+/******************RESPONSIVE******************/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+#ques_7 .ques6 {
+    width: 100%;
+}
+#ques_7 .ques6 li label{
+    width: 100%;
+}
+ form#formQuestionfourteen .message.d-i-f.f-d-c {
+    margin-bottom: 60px;
+}
+form#formQuestionfourteen > .full-section {
+    margin-top: 20px;
+}
+input#browser-age {
+    width: 100%;
+}
+.register-page #formQuestionseventeen label {
+    width: 100%;
+    height: auto;
+}
+ #formQuestionfifteen .form-inline label {
+    margin-bottom: 0;
+    width: 100%;
+}
+.register-page  #formQuestionfifteen .placeholder-icon {
+    top: 65%;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown > div a.delete-button {
+    margin-right: 50px !important;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown {
+    margin-bottom: 0;
+}
+.register-page .form-inline > * {
+    margin: 0; 
+}
+#formQuestionseventeen select {
+    width: 100%;
+}
+form#formQuestionseventeen .form-inline.multiple-dropdown > div:last-child {
+    margin: 0;
+}
+.register-page #formQuestionseventeen .placeholder-icon {
+    top: 63%;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown > div:last-child {
+    float: right;
+}
+ form#formQuestionsixteen {
+    width: 100%;
+}
+div#formQuestionSixteenDIV ul.question-ul.my_question.click-color-change li {
+    float: left;
+}
+div#formQuestionSixteenDIV ul.question-ul.my_question.click-color-change {
+    margin-bottom: 30px;
+    float: right;
+ }
+ .register-page .form-group.top-m {
+    width: 100%;
+}
+ .register-page .range-group {
+    max-width: 80%;
+}
+.register-page #formQuestionSixteenDIV label {
+    margin-bottom: 0;
+}
+.register-page #formQuestionSixteenDIV .placeholder-icon {
+    top: 66%;
+}
+#formQuestionsixteen .delete-button {
+    margin-right: 49px!important;
+}
+.register-page #formQuestionSixteenDIV .placeholder-icon {
+    top: 75%;
+}
+.register-page #formQuestionSixteenDIV input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page #formQuestionSixteenDIV textarea.form-control {
+    margin-bottom: 0;
+}
+
+ .register-page  .message.no-background.d-i-f.f-d-c {
+    margin: 0 !important;
+    padding-left: 0;
+}
+ .register-page  .chat-container.d-f.f-d-c.a-i-f-s .col-md-offset-5.col-md-7.text-center.five {
+    padding-right: 0;
+    margin-top: 26px;
+}
+ .register-page  #formQuestionOne .chat-buttons .main-button {
+    min-width: 110px !important;
+    width: 100%;
+    margin: 10px 0;
+}
+ul.question-ul.my_question.click-color-change li:first-child {
+    margin-top: 8px;
+}
+form#formQuestionFivePointOne {
+    width: 100%;
+}
+.register-page .q14 .placeholder-icon {
+    top: 67%;
+}
+.q14 .chat-equity-cost {
+    padding-left: 0;
+}
+
+.q14 .chat-equity-cost .main-button {
+    margin-right: 0;
+    min-width: 204%;
+}
+#formQuestionFourteenDIV input#monthly_refund_input {
+    margin-right: 0;
+}
+.register-page select {
+    min-width: 100%;
+}
+
+.register-page div#dlt_16_1 .placeholder-icon {
+    top: 62%;
+}
+.register-page select {
+    padding-left: 0;
+    min-width: 100%;
+}
+form#formQuestionEighteen {
+    width: 100%;
+}
+#formQuestionFourteenDIV input#monthly_refund_input {
+    margin-right: 0;
+}
+.register-page .range-group {
+    margin-bottom: 49PX;
+}
+#formQuestionFourteenDIV input#lower_mortgage_input {
+    margin-right: 0;
+}
+ .register-page  .question2-ul li input {
+    opacity: 0;
+    position: absolute;
+}
+ .register-page   ul.question2-ul.my_question.click-color-change {
+    margin-top: 15px;
+}
+.my_question li input[type="radio"] {
+    position: absolute;
+    z-index: -1;
+}
+.register-page #formQuestionseventeen .form-inline .form-group label {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+}
+.register-page .question6-ul li {
+    display: block;
+    width: 100%;
+}
+
+
+#formQuestionFourteenDIV input#monthly_refund_input {
+    margin-right: 0;
+}
+#formQuestionFourteenDIV input#lower_mortgage_input {
+    margin-right: 0;
+}
+ #formQuestionOne .chat-buttons .main-button {
+    margin-bottom: 0;
+}
+ #formQuestionOne .chat-buttons .main-button {
+    min-width: 110px !important;
+}
+ .register-page .form-inline.multiple-dropdown .form-inline > * {
+    display: block;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
+    max-width: calc(100% - 77px);
+}
+form#formQuestionseventeen .form-inline.multiple-dropdown > div:last-child {
+    margin-right: 0;
+}
+.register-page select {
+    padding-left: 0;
+    min-width: 100%;
+}
+.register-page .form-inline label {
+    width: 100%;
+    margin-bottom: 15px;
+    max-width: unset;
+}
+.register-page #formQuestionTwo .form-inline label {
+    margin-bottom: 0;
+}
+.register-page #formQuestionTwo .message + .message {
+    width: 100%;
+}
+.register-page #formQuestionTwo .form-group {
+    margin-bottom: 0;
+}
+.register-page .message-pic {
+    width: 45px;
+    height: 45px;
+}
+
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.register-page .main-button {
+    margin: 0;
+    font-size: 15px !important;
+    margin-left: 6px !important;
+}
+.register-page .placeholder-icon {
+    top: 39%;
+}
+.register-page .message + .message {
+    min-width: 220px;
+}
+.register-page .message {
+    padding-left: 37px;
+}
+.register-page form#formQuestionFive input.form-control:not([type="checkbox"]):not([type="radio"]) {
+    width: 220px;
+}
+.register-page .form-group.top-m {
+    margin-right: 0;
+}
+img.custom-arrow {
+    left: 10px;
+}
+
+.register-page form#formQuestionFive input.form-control:not([type="checkbox"]):not([type="radio"]) {
+    width: 100%;
+}
+
+
+.reg-header a.level-call.a-i-c.j-c-c.left-icon-h {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    left: 4px;
+    border: 1px solid #bbb;
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+}
+a.level-call.a-i-c.j-c-c.left-icon-h.phone_icon img {
+    max-width: 25px;
+}
+.reg-header .advisor-container {
+    padding: 0 0 28px 0;
+}
+
+.mobile-h-top {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+}
+.reg-header .advisor-nav {
+    position: relative;
+    right: -240px;
+    background: #fff;
+    padding: 30px 30px;
+    margin-top: 10px;
+}
+.reg-header .toggle_bar i.fa.fa-bars {
+    color: #53cbcb;
+}
+.reg-header .advisor-header .logo-container {
+    margin-right: 150px;
+}
+.reg-header .row .col-sm-9 {
+    margin-bottom: 0;
+}
+.reg-header ul.nav_reg {
+    border-radius: 0;
+}
+ul.nav-main {
+    margin-top: 25px;
+    width: 190px;
+}
+.reg-header a.level-call.a-i-c.j-c-c.left-icon-h {
+    padding: 4px;
+}
+.register-page div#ques_1 .chat-container.d-f.f-d-c.a-i-f-s .col-md-offset-5.col-md-7.text-center.five {
+    float: none;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: right;
+}
+img.custom-arrow {
+    left: -10px;
+    bottom: 41%;
+}
+.register-page .message + .message {
+    margin-top: 15px;
+
+}
+.register-page .my_question li {
+    margin-top: 0;
+}
+.register-page #formQuestionOne .chat-buttons .main-button {
+    margin: 15px 0 0 0;
+}
+ul.question-ul.my_question li:first-child {
+    margin-top: 0;
+}
+.chat-wrap .chat-container:last-of-type {
+    margin-bottom: 40px;
+}
+div#ques_3 {
+    margin-bottom: 10px;
+}
+
+.register-page .ques2 .main-button {
+    margin-bottom: 15px;
+}
+#formQuestionOne div#FOR_RENTAL_ONLY {
+    margin-bottom: 40px;
+}
+.chat-buttons.ques4 ul.question3-ul.my_question{
+    margin-top: 15px;
+}
+.chat-buttons ul.question3-ul.my_question.click-color-change .main-button {
+    padding: 13px 11px;
+    margin-bottom: 15px;
+}
+div#ques_4 {
+    margin-bottom: 10px;
+}
+form#formQuestionThree {
+    margin-top: 20px;
+}
+div#ques_5 {
+    margin-bottom: 50px;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
+    text-align: center;
+}
+ul.question2-ul.my_question li {
+    width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+.chat-buttons.ques2 {
+    margin-top: 20px;
+}
+ul.question2-ul.my_question li:first-child {
+    margin-right: 0;
+}
+.chat-buttons ul.question3-ul.my_question.click-color-change .main-button {
+    padding: 10px 0;
+}
+.register-page .main-button {
+    min-width: 180px;
+}
+.chat-buttons .main-button img {
+    margin-left: 5px;
+    margin-right: 0;
+}
+form#formQuestionSix {
+    margin-top: 60px;
+}
+.chat-buttons.ques6 .main-button {
+    margin-top: 15px;
+}
+
+ul.question3-ul.my_question li {
+    width: 49%;
+    float: right;
+    margin-right: 2%;
+}
+ul.question3-ul.my_question li:first-child {
+    margin-right: 0;
+}
+div#ques_7 {
+    margin-bottom: 50px;
+}
+.ques7 .main-button {
+    margin-top: 15px;
+}
+.q9.chat-container.d-f.f-d-c.a-i-f-s.questionsevenOption {
+    margin-top: 50px;
+}
+div#ques_8 {
+    margin-bottom: 80px;
+}
+.ques9 .main-button {
+    margin-top: 15px;
+}
+.register-page .spinner {
+    max-width: 150px;
+}
+.ques_5 .spinner {
+    margin-top: 20px;
+}
+form#formQuestionEight {
+    margin-bottom: 60px;
+}
+.range-form {
+    margin-top: 15px;
+}
+.register-page .range-group {
+    margin-bottom: 15PX;
+}
+.ques10 .main-button {  
+    margin-top: 15px;
+}
+div#ques_10 {
+    margin-bottom: 50px;
+}
+div#ques_6 .message.no-background.d-i-f.a-i-c span {
+    width: 100%;
+    justify-content: right;
+}
+div#ques_6 form#formQuestionFive .form-group {
+    width: 50%;
+    float: right;
+}
+#formQuestionEight .chat-buttons .main-button {
+    margin-left: 0;
+    width: 100%;
+}
+.register-page #formQuestionEight .my_question li {
+    margin-top: 0;
+    width: 32.9%;
+}
+.register-page #formQuestionNine .my_question li {
+    margin-top: 0;
+    width: 32.9%;
+}
+.register-page #formQuestionNine .chat-buttons {
+    width: 100%;
+}
+.register-page #formQuestionNine .chat-buttons li label {
+    width: 100%;
+}
+
+div#ques_6 .chat-container .form-group.top-m form .main-button {
+    margin: 0;
+    width: 48%;
+    float: right;
+    padding: 15px 0;
+    float: left;
+}
+ul.question6-ul.my_question li {
+    width: 31.3%;
+    float: right;
+    margin: 0 1%;
+}
+ul.question6-ul.my_question li .main-button {
+    font-size: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 50px;
+}
+div#ques_11 .form-inline.range-form.cs-r-f > label {
+    margin: 0 !important;
+    justify-content: center;
+}
+form#formQuestionThirteen > div > div {
+    width: 48%;
+    float: left;
+    margin: 0 1%;
+}
+form#formQuestionThirteen label {
+    margin-bottom: 0;
+}
+form#formQuestionThirteen {
+    padding: 0;
+}
+.register-page form#formQuestionThirteen  .placeholder-icon {
+    top: 62%;
+}
+div#formQuestionThirteenDIV .message.no-background.d-i-f {
+    margin-top: 0;
+}
+form#formQuestionThirteen > div > div button.purp_buy.main-button {
+    margin: 0 !important;
+    min-width: 204%;
+}
+form#formQuestionThirteen > div > div .form-group {
+    margin-bottom: 0;
+    width: 100%;
+}
+form#formQuestionThirteen > div > div.d-f {
+    margin-bottom: 20px;
+}
+#formQuestionThirteenDIV .chat-buttons {
+    margin-top: 0;
+}
+#formQuestionThirteenDIV  .chat-buttons a {
+    margin-top: 15px !important;
+}
+#formQuestionfourteen .alert-text.alert-monthly-refund {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+form#formQuestionfourteen .full-section.nd-div-jugaad {
+    margin-top: 0 !important;
+}
+form#formQuestionfourteen .full-section > div:nth-child(2) {
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+form#formQuestionfourteen .full-section.nd-div-jugaad > div:nth-child(2) {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+#formQuestionFourteenDIV input#lower_mortgage_input {
+    margin-bottom: 0;
+}
+#formQuestionfourteen .errMsg {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.register-page .div#formQuestionThirteenDIV .message p {
+    text-align: center;
+}
+div#formQuestionFourteenDIV {
+    margin-bottom: 0;
+}
+div#formQuestionFifteenDIV {
+    margin-top: 60px;
+}
+form#formQuestionfifteen ul.question-ul.my_question {
+    margin-top: 15px;
+}
+div#formQuestionFourteenDIV .chat-buttons .main-button {
+    margin-top: 15px !important;
+}
+form#formQuestionfourteen .form-group.range-group.monthly-refund {
+    margin-top: 15px;
+}
+.sweet-alert {
+    top: 10px !important;
+    margin: 0 !important;
+}
+.sweet-alert h2 {
+    font-size: 23px;
+}
+
+form#formQuestionfifteen ul.question-ul.my_question li {
+    width: auto;
+    float: right;
+    margin: 0 1%;
+}
+form#formQuestionfifteen ul.question-ul.my_question li  label{
+    min-width: unset !important;
+}
+form#formQuestionsixteen ul.question-ul.my_question li {
+    width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+
+form#formQuestionfifteen {
+    width: 100%;
+}
+.repeated_div_second_question .form-inline.multiple-dropdown > div {
+    max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+.repeated_div_second_question .form-inline.multiple-dropdown > div  select{
+   padding: 15px 10px;
+}
+.repeated_div_second_question .form-group {
+    margin: 0;
+}
+.repeated_div_second_question .form-group input {
+    margin: 0;
+}
+input#property-value1 {
+    margin-bottom: 0;
+}
+.register-page #formQuestionTwo .form-inline .form-group {
+    float: left;
+}
+.register-page #formQuestionTwo .up-fo a.delete-button {
+    width: 70px;
+    margin: 54px 0 0 0 !important;
+    float: left;
+}
+ 
+
+
+
+
+.section_13_repeat .form-inline.multiple-dropdown > div  select{
+   padding: 15px 10px;
+       max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+.section_13_repeat .form-group {
+    margin: 0;
+}
+.section_13_repeat .form-group input {
+    margin: 0;
+}
+.second-sec-options.questiontwoOption {
+    margin-bottom: 30px;
+}
+.register-page .bootstrap-select button {
+    font-size: 12px;
+}
+.register-page .form-inline.multiple-dropdown > div select {
+    font-size: 12px;
+}
+.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]),
+.register-page textarea.form-control {
+    font-size: 12px;
+}
+.register-page form input.form-control::placeholder, 
+.register-page textarea.form-control::placeholder {
+    font-size: 12px !important;
+}
+.register-page #formQuestionTwo .up-fo a.delete-button {
+    font-size: 12px;
+}
+.form-inline.multiple-dropdown.up-fo> div {
+    width: 100%;
+    max-width: 100%;
+}
+div#ques_3  .form-inline.multiple-dropdown.up-fo > div.second div {
+    width: 49% !important;
+    margin: 0 0 0 1% !important;
+}
+.register-page div#ques_3  .form-inline.multiple-dropdown.up-fo > div > select {
+    min-width: calc(100% - 140px);
+}
+.register-page .questiontwoOption .add {
+    width: calc(100% - 49px);
+    font-size: 12px;
+    margin-right: 49px!important;
+}
+.register-page #formQuestionTwo .up-fo a.delete-button {
+    margin: 0 0 0 10px !important;
+}
+.form-inline.multiple-dropdown.up-fo .third > div {
+    max-width: 48%;
+    margin: 0 1% !important;
+}
+.register-page .form-inline.multiple-dropdown.up-fo > div > select {
+    padding-left: 0;
+    min-width: calc(100% - 126px);
+    height: 48px;
+}
+form#formQuestionEleven_One > div >div {
+    width: 48%;
+    float: left;
+    margin: 0 1% !important;
+}
+form#formQuestionEleven_One > div >div input {
+    width: 100%;
+}
+form#formQuestionEleven_One > div > p {
+    text-align: center;
+    margin-top: 10px;
+    float: left;
+}
+form#formQuestionEleven_One > div >div > div {
+    margin-bottom: 0;
+}
+form#formQuestionEleven_One > div >div label {
+    margin-bottom: 0;
+}
+
+.register-page .message {
+    padding-left: 30px;
+}
+.register-page .range-form {
+    width: 100%;
+}
+.register-page .range-group {
+    margin-bottom: 35px;
+}
+.register-page .q14 .placeholder-icon {
+    top: 62%;
+}
+.full-section > .form-group:last-child {
+    display: none;
+}
+.full-section > .form-group:nth-child(2) {
+    display: none;
+}
+form#formQuestionfifteen ul.question-ul.my_question li label {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.register-page #formQuestionfifteen .form-inline.multiple-dropdown > div select {
+    height: 48px;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown > div:last-child {
+    float: left;
+    margin-bottom: 10px;
+}
+#formQuestionfifteen .form-inline.multiple-dropdown > div:last-child a {
+    margin-top: 15px;
+    margin-left: 18px;
+}
+#formQuestionfifteen .chat-buttons a {
+    margin-top: 0px!important;
+}
+.register-page #formQuestionfifteen .chat-buttons {
+    margin-bottom: 15px;
+}
+#formQuestionfifteen button.ok_btn.main-button1 {
+    margin-bottom: 20px;
+    width: 100%;
+}
+div#formQuestionSixteenDIV ul.question-ul.my_question{
+    width: 100%;
+    margin-top: 15px;
+}
+#formQuestionsixteen .section-2 {
+    width: 130px;
+}
+#formQuestionsixteen .section-3 {
+    width: calc(100% - 130px);
+}
+.questiontwoOption .form-group.with_mortgage3 select.selectpicker {
+    height: 48px;
+}
+.repeated_div_14 .form-inline.multiple-dropdown > div {
+    max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+#formQuestionfifteen button.ok_btn.main-button1 {
+    margin-bottom: 20px;
+    width: 200px;
+}
+#formQuestionsixteen .chat-buttons a {
+    margin-top: 0px!important;
+}
+#formQuestionSixteenDIV button.ok_btn.main-button1 {
+    width: 200px;
+}
+#formQuestionSixteenDIV .message.no-background.d-i-f.f-d-c {
+    padding-top: 0 !important;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown .section-1 div{
+	    margin-bottom: 0;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown .section-2 div{
+	    margin-bottom: 0;
+}
+form#formQuestionsixteen .form-inline.multiple-dropdown {
+    width: 100%;
+    float: right;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown div {
+    float: right;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown > div:last-child {
+    margin-top: 50px !important;
+    float: left;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown div {
+    margin-bottom: 0;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown .chat-buttons {
+    margin: 20px 0;
+}
+form#formQuestionseventeen {
+    width: 100%;
+}
+form#formQuestionseventeen .form-inline.multiple-dropdown > div {
+    width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+#formQuestionseventeen select {
+    width: 100%;
+    min-width: unset;
+}
+
+#formQuestionseventeen > .chat-buttons {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#formQuestionseventeen ul.question-ul.my_question li {
+    margin-bottom: 15px;
+}
+
+form#formQuestionseventeen .form-inline.multiple-dropdown > div:nth-child(3) {
+    float: right;
+    min-width: 47%;
+}
+form#formQuestionseventeen button.ok_btn.main-button1 {
+    min-width: 100%;
+}
+form#formQuestionseventeen .repeated_fields_16 .form-group {
+    margin-bottom: 0;
+}
+form#formQuestionseventeen  .chat-buttons a {
+    margin-top: 10px!important;
+}
+form#formQuestionseventeen .repeated_fields_16 .form-group > input {
+    margin-bottom: 0;
+}
+.register-page form#formQuestionseventeen  .placeholder-icon {
+    top: 72%;
+}
+form#formQuestionseventeen .form-inline.multiple-dropdown > div:last-child {
+    margin-right: 0;
+    float: left;
+    margin-left: 4px;
+    margin-top: 40px;
+}
+.register-page #formQuestionEighteen .eligibility-dropdown {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.register-page #formQuestionEighteen .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 210px;
+    margin: 5px 0;
+}
+.register-page  #formQuestionEighteenDIV .message p {
+    text-align: center;
+}
+div#formQuestionSeventeenDIV {
+    margin-bottom: 0;
+}
+div#formQuestionEighteenDIV {
+    margin-bottom: 50px;
+}
+div#ques_18 {
+    margin-top: 60px;
+}
+form#formQuestionEighteen ul {
+    margin-bottom: 10px;
+}
+.register-page div#formQuestionNineteenDIV .message {
+    text-align: center;
+}
+span.chat-icon {
+    top: 7px;
+}
+div#ques_9 .message.d-i-f.f-d-c.spinner.spinner-ques-8 {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+#formQuestionEleven_Two > div  {
+        width: 100%;
+        float: right;
+}
+#formQuestionEleven_Two > div > div {
+    width: 100%;
+    float: right;
+    margin: 0 !important;
+}
+form#formQuestionEleven_Two > div > p {
+    width: 100% !important;
+    float: left;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#formQuestionEleven_Two > div > div > div:nth-child(2) {
+    margin-top: 0;
+}
+#formQuestionEleven_Two > div > div:nth-child(2) button {
+    margin-top: 41px;
+}
+
+form#formQuestionEleven_Two > div >div label {
+    margin-bottom: 0;
+}
+form#formQuestionEleven_Two > div >div > div {
+    margin-bottom: 0;
+}
+div#ques_12_2 .double-chat-container .chat-container + .chat-container {
+    margin-top: 10px!important;
+}
+#formQuestionSixteenDIV div#dlt_15_1 > div:last-child {
+    margin-top: 0 !important;
+}
+.register-page #formQuestionTwo .form-inline .third .form-group {
+    float: right;
+}
+.register-page #formQuestionTwo .form-inline .third div:nth-child(2) {
+    position: absolute;
+    top: -102px;
+    right: 0;
+    width: 47%;
+}
+.register-page #formQuestionTwo .form-inline .third div:nth-child(3) {
+    min-width: 97%;
+    margin-bottom: 20px !important;
+    float: right;
+    margin-top: -5px !important;
+}
+.register-page #formQuestionTwo .form-inline .third  {
+    position: relative;
+} 
+#formQuestionEleven_Two > div > div:first-child > div {
+    width: 48%;
+    float: right;
+    margin: 0 1%;
+    display: -webkit-block;
+    display: block;
+}
+#formQuestionEleven_Two > div > div:first-child  {
+    display: block;
+}
+#formQuestionEleven_Two > div > div:nth-child(2) {
+    width: 100%;
+}
+#formQuestionEleven_Two > div > div:nth-child(2) div {
+    width: 98%;
+    margin: 0 1%;
+}
+div#ques_12_2 button.prop_mark.main-button {
+    min-width: unset;
+    width: 98%;
+    margin: 10px 1% 20px 1% !important;
+}
+.send-offer img.col-img_ {
+    margin-top: 20px;
+    max-width: 50px;
+}
+.send-offer .bottom-bg {
+    padding-top: 40px;
+    padding-bottom: 0;
+    margin-top: 0px;
+}
+.payment-step .mortgage-offers-border {
+    padding: 2px;
+    margin: 0;
+}
+button.custom4_6 {
+    margin: 10px 0 10px 0;
+}
+.footer-content {
+    padding: 0 0 10px;
+    margin-top: 20px;
+}
+.pay-step-3 .last-bt-A > button.custom4_6 {
+    width: auto;
+    margin: 10px 15px;
+    padding: 0 10px;
+}
+.advisor-header {
+	background: transparent;
+}
+ul.nav_reg {
+    width: auto;
+	padding: 0 7px;
+    margin: 0;
+}
+.advisor-image img {
+    max-width: 65px;
+}
+div#ques_11 .form-inline.range-form.cs-r-f {
+    margin-top: 60px;
+}
+.register-page #formQuestionTwo .form-inline .form-group {
+    float: left;
+    width: 100%;
+    margin: 0;
+}
+#formQuestionTwo .form-inline.multiple-dropdown.up-fo> div {
+    margin: 0 !important;
+}
+div#ques_3 input {
+    width: 100%;
+}
+.register-page div#ques_3 .placeholder-icon {
+    top: 61px;
+}
+.register-page .questiontwoOption .add {
+    max-width: 240px;
+}
+
+
+div#ques_11 button.main-button.tenth-left {
+    margin-right: 0 !important;
+}
+.register-page div#ques_11 .range-group {
+    margin-bottom: 35px;
+    width: 100%;
+}
+form#formQuestionTen {
+    margin-top: 40px;
+}
+div#ques_11 .form-inline.range-form.cs-r-f > label {
+    justify-content: right;
+}
+.register-page div#ques_11 .range-form {
+    display: block;
+}
+.register-page div#ques_11 .range-group {
+    max-width: 92%;
+}
+form#formQuestionTen {
+    width: 100%;
+}
+div#ques_12_2 input#property-market-value {
+    width: 100%;
+}
+.register-page div#ques_12_2 .message {
+    padding-left: 0;
+}
+div#ques_12_2 input{
+	min-width: 100%;
+}
+.register-page div#ques_13 .range-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+.register-page div#ques_13  button.main-button.questwelvesubmit {
+    margin: 0;
+}
+.section_13_repeat {
+    width: 100%;
+    width: 100%;
+    float: right;
+}
+div#ques_14 input {
+    width: 100%;
+}
+div#ques_14 .section-2 {
+    width: 53.5%;
+}
+.section_13_repeat .form-inline.multiple-dropdown > div select {
+    max-width: 100%;
+}
+.section_13_repeat > div {
+    width: 100%;
+}
+div#ques_16 input#investment-amount1 {
+    width: 100%;
+}
+div#ques_16 .section-2 {
+    width: 53.5%;
+}
+.section_13_repeat .form-inline.multiple-dropdown > div {
+    max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+#formQuestionfifteen .form-inline label {
+    margin-bottom: 0;
+    width: 100%;
+}
+div#ques_14 input#investment-amount1 {
+    width: 100%;
+}
+#ques_16 .form-inline.multiple-dropdown > div {
+    max-width: 48%;
+    float: right;
+    margin: 0 1%;
+}
+#ques_16 .form-inline.multiple-dropdown > div select {
+    max-width: 100%;
+}
+.section_13_repeat > div {
+    width: 100%;
+}
+form#formQuestionseventeen .repeated_fields_16 .form-group > input {
+    min-width: 100%;
+}
+form#formQuestionseventeen button.ok_btn.main-button1 {
+    min-width: 200px;
+}
+.register-page #formQuestionSixteenDIV label {
+    width: 100%;
+}
+div#ques_15 input {
+    width: 100%;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown div > div {
+    min-width: 49%;
+    float: right;
+    margin: 0 0.5%;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown div > div label{
+    min-width: 100%;
+    float: right;
+}
+#formQuestionsixteen select {
+    min-width: 100%;
+    height: 48px;
+    padding: 0 15px;
+}
+.register-page div#ques_18 .main-button {
+    margin-top: 15px;
+}
+iv#ques_17 .spinner {
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.payment-step .mortgage-offers {
+    padding-bottom: 60px;
+}
+div#ques_12_1 input,
+div#ques_12_3 input {
+    min-width: 100% !important;
+}
+}
+
+
+@media (max-width: 991px){
+.register-page div#ques_11 .range-form {
+    width: 100%;
+    display: block;
+}
+div#ques_11 .form-inline.range-form.cs-r-f > label {
+    justify-content: right;
+    padding: 0px 0 0 0;
+}
+.register-page div#ques_11 .range-group {
+    width: 84%;
+}
+form#formQuestionTen {
+    margin-top: 0px;
+}
+.reg-header .row{
+	position: relative;
+}
+
+.mobile-h-top {
+    z-index: 9;
+}
+.fixedheader .advisor-image img {
+    max-width: 30px;
+    float: left;
+}
+.fixedheader .advisor-text {
+    font-size: 15px;
+    margin-top: 7px;
+}
+.fixedheader .advisor-nav {
+    right: -180px;
+}
+.fixedheader .advisor-container {
+    right: -180px;
+    width: 185px;
+}
+.fixedheader .advisor-nav {
+    padding: 0;
+    margin-top: 0;
+    top: 10px;
+}
+.fixedheader  a.logo-container img {
+    max-width: 41px;
+    position: relative;
+    top: 6px;
+}
+.fixedheader ul.nav_reg {
+    position: relative;
+    top: -3px;
+}
+}
+@media (max-width: 767px){
+.mobile-h-top {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+}
+.advisor.reg-header .col-lg-9 {
+    width: 100%;
+}
+.advisor-image img {
+    max-width: 45px;
+}
+.toggle_bar i.fa.fa-bars {
+    color: #53cbcb;
+}
+div#formQuestionEleven {
+    width: 100%;
+}
+.register-page #formQuestionEight .my_question li {
+    width: 100%;
+}	
+.register-page #formQuestionNine .my_question li {
+    margin-top: 0;
+    width: 100%;
+}	
+}
+@media (max-width: 480px){
+.fixedheader .advisor-header .logo-container {
+    margin-right: 70px;
+}
+.fixedheader .advisor-nav {
+    right: -80px;
+}
+.fixedheader ul.nav_reg li a {
+    width: 76px;
+    padding-top: 0;
+    HEIGHT: 76px;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    margin: 5px auto;
+    padding: 0;
+    line-height: 17px;
+}
+a.logo-container img {
+    max-width: 90px;
+}
+.reg-header .advisor-nav {
+    right: -170px;
+    padding: 20px 20px;
+}
+.reg-header .advisor-header .logo-container {
+    margin-right: 100px;
+}
+.advisor-text {
+    font-size: 13px;
+}
+
+
+}
+@media(max-width: 420px) {
+ul.nav_reg {
+    margin: 10px 0 0 0;
+}
+reg-header .advisor-container {
+    text-align: left;
+    margin-left: 20px;
+}
+.advisor-text {
+    font-size: 10px;
+}
+.reg-header .advisor-nav {
+    right: -178px;
+    background: #fff;
+    padding: 26px 26px;
+}
+.advisor-image img {
+    max-width: 65px;
+    margin-left: 6px;
+}
+a.logo-container img {
+    max-width: 80px;
+}
+.reg-header .advisor-header .logo-container {
+    margin-right: 90px;
+}
+.fixedheader .advisor-nav {
+    right: -118px;
+    padding: 0;
+}
+}
+@media (min-width: 768px){
+.form-horizontal .control-label {
+    color: #898989;
+	}
+}
+
+
+}
+@media (max-width: 420px){
+    #loginModal .modal-dialog {
+        max-width: 94%;
+    }
+    .half {
+        width: 100%;
+        flex: auto;
+    }
+    .link-facebook {
+        font-size: 14px;
+        margin: 15px 0;
+    }
+}
+img.custom-arrow {
+    position: absolute;
+    left: -10px;
+    right: unset;
+    top: unset;
+    bottom: 51px;
+    transform: rotate(95deg);
+    width: 60px;
+}
+div#formQuestionThirteenDIV {
+    margin-top: 0;
+    margin-top: -30px;
+}
+.go-grey{
+    background-color: #e8e8e8 !important;
+    box-shadow: 0 2px rgba(0,0,0,0.2) !important;
+    color: #ababab !important;
+}
+.alert-text .green {
+    color: #059928;
+}
+.alert-text .red {
+    color: #f85151;
+}
+#formQuestionfourteen .alert-text.alert-monthly-refund {
+    max-width: 70%;
+}
+
+#formQuestionFourteenDIV .success-text {
+    margin: -30px 0 15px 0;
+}
+
+
+#formQuestionFourteenDIV input#lower_mortgage_input {
+    margin-right: 45px;
+    text-align: center;
+    padding-left: 10px;
+}
+
+#formQuestionFourteenDIV input#monthly_refund_input{
+    margin-right: 45px;
+    text-align: center;
+    padding-left: 30px;
+}
+#formQuestionfourteen .range-group.monthly-refund::after {
+	content: "Min";
+    top: -20px;
+    left: 12px;
+}
+#formQuestionfourteen .range-group.monthly-refund::before {
+    content: "Max";
+    left: calc(100% - 17px);
+    top: -20px;
+}
+.range-group.lower-mortgage::after {
+    content: "4";
+    left: 20px;
+    top: -20px;
+}
+.range-group.lower-mortgage::before {
+    content: "30";
+    top: -20px;
+}
+
+#formQuestionfifteen .form-inline.multiple-dropdown > div a.delete-button {
+    margin-bottom: 0;
+}
+#formQuestionfifteen .form-inline label {
+   min-width: 130px;
+}
+.register-page #formQuestionSixteenDIV label {
+    width: auto;
+    margin-right: 5px;
+}
+.contactForm form input[type="date"] {
+    width: 49%;
+    float: right;
+}
+.contactForm form select {
+    width: 49%;
+    float: right;
+    padding: 13px 9px;
+    margin-top: 6px;
+    float: left;
+}
+
+#formQuestionseventeen select {
+    min-width: 120px;
+}
+
+
+
+div#ques_1,
+div#ques_2 {
+    position: relative;;
+}
+
+div#ques_1:before {
+    position: absolute;
+    right: -80px;
+    width: 1px;
+    height: calc(100% + 30px);
+    top: 0;
+    background: #ccc;
+    content: "";
+}
+
+div#ques_1:after {
+    position: absolute;
+    right: -85px;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    content: "";
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+div#ques_2:after {
+    position: absolute;
+    right: -85px;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    content: "";
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+.reg-header ul.nav-main {
+    top: 75px;
+    min-height: 170px;
+}
+.register-page .ques_3 form input.form-control:not([type="checkbox"]):not([type="radio"]), 
+.register-page .ques_3 textarea.form-control {
+    max-width: 190px;
+}

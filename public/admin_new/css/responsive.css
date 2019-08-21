@@ -1,0 +1,392 @@
+@media(min-width: 1800px) {
+    .customer-filters form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .customer-filters form ul+ul {
+        margin-left: 30px;
+    }
+    .customer-filters .d-b-selects>ul>li {
+        width: calc(16% - 60px);
+    }
+}
+@media(max-width: 1800px) {
+	.form-group-container .file-upload-container {
+		min-width: 262px;
+	}
+	.b-i-steps-heading h3 {
+		font-size: 15px;
+	}
+	.form-group-container label {
+		font-size: 13px;
+	}
+	.col-2.a4.last h3 {
+		font-size: 15px;
+	}
+}
+@media(max-width: 1600px) {
+	.upload-excel-btn label.a-time-selection {
+		max-width: 310px;
+		min-height: 40px;
+		width: 100%;
+		padding: 14px 0 12px 0;
+		border-radius: 45px;
+		text-align: center;
+		font-size: 13px;
+	}
+	.regulation .left-table {
+		margin-top: 0;
+	}
+	.A_return_algo .tab-pane {
+		min-height: 300px;
+	}
+	.funding-tree.tree_right {
+		margin-top: 155px;
+	}
+	.form-group-container .file-upload-container {
+		min-width: 262px;
+	}
+	.b-i-steps-heading h3 {
+		font-size: 15px;
+	}
+	.form-group-container label {
+		font-size: 13px;
+	}
+	.download-button {
+		font-size: 13px;
+	}
+	.custom-radio-text {
+		min-width: 80px;
+		padding: 15px 8px;
+		font-size: 12px;
+		width: 100%;
+	} 
+	.gender-radio .custom-radio-text span {
+		width: 12px;
+		height: 22px;
+	}
+	.custom-radio-container.gender-radio {
+		width: 48%;
+	}
+	.number-spinner input {
+		max-width: 63px;
+		margin-left: 7px;
+	}
+	.funding-tree-container .button-bordered {
+		width: 55px;
+	}
+	.offer-compare ul.d-f.a-i-f-e .button-large {
+		padding: 20px 10px;
+		font-size: 12px;
+	}
+	.compare-offer-top .form-group input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]) {
+		padding: 10px;
+		width: 100%;
+		height: 52px;
+		font-size: 12px;
+		max-width: 150px;
+	}
+	.compare-offer-top .form-group label {
+		margin-left: 0;
+		font-size: 12px;
+	}
+	.compare-offer-top ul li+li {
+		margin-left: 15px;
+	}
+	.compare-offer-top  .upload h4 {
+		margin-left: 0;
+		font-size: 12px;
+	}
+	.compare-offer-top .form-group input::placeholder {
+		font-size: 12px;
+	}
+	.questions-tab {
+		width: -webkit-calc(76% - 30px);
+		width: calc(76% - 30px);
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 -webkit-calc(76% - 30px);
+		-ms-flex: 0 0 calc(76% - 30px);
+		flex: 0 0 calc(76% - 30px);
+		max-width: -webkit-calc(76% - 30px);
+		max-width: calc(76% - 30px);
+		margin-right: 30px;
+	}
+	.tab-inner-heading span {
+		font-size: 12px;
+	}
+	.question-container.question-8-11 h2 {
+		font-size: 15px;
+	}
+	.main-content.registration-admin .all-questions-wrap > .question-container {
+		width: 100%;
+	}
+	.best-bank-form .form-group label {
+		font-size: 13px;
+	}
+	.left-table thead tr td h2 {
+		font-size: 16px;
+	}
+	.main-content.registration-admin div#property-evaluation h2 {
+		font-size: 14px;
+		min-width: auto;
+	}
+	.r-t-r-input-container span {
+		font-size: 11px;
+	}
+	form.A_loan_qa .form-group h1 {
+		font-size: 12px;
+	}
+	.elegebility-question ul {
+		font-size: 14px;
+	}
+	#current-loans form.A_table-input {
+		margin-top: 0;
+	}
+	.req-mortgage-text p {
+		font-size: 13px;
+	}
+	.offer-tabs.A_current_loan.current-loans.future-loans form.A_table-input .form-group {
+		margin-bottom: 72px;
+	}
+	.td-input input {
+		max-width: 126px;
+		margin-left: 10px;
+	} 
+	.question-16-header h2 {
+		margin-right: 10px!important;
+	}
+	.question-16-header>*+* {
+		margin-left: 8px;
+	}
+	.question-12-16 .tab-pane {
+		min-height: 422px;
+	}
+	.questions-tab .questions li {
+		font-size: 12px;
+	}
+	.questions-tab .questions li+li {
+		margin-left: 25px;
+	}
+    ul.upper-right-a li {
+        font-size: 14px;
+    }
+    .offer-tabs.A_future_loan div#customer-offers p {
+        font-size: 12px;
+    }
+    .redio-design .form-group {
+        width: 83px;
+        font-size: 9px;
+    }
+    .redio-design .form-group label {
+        padding: 9px 0;
+    }
+    .table-c th, .table-c td {
+        min-width: auto;
+        font-size: 10px;
+        padding-left: 6px;
+    }
+.bank-interest-admin table th, .bank-interest-admin table td {
+    min-width: auto;
+    font-size: 9px;
+    padding-left: 6px;
+    padding: 6px;
+}
+
+
+  .prime-by-years-heading-p h3 {
+        font-size: 14px;
+    }
+  .table-content-heading-p h2 {
+        font-size: 13px;
+    }
+    .table-content-heading-p h2 span {
+        font-size: 11px;
+    }
+    .table-content-heading-p>ul>li {
+        width: 47%;
+    }
+    .show-only-tbale-outer-p {
+        margin-left: 7px;
+    }
+    .table-content-heading-p ul li p {
+        font-size: 10px;
+    }
+    .maded-table-month-p .to-create-link-p {
+        padding: 0 13px;
+    }
+    .to-create-link-p {
+        padding: 0 10px;
+    }
+    .table>tbody>tr>td, 
+    .table>tbody>tr>th, 
+    .table>tfoot>tr>td, 
+    .table>tfoot>tr>th, 
+    .table>thead>tr>td, 
+    .table>thead>tr>th {
+        padding: 6px;
+    }
+    .prime-by-years-heading-p h2 {
+        font-size: 13px;
+    }
+    .prime-month-p ul li .bootstrap-select .dropdown-toggle.selectpicker, .maded-table-month-p ul li .bootstrap-select .dropdown-toggle.selectpicker {
+        padding: 5px 6px;
+        text-align: center;
+    }
+    .prime-table-form-p .bootstrap-select .dropdown-toggle.selectpicker {
+        padding: 5px 10px;
+    }
+    .prime-by-years-heading-p p {
+        font-size: 12px;
+    }
+	form#top-2 .form-group {
+		width: 100px;
+		font-size: 11px;
+	}
+    .bank-interest-admin form#top-2 .form-group {
+        width: 110px;
+        font-size: 11px;
+    }
+     .step-3-design .funding-tree .col-2 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]) {
+        width: 90px;
+    }
+    .col-2.a1 p {
+        width: calc(100% - 20px);
+        font-size: 13px;
+    }
+    .step-3-design .funding-tree .col-2 button {
+        width: 210px;
+        padding: 0;
+    }
+    li .button-large {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+    .a-rightside .form-group h2 {
+        font-size: 14px;
+    }
+    #bottom-tab2 .funding-tree-container .best-fit-years {
+        margin-left: 20px!important;
+    }
+    .a-month-return .col-2 {
+        width: 100%;
+    }
+    .a-month-return .col-2:last-child {
+        padding: 10px 0;
+    }
+    .nav-tabs>li>a {
+        font-size: 10px;
+    }
+    .a-rightside .offer-tabs li:last-child a {
+        font-size: 9px;
+        padding: 5px 4px;
+    }
+    .Req_morg .col-2 span {
+        top: 0;
+        font-size: 13px;
+    }
+    .offer-tabs.A_return_algo .A_table-full .form-group p {
+        font-size: 12px;
+        top: 0 ;
+    }
+    .A_table-div p {
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+    .report1-admin .col-2.a1 {
+        width: 26%;
+    }
+    .report1-admin .col-2.a2 {
+        width: 45%;
+    }
+    .report1-admin .col-2.a3 {
+        font-size: 14px;
+    }
+    .report1-admin .funding-tree .col-2 button {
+        padding: 18px 15px;
+    }
+    .report1-admin .normal-full .funding-tree {
+        margin-bottom: 0;
+    }
+
+    .report1-admin .funding-tree.tree_right .col-2.a1 {
+        width: 52%;
+    }
+    .funding-tree.tree_right .col-2.a2 {
+        width: 43%;
+        margin-left: 2%;
+    }
+    .funding-tree.tree_right .col-2.a4 {
+        bottom: -100px;
+    }
+    .report1-admin .a-month-return .col-2 span {
+        font-size: 14px;
+    }
+    .report1-admin .req-mortgage {
+        min-height: 200px;
+    }
+    .report1-admin .A_table-div p {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .offer-tabs.A_return_algo.no-height div#customer-offers {
+        min-height: 300px;
+    }
+    .A_table-div .A_return_algo .tab-pane {
+        padding-bottom: 17px;
+    }
+    .funding-tree-container .button-large {
+        padding: 24px 15px;
+    }
+.report-online2 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]) {
+    max-width: 160px;
+    margin-right: 10px;
+}
+    .report-online2 .sdffdf button.btn.dropdown-toggle.selectpicker.btn-default {
+        margin-left: -35px;
+        min-width: 192px;
+    }
+   .report-online2 .sdffdf p.a-t-m {
+        font-size: 13px;
+    }
+    .report-online2 ul.dsa {
+        font-size: 12px;
+    }
+    .report-online2 .report-tree .col-2.a4 {
+        width: 68%;
+    }
+    .grace-cl .row .col-md-6:first-child .a-month-return .col-2:first-child {
+        margin-bottom: 27px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .left-table tr th,
+    .left-table tr td {
+        font-size: 11px;
+    }
+    form.A_loan_qa {
+        width: 100%;
+        float: right;
+    }
+    form.A_table-input {
+        width: 100%;
+        float: left;
+    }
+	#future-loans form.A_table-input {
+		width: 100%;
+	}
+	form.A_table-input .form-group {
+		margin-bottom: 76px;
+	}
+    p.A-title_center {
+        width: 100%;
+        font-size: 14px;
+        margin-top: -15px;
+    }
+    .A_future_loan a.A_title_table {
+        margin-bottom: 27px;
+    }
+    .a-rightside .a-main .tab-pane {
+        min-height: 695px;
+    }
+}

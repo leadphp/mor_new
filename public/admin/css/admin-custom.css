@@ -1,0 +1,25 @@
+img.profile_banner_preiew.img-thumbnail {
+    width: 200px;
+}
+.img-thumbnail{
+	background-color: #d5d5d5!important;
+}
+img {
+    background-color: #d5d5d5;
+    padding: 3px;
+}
+img.testi_img {
+    border-radius: 50px;
+}
+.col-sm-2 {
+    max-width: 100%!important;
+}
+.card-primary:not(.card-outline) .card-header {
+    padding-bottom: 0px;
+}
+.error-msg {
+    color: red;
+}
+.pagination li {
+    margin: 10px;
+}
