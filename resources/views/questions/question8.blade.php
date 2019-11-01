@@ -1,7 +1,7 @@
 @php
 $auth = \Auth::user();
 if(!empty($auth)){
-    $ques = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
+    $ques = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','8')->get();
     if(count($ques)){
     $ques8 = $ques;
 	}
@@ -16,7 +16,7 @@ if(!empty($auth)){
 			</div>
 			<div class="message d-i-f f-d-c">
 				<span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-				<p>ספר לי בבקשה לשם מה אתה מבקש את המשכנתא?</p>
+				<p class="male_female_eight">ספרי לי בבקשה לשם מה אתה מבקש את המשכנתא?</p>
 				<span class="message-timing">18:26</span>
 			</div>
 			<div class="chat-buttons ques9">
@@ -69,6 +69,16 @@ if(!empty($auth)){
 	// /window.location.hash = '#formQuestionEight';
 
 	$(document).ready(function(){
-		//$('body').addClass('bubble_first_filled');
+
+		$("body").on('change','input[name=why_mortgage]',function(){
+		    var val = $('input[name=why_mortgage]:checked').val();
+		   // alert(val);
+		    if(val == "mistaken_program"){
+
+		    	$('body').find('#input93').click();
+
+		    }
+		});
+
 	});
 </script>	

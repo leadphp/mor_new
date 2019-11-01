@@ -456,7 +456,7 @@ section::after,
 
 .navbar-nav>li>a {
     color: #a3b3e1;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0;
     font-weight: 300;
     text-transform: capitalize;
@@ -486,7 +486,7 @@ header {
 }
 
 .date-n-time-container {
-    font-size: 15px;
+    font-size: 13px;
     color: #fff;
     font-weight: 600;
     padding: 0 15px;
@@ -586,7 +586,7 @@ header {
 .user-name .dropdown-toggle {
     font-weight: 600;
     color: #fff;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .dropdown-menu>li>a {
@@ -627,13 +627,12 @@ header {
 
 .user-details {
     color: #fff;
-    max-width: 130px;
-    line-height: 20px;
+    max-width: 150px;
+    line-height: 18px;
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 12px;
     word-break: break-all;
 }
-
 .h-b-nav .navbar-nav>li+li {
     margin-left: 15px;
 }
@@ -723,11 +722,11 @@ header {
 }
 
 .offer-text {
-    font-size: 13px;
+    font-size: 12px;
     color: #fff;
     margin-right: 10px;
     max-width: 60px;
-    line-height: 20px;
+    line-height: 17px;
     text-transform: capitalize;
 }
 
@@ -1047,11 +1046,11 @@ h2 {
     margin-top: 20px;
 }
 
-input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]) {
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]), select {
     border: 1px solid #ddd;
     -webkit-border-radius: 100px;
     border-radius: 100px;
-    padding: 15px;
+    padding: 10px;
     width: 100%;
     height: 52px;
     -webkit-box-shadow: 0 2px 3px #cbe2ff!important;
@@ -2003,12 +2002,12 @@ a.A_title_table {
     background-color: #f3f3f3;
 }
 
-form.A_loan_qa {
-    width: 70%;
+.A_loan_qa {
+    width: 100%;
     float: right;
 }
 
-form.A_loan_qa .form-group {
+.A_loan_qa .form-group {
     width: 46%;
     float: left;
     border: 1px solid #98d7ac;
@@ -2016,14 +2015,14 @@ form.A_loan_qa .form-group {
     position: relative;
 }
 
-form.A_loan_qa .form-group:last-child {
+.A_loan_qa .form-group:last-child {
     width: 50%;
     float: left;
     border: 1px solid #eaadb1;
     margin-top: 0;
 }
 
-form.A_loan_qa .form-group h1 {
+.A_loan_qa .form-group h1 {
     color: #333;
     background: #c9f4d7;
     font-size: 14px;
@@ -2031,7 +2030,7 @@ form.A_loan_qa .form-group h1 {
     border-bottom: 1px solid #98d7ac;
 }
 
-form.A_loan_qa .form-group:last-child h1 {
+.A_loan_qa .form-group:last-child h1 {
     color: #333;
     background: #ffd8db;
     font-size: 14px;
@@ -2039,7 +2038,7 @@ form.A_loan_qa .form-group:last-child h1 {
     border-bottom: 1px solid #eaadb1;
 }
 
-form.A_loan_qa .form-group label {
+.A_loan_qa .form-group label {
     color: #333;
     font-size: 14px;
     padding: 17px 10px;
@@ -2047,22 +2046,21 @@ form.A_loan_qa .form-group label {
     width: 100%;
 }
 
-form.A_loan_qa .form-group:last-child label {
+.A_loan_qa .form-group:last-child label {
     color: #333;
     font-size: 14px;
-    padding: 17px 10px;
 }
 
-form.A_loan_qa .form-group input {
+.A_loan_qa .form-group input {
     position: absolute;
     opacity: 0;
 }
 
-form.A_loan_qa .form-group input:checked+label {
+.A_loan_qa .form-group input:checked+label {
     background: #c9f4d7;
 }
 
-form.A_loan_qa .form-group:last-child input:checked+label {
+.A_loan_qa .form-group:last-child input:checked+label {
     background: #ffd8db;
 }
 
@@ -2070,32 +2068,32 @@ form.A_loan_qa .form-group:last-child input:checked+label {
     padding: 0px 12px 0px 12px;
 }
 
-form.A_table-input {
+.A_table-input {
     width: 40%;
     float: left;
 }
 
-form.A_table-input .form-group {
+.A_table-input .form-group {
     padding-left: 30px;
     position: relative;
     margin-bottom: 70px;
     margin-top: 20px;
 }
 
-form.A_table-input .form-group:last-child {
+.A_table-input .form-group:last-child {
     padding-left: 30px;
     position: relative;
     margin-bottom: 0;
     margin-top: 20px;
 }
 
-form.A_table-input .form-group i {
+.A_table-input .form-group i {
     position: absolute;
     left: -10px;
     top: 42px;
 }
 
-form.A_table-input .form-group input[type="text"] {
+.A_table-input .form-group input[type="text"] {
     margin: 5px 0;
 }
 
@@ -2103,12 +2101,12 @@ form.A_table-input .form-group input[type="text"] {
     min-height: 690px;
 }
 
-.A_future_loan form.A_table-input .form-group {
+.A_future_loan .A_table-input .form-group {
     margin-bottom: 80px;
     margin-top: 45px;
 }
 
-.A_future_loan form.A_table-input .form-group:last-child {
+.A_future_loan .A_table-input .form-group:last-child {
     margin-bottom: 0;
 }
 
@@ -2409,15 +2407,15 @@ p.A_final_Mr .arrow {
     padding-top: 2px;
 }
 
-.A_future_loan form.A_table-input {
+.A_future_loan .A_table-input {
     width: 100%;
 }
 
-.A_future_loan form.A_table-input input[type="text"] {
+.A_future_loan .A_table-input input[type="text"] {
     max-width: 290px;
 }
 
-.A_future_loan form.A_table-input p {
+.A_future_loan .A_table-input p {
     padding-left: 30px;
 }
 
@@ -3435,8 +3433,8 @@ td.sum-border {
 
 .question-container.question-8-11 h2 {
     margin: 15px 0;
+    font-size: 18PX;
 }
-
 .question-container.question-8-11 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 100%;
@@ -3562,11 +3560,13 @@ td.sum-border {
 
 .tab-inner-heading span {
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
     text-transform: uppercase;
 }
-
+.main-content.registration-admin.aMorTable h2 {
+    line-height: 30px;
+}
 .question-12-16 {
     width: 100%;
     -webkit-box-flex: 0;
@@ -3637,7 +3637,7 @@ td.sum-border {
     line-height: 22px;
 }
 
-#investments form.A_loan_qa {
+#investments .A_loan_qa {
     width: 100%;
 }
 
@@ -3645,13 +3645,6 @@ td.sum-border {
     margin: 0;
 }
 
-.current-loans form.A_loan_qa .form-group h1 {
-    border-left: 1px solid #98d7ac;
-}
-
-.current-loans form.A_loan_qa .form-group:last-child h1 {
-    border-left: 1px solid #eaadb1;
-}
 
 .current-loans,
 .investments {
@@ -3661,12 +3654,14 @@ td.sum-border {
 #future-loans .A-title_center {
     margin-top: 20px;
 }
-
-.future-loans form.A_loan_qa .form-group h1 {
+.A_loan_qa .form-group:last-child input.admin-btn-red:checked + label h1 {
+    background: #ffd8db;
+}
+.future-loans .A_loan_qa .form-group h1 {
     border-left: 0;
 }
 
-.future-loans form.A_loan_qa .form-group:last-child h1 {
+.future-loans .A_loan_qa .form-group:last-child h1 {
     border-left: 0;
 }
 
@@ -4280,13 +4275,12 @@ form#top-2 .form-group {
 }
 
 .a-month-return .col-2 {
-    font-size: 15px;
+    font-size: 11px;
     color: #c5c5c5;
     line-height: 27px;
     width: 50%;
     float: left;
 }
-
 .a-month-return .col-2 span {
     color: #000;
     margin-top: 7px;
@@ -4397,7 +4391,7 @@ form#top-1 {
 
 .online-clerk-wrap thead td {
     text-align: center;
-    border: none;
+    border: none;   
 }
 
 .online-clerk-wrap thead td span {
@@ -4407,7 +4401,7 @@ form#top-1 {
 .left-table tr th,
 .left-table tr td {
     text-align: left;
-    padding: 0 10px;
+    padding: 0 9px;
     height: 60px;
 }
 
@@ -4423,67 +4417,123 @@ a.A_title_table {
     background-color: #f3f3f3;
 }
 
-form.A_loan_qa {
+.A_loan_qa {
     max-width: 450px;
     float: right;
 }
-
-form.A_loan_qa .form-group {
+#investments .A_loan_qa {
+    max-width: 100%;
+}
+#future-loans #formQuestionSeventeenDIV .A_loan_qa {
+    max-width: 450px;
+}
+#future-loans .A_loan_qa {
+    max-width: 100%;
+    float: right;
+}
+.A_loan_qa .form-group {
     width: 46%;
     float: left;
-    border: 1px solid #98d7ac;
+    border: 1px solid #aaa;
     margin-left: 2%;
     position: relative;
     max-width: 200px;
 }
+.A_loan_qa .form-group input:checked + label h1 {
+    background: #c9f4d7;
+}
 
-form.A_loan_qa .form-group:last-child {
+.A_loan_qa .form-group:last-child {
     width: 50%;
     float: left;
-    border: 1px solid #eaadb1;
+    border: 1px solid #aaa;
     margin-top: 0;
 }
 
-form.A_loan_qa .form-group h1 {
+.A_loan_qa .form-group h1 {
     color: #333;
-    background: #c9f4d7;
+    background: #eee;
     font-size: 14px;
     padding: 17px 10px;
-    border-bottom: 1px solid #98d7ac;
+    border-bottom: 1px solid #aaa;
 }
 
-form.A_loan_qa .form-group:last-child h1 {
+.A_loan_qa .form-group:last-child h1 {
     color: #333;
-    background: #ffd8db;
+    background: #eee;
     font-size: 14px;
     padding: 17px 10px;
-    border-bottom: 1px solid #eaadb1;
+    border-bottom: 1px solid #aaaaaa;
 }
 
-form.A_loan_qa .form-group label {
+.A_loan_qa .form-group label {
     color: #333;
     font-size: 14px;
-    padding: 17px 10px;
+    padding: 0;
     margin: 0;
     width: 100%;
+    background: #eee;
+}
+.A_loan_qa .form-group span {
+    padding: 16px;
 }
 
-form.A_loan_qa .form-group:last-child label {
+.A_loan_qa .form-group:last-child label {
     color: #333;
     font-size: 14px;
-    padding: 17px 10px;
+    border-left: 1px solid #aaa;
 }
-
-form.A_loan_qa .form-group input {
+.selectBoxes input {
     position: absolute;
     opacity: 0;
 }
+.selectBoxes  {
+    margin:0;
+}
+.selectBoxes label a{
+    background-color:#ddd; 
+    color: #000;
+}
+.selectBoxes input:checked + label a.button-red{
+      background-color: #e11b2b;
 
-form.A_loan_qa .form-group input:checked+label {
+}
+.selectBoxes input:checked + label .button-green{
+          background-color: #00a133;
+}
+.A_loan_qa .form-group input {
+    position: absolute;
+    opacity: 0;
+}
+.offer-tabs.investments .A_loan_qa .form-group label {
+    border: 1px solid #aaa;
+}
+.offer-tabs.investments .A_loan_qa .form-group {
+    border: none;
+}
+.form-submittion >input[type="submit"] {
+    border: none;
+    background: #4CAF50;
+    border: none;
+    width: fit-content;
+    margin: 0 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 23px;
+    margin-top: 5px;
+    float: right;
+    width: 90px;
+}
+#investments input.thirteenForm {
+    position: relative;
+    top: 20px;
+}
+
+.A_loan_qa .form-group input:checked+label {
     background: #c9f4d7;
 }
 
-form.A_loan_qa .form-group:last-child input:checked+label {
+.A_loan_qa .form-group:last-child input:checked+label {
     background: #ffd8db;
 }
 
@@ -4491,32 +4541,32 @@ form.A_loan_qa .form-group:last-child input:checked+label {
     padding: 0px 12px 0px 12px;
 }
 
-form.A_table-input {
+.A_table-input {
     width: 42%;
     float: left;
 }
 
-form.A_table-input .form-group {
+.A_table-input .form-group {
     padding-left: 30px;
     position: relative;
     margin-bottom: 75px;
     margin-top: 5px;
 }
 
-form.A_table-input .form-group:last-child {
+.A_table-input .form-group:last-child {
     padding-left: 30px;
     position: relative;
     margin-bottom: 0;
     margin-top: 20px;
 }
 
-form.A_table-input .form-group i {
+.A_table-input .form-group i {
     position: absolute;
     left: -10px;
     top: 42px;
 }
 
-form.A_table-input .form-group input[type="text"] {
+.A_table-input .form-group input[type="text"] {
     margin: 5px 0;
 }
 
@@ -4524,12 +4574,12 @@ form.A_table-input .form-group input[type="text"] {
     min-height: 710px;
 }
 
-.A_future_loan form.A_table-input .form-group {
+.A_future_loan .A_table-input .form-group {
     margin-bottom: 80px;
     margin-top: 45px;
 }
 
-.A_future_loan form.A_table-input .form-group:last-child {
+.A_future_loan .A_table-input .form-group:last-child {
     margin-bottom: 0;
 }
 
@@ -4664,12 +4714,11 @@ form.A_table-full input {
 }
 
 .col-2.a2 {
-    width: 30%;
+    width: 36%;
     float: left;
 }
-
 .col-2.a3 {
-    width: 26%;
+    width: 20%;
     float: left;
     margin-left: 1%;
 }
@@ -4687,12 +4736,12 @@ form.A_table-full input {
 }
 
 .col-2.a2 input[type="text"] {
-    max-width: 104px;
+    max-width: 143px;
     float: left;
 }
 
 .col-2.a2 span {
-    width: calc(100% - 208px);
+    width: calc(100% - 288px);
     float: left;
     text-align: center;
     display: flex;
@@ -4718,14 +4767,13 @@ form.A_table-full input {
 }
 
 .col-2.a4 {
-    width: 45%;
+    width: 39%;
     float: right;
     margin-top: 20px;
     position: absolute;
-    bottom: -50px;
+    bottom: -30px;
     right: 15px;
 }
-
 .col-2.a4 h3 {
     width: auto;
     float: left;
@@ -4842,15 +4890,15 @@ p.A_final_Mr .arrow {
     padding-top: 2px;
 }
 
-.A_future_loan form.A_table-input {
+.A_future_loan .A_table-input {
     width: 100%;
 }
 
-.A_future_loan form.A_table-input input[type="text"] {
+.A_future_loan .A_table-input input[type="text"] {
     max-width: 290px;
 }
 
-.A_future_loan form.A_table-input p {
+.A_future_loan .A_table-input p {
     padding-left: 30px;
 }
 
@@ -4861,8 +4909,8 @@ p.A_final_Mr .arrow {
 
 .selection label {
     margin-left: 6px;
+    font-size: 14px;
 }
-
 .offer-tabs.A_return_algo.no-height div#customer-offers {
     min-height: 130px;
     padding-bottom: 20px;
@@ -4884,14 +4932,16 @@ p.A_final_Mr .arrow {
 }
 
 .a-month-return .col-2 span {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .Req_morg .col-2 span {
     position: relative;
     top: 13px;
 }
-
+.Req_morg .col-2 span {
+    top: 0;
+}
 .first-tab .tab-pane {
     padding: 25px 15px;
 }
@@ -5018,7 +5068,9 @@ a.arrow.a-red {
 }
 
 .report-online2 .funding-tree.tree_right {
-    margin-top: 0;
+    margin-top: 85px;
+    position: relative;
+    top: 49px;
 }
 
 .report-online2 .funding-tree .col-2 {
@@ -5417,7 +5469,7 @@ ul.sadasd li {
 }
 
 .funding-tree.tree_right .col-2.a4.last .form-group .selection {
-    width: 30%;
+    width: 33%;
     float: left;
     position: relative;
     top: 0;
@@ -5994,9 +6046,8 @@ ul.upper-right-a {
     width: 16%;
 }
 
-.prime-month-p,
-.maded-table-years-p {
-    width: 10%;
+.prime-month-p, .maded-table-years-p {
+    width: 12%;
 }
 
 .maded-table-month-p {
@@ -6256,6 +6307,7 @@ li.last-a-l h4 {
 .b-o-bottom-right-left {
     border: 2px solid orange;
     border-top: 0;
+    border-bottom: 0;
 }
 
 .b-o {
@@ -6444,11 +6496,11 @@ span.i-f-h {
     top: 30px;
 }
 
-#future-loans form.A_table-input {
+#future-loans .A_table-input {
     width: 65%;
 }
 
-#current-loans form.A_table-input {
+#current-loans .A_table-input {
     margin-top: 95px;
 }
 
@@ -6590,7 +6642,7 @@ span.i-f-h {
 }
 
 .question-12-16 .tab-pane {
-    min-height: 350px;
+    min-height: 370px;
 }
 
 #future-loans {
@@ -6801,10 +6853,11 @@ background: transparent;
     color: red;
 }
 
-.d-flix{
+.d-flix {
     display: flex;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #ddd;
 }
-
 .edit-btn {
     background: transparent;
     border: navajowhite;
@@ -6882,10 +6935,10 @@ border: 1px solid #ddd;
 	position: absolute;
 	z-index:-1;
 }
-.tBoxDesign label{
-        background-color: #ffd8db;
-    border: 1px solid #eaadb1;
-	cursor: pointer;
+.tBoxDesign label {
+    background-color: #eee;
+    border: 1px solid #dedddd;
+    cursor: pointer;
 }
 
 .tBoxDesign input:checked + label{
@@ -6912,4 +6965,412 @@ section.prime-table-p .upload-excel-btn label.a-time-selection {
     border-radius: 45px;
     text-align: center;
     margin-left: 0;
+}
+
+
+.offer-status-container .user-img-grey {
+    width: 20px;
+    height: 20px;
+    background-color: #a0aba4;
+    border-color: #a0aba4;
+    border-radius: 50%;
+}
+.offer-status-container .user-img-orange {
+    width: 20px;
+    height: 20px;
+    background-color: #e69753;
+    border-color: #e69753;
+    border-radius: 50%;
+}
+
+
+
+td.remove_capital_letter {
+    text-transform: lowercase;
+}
+td.monthlyValue {
+    position: relative;
+    min-width: 170px;
+}
+td.monthlyValue button.ok_btn.main-button1.main-button {
+    position: unset;
+    margin-bottom: 0;
+    padding: 7px 17px;
+}
+.aMorTable table td.monthlyValue input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]) {
+    width: 90px;
+}
+form#formQuestionEight {
+    width: 100%;
+}
+.online-clerk-wrap .indicator-container .indicator {
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    float: left;
+    margin-right: 4px;
+}
+.coupon-code-table i.fa.fa-times {
+    color: red;
+}
+input[readonly="readonly"] {
+    background: #eee !important;
+    color: #000 !important;
+}
+
+
+
+
+
+
+
+/*05-sep-2019*/
+
+
+
+.bank-name-six {
+    width: 25%;
+    float: left;
+}
+
+
+.bank-name-six:last-child {
+    width: 100%;
+    float: left;
+}
+
+.bank-name-six input {
+    position: absolute;
+    opacity: 0;
+}
+.bank-name-six label {
+    margin: 0;
+    width:100%;
+    text-align: center;
+    padding-left: 10px 0;
+    border: 1px solid #aaa;
+    margin: 2px 0;
+}
+
+.bank-name-six input:checked + label {
+    background: #00a133;
+    color: #fff;
+    border: 1px solid #00a134;
+}
+
+input.admin-btn-red:checked + label {
+    background: #ffd8db;
+    border-color: #eaadb1;
+}
+.clerk-t th {
+    display: table-cell;
+}
+.clerk-t table tr td {
+    line-height: 21px;
+        border-right: none;s
+}
+form#formQuestionEighteen input {
+    background: #4CAF50;
+    border: none;
+    width: fit-content;
+    margin: 0 15px 0 0px;
+    color: #fff;
+    padding: 11px 30px 9px 30px;
+    border-radius: 23px;
+    margin-top: 5px;
+    float: right;
+    width: 100px;
+}
+form#formQuestionsixteen {
+    position: unset;
+}
+#formQuestionsixteen .form-submittion {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+
+
+.selectBoxes label .bnb-jatt-green-kr {
+    background-color: green;
+    color: #fff;
+}
+
+.selectBoxes label .bnb-jatt-red-kr {
+    background-color: red;
+    color: #fff;
+}
+.item-1-1 {
+    white-space: nowrap;
+    margin-top: 10px;
+}
+.owner-monthly-container.question-3 {
+    margin-top: 81px;
+}
+.owner-monthly-container li+li {
+    margin-top: 20px;
+}
+.owner-monthly-container.question-3 li:last-child i+i {
+    top: 39px;
+}
+
+
+
+.registration-admin select.form-control.graces.read_only_ten {
+    border: 1px solid #ddd;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    padding: 15px;
+    width: 100%;
+    height: 52px;
+    -webkit-box-shadow: 0 2px 3px #cbe2ff!important;
+    box-shadow: 0 2px 3px #cbe2ff!important;
+}
+.question-1-7 .form-submittion >input[type="submit"] {
+    position: absolute;
+    bottom: 21px;
+    right: 50px;
+}
+.report-1-c .A_table-input {
+    width: 100%;
+}
+
+.report-1-c .funding-tree.tree_right .col-2.a4 {
+    bottom: -110px;
+}
+.report-1-c .funding-tree.tree_right .col-2.a4.last .form-group {
+    height: 90px;
+}
+.report-1-c  .A_table-input .form-group:last-child {
+    margin-top: 0;
+}
+.report-1-c .A_table-div p {
+    margin-bottom: 5px;
+}
+.report-1-c .A_table-input .form-group:last-child {
+    padding-left: 0;
+}
+.report-1-c .A_table-input .form-group {
+    padding-left: 0;
+}
+
+
+.i-grey {
+    background: #aaa;
+}
+
+
+
+.aMorTable table .one_color, .aMorTable table .one_color button {
+    border: none;
+    padding: 0;
+    height: auto;
+    -webkit-box-shadow: none !important;
+    background: transparent;
+    width: 91px;
+    outline: none;
+}
+.aMorTable table .one_color option{
+    color: #000;
+}
+.one_color .dropdown-toggle.selectpicker {
+    border: none !important;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent !important;
+    box-shadow: none;
+    color: #fff!important;
+    line-height: 13px;
+}
+
+
+
+
+
+#customer-offers .a-month-return .col-2 span {
+    font-size: 13px;
+}
+#customer-offers .a-month-return .col-2 {
+    width: 100%;
+    float: left;
+}
+#customer-offers .a-month-return .col-2:last-child {
+    padding: 0;
+}
+.report-1-c .A_table-div p {
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+.offer-tabs.A_return_algo .nav-tabs>li>a {
+    font-size: 14px;
+}
+
+
+.hide_for_now {
+    position: relative;
+}
+.hide_for_now:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #aaaaaa05;
+    content: "";
+}
+.ques12-class td {
+    padding: 10px 5px;
+    font-size: 12px;
+}
+
+
+
+
+}
+.owner-monthly-container.question-3 li i {
+    left: -50px;
+}
+.owner-monthly-container.question-3 li:first-child i {
+    bottom: -7px;
+}
+.owner-monthly-container.question-3 {
+    margin-top: 74px;
+}
+.owner-monthly-container.question-3 li:last-child i+i {
+    top: 5px;
+}
+.owner-monthly-container.question-3 li:last-child i {
+    top: -42px;
+}
+.owner-monthly-container.question-3 li i {
+    left: -35px;
+}
+.owner-monthly-container .hide_for_now {
+    width: 100%;
+    padding: 0 20px;
+}
+.make_it_disabled{
+    position: relative;
+}
+.make_it_disabled:befere{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    left: 0;
+   top: 0;
+}
+
+input#eligibility-score {
+    background: #4caf50d9;
+    color: #fff;
+
+}
+
+
+.make_it_red_12_3{
+    color: red !important;
+    border-color: red !important;
+}
+.report-1-c{}
+
+.report-1-c .d-flix input {
+    height: 50px!important;
+}
+.report-1-c .A_table-input .form-group i {
+    left: -20px;
+}
+.report-1-c .A_future_loan .A_table-input .form-group {
+    margin-bottom: 40px;
+}
+.report-1-c .starting-row input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]) {
+    height: 52px;
+}
+.report-1-c .left-table tr th,  .report-1-c .left-table tr td {
+    padding: 0 5px;
+}
+.report-1-c .col-2.a4 {
+    z-index: 999;
+}
+.report-1-c .online-clerk-wrap.left-table table {
+    margin-bottom: 20px;
+}
+.report-1-c .a-month-return .col-2 {
+    font-size: 14px;
+}
+.report-1-c  form input.form-control:not([type="checkbox"]):not([type="radio"]){
+  font-size: 14px;
+}
+
+
+input#bank-customer-discount {
+    text-align: center;
+}
+.aMorTable form input.form-control:not([type="checkbox"]):not([type="radio"]), 
+.aMorTable textarea.form-control {
+    color: #000;
+}
+.report-1-c .indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.best_bank_found select,
+.best_bank_found_td {
+    background: green;
+    color: #fff;
+}
+#formQuestionThirteen .form-submittion {
+    width: 100%;
+}
+#formQuestionThirteen .form-submittion {
+     margin: 0;
+}
+input._dd.loanfee_dd.red,
+input.ee_.loanfee_ee.red {
+    color: #666;
+}
+
+.report-1-c .report-form  .indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+.report-form {
+    position: relative;
+}
+
+
+.report-online2 .funding-tree .col-2 button {
+    max-height: 55px;
+}
+.report-online2 .col-2.a3 span {
+    margin-bottom: 7px;
+}
+.report-online2 .funding-tree.tree_right .col-2.a4.last .form-group {
+    width: 100%;
+}
+.report-online2 .funding-tree.tree_right .col-2.a4 {
+    position: unset;
+}
+.report-online2 .col-2.a4.last p {
+    width: 100%;
+}
+.report-online2 .funding-tree .col-2 h3 {
+    margin: 13px 20px 0 0;
+}
+.report-online2  .funding-tree.tree_right .col-2.a4.last .form-group .selection {
+    width: auto;
+    margin-right: 15px;
+}
+.report-online2  .funding-tree.tree_right .col-2.a4 h3 {
+    min-width: 190px;
+}
+.report-online2  .col-2.a3 {
+    flex-direction: column;
+}
+.report-online2 .col-2.a4 {
+    width: 49%;
 }

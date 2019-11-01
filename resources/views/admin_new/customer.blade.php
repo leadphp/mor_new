@@ -28,62 +28,80 @@
     </div>
 
     <!-- search-bar ends here -->
-
+    @foreach ($user_data as $user)
+<input type="hidden" name="demo" id="demo" value="{{date('d/m/Y', strtotime($user->created_at))}}">
+   @endforeach
     <!-- main content starts here -->
 
     <div class="main-content">
         <div class="container-fluid">
             <div class="online-clerk-wrap">
-                <div class="table-container online-customers-table">
+                <div class="table-container online-customers-table" id="customer-table-append">
                     <table id="customerTable" style="text-align: center;">
                         <thead>
                             <tr>
-                                <th>View Customer</th>
-                                <th>Registration</th>
-                                <th>Payed</th>
-                                <th>My Offers</th>
-                                <th>Bank Info</th>
-                                <th>Compare Offer</th>
-                                <th>Upload Offer</th>
                                 <th>Customer # <i class="fa fa-sort" aria-hidden="true"></i></th>
+                                <th style="display: none;">Register Time <i class="fa fa-sort" aria-hidden="true"></i></th>
                                 <th>Register Time <i class="fa fa-sort" aria-hidden="true"></i></th>
                                 <th>First Name <i class="fa fa-sort" aria-hidden="true"></i></th>
                                 <th>Last name <i class="fa fa-sort" aria-hidden="true"></i></th>
                                 <th>Mail <i class="fa fa-sort" aria-hidden="true"></i></th>
                                 <th>Phone <i class="fa fa-sort" aria-hidden="true"></i></th>
+                                <th style="display: none;">Payment time <i class="fa fa-sort" aria-hidden="true"></i></th>
                                 <th>Payment time <i class="fa fa-sort" aria-hidden="true"></i></th>
                                 <th>Price (NIS) <i class="fa fa-sort" aria-hidden="true"></i></th>
                                 <th>Download invoice <i class="fa fa-sort" aria-hidden="true"></i></th>
-                                <th>Bank name <i class="fa fa-sort" aria-hidden="true"></i></th>
+                                <th>Registration</th>
+                                <th>Payed</th>
+                                <th>My Offers</th>
+                                <th>Bank Info</th>
+                                <th>Compare Offer</th>
+                               
                                 <th>Download Offer <i class="fa fa-sort" aria-hidden="true"></i></th>
+                                <th>Bank name <i class="fa fa-sort" aria-hidden="true"></i></th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
-                        <tbody>
-                           
+                        <tbody class="data-app">
+                            @php 
+                                $counter = 0;
+                            @endphp
                             @foreach ($user_data as $user)
+                          
+                                @php $classs = $class[$counter]; @endphp
 
-                         
+
                             <tr>
-                                <td><a href="/admin/customer-detail"><a href="/admin/customer-detail"><i class="fa fa-eye" aria-hidden="true"></i></a></a></td>
-                                <td><span class="indicator i-yellow"></span></td>
-                                <td><span class="indicator i-green"></span></td>
-                                <td><span class="indicator i-green"></span></td>
-                                <td><span class="indicator i-gray"></span></td>
-                                <td><span class="indicator i-gray"></span></td>
-                                <td><span class="indicator i-gray"></span></td>
-                                <td>{{$user->id}}</td>
-                                <td style="white-space:nowrap;">{{date('m-d-Y', strtotime($user->created_at))}}</td>
-                                <td>{{$user->first_name}}</td>
-                                <td>{{$user->last_name}}</td>
-                                <td>{{$user->email}}</td>
+                                <td><a href="/admin/registration/{{$user->id}}">{{$user->id}}</a></td>
+                                <td style="white-space:nowrap; display: none;">{{date('m/d/Y', strtotime($user->created_at))}}</td>
+                                <td style="white-space:nowrap;"><a href="/admin/registration/{{$user->id}}">{{date('d/m/Y', strtotime($user->created_at))}}</a></td>
+                                <td><a href="/admin/registration/{{$user->id}}">{{$user->first_name}}</a></td>
+                                <td><a href="/admin/registration/{{$user->id}}">{{$user->last_name}}</a></td>
+                                <td class="remove_capital_letter">{{$user->email}}</td>
                                 <td style="white-space:nowrap;">{{$user->phone_number}}</td>
-                                <td style="white-space:nowrap;">04-22-2019</td>
+                                <td style="white-space:nowrap; display: none;">04/22-/2019</td>
+                                <td style="white-space:nowrap;">22/04/2019</td>
                                 <td>700</td>
                                 <td><a href="javascript:void(0);"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                <td>AA-HH</td>
+                                <td><a href="/admin/registration/{{$user->id}}"><span class="indicator i-{{$classs}}"></span></a></td>
+                                <td><a href="/admin/registration/{{$user->id}}"><span class="indicator i-green"></span></a></td>
+                                <td><a href="/admin/registration/{{$user->id}}"><span class="indicator i-gray"></span></a></td>
+                                <td><a href="/admin/registration/{{$user->id}}"><span class="indicator i-gray"></span></a></td>
+                                <td><a href="/admin/registration/{{$user->id}}"><span class="indicator i-gray"></span></a></td>
+                                <!-- <td><a href="/admin/registration/{{$user->id}}"><a href="/admin/registration/{{$user->id}}"><i class="fa fa-eye" aria-hidden="true"></i></a></a></td> -->
+                              
+                                
+                                
+                                <!-- <td><span class="indicator i-gray"></span></td> -->
+                                
+                                
                                 <td><a href="javascript:void(0);"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td>AA-HH</td>
+                                <td><a href="/admin/customer-delete/{{$user->id}}" onclick="return confirm('Are you sure?')"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                             </tr>
-
+                            @php
+                                $counter++;
+                            @endphp
                             @endforeach
                             
                             <!-- <tr>
@@ -275,6 +293,7 @@
                             <li> <span class="indicator i-gray"></span> No Info </li>
                             <li> <span class="indicator i-yellow"></span> In Progress </li>
                             <li> <span class="indicator i-green"></span> Done </li>
+                            <li> <span class="indicator i-red"></span> Algo Error </li>
                         </ul>
                     </div>
                     <div class="pagination-container">
@@ -309,34 +328,37 @@
             <form>
                 <ul class="d-f a-i-f-e">
                     <li>
+                        <button type="button" class="main-button-reset button-bordered button-large">Clear All Filters</button>
+                    </li>
+                    <li>
                         <label>Register time</label>
                         <div class="form-group datepicker-container">
-                            <input type="text" class="datepicker1" id="from-register-time" name="from-register-time" placeholder="From" />
+                            <input type="text" class="datepicker1" id="from-register-time" name="from-register-time" placeholder="From" readonly="readonly" />
                             <img src="{{ URL::asset('admin_new/images/icon-calendar.png') }}" alt="" /> </div>
                     </li>
                     <li>
                         <div class="form-group datepicker-container">
-                            <input type="text" class="datepicker2" id="to-register-time" name="to-register-time" placeholder="To" />
+                            <input type="text" class="datepicker2" id="to-register-time" name="to-register-time" placeholder="To" readonly="readonly" />
                             <img src="{{ URL::asset('admin_new/images/icon-calendar.png') }}" alt="" /> </div>
                     </li>
                     <li>
-                        <button type="submit" class="main-button-date button-bordered button-large">Show all dates</button>
+                        <button type="submit" class="main-button-date button-bordered button-large">Show Dates</button>
                     </li>
                 </ul>
                 <ul class="d-f a-i-f-e">
                     <li>
                         <label>Payment time</label>
                         <div class="form-group datepicker-container">
-                            <input type="text" class="datepicker3" id="from-payment-time" name="from-payment-time" placeholder="From" />
+                            <input type="text" class="datepicker3" id="from-payment-time" name="from-payment-time" placeholder="From" readonly="readonly" />
                             <img src="{{ URL::asset('admin_new/images/icon-calendar.png') }}" alt="" /> </div>
                     </li>
                     <li>
                         <div class="form-group datepicker-container">
-                            <input type="text" class="datepicker4" id="to-payment-time" name="to-payment-time" placeholder="To" />
+                            <input type="text" class="datepicker4" id="to-payment-time" name="to-payment-time" placeholder="To" readonly="readonly" />
                             <img src="{{ URL::asset('admin_new/images/icon-calendar.png') }}" alt="" /> </div>
                     </li>
                     <li>
-                        <button type="submit" class="main-button-pay button-bordered button-large">Show all dates</button>
+                        <button type="submit" class="main-button-pay button-bordered button-large">Show Dates</button>
                     </li>
                 </ul>
             </form>
@@ -346,10 +368,10 @@
                 <li>
                     <div class="d-b-select-container s-in-progress d-f f-d-c">
                         <label>Registration</label>
-                        <select class="selectpicker">
-                <option>In progress</option>
-                <option>In progress-1</option>
-                <option>In progress-2</option>
+                        <select class="selectpicker" name="status_check">
+                <option value="show all">Show All</option>
+                <option value="in progress">In Progress</option>
+                <option value="completed">Completed</option>
               </select>
                     </div>
                 </li>
@@ -416,73 +438,11 @@
             </ul>
         </div>
     </div>
+
 @include('layouts.footer_admin')
-    <!-- customer filters ends here -->
-<script type="text/javascript">
-$(document).ready(function(){
-     $('#customerTable').DataTable({
-        language: {
-                    paginate: {
-                        next: '>>',
-                        previous: '<<'
-                    }
-                },
-                "bPaginate": true,
-        //pagingType: "numbers",
-       // searching: false,
-        bInfo: false,
-       // "dom": 't<"pagination"p>',
-    });
-    
-    var table = $('#customerTable').DataTable(); 
-    $('#searchuser').on( 'keyup', function () {
-        table.search( this.value, true, false ).draw();
-    } );
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 
-    $('#customerTable_filter').hide()
-    $(".main-button-date").on("click", function(e){
-    e.preventDefault();
+ <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.1/js/bootstrap-datepicker.js"></script>
 
-        $.fn.dataTable.ext.search.push(
-            function (settings, data, dataIndex) {
-                 var sd = $('#from-register-time').val(),
-                 endDate = $('#to-register-time').val();
 
-                 var dateAr = sd.split('/');
-                 var min = dateAr[2] + '' + dateAr[0] + '' + dateAr[1];
-                
-                 var dateAr2 = endDate.split('/');
-                 var max = dateAr2[2] + '' +dateAr2[0] + '' + dateAr2[1];
-                
-                 var startDate1 = new Date(data[8]);
-                 var startDate = normalizeDate(startDate1);
-                  
-                 if (min == "undefinedundefined" && max == "undefinedundefined") { return true; }
-                 if (min == "undefinedundefined" && startDate <= max) { return true;}
-                 if(max == "undefinedundefined" && startDate >= min) {return true;}
-                 if (startDate <= max && startDate >= min) { return true; }
-                 return false;
-            
-            }
-        );
-        var normalizeDate = function(dateString) {
-              var date = new Date(dateString);
-              var normalized = date.getFullYear() + '' + (("0" + (date.getMonth() + 1)).slice(-2)) + '' + ("0" + date.getDate()).slice(-2);
-              return normalized;
-        }
-
-       
-            
-             var table = $('#customerTable').DataTable();
-            $('#to-register-time').change(function () {
-                table.draw();
-            });
-            $('#from-register-time').change(function () {
-                table.draw();
-            });
-            table.draw();
-        });
-
-  });
-</script>  

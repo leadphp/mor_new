@@ -1,4 +1,4 @@
-<!-- <script src="{{ URL::asset('js/jquery.min.js') }}"></script> -->
+ <!-- <script src="{{ URL::asset('js/jquery.min.js') }}"></script> -->
 <script src="{{ URL::asset('js/owl.carousel.min.js') }}"></script> 
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
@@ -14,8 +14,8 @@
         <ul class="nav nav-tabs login-popup-custom">
           <!-- <li><a data-toggle="tab" href="#login">login</a></li>
           <li class="active"><a data-toggle="tab" href="#signup">sign up</a></li> -->
-          <li><a data-toggle="tab" href="#signup">הרשמה</a></li>
           <li class="active"><a data-toggle="tab" href="#login">התחברות</a></li>
+          <li><a data-toggle="tab" href="#signup">הרשמה</a></li>
         </ul>
 
 <div class="tab-content">
@@ -32,7 +32,7 @@
 
         <div class="modal-body-inner">
         <p>להרשמה מהירה ובטוחה</p>
-            <a href="javascript:void(0);" class="link-facebook">הרשמה באמצעות facebook<i class="fa fa-facebook-f"></i></a>
+            <a href="javascript:void(0);" class="link-facebook">הרשמה  באמצעות facebook<i class="fa fa-facebook-f"></i></a>
             <p>להרשמה סטנדרטית</p>
 
             <div class="login-modal-form">
@@ -105,15 +105,25 @@
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                      </div>
                   </div>
+
+                  <div class="full">
+                    <div class="custom-check">
+                    <div class="form-group">
+                    <input type="checkbox" id="login-modal-check" class="form-control" name="terms_and_condition" value="1">
+                      <label for="login-modal-check">קראתי ואני מסכים  <a href="terms-and-condition"> לתנאי השימוש </a> <br class="hideDesktop"> וכן  <a href="privacy"> למדיניות הפרטיות </a>  בקישור.</label>
+                    </div>
+                    </div>
+                  </div>
+
+
                   <button type="submit" class="reg_btn main-button button-dark">אישור הרשמה</button>
                </form>
             </div>
 
         </div>
-        <div class="modal-footer">
-        כבר נרשמת בעבר? עבור למסך התחברות
-      </div>
-  </div>
+        <div class="modal-footer bottom-line-popup-login">
+        כבר נרשמת בעבר? עבור למסך <a data-toggle="tab"  class="loginPop" href="#login">התחברות</a>
+      </div>  </div>
 <!-- Register Form End -->
 
 <!-- Login Form Start  -->
@@ -130,7 +140,7 @@
 
 
         <p>כניסה מהירה ובטוחה</p>
-        <a href="javascript:void(0);" class="link-facebook">הרשמה באמצעות facebook<i class="fa fa-facebook-f"></i></a>
+        <a href="javascript:void(0);" class="link-facebook">התחברות באמצעות facebook<i class="fa fa-facebook-f"></i></a>
         <p>או</p>
 
         <div class="login-modal-form">
@@ -165,8 +175,8 @@
           </form>
         </div>
         </div>
-        <div class="modal-footer">
-        פעם ראשונה שלך פה? עבור למסך הרשמה
+        <div class="modal-footer bottom-line-popup-login">
+        פעם ראשונה שלך פה? עבור למסך <a data-toggle="tab" class="signUpPop" href="#signup">הרשמה</a>
       </div>
   </div>
 <!-- Login Form End -->
@@ -213,18 +223,21 @@
                     $(".message_data").html("");
                     $.each(msg.errors, function( index, value ) 
                     {
+                      //alert(value);
                         $(".message_data").append("<div>"+value+"</div>");
                     });
 
                 } else{  
                     $(".message_data").addClass("suc_reg");            
-                    $(".message_data").html("User registered succesfully");
+                    $(".message_data").html("המשתמש נרשם בהצלחה");
 
                     setTimeout(function(){ 
+                      $('#loginModal').modal('hide');
+                             location.reload();   
                           //window.location.href = '/questions_new'; 
+                            // window.location.href = '/questions_flow'; 
+                    }, 3000);
 
-                             window.location.href = '/questions_flow'; 
-                    }, 3000);   
                 }                 
              }
               
@@ -254,16 +267,18 @@ $(document).ready( function( $ ) {
 
                 if(msg.status == 0){
                     $(".login_msg").addClass("log_err");
-                    $(".login_msg").html("Invalid Credentials");
+                    $(".login_msg").html("אישורים לא חוקיים");  //invalid credentails
 
                 } else{   
                     $(".login_msg").addClass("log_suc");
-                    $(".login_msg").html("User login succesfully");
+                    $(".login_msg").html("התחבר בהצלחה!"); //User login succesfully
 
                     setTimeout(function(){ 
                              //window.location.href = '/questions_new'; 
-
-                             window.location.href = '/questions_flow'; 
+                             $('#loginModal').modal('hide');
+                             location.reload();
+         
+                             //window.location.href = '/questions_flow'; 
                     }, 3000);   
                 }                 
              }
@@ -279,7 +294,15 @@ $(document).ready( function( $ ) {
 |--------------------------------------------------------------------------
 */
  $('#reset_form').click(function(){
-            $('#register_form_validation')[0].reset();              
+      $('#register_form_validation')[0].reset();              
+ });
+ $('.loginPop').click(function(){
+   $('.login-popup-custom li:first-child').addClass('active');
+   $('.login-popup-custom li:last-child').removeClass('active');
+ });
+ $('.signUpPop').click(function(){
+   $('.login-popup-custom li:first-child').removeClass('active');
+   $('.login-popup-custom li:last-child').addClass('active');
  });
 </script>
 

@@ -1,77 +1,79 @@
 @include('layouts.admin_top_header')
 @include('layouts.admin_header_subheader')
+  <input type="hidden" name="user_id" id="user_id" value="<?php echo$user_id; ?>">
+  <input type="hidden" name="fund_field" class="fund_field">
  <div class="main-content report2-admin">
         <div class="container-fluid">
             <div class="row report-online report-online2">
                 <div class="col-md-8">
                     <form class="redio-design" id="top-1">
-                        <div class="form-group">
-                            <input id="radio1" type="radio" checked name="select1">
-                            <label for="radio1">AA - Mizrahi</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio2" type="radio" name="select1">
-                            <label for="radio2">BB-Discount</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio3" type="radio" name="select1">
-                            <label for="radio3">CC - Igud</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio4" type="radio" name="select1">
-                            <label for="radio4">DD- Hapolaim</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio5" type="radio" name="select1">
-                            <label for="radio5">EE - Leumi</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio6" type="radio" name="select1">
-                            <label for="radio6">FF - Otsar Hahayal</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio7" type="radio" name="select1">
-                            <label for="radio7">GG- Jerusalem</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio8" type="radio" name="select1">
-                            <label for="radio8">HH - Habenleumi</label>
-                        </div>
-                    </form>
-                    <form class="redio-design" id="top-2">
-                        <div class="form-group">
-                            <input id="radio9" type="radio" name="select1">
-                            <label for="radio9">1,00,000</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio10" type="radio" name="select1">
-                            <label for="radio10">1,00,000</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio11" type="radio" name="select1">
-                            <label for="radio11">1,00,000</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio12" type="radio" checked name="select1">
-                            <label for="radio12">1,00,000</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio13" type="radio" name="select1">
-                            <label for="radio12">1,00,000</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio14" type="radio" name="select1">
-                            <label for="radio14">1,00,000</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio15" type="radio" name="select1">
-                            <label for="radio15">1,00,000</label>
-                        </div>
-                        <div class="form-group">
-                            <input id="radio16" type="radio" name="select1">
-                            <label for="radio16">1,00,000</label>
-                        </div>
-                    </form>
+            <div class="form-group">
+                <input value="AA" id="radio1" type="radio" checked name="select_bank">
+                <label for="radio1">AA - Mizrahi</label>
+            </div>
+            <div class="form-group">
+                <input value="BB"  id="radio2" type="radio" name="select_bank">
+                <label for="radio2">BB-Discount</label>
+            </div>
+            <div class="form-group">
+                <input value="CC" id="radio3" type="radio" name="select_bank">
+                <label for="radio3">CC - Igud</label>
+            </div>
+            <div class="form-group">
+                <input value="DD" id="radio4" type="radio" name="select_bank">
+                <label for="radio4">DD- Hapolaim</label>
+            </div>
+            <div class="form-group">
+                <input value="EE" id="radio5" type="radio" name="select_bank">
+                <label for="radio5">EE - Leumi</label>
+            </div>
+            <div class="form-group">
+                <input value="FF"  id="radio6" type="radio" name="select_bank">
+                <label for="radio6">FF - Otsar Hahayal</label>
+            </div>
+            <div class="form-group">
+                <input value="GG" id="radio7" type="radio" name="select_bank">
+                <label for="radio7">GG- Jerusalem</label>
+            </div>
+            <div class="form-group">
+                <input value="HH" id="radio8" type="radio" name="select_bank">
+                <label for="radio8">HH - Habenleumi</label>
+            </div>
+        </form>
+        <form class="redio-design" id="top-2">
+            <div class="form-group">
+                <input id="radio9" type="radio" name="select1">
+                <label for="radio9">1,00,000</label>
+            </div>
+            <div class="form-group">
+                <input id="radio10" type="radio" name="select1">
+                <label for="radio10">1,00,000</label>
+            </div>
+            <div class="form-group">
+                <input id="radio11" type="radio" name="select1">
+                <label for="radio11">1,00,000</label>
+            </div>
+            <div class="form-group">
+                <input id="radio12" type="radio" checked name="select1">
+                <label for="radio12">1,00,000</label>
+            </div>
+            <div class="form-group">
+                <input id="radio13" type="radio" name="select1">
+                <label for="radio13">1,00,000</label>
+            </div>
+            <div class="form-group">
+                <input id="radio14" type="radio" name="select1">
+                <label for="radio14">1,00,000</label>
+            </div>
+            <div class="form-group">
+                <input id="radio15" type="radio" name="select1">
+                <label for="radio15">1,00,000</label>
+            </div>
+            <div class="form-group">
+                <input id="radio16" type="radio" name="select1">
+                <label for="radio16">1,00,000</label>
+            </div>
+        </form>
                 </div>
                 <div class="col-md-4">
                     <div class="a-rightside">
@@ -96,7 +98,7 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="col-md-6 normal-full">
+                   <!--  <div class="col-md-6 normal-full">
                         <div class="funding-tree">
                             <div class="col-2">
                                 <button class="a-time-selection">Funding Tree</button>
@@ -111,9 +113,83 @@
                                 <button class="a-time-selection">Enslevment Tree</button>
                             </div>
                         </div>
+                    </div> -->
+                     <div class="col-md-6 normal-full">
+            <div class="A_top_head">
+                <h3 class="blue-color">Step 1 - Best tree fit</h3>
+                <p>Find the best Final_MR with the best fit for<a href="javascript:void(0);"> 20.2 Req_PMT Algo</a> the actual MR. *If Loan type interest is ZERO you must skip. Table should never has 0 intrest value!
+                </p>
+            </div>
+            <div class="funding-tree">
+                <div class="col-2 a1">
+                    <button class="a-time-selection">Funding Tree</button>
+                    <p><span>20.8: Funding Morg</span> Calc: 11.1 *minimum (20.4 or 20.3)<br>[For Q8.4 only: 11.4*minimum (20.4 or 20.3)]
+                    </p>
+                </div>
+                <div class="col-2 a2">
+                    <input type="text" name="funding_morg_tree" class="funding_morg_tree" id="funding_morg_tree" placeholder="1k-10m">
+                    <span>Ratio:</span>
+                    <input type="text" name="funding_ratio_tree" class="funding_ratio_tree" id="funding_ratio_tree" placeholder="0-75%">
+                </div>
+                <div class="col-2 a3">
+                    <span>20.11 Funding Type Table</span>
+                    <select id="funding_type" name="funding_type">
+                         <option value="FundingA"> Funding A _1-45 </option>
+                         <option value="FundingB">Funding B_45-60 </option>
+                         <option value="FundingC">Funding C_60-75 </option>
+                         <option value="Any_Cause"> Any Cause_1-50 </option>
+                         <!-- <option value="Enslavement">Enslavement_1-50 </option> -->
+                    </select>
+                </div>
+                <div class="col-2 a4">
+                    <h3>Best On Loan Tree</h3>
+                    <input type="text" placeholder="Start, H1-4, L1-5" class="best_OF_loan_tree" value="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 normal-full">
+            <div class="funding-tree tree_right">
+                <div class="col-2 a1">
+                    <button class="a-time-selection">Enslevment Tree</button>
+                    <p><span>20.9: Enslevment Morg</span> Calc 11.1*20.6 <br>[For Q8.4 only: 11.4*20.6 >0 set Algo-Error]
+                    </p>
+                </div>
+                <div class="col-2 a2">
+                    <input type="text" name="enslavement_morg_tree" class="enslavement_morg_tree" id="enslavement_morg_tree" placeholder="1k-10m">
+                    <span>Ratio:</span>
+                    <input type="text" name="enslavement_ratio_tree" class="enslavement_ratio_tree" id="enslavement_ratio_tree" placeholder="1%-75%">
+                </div>
+                <div class="col-2 a4 last">
+                    <div class="form-group">
+                        <h3>20.7 To check Ens. with algo?</h3>
+                       
+                        <div class="selection">
+                            <input id="checkEnslavement_no" type="radio" name="algo2" value="no">
+                            <label for="checkEnslavement_no">No</label>
+                        </div>
+                         <div class="selection">
+                            <input id="checkEnslavement_yes" type="radio"  name="algo2" value="yes">
+                            <label for="checkEnslavement_yes">Yes</label>
+                        </div>
+                        <div class="selection">
+                            <input id="checkEnslavement_error" type="radio" name="algo2" value="error">
+                            <label for="checkEnslavement_error">Algo Error</label>
+                        </div>
                     </div>
+
+                    <div class="A_right_p">
+                      
+                       <p><b>NO:</b>if [20.3 Morg_ratio <= 20.4 Regulation table].</p>
+                        <p><b>YES:</b> if: [Aprt max owner_value 2.8>=20.9] && [20.7 is yes] && [20.5 is yes only].</p>
+                       <p><b>Otherwise:</b>Algo Error: "We have a problem please contact support".</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
                 </div>
                 <div class="col-md-12">
+
                     <div class="main-content a-main">
                         <div class="container-fluid">
                             <div class="offer-tabs A_future_loan">
@@ -131,7 +207,7 @@
                                                         <table style="text-align: center;">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>H4</th>
+                                                                    <th class="head">H4</th>
                                                                     <th>Loan Type (T)</th>
                                                                     <th>Part (P)</th>
                                                                     <th>Mortgage (M)</th>
@@ -144,42 +220,43 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td>Prime</td>
-                                                                    <td>A</td>
-                                                                    <td>0.333</td>
-                                                                    <td>443333</td>
-                                                                    <td>30</td>
-                                                                    <td>0.1</td>
-                                                                    <td>3891</td>
-                                                                    <td>14025</td>
-                                                                    <td>17092</td>
+                                                                    <td id="head1">Prime</td>
+                                                                    <td id="part1">A</td>
+                                                                    <td id="partvalue1">0.333</td>
+                                                                    <td id="morg1">443333</td>
+                                                                    <td id="year1">30</td>
+                                                                    <td id="intrest1">0.1</td>
+                                                                    <td id="pmt1">3891</td>
+                                                                    <td id="totalpmt1">14025</td>
+                                                                    <td id="finalpmt1">17092</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Linked</td>
-                                                                    <td>D</td>
-                                                                    <td>0.333</td>
-                                                                    <td>443333</td>
-                                                                    <td>30</td>
-                                                                    <td>0.7</td>
-                                                                    <td>2950</td>
+                                                                    <td id="head2">Linked</td>
+                                                                    <td id="part2">D</td>
+                                                                    <td id="partvalue2">0.333</td>
+                                                                    <td id="morg2">443333</td>
+                                                                    <td id="year2">30</td>
+                                                                    <td id="intrest2">0.7</td>
+                                                                    <td id="pmt2">2950</td>
                                                                     <td>&nbsp;</td>
                                                                     <td>&nbsp;</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Linked</td>
-                                                                    <td>B</td>
-                                                                    <td>0.333</td>
-                                                                    <td>443333</td>
-                                                                    <td>20</td>
-                                                                    <td>0.19</td>
-                                                                    <td>7185</td>
+                                                                    
+                                                                    <td id="head3">Linked</td>
+                                                                    <td id="part3">B</td>
+                                                                    <td id="partvalue3">0.333</td>
+                                                                    <td id="morg3">443333</td>
+                                                                    <td id="year3">20</td>
+                                                                    <td id="intrest3">0.7</td>
+                                                                    <td id="pmt3">2950</td>
                                                                     <td>&nbsp;</td>
                                                                     <td>&nbsp;</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <div class="table-bottom-content d-f j-c-s-b a-i-c"> <span>*Recycle B after 10 years.</span> <span class="alert">Y go from 10 to 30</span><span class="t-b-c-full success">** First do elegebility process for B&gt;A according of elegebility TABLE.</span>
+                                                    <div class="table-bottom-content d-f j-c-s-b a-i-c"> <span class="span_test_one">*Recycle B after 10 years.</span> <span class="alert span_test_two">Y go from 10 to 30</span><span class="t-b-c-full success span_test_three">** First do elegebility process for B&gt;A according of elegebility TABLE.</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -189,7 +266,7 @@
                                                         <table style="text-align: center;">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>H4</th>
+                                                                    <th class="head">H4</th>
                                                                     <th>Loan Type (T)</th>
                                                                     <th>Part (P)</th>
                                                                     <th>Mortgage (M)</th>
@@ -202,42 +279,42 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td>Prime</td>
-                                                                    <td>A</td>
-                                                                    <td>0.333</td>
-                                                                    <td>443333</td>
-                                                                    <td>30</td>
-                                                                    <td>0.1</td>
-                                                                    <td>3891</td>
-                                                                    <td>14025</td>
-                                                                    <td>17092</td>
+                                                                    <td id="head1_e">Prime</td>
+                                                                    <td id="part1_e">A</td>
+                                                                    <td id="partvalue1_e">0.333</td>
+                                                                    <td id="morg1_e">443333</td>
+                                                                    <td id="year1_e">30</td>
+                                                                    <td id="intrest1_e">0.1</td>
+                                                                    <td id="pmt1_e">3891</td>
+                                                                    <td id="totalpmt1_e">14025</td>
+                                                                    <td id="finalpmt1_e">17092</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Linked</td>
-                                                                    <td>D</td>
-                                                                    <td>0.333</td>
-                                                                    <td>443333</td>
-                                                                    <td>30</td>
-                                                                    <td>0.07</td>
-                                                                    <td>2950</td>
+                                                                     <td id="head2_e">Linked</td>
+                                                                    <td id="part2_e">D</td>
+                                                                    <td id="partvalue2_e">0.333</td>
+                                                                    <td id="morg2_e">443333</td>
+                                                                    <td id="year2_e">30</td>
+                                                                    <td id="intrest2_e">0.7</td>
+                                                                    <td id="pmt2_e">2950</td>
                                                                     <td>&nbsp;</td>
                                                                     <td>&nbsp;</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Linked</td>
-                                                                    <td>B</td>
-                                                                    <td>0.333</td>
-                                                                    <td>443333</td>
-                                                                    <td>20</td>
-                                                                    <td>0.19</td>
-                                                                    <td>7185</td>
+                                                                     <td id="head3_e">Linked</td>
+                                                                    <td id="part3_e">B</td>
+                                                                    <td id="partvalue3_e">0.333</td>
+                                                                    <td id="morg3_e">443333</td>
+                                                                    <td id="year3_e">20</td>
+                                                                    <td id="intrest3_e">0.7</td>
+                                                                    <td id="pmt3_e">2950</td>
                                                                     <td>&nbsp;</td>
                                                                     <td>&nbsp;</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <div class="table-bottom-content d-f j-c-s-b a-i-c"> <span>*Recycle B after 10 years.</span> <span class="alert">Y go from 10 to 30</span><span class="t-b-c-full red success">** No elegebility</span>
+                                                    <div class="table-bottom-content d-f j-c-s-b a-i-c"> <span class="e_span_test_one">*Recycle B after 10 years.</span> <span class="alert e_span_test_two">Y go from 10 to 30</span><span class="t-b-c-full red success e_span_test_three">** No elegebility</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -254,7 +331,7 @@
                                                         <table style="text-align: center;">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>H4</th>
+                                                                    <th class="head">H4</th>
                                                                     <th>Loan Type (T)</th>
                                                                     <th>Part (P)</th>
                                                                     <th>Mortgage (M)</th>
@@ -267,72 +344,88 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td>Prime</td>
-                                                                    <td>A</td>
-                                                                    <td>0.133</td>
-                                                                    <td>177333</td>
-                                                                    <td>30</td>
-                                                                    <td>0.1</td>
-                                                                    <td>1556</td>
-                                                                    <td>13040</td>
-                                                                    <td>15912</td>
+                                                                    <td class="step2_head1">Prime</td>
+                                                                    <td class="step2_type1" ></td>
+                                                                    <td class="step2_part1"></td>
+                                                                    <td class="step2_morg1"></td>
+                                                                    <td class="step2_year1"></td>
+                                                                    <td class="step2_int1"></td>
+                                                                    <td class="step2_mr1"></td>
+                                                                    <td class="step2_totalmr1"></td>
+                                                                    <td class="step2_final1"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Dollar</td>
-                                                                    <td>F</td>
-                                                                    <td>0.1</td>
-                                                                    <td>133000</td>
-                                                                    <td>30</td>
-                                                                    <td>0.05</td>
-                                                                    <td>714</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                    <td class="step2_head2">Dollar</td>
+                                                                    <td class="step2_type2" ></td>
+                                                                    <td class="step2_part2">0.1</td>
+                                                                    <td class="step2_morg2"></td>
+                                                                    <td class="step2_year2"></td>
+                                                                    <td class="step2_int2"></td>
+                                                                    <td class="step2_mr2"></td>
+                                                                    <td class="step2_totalmr2"></td>
+                                                                    <td class="step2_final2"></td>
+                                                                   
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Euro</td>
-                                                                    <td>G</td>
-                                                                    <td>0.1</td>
-                                                                    <td>133000</td>
-                                                                    <td>30</td>
-                                                                    <td>0.04</td>
-                                                                    <td>635</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                    
+                                                                    <td class="step2_head3">Euro</td>
+                                                                    <td class="step2_type3" ></td>
+                                                                    <td class="step2_part3">0.1</td>
+                                                                    <td class="step2_morg3"></td>
+                                                                    <td class="step2_year3"></td>
+                                                                    <td class="step2_int3"></td>
+                                                                    <td class="step2_mr3"></td>
+                                                                    <td class="step2_totalmr3"></td>
+                                                                    <td class="step2_final3"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Linked</td>
-                                                                    <td>D</td>
-                                                                    <td>0.333</td>
-                                                                    <td>443333</td>
-                                                                    <td>30</td>
-                                                                    <td>0.07</td>
-                                                                    <td>2950</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                    <td class="step2_head4">Euro</td>
+                                                                    <td class="step2_type4" ></td>
+                                                                    <td class="step2_part4"></td>
+                                                                    <td class="step2_morg4"></td>
+                                                                    <td class="step2_year4"></td>
+                                                                    <td class="step2_int4"></td>
+                                                                    <td class="step2_mr4"></td>
+                                                                    <td class="step2_totalmr4"></td>
+                                                                    <td class="step2_final4"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Linked</td>
-                                                                    <td>B</td>
-                                                                    <td>0.333</td>
-                                                                    <td>443333</td>
-                                                                    <td>20</td>
-                                                                    <td>0.19</td>
-                                                                    <td>7185</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                    <td class="step2_head5">Euro</td>
+                                                                    <td class="step2_type5" ></td>
+                                                                    <td class="step2_part5"></td>
+                                                                    <td class="step2_morg5"></td>
+                                                                    <td class="step2_year5"></td>
+                                                                    <td class="step2_int5"></td>
+                                                                    <td class="step2_mr5"></td>
+                                                                    <td class="step2_totalmr5"></td>
+                                                                    <td class="step2_final5"></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <input type="hidden" name="year_val" class="year_val">
+                                            <input type="hidden" name="type_val" class="type_val">
+                                            <input type="hidden" name="part_val" class="part_val">
+                                            <input type="hidden" name="morg_val" class="morg_val">
+                                            <input type="hidden" name="pmtr_val" class="pmtr_val">
+                                            <input type="hidden" name="intrest_val" class="intrest_val">
+
+                                             <input type="hidden" name="e_year_val" class="e_year_val">
+                                            <input type="hidden" name="e_type_val" class="e_type_val">
+                                            <input type="hidden" name="e_part_val" class="e_part_val">
+                                            <input type="hidden" name="e_morg_val" class="e_morg_val">
+                                            <input type="hidden" name="e_pmtr_val" class="e_pmtr_val">
+                                            <input type="hidden" name="e_intrest_val" class="e_intrest_val">
+                                           
                                             <div class="col-md-6">
                                                 <div class="online-clerk-wrap left-table">
                                                     <div class="table-container online-customers-table">
                                                         <table style="text-align: center;">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>H4</th>
+                                                                    <th class="head">H4</th>
                                                                     <th>Loan Type (T)</th>
                                                                     <th>Part (P)</th>
                                                                     <th>Mortgage (M)</th>
@@ -344,60 +437,62 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                    <td>Prime</td>
-                                                                    <td>A</td>
-                                                                    <td>0.133</td>
-                                                                    <td>31942</td>
-                                                                    <td>30</td>
-                                                                    <td>0.13</td>
-                                                                    <td>353</td>
-                                                                    <td>2872</td>
-                                                                    <td>15912</td>
+                                                                 <tr>
+                                                                    <td class="e_step2_head1">Prime</td>
+                                                                    <td class="e_step2_type1" ></td>
+                                                                    <td class="e_step2_part1"></td>
+                                                                    <td class="e_step2_morg1"></td>
+                                                                    <td class="e_step2_year1"></td>
+                                                                    <td class="e_step2_int1"></td>
+                                                                    <td class="e_step2_mr1"></td>
+                                                                    <td class="e_step2_totalmr1"></td>
+                                                                    <td class="e_step2_final1"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Dollar</td>
-                                                                    <td>F</td>
-                                                                    <td>0.1</td>
-                                                                    <td>23956.52</td>
-                                                                    <td>30</td>
-                                                                    <td>0.08</td>
-                                                                    <td>176</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                    <td class="e_step2_head2">Dollar</td>
+                                                                    <td class="e_step2_type2" ></td>
+                                                                    <td class="e_step2_part2">0.1</td>
+                                                                    <td class="e_step2_morg2"></td>
+                                                                    <td class="e_step2_year2"></td>
+                                                                    <td class="e_step2_int2"></td>
+                                                                    <td class="e_step2_mr2"></td>
+                                                                    <td class="e_step2_totalmr2"></td>
+                                                                    <td class="e_step2_final2"></td>
+                                                                   
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Euro</td>
-                                                                    <td>G</td>
-                                                                    <td>0.1</td>
-                                                                    <td>23956.52</td>
-                                                                    <td>30</td>
-                                                                    <td>0.07</td>
-                                                                    <td>159</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                    
+                                                                    <td class="e_step2_head3">Euro</td>
+                                                                    <td class="e_step2_type3" ></td>
+                                                                    <td class="e_step2_part3">0.1</td>
+                                                                    <td class="e_step2_morg3"></td>
+                                                                    <td class="e_step2_year3"></td>
+                                                                    <td class="e_step2_int3"></td>
+                                                                    <td class="e_step2_mr3"></td>
+                                                                    <td class="e_step2_totalmr3"></td>
+                                                                    <td class="e_step2_final3"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Linked</td>
-                                                                    <td>D</td>
-                                                                    <td>0.333</td>
-                                                                    <td>79855</td>
-                                                                    <td>30</td>
-                                                                    <td>0.1</td>
-                                                                    <td>701</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                    <td class="e_step2_head4">Euro</td>
+                                                                    <td class="e_step2_type4" ></td>
+                                                                    <td class="e_step2_part4"></td>
+                                                                    <td class="e_step2_morg4"></td>
+                                                                    <td class="e_step2_year4"></td>
+                                                                    <td class="e_step2_int4"></td>
+                                                                    <td class="e_step2_mr4"></td>
+                                                                    <td class="e_step2_totalmr4"></td>
+                                                                    <td class="e_step2_final4"></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Linked</td>
-                                                                    <td>B</td>
-                                                                    <td>0.333</td>
-                                                                    <td>79855</td>
-                                                                    <td>20</td>
-                                                                    <td>0.22</td>
-                                                                    <td>1483</td>
-                                                                    <td>&nbsp;</td>
-                                                                    <td>&nbsp;</td>
+                                                                    <td class="e_step2_head5">Euro</td>
+                                                                    <td class="e_step2_type5" ></td>
+                                                                    <td class="e_step2_part5"></td>
+                                                                    <td class="e_step2_morg5"></td>
+                                                                    <td class="e_step2_year5"></td>
+                                                                    <td class="e_step2_int5"></td>
+                                                                    <td class="e_step2_mr5"></td>
+                                                                    <td class="e_step2_totalmr5"></td>
+                                                                    <td class="e_step2_final5"></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -415,8 +510,8 @@
                                                         <li>Do elegebility process if: 1. Elegible (has Aprt), 2. Has loan type B in table only.</li>
                                                     </ul>
                                                     <ul class="d-f a-i-f-e">
-                                                        <li><a href="javascript:void(0);" class="main-button button-green button-large">Elegeble</a></li>
-                                                        <li><a href="javascript:void(0);" class="main-button button-red button-large">Not Elegeble</a></li>
+                                                        <li><a href="javascript:void(0);" class="main-button button-green button-large elg_yes">Elegeble</a></li>
+                                                        <li><a href="javascript:void(0);" class="main-button button-red button-large elg_no">Not Elegeble</a></li>
                                                     </ul>
                                                     <div class="funding-tree">
                                                         <div class="col-2 a1">
@@ -424,11 +519,11 @@
                                                             <p><span>Elegebility</span>Score</p>
                                                         </div>
                                                         <div class="col-2 a1 input-green">
-                                                            <input type="text">
+                                                            <input type="text" class="elegebility_score">
                                                             <p><span>Elegebility</span> Ratio</p>
                                                         </div>
                                                         <div class="col-2 a1">
-                                                            <input type="text" placeholder="0.07507">
+                                                            <input type="text" placeholder="0.07507" class="elegebility_ratio">
                                                             <p><span>Ratio H: defined </span> (Elegebilty score/20.8 Funding_morg)</p>
                                                         </div>
                                                     </div>
@@ -465,87 +560,93 @@
                                                     <div class="online-clerk-wrap left-table">
                                                         <div class="table-container online-customers-table">
                                                             <table>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>H4</th>
-                                                                        <th>Loan Type (T)</th>
-                                                                        <th>Part (P)</th>
-                                                                        <th>Mortgage (M)</th>
-                                                                        <th>Years (Y)</th>
-                                                                        <th>Intrest (I)</th>
-                                                                        <th>Monthly Return (MR)</th>
-                                                                        <th>Total_MR</th>
-                                                                        <th>Final_MR</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>Prime</td>
-                                                                        <td>A</td>
-                                                                        <td>0.333</td>
-                                                                        <td>177333</td>
-                                                                        <td>30</td>
-                                                                        <td>0.1</td>
-                                                                        <td>1556</td>
-                                                                        <td>12591</td>
-                                                                        <td>15464</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Dollar</td>
-                                                                        <td>F</td>
-                                                                        <td>0.1</td>
-                                                                        <td>133000</td>
-                                                                        <td>30</td>
-                                                                        <td>0.5</td>
-                                                                        <td>714</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Euro</td>
-                                                                        <td>G</td>
-                                                                        <td>0.1</td>
-                                                                        <td>133000</td>
-                                                                        <td>30</td>
-                                                                        <td>0.4</td>
-                                                                        <td>635</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Linked</td>
-                                                                        <td>D</td>
-                                                                        <td>0.333</td>
-                                                                        <td>443333</td>
-                                                                        <td>30</td>
-                                                                        <td>0.7</td>
-                                                                        <td>2950</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Linked</td>
-                                                                        <td>B</td>
-                                                                        <td>0.258</td>
-                                                                        <td>343493</td>
-                                                                        <td>30</td>
-                                                                        <td>0.19</td>
-                                                                        <td>5567</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Elegebility</td>
-                                                                        <td>H</td>
-                                                                        <td>0.07507</td>
-                                                                        <td>99840</td>
-                                                                        <td>20</td>
-                                                                        <td>0.13</td>
-                                                                        <td>1170</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                </tbody>
+                                                                 <thead>
+                                                                <tr>
+                                                                    <th class="head">H4</th>
+                                                                    <th>Loan Type (T)</th>
+                                                                    <th>Part (P)</th>
+                                                                    <th>Mortgage (M)</th>
+                                                                    <th>Years (Y)</th>
+                                                                    <th>Intrest (I)</th>
+                                                                    <th>Monthly Return (MR)</th>
+                                                                    <th>Total_MR</th>
+                                                                    <th>Final_MR</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="step3_elg">
+                                                                <tr>
+                                                                    <td class="step2_head1 elg_head1">Prime</td>
+                                                                    <td class="step2_type1 elg_type1" ></td>
+                                                                    <td class="step2_part1 elg_part1"></td>
+                                                                    <td class="step2_morg1 elg_morg1"></td>
+                                                                    <td class="step2_year1 elg_year1"></td>
+                                                                    <td class="step2_int1 elg_int1"></td>
+                                                                    <td class="step2_mr1 elg_mr1"></td>
+                                                                    <td class="step2_totalmr1_ elg_totalmr1"></td>
+                                                                    <td class="step2_final1_ elg_final1"></td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td class="step2_head2 elg_head2">Dollar</td>
+                                                                    <td class="step2_type2 elg_type2" ></td>
+                                                                    <td class="step2_part2 elg_part2">0.1</td>
+                                                                    <td class="step2_morg2 elg_morg2"></td>
+                                                                    <td class="step2_year2 elg_year2"></td>
+                                                                    <td class="step2_int2 elg_int2"></td>
+                                                                    <td class="step2_mr2 elg_mr2"></td>
+                                                                    <td class="step2_totalmr2 elg_totalmr2"></td>
+                                                                    <td class="step2_final2 elg_final2"></td>
+                                                                   
+                                                                </tr>
+                                                                <tr>
+                                                                    
+                                                                    <td class="step2_head3 elg_head3">Euro</td>
+                                                                    <td class="step2_type3 elg_type3" ></td>
+                                                                    <td class="step2_part3 elg_part3">0.1</td>
+                                                                    <td class="step2_morg3 elg_morg3"></td>
+                                                                    <td class="step2_year3 elg_year3"></td>
+                                                                    <td class="step2_int3 elg_int3"></td>
+                                                                    <td class="step2_mr3 elg_mr3"></td>
+                                                                    <td class="step2_totalmr3 elg_totalmr3"></td>
+                                                                    <td class="step2_final3 elg_final3"></td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td class="step2_head4 elg_head4">Euro</td>
+                                                                    <td class="step2_type4 elg_type4" ></td>
+                                                                    <td class="step2_part4 elg_part4"></td>
+                                                                    <td class="step2_morg4 elg_morg4"></td>
+                                                                    <td class="step2_year4 elg_year4"></td>
+                                                                    <td class="step2_int4 elg_int4"></td>
+                                                                    <td class="step2_mr4 elg_mr4"></td>
+                                                                    <td class="step2_totalmr4 elg_totalmr4"></td>
+                                                                    <td class="step2_final4 elg_final4"></td>
+                                                                </tr>
+                                                                <tr>
+
+                                                                    <td class="step2_head5 elg_head5">Euro</td>
+                                                                    <td class="step2_type5 elg_type5" ></td>
+                                                                    <td class="step2_part5 elg_part5"></td>
+                                                                    <td class="step2_morg5 elg_morg5"></td>
+                                                                    <td class="step2_year5 elg_year5"></td>
+                                                                    <td class="step2_int5 elg_int5"></td>
+                                                                    <td class="step2_mr5 elg_mr5"></td>
+                                                                    <td class="step2_totalmr5 elg_totalmr5"></td>
+                                                                    <td class="step2_final5 elg_final5"></td>
+                                                                </tr>
+                                                                 <tr>
+
+                                                                    <td class="step2_head6 elg_head6">Elegebility</td>
+                                                                    <td class="step2_type6 elg_type6" >H</td>
+                                                                    <td class="step2_part6 elg_part6"></td>
+                                                                    <td class="step2_morg6 elg_morg6"></td>
+                                                                    <td class="step2_year6 elg_year6"></td>
+                                                                    <td class="step2_int6 elg_int6"></td>
+                                                                    <td class="step2_mr6 elg_mr6"></td>
+                                                                    <td class="step2_totalmr6 elg_totalmr6"></td>
+                                                                    <td class="step2_final6 elg_final6"></td>
+                                                                </tr>
+                                                            </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
@@ -558,76 +659,78 @@
                                                     <div class="online-clerk-wrap left-table">
                                                         <div class="table-container online-customers-table">
                                                             <table>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>H4</th>
-                                                                        <th>Loan Type (T)</th>
-                                                                        <th>Part (P)</th>
-                                                                        <th>Mortgage (M)</th>
-                                                                        <th>Years (Y)</th>
-                                                                        <th>Intrest (I)</th>
-                                                                        <th>Monthly Return (MR)</th>
-                                                                        <th>Total_MR</th>
-                                                                        <th>Final_MR</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>Prime</td>
-                                                                        <td>A</td>
-                                                                        <td>0.333</td>
-                                                                        <td>31942</td>
-                                                                        <td>30</td>
-                                                                        <td>0.13</td>
-                                                                        <td>1556</td>
-                                                                        <td>12591</td>
-                                                                        <td>15464</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Dollar</td>
-                                                                        <td>F</td>
-                                                                        <td>0.1</td>
-                                                                        <td>23956.52</td>
-                                                                        <td>30</td>
-                                                                        <td>0.8</td>
-                                                                        <td>176</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Euro</td>
-                                                                        <td>G</td>
-                                                                        <td>0.1</td>
-                                                                        <td>23956.52</td>
-                                                                        <td>30</td>
-                                                                        <td>0.7</td>
-                                                                        <td>159</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Linked</td>
-                                                                        <td>D</td>
-                                                                        <td>0.333</td>
-                                                                        <td>79855</td>
-                                                                        <td>30</td>
-                                                                        <td>0.1</td>
-                                                                        <td>701</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Linked</td>
-                                                                        <td>B</td>
-                                                                        <td>0.333</td>
-                                                                        <td>79855</td>
-                                                                        <td>20</td>
-                                                                        <td>0.22</td>
-                                                                        <td>1483</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
-                                                                    </tr>
-                                                                </tbody>
+                                                               <thead>
+                                                                <tr>
+                                                                    <th class="head">H4</th>
+                                                                    <th>Loan Type (T)</th>
+                                                                    <th>Part (P)</th>
+                                                                    <th>Mortgage (M)</th>
+                                                                    <th>Years (Y)</th>
+                                                                    <th>Intrest (I)</th>
+                                                                    <th>Monthly Return (MR)</th>
+                                                                    <th>Total_MR</th>
+                                                                    <th>Final_MR</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                 <tr>
+                                                                    <td class="e_step2_head1">Prime</td>
+                                                                    <td class="e_step2_type1" ></td>
+                                                                    <td class="e_step2_part1"></td>
+                                                                    <td class="e_step2_morg1"></td>
+                                                                    <td class="e_step2_year1"></td>
+                                                                    <td class="e_step2_int1"></td>
+                                                                    <td class="e_step2_mr1"></td>
+                                                                    <td class="e_step2_totalmr1"></td>
+                                                                    <td class="e_step2_final1_"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="e_step2_head2">Dollar</td>
+                                                                    <td class="e_step2_type2" ></td>
+                                                                    <td class="e_step2_part2">0.1</td>
+                                                                    <td class="e_step2_morg2"></td>
+                                                                    <td class="e_step2_year2"></td>
+                                                                    <td class="e_step2_int2"></td>
+                                                                    <td class="e_step2_mr2"></td>
+                                                                    <td class="e_step2_totalmr2"></td>
+                                                                    <td class="e_step2_final2"></td>
+                                                                   
+                                                                </tr>
+                                                                <tr>
+                                                                    
+                                                                    <td class="e_step2_head3">Euro</td>
+                                                                    <td class="e_step2_type3" ></td>
+                                                                    <td class="e_step2_part3">0.1</td>
+                                                                    <td class="e_step2_morg3"></td>
+                                                                    <td class="e_step2_year3"></td>
+                                                                    <td class="e_step2_int3"></td>
+                                                                    <td class="e_step2_mr3"></td>
+                                                                    <td class="e_step2_totalmr3"></td>
+                                                                    <td class="e_step2_final3"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="e_step2_head4">Euro</td>
+                                                                    <td class="e_step2_type4" ></td>
+                                                                    <td class="e_step2_part4"></td>
+                                                                    <td class="e_step2_morg4"></td>
+                                                                    <td class="e_step2_year4"></td>
+                                                                    <td class="e_step2_int4"></td>
+                                                                    <td class="e_step2_mr4"></td>
+                                                                    <td class="e_step2_totalmr4"></td>
+                                                                    <td class="e_step2_final4"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="e_step2_head5">Euro</td>
+                                                                    <td class="e_step2_type5" ></td>
+                                                                    <td class="e_step2_part5"></td>
+                                                                    <td class="e_step2_morg5"></td>
+                                                                    <td class="e_step2_year5"></td>
+                                                                    <td class="e_step2_int5"></td>
+                                                                    <td class="e_step2_mr5"></td>
+                                                                    <td class="e_step2_totalmr5"></td>
+                                                                    <td class="e_step2_final5"></td>
+                                                                </tr>
+                                                            </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
@@ -666,7 +769,7 @@
                                                     <div class="funding-tree report-tree">
                                                         <div class="col-2 a4">
                                                             <h3>Grace implemented on loan types below:</h3>
-                                                            <input type="text" placeholder="A>E>D>B>C">
+                                                            <input type="text" placeholder="A>E>D>B>C" class="grace_value">
                                                         </div>
                                                     </div>
                                                     <div class="offer-tabs A_return_algo grace-cl ">
@@ -682,7 +785,7 @@
                                                                                 <span>10.1 Enter_Month (0 or 3-36)</span> Grace Period
                                                                             </div>
                                                                             <div class="col-2">
-                                                                                <button class="a-time-selection">0 or 3-36 Month</button>
+                                                                               <input type="text" name="ten_one" class="ten_one">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -692,7 +795,7 @@
                                                                                 <span>10.2 Req_Grace</span> If Chose 5.1 Val 12.1<br> If Chose 5.2 Val 12.1 - 5.2
                                                                             </div>
                                                                             <div class="col-2">
-                                                                                <button class="a-time-selection">Calc Value</button>
+                                                                                <input type="text" name="ten_two" class="ten_two">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -705,29 +808,37 @@
                                         </div>
                                         <div class="col-md-12">
                                             <form class="redio-design" id="top-3">
-                                                <div class="form-group">
-                                                    <input id="A_radio1" type="radio" checked="" name="name11">
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio1" type="radio" checked="" name="name11" value="A">
                                                     <label for="A_radio1">A</label>
                                                 </div>
-                                                <div class="form-group">
-                                                    <input id="A_radio2" type="radio" name="name11">
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio2" type="radio" name="name11" value="F">
                                                     <label for="A_radio2">F</label>
                                                 </div>
-                                                <div class="form-group">
-                                                    <input id="A_radio3" type="radio" name="name11">
+                                                <div class="form-group" style="display: none;" >
+                                                    <input id="A_radio3" type="radio" name="name11" value="G">
                                                     <label for="A_radio3">G</label>
                                                 </div>
-                                                <div class="form-group">
-                                                    <input id="A_radio4" type="radio" name="name11">
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio4" type="radio" name="name11" value="D">
                                                     <label for="A_radio4">D</label>
                                                 </div>
-                                                <div class="form-group">
-                                                    <input id="A_radio5" type="radio" name="name11">
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio5" type="radio" name="name11" value="B">
                                                     <label for="A_radio5">B</label>
                                                 </div>
-                                                <div class="form-group">
-                                                    <input id="A_radio6" type="radio" name="name11">
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio6" type="radio" name="name11" value="H">
                                                     <label for="A_radio6">H</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio7" type="radio" name="name11" value="E">
+                                                    <label for="A_radio7">E</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio8" type="radio" name="name11" value="C">
+                                                    <label for="A_radio8">C</label>
                                                 </div>
                                             </form>
                                         </div>
@@ -739,24 +850,51 @@
                                                         <li>
                                                             <div class="form-group">
                                                                 <label>Show years</label>
-                                                                <select class="selectpicker" style="display: none;">
+                                                                <select class="selectpicker sel-years" style="display: none;">
                                                        <option>1</option>
                                                        <option>2</option>
                                                        <option>3</option>
+                                                       <option>4</option>
+                                                       <option>5</option>
+                                                       <option>6</option>
+                                                       <option>7</option>
+                                                       <option>8</option>
+                                                       <option>9</option>
+                                                       <option>10</option>
+                                                       <option>11</option>
+                                                       <option>12</option>
+                                                       <option>13</option>
+                                                       <option>14</option>
+                                                       <option>15</option>
+                                                       <option>16</option>
+                                                       <option>17</option>
+                                                       <option>18</option>
+                                                       <option>19</option>
+                                                       <option>20</option>
+                                                       <option>21</option>
+                                                       <option>22</option>
+                                                       <option>23</option>
+                                                       <option>24</option>
+                                                       <option>25</option>
+                                                       <option>26</option>
+                                                       <option>27</option>
+                                                       <option>28</option>
+                                                       <option>29</option>
+                                                       <option>30</option>
                                                     </select>
                                                             </div>
                                                         </li>
                                                         <li class="input-max-years">
                                                             <div class="form-group d-f a-i-c">
                                                                 <label>Max years:</label>
-                                                                <input type="text" class="form-control" id="max-years" name="max-years" placeholder="30">
+                                                                <input type="text" class="form-control" id="max-years" name="max-years" placeholder="30" value="30" readonly="readonly">
                                                             </div>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div class="mortgage-linked-wrap">
                                                     <div class="table-container table-auto mortgage-linked-table wid-scroll">
-                                                        <table>
+                                                        <table class="step_4_table">
                                                             <thead>
                                                                 <tr>
                                                                     <th>MR Linked</th>
@@ -773,7 +911,7 @@
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td>1557.70</td>
+                                                                    <td >1557.70</td>
                                                                     <td>1556.23</td>
                                                                     <td>177510.66</td>
                                                                     <td>177333.33</td>
@@ -968,7 +1106,7 @@
                                                 </div>
                                                 <div class="mortgage-linked-wrap">
                                                     <div class="table-container table-auto mortgage-linked-table wid-scroll">
-                                                        <table>
+                                                        <table >
                                                             <thead>
                                                                 <tr>
                                                                     <th>MR Linked</th>
@@ -1010,14 +1148,14 @@
                                                         <li class="input-max-years">
                                                             <div class="form-group d-f a-i-c">
                                                                 <label>Max years:</label>
-                                                                <input type="text" class="form-control" id="max-years" name="max-years" placeholder="30">
+                                                                <input type="text" class="form-control" id="max-years" name="max-years" placeholder="30" value="30" readonly="readonly">
                                                             </div>
                                                         </li>
                                                     </ul>
                                                 </div>
                                                 <div class="mortgage-linked-wrap">
                                                     <div class="table-container table-auto mortgage-linked-table wid-scroll">
-                                                        <table>
+                                                        <table class="step_4_e_table">
                                                             <thead>
                                                                 <tr>
                                                                     <th>MR Linked</th>
@@ -1262,7 +1400,7 @@
                                                         </ul>
                                                         <ul class="dsa">
                                                             <li>Recycle the large year loan types below:</li>
-                                                            <li>Go from 30 to 1 and search best fit New <a href="javascript:void(0);">Final_MR to Final_MR</a></li>
+                                                            <li>Go from 30 to 4 and search best fit New <a href="javascript:void(0);">Final_MR to Final_MR</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="mortgage-linked-wrap space-a">
@@ -1270,7 +1408,7 @@
                                                             <table style="text-align: center;">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>H4</th>
+                                                                        <th class="head">H4</th>
                                                                         <th>Loan Type (T)</th>
                                                                         <th>Part (P)</th>
                                                                         <th>Left Morg (M)</th>
@@ -1282,49 +1420,71 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr>
-                                                                        <td>prime</td>
-                                                                        <td>A</td>
-                                                                        <td>0.25</td>
-                                                                        <td>118331.63</td>
-                                                                        <td class="b-r-top-right-left">7</td>
-                                                                        <td>0.1</td>
-                                                                        <td>1964</td>
-                                                                        <td>7641</td>
-                                                                        <td>16044</td>
+                                                                    <tr class="tab1_rec">
+                                                                        <td class="rec_head1">prime</td>
+                                                                        <td class="rec_type1">A</td>
+                                                                        <td class="rec_part1">0.25</td>
+                                                                        <td class="rec_morg1">118331.63</td>
+                                                                        <td class="b-r-top-right-left rec_year1">7</td>
+                                                                        <td class="rec_int1">0.1</td>
+                                                                        <td class="rec_pmt1">1964</td>
+                                                                        <td class="rec_totalpmt1">7641</td>
+                                                                        <td class="rec_finalpmt1">16044</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>dollar</td>
-                                                                        <td>F</td>
-                                                                        <td>0.25</td>
-                                                                        <td>67746.01</td>
-                                                                        <td class="b-r-left-right">7</td>
-                                                                        <td>0.05</td>
-                                                                        <td>958</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>*Best fit to Final_MR</td>
+                                                                    <tr class="tab2_rec">
+                                                                        <td class="rec_head2">prime</td>
+                                                                        <td class="rec_type2">A</td>
+                                                                        <td class="rec_part2">0.25</td>
+                                                                        <td class="rec_morg2">118331.63</td>
+                                                                        <td class="b-r-top-right-left rec_year2">7</td>
+                                                                        <td class="rec_int2">0.1</td>
+                                                                        <td class="rec_pmt2">1964</td>
+                                                                        <td class="rec_totalpmt2"></td>
+                                                                        <td class="rec_finalpmt2"></td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>euro</td>
-                                                                        <td>G</td>
-                                                                        <td>0.25</td>
-                                                                        <td>63139.84</td>
-                                                                        <td class="b-r-left-right">7</td>
-                                                                        <td>0.04</td>
-                                                                        <td>863</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
+                                                                    <tr class="tab3_rec">
+                                                                        <td class="rec_head3">prime</td>
+                                                                        <td class="rec_type3">A</td>
+                                                                        <td class="rec_part3">0.25</td>
+                                                                        <td class="rec_morg3">118331.63</td>
+                                                                        <td class="b-r-top-right-left rec_year3">7</td>
+                                                                        <td class="rec_int3">0.1</td>
+                                                                        <td class="rec_pmt3">1964</td>
+                                                                        <td class="rec_totalpmt3"></td>
+                                                                        <td class="rec_finalpmt3"></td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>linked</td>
-                                                                        <td>D</td>
-                                                                        <td>0.25</td>
-                                                                        <td>255489.50</td>
-                                                                        <td class="b-r-bottom-right-left">7</td>
-                                                                        <td>0.07</td>
-                                                                        <td>3856</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
+                                                                    <tr class="tab4_rec">
+                                                                        <td class="rec_head4">prime</td>
+                                                                        <td class="rec_type4">A</td>
+                                                                        <td class="rec_part4">0.25</td>
+                                                                        <td class="rec_morg4">118331.63</td>
+                                                                        <td class="b-r-top-right-left rec_year4">7</td>
+                                                                        <td class="rec_int4">0.1</td>
+                                                                        <td class="rec_pmt4">1964</td>
+                                                                        <td class="rec_totalpmt4"></td>
+                                                                        <td class="rec_finalpmt4"></td>
+                                                                    </tr>
+                                                                     <tr class="tab5_rec">
+                                                                        <td class="rec_head5">prime</td>
+                                                                        <td class="rec_type5">A</td>
+                                                                        <td class="rec_part5">0.25</td>
+                                                                        <td class="rec_morg5">118331.63</td>
+                                                                        <td class="b-r-top-right-left rec_year5">7</td>
+                                                                        <td class="rec_int5">0.1</td>
+                                                                        <td class="rec_pmt5">1964</td>
+                                                                        <td class="rec_totalpmt5"></td>
+                                                                        <td class="rec_finalpmt5"></td>
+                                                                    </tr>
+                                                                     <tr class="tab6_rec">
+                                                                        <td class="rec_head6">prime</td>
+                                                                        <td class="rec_type6">A</td>
+                                                                        <td class="rec_part6">0.25</td>
+                                                                        <td class="rec_morg6">118331.63</td>
+                                                                        <td class="b-r-top-right-left rec_year6">7</td>
+                                                                        <td class="rec_int6">0.1</td>
+                                                                        <td class="rec_pmt6">1964</td>
+                                                                        <td class="rec_totalpmt6"></td>
+                                                                        <td class="rec_finalpmt6"></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -1554,7 +1714,7 @@
                                                             <table style="text-align: center; margin-top: 20px;">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>H4</th>
+                                                                        <th class="head">H4</th>
                                                                         <th>Loan Type (T)</th>
                                                                         <th>Part (P)</th>
                                                                         <th>Left Morg (M)</th>
@@ -1566,49 +1726,71 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr>
-                                                                        <td>prime</td>
-                                                                        <td>A</td>
-                                                                        <td>0.25</td>
-                                                                        <td>118331.63</td>
-                                                                        <td class="b-r-top-right-left">7</td>
-                                                                        <td>0.1</td>
-                                                                        <td>1964</td>
-                                                                        <td>7641</td>
-                                                                        <td>16044</td>
+                                                                   <tr class="e_tab1_rec">
+                                                                        <td class="e_rec_head1">prime</td>
+                                                                        <td class="e_rec_type1">A</td>
+                                                                        <td class="e_rec_part1">0.25</td>
+                                                                        <td class="e_rec_morg1">118331.63</td>
+                                                                        <td class="b-r-top-right-left e_rec_year1">7</td>
+                                                                        <td class="e_rec_int1">0.1</td>
+                                                                        <td class="e_rec_pmt1">1964</td>
+                                                                        <td class="e_rec_totalpmt1">7641</td>
+                                                                        <td class="e_rec_finalpmt1">16044</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>dollar</td>
-                                                                        <td>F</td>
-                                                                        <td>0.25</td>
-                                                                        <td>67746.01</td>
-                                                                        <td class="b-r-left-right">7</td>
-                                                                        <td>0.05</td>
-                                                                        <td>958</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>*Best fit to Final_MR</td>
+                                                                    <tr class="e_tab2_rec">
+                                                                        <td class="e_rec_head2">prime</td>
+                                                                        <td class="e_rec_type2">A</td>
+                                                                        <td class="e_rec_part2">0.25</td>
+                                                                        <td class="e_rec_morg2">118331.63</td>
+                                                                        <td class="b-r-top-right-left e_rec_year2">7</td>
+                                                                        <td class="e_rec_int2">0.1</td>
+                                                                        <td class="e_rec_pmt2">1964</td>
+                                                                        <td class="e_rec_totalpmt2"></td>
+                                                                        <td class="e_rec_finalpmt2"></td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>euro</td>
-                                                                        <td>G</td>
-                                                                        <td>0.25</td>
-                                                                        <td>63139.84</td>
-                                                                        <td class="b-r-left-right">7</td>
-                                                                        <td>0.04</td>
-                                                                        <td>863</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
+                                                                    <tr class="e_tab3_rec">
+                                                                        <td class="e_rec_head3">prime</td>
+                                                                        <td class="e_rec_type3">A</td>
+                                                                        <td class="e_rec_part3">0.25</td>
+                                                                        <td class="e_rec_morg3">118331.63</td>
+                                                                        <td class="b-r-top-right-left e_rec_year3">7</td>
+                                                                        <td class="e_rec_int3">0.1</td>
+                                                                        <td class="e_rec_pmt3">1964</td>
+                                                                        <td class="e_rec_totalpmt3"></td>
+                                                                        <td class="e_rec_finalpmt3"></td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>linked</td>
-                                                                        <td>D</td>
-                                                                        <td>0.25</td>
-                                                                        <td>255489.50</td>
-                                                                        <td class="b-r-bottom-right-left">7</td>
-                                                                        <td>0.07</td>
-                                                                        <td>3856</td>
-                                                                        <td>&nbsp;</td>
-                                                                        <td>&nbsp;</td>
+                                                                    <tr class="e_tab4_rec">
+                                                                        <td class="e_rec_head4">prime</td>
+                                                                        <td class="e_rec_type4">A</td>
+                                                                        <td class="e_rec_part4">0.25</td>
+                                                                        <td class="e_rec_morg4">118331.63</td>
+                                                                        <td class="b-r-top-right-left e_rec_year4">7</td>
+                                                                        <td class="e_rec_int4">0.1</td>
+                                                                        <td class="e_rec_pmt4">1964</td>
+                                                                        <td class="e_rec_totalpmt4"></td>
+                                                                        <td class="e_rec_finalpmt4"></td>
+                                                                    </tr>
+                                                                     <tr class="e_tab5_rec">
+                                                                        <td class="e_rec_head5">prime</td>
+                                                                        <td class="e_rec_type5">A</td>
+                                                                        <td class="e_rec_part5">0.25</td>
+                                                                        <td class="e_rec_morg5">118331.63</td>
+                                                                        <td class="b-r-top-right-left e_rec_year5">7</td>
+                                                                        <td class="e_rec_int5">0.1</td>
+                                                                        <td class="e_rec_pmt5">1964</td>
+                                                                        <td class="e_rec_totalpmt5"></td>
+                                                                        <td class="e_rec_finalpmt5"></td>
+                                                                    </tr>
+                                                                     <tr class="e_tab6_rec">
+                                                                        <td class="e_rec_head6">prime</td>
+                                                                        <td class="e_rec_type6">A</td>
+                                                                        <td class="e_rec_part6">0.25</td>
+                                                                        <td class="e_rec_morg6">118331.63</td>
+                                                                        <td class="b-r-top-right-left e_rec_year6">7</td>
+                                                                        <td class="e_rec_int6">0.1</td>
+                                                                        <td class="e_rec_pmt6">1964</td>
+                                                                        <td class="e_rec_totalpmt6"></td>
+                                                                        <td class="e_rec_finalpmt6"></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -1817,30 +1999,39 @@
 
                                             <div class="col-md-12">
                                                 <form class="redio-design" id="top-3">
-                                                    <div class="form-group">
-                                                        <input id="A_radio1" type="radio" checked="" name="name11">
-                                                        <label for="A_radio1">A</label>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input id="A_radio2" type="radio" name="name11">
-                                                        <label for="A_radio2">F</label>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input id="A_radio3" type="radio" name="name11">
-                                                        <label for="A_radio3">G</label>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input id="A_radio4" type="radio" name="name11">
-                                                        <label for="A_radio4">D</label>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input id="A_radio5" type="radio" name="name11">
-                                                        <label for="A_radio5">B</label>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input id="A_radio6" type="radio" name="name11">
-                                                        <label for="A_radio6">H</label>
-                                                    </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio1_" type="radio" checked="" name="name11_" value="A">
+                                                    <label for="A_radio1_">A</label>
+                                                </div>
+                                               
+                                                <div class="form-group" style="display: none;" >
+                                                    <input id="A_radio3_" type="radio" name="name11_" value="G">
+                                                    <label for="A_radio3_">G</label>
+                                                </div>
+                                                 <div class="form-group" style="display: none;">
+                                                    <input id="A_radio2_" type="radio" name="name11_" value="F">
+                                                    <label for="A_radio2_">F</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio4_" type="radio" name="name11_" value="D">
+                                                    <label for="A_radio4_">D</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio5_" type="radio" name="name11_" value="B">
+                                                    <label for="A_radio5_">B</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio6_" type="radio" name="name11_" value="H">
+                                                    <label for="A_radio6_">H</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio7_" type="radio" name="name11_" value="E">
+                                                    <label for="A_radio7_">E</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="A_radio8_" type="radio" name="name11_" value="C">
+                                                    <label for="A_radio8_">C</label>
+                                                </div>
                                                 </form>
                                             </div>
                                             <div class="row-margin">
@@ -1851,10 +2042,37 @@
                                                             <li>
                                                                 <div class="form-group">
                                                                     <label>Show years</label>
-                                                                    <select class="selectpicker" style="display: none;">
-                                                       <option>1</option>
+                                                                    <select class="selectpicker sel-years-6" style="display: none;">
+                                                        <option>1</option>
                                                        <option>2</option>
                                                        <option>3</option>
+                                                       <option>4</option>
+                                                       <option>5</option>
+                                                       <option>6</option>
+                                                       <option>7</option>
+                                                       <option>8</option>
+                                                       <option>9</option>
+                                                       <option>10</option>
+                                                       <option>11</option>
+                                                       <option>12</option>
+                                                       <option>13</option>
+                                                       <option>14</option>
+                                                       <option>15</option>
+                                                       <option>16</option>
+                                                       <option>17</option>
+                                                       <option>18</option>
+                                                       <option>19</option>
+                                                       <option>20</option>
+                                                       <option>21</option>
+                                                       <option>22</option>
+                                                       <option>23</option>
+                                                       <option>24</option>
+                                                       <option>25</option>
+                                                       <option>26</option>
+                                                       <option>27</option>
+                                                       <option>28</option>
+                                                       <option>29</option>
+                                                       <option>30</option>
                                                     </select>
                                                                 </div>
                                                             </li>
@@ -1868,7 +2086,7 @@
                                                     </div>
                                                     <div class="mortgage-linked-wrap">
                                                         <div class="table-container table-auto mortgage-linked-table wid-scroll">
-                                                            <table>
+                                                            <table class="step_6_table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th>MR Linked</th>
@@ -2133,7 +2351,7 @@
                                                     </div>
                                                     <div class="mortgage-linked-wrap">
                                                         <div class="table-container table-auto mortgage-linked-table wid-scroll">
-                                                            <table>
+                                                            <table class="step_6_e_table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th>MR Linked</th>
@@ -2376,21 +2594,21 @@
                                                                                             <tbody>
                                                                                                 <tr>
                                                                                                     <td>13.3 Invest_Fee</td>
-                                                                                                    <td>1k-10m</td>
-                                                                                                    <td>1k-10m</td>
-                                                                                                    <td>1k-10m</td>
+                                                                                                    <td class="inst_fee_1"></td>
+                                                                                                    <td class="inst_fee_2"></td>
+                                                                                                    <td class="inst_fee_3"></td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td>13.4 Invest_Time</td>
-                                                                                                    <td>1-20 Years</td>
-                                                                                                    <td>1-20 Years</td>
-                                                                                                    <td>1-20 Years</td>
+                                                                                                    <td class="inst_year_1">Years</td>
+                                                                                                    <td class="inst_year_2">Years</td>
+                                                                                                    <td class="inst_year_3">Years</td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                     <td>Calc Month Again</td>
-                                                                                                    <td>297</td>
-                                                                                                    <td>280</td>
-                                                                                                    <td>270</td>
+                                                                                                    <td class="inst_month_1">297</td>
+                                                                                                    <td class="inst_month_2">280</td>
+                                                                                                    <td class="inst_month_3"></td>
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>
@@ -2405,12 +2623,12 @@
                                                                                 <form class="A_loan_qa">
                                                                                     <div class="form-group">
                                                                                         <h1>13.1 Has_Invest</h1>
-                                                                                        <input id="has_loan" type="radio" name="select1">
+                                                                                        <input id="has_loan" type="radio" name="select1_inst" class="sel_7_r">
                                                                                         <label for="has_loan">Yes</label>
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <h1>13.2 No_Invest</h1>
-                                                                                        <input id="no_loan" type="radio" name="select1">
+                                                                                        <input id="no_loan" type="radio" name="select1_inst" class="sel_7_l">
                                                                                         <label for="no_loan">No</label>
                                                                                     </div>
                                                                                 </form>
@@ -2448,30 +2666,39 @@
 
                                                 <div class="col-md-12">
                                                     <form class="redio-design" id="top-3">
-                                                        <div class="form-group">
-                                                            <input id="A_radio1" type="radio" checked="" name="name11">
-                                                            <label for="A_radio1">A</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input id="A_radio2" type="radio" name="name11">
-                                                            <label for="A_radio2">F</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input id="A_radio3" type="radio" name="name11">
-                                                            <label for="A_radio3">G</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input id="A_radio4" type="radio" name="name11">
-                                                            <label for="A_radio4">D</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input id="A_radio5" type="radio" name="name11">
-                                                            <label for="A_radio5">B</label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input id="A_radio6" type="radio" name="name11">
-                                                            <label for="A_radio6">H</label>
-                                                        </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="_A_radio1_" type="radio" checked="" name="_name11_" value="A">
+                                                    <label for="_A_radio1_">A</label>
+                                                </div>
+                                               
+                                                <div class="form-group" style="display: none;" >
+                                                    <input id="_A_radio3_" type="radio" name="_name11_" value="G">
+                                                    <label for="_A_radio3_">G</label>
+                                                </div>
+                                                 <div class="form-group" style="display: none;">
+                                                    <input id="_A_radio2_" type="radio" name="_name11_" value="F">
+                                                    <label for="_A_radio2_">F</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="_A_radio4_" type="radio" name="_name11_" value="D">
+                                                    <label for="_A_radio4_">D</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="_A_radio5_" type="radio" name="_name11_" value="B">
+                                                    <label for="_A_radio5_">B</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="_A_radio6_" type="radio" name="_name11_" value="H">
+                                                    <label for="_A_radio6_">H</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="_A_radio7_" type="radio" name="_name11_" value="E">
+                                                    <label for="_A_radio7_">E</label>
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <input id="_A_radio8_" type="radio" name="_name11_" value="C">
+                                                    <label for="_A_radio8_">C</label>
+                                                </div>
                                                     </form>
                                                 </div>
                                                 <div class="row-margin">
@@ -2499,7 +2726,7 @@
                                                         </div>
                                                         <div class="mortgage-linked-wrap">
                                                             <div class="table-container table-auto mortgage-linked-table wid-scroll">
-                                                                <table>
+                                                                <table >
                                                                     <thead>
                                                                         <tr>
                                                                             <th>MR Linked</th>
@@ -2701,7 +2928,7 @@
                                                         </div>
                                                         <div class="mortgage-linked-wrap">
                                                             <div class="table-container table-auto mortgage-linked-table">
-                                                                <table>
+                                                                <table >
                                                                     <thead>
                                                                         <tr>
                                                                             <th>MR Linked</th>
@@ -2754,7 +2981,7 @@
                                                         </div>
                                                         <div class="mortgage-linked-wrap">
                                                             <div class="table-container table-auto mortgage-linked-table wid-scroll">
-                                                                <table>
+                                                                <table class="e_step_7_table">
                                                                     <thead>
                                                                         <tr>
                                                                             <th>MR Linked</th>
@@ -2967,7 +3194,7 @@
 
                                                         <div class="mortgage-linked-wrap">
                                                             <div class="table-container table-auto mortgage-linked-table wid-scroll">
-                                                                <table>
+                                                                <table class="final_step_8">
                                                                     <thead>
                                                                         <tr>
                                                                             <th>MR Linked</th>
@@ -3192,10 +3419,37 @@
                                                     <div class="col-md-1 dsds">
                                                         <div class="form-group">
                                                             <label>Show years</label>
-                                                            <select class="selectpicker">
-                                           <option>1</option>
-                                           <option>2</option>
-                                           <option>3</option>
+                                                            <select class="selectpicker sel_8_final">
+                                                       <option>1</option>
+                                                       <option>2</option>
+                                                       <option>3</option>
+                                                       <option>4</option>
+                                                       <option>5</option>
+                                                       <option>6</option>
+                                                       <option>7</option>
+                                                       <option>8</option>
+                                                       <option>9</option>
+                                                       <option>10</option>
+                                                       <option>11</option>
+                                                       <option>12</option>
+                                                       <option>13</option>
+                                                       <option>14</option>
+                                                       <option>15</option>
+                                                       <option>16</option>
+                                                       <option>17</option>
+                                                       <option>18</option>
+                                                       <option>19</option>
+                                                       <option>20</option>
+                                                       <option>21</option>
+                                                       <option>22</option>
+                                                       <option>23</option>
+                                                       <option>24</option>
+                                                       <option>25</option>
+                                                       <option>26</option>
+                                                       <option>27</option>
+                                                       <option>28</option>
+                                                       <option>29</option>
+                                                       <option>30</option>
                                         </select>
                                                         </div>
                                                     </div>

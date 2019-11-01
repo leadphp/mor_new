@@ -8,739 +8,51 @@ use App\question_survey;
 use App\Clerk;
 use App\Banks_regulation;
 use App\Banks_regulation_relation;
+use App\AdminCheckboxes;
+use App\Bank_interest;
 use Auth;
 use Mail;
 use Session;
 use Excel;
 class QuestionSurveyController extends Controller
 {
-    //
+   public $user_id_edit;
     public function __construct()
     {
        $this->middleware('auth');
+
+        //$this->auth_checker();
     } 
+
+
+
+    public function auth_checker(){
+      $user_id_edit = session::get('User_id_edit');
+
+        if($user_id_edit != ""){
+            $user_id_edit = session::get('User_id_edit');
+        }else{
+            $user_id_edit = \Auth::user()->id;
+
+        }
+        return $user_id_edit;
+    }
+
+
+
+
+
 
     public function latestview(){
         return view('question_latest');
     }
 
 /************************************************************/
-    public function question_flow(){
-      return view('questions_flow');
-    }
+    // public function question_flow(){
+    //     $sett = AdminCheckboxes::get();
+    //   return view('questions_flow')->with('setting',$sett);;
+    // }
 /***********************************************************/
-
-
-
-
-//     public function view(){
-//      $exreport = Exreport::orderBy('id','desc')->first();
-//       $auth = \Auth::user();
-//       if(!empty($auth)){
-    //   $ques1 = question_survey::where('user_id',\Auth::user()->id)->latest()->first();
-
-    //   if(!empty($ques1)){
-    //     $rr = $ques1->question_id;
-        
-    //     switch ($rr) {
-    //       case "1":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','first');
-    //           break;
-    //       case "2":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','second');
-    //           break;
-    //       case "3":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','third');
-    //           break;
-    //       case "4":
-    //          return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','fourth') ;
-    //           break;
-    //       case "5":
-    //          return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','fifth');
-    //           break;
-    //       case "6":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','sixth');
-    //           break;
-    //       case "7":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','seventh');
-    //           break;
-    //       case "8":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','eighth bubble_first_filled');
-    //           break;
-    //       case "9":
-    //          return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','ninth bubble_first_filled');
-    //           break;
-    //       case "10":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','tenth bubble_first_filled');
-    //           break;
-    //       case "11":
-    //          return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','eleventh bubble_first_filled');
-    //           break;
-    //       case "14":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','twelveth bubble_first_filled bubble_second_filled');
-    //           break;
-    //       case "15":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','thirteen bubble_first_filled bubble_second_filled');
-    //           break;
-    //       case "16":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','fourteen bubble_first_filled bubble_second_filled');
-    //           break;
-    //       case "17":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','fifteen bubble_first_filled bubble_second_filled bubble_third_filled bubble_fourth_filled');
-    //           break;
-    //       case "18":
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','sixteen bubble_first_filled bubble_second_filled bubble_third_filled bubble_fourth_filled');
-    //           break;
-    //       default:
-    //           return view('question_new')
-    //           ->with('exreport',$exreport)
-    //           ->with('questions',$this->QuestionHTML())
-    //           ->with('class_value','');
-    //     }
-    //   }else{
-    //     return view('question_new')
-    //     ->with('exreport',$exreport)
-    //     ->with('questions',$this->QuestionHTML());
-    //   }
-    // }else{ 
-    //     return view('question_new')
-    //     ->with('exreport',$exreport)
-    //     ->with('questions',$this->QuestionHTML());
-    // }
-//   }
-
-//   public function QuestionHTML()
-//   {   
-//       $auth = \Auth::user();
-//     if(!empty($auth)){
-//     //   $ques1 = question_survey::where('user_id',\Auth::user()->id)->latest()->first();
-
-//     //   if(!empty($ques1)){
-//     //     $rr = $ques1->question_id;
-//     //     switch ($rr) {
-//     //     case "1":
-//     //         return $this->ques1();
-//     //         break;
-//     //     case "2":
-//     //         return $this->ques2();
-//     //         break;
-//     //     case "3":
-//     //         return $this->ques3();
-//     //         break;
-//     //     case "4":
-//     //         return $this->ques4();
-//     //         break;
-//     //     case "5":
-//     //         return $this->ques5();
-//     //         break;
-//     //     case "6":
-//     //         return $this->ques6();
-//     //         break;
-//     //     case "7":
-//     //         return $this->ques7();
-//     //         break;
-//     //     case "8":
-//     //         return $this->ques8();
-//     //         break;
-//     //     case "9":
-//     //         return $this->ques9();
-//     //         break;
-//     //     case "10":
-//     //         return $this->ques10();
-//     //         break;
-//     //     case "11":
-//     //         return $this->ques11();
-//     //         break;
-//     //     case "12":
-//     //         return $this->ques12();
-//     //         break;
-//     //     case "13":
-//     //         return $this->ques13();
-//     //         break;
-//     //     case "14":
-//     //         return $this->ques14();
-//     //         break;
-//     //     case "15":
-//     //         return $this->ques15();
-//     //         break;
-//     //     case "16":
-//     //         return $this->ques16();
-//     //         break;
-//     //     case "17":
-//     //         return $this->ques17();
-//     //         break;
-//     //     case "18":
-//     //         return $this->ques18();
-//     //         break;
-//     //     default:
-//     //         return $this->Getstarted();
-//     //     }
-//     //   }else{
-//     //     return $this->Getstarted();
-//     //   }
-//     // }
-//     // else{
-//       return $this->Getstarted();
-//     }
-//   }
-
-// /*functions for questions*/
-//   public function Getstarted(){
-    
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $vv = '';
-//       $ques1 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','1')->get();
-//       if(count($ques1)){
-//         $vv .= view('questions.questionGetstarted')->with('ques1', $ques1)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.questionGetstarted')->render();
-//         return $vv;
-//       } 
-//     }else{
-//       $vv = view('questions.questionGetstarted')->render();
-//     }
-//     return $vv; 
-//   }
-
-
-// 	public function ques1(){
-//     $vv ='';
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-// 		  $ques1 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','1')->get();
-//       if(count($ques1)){
-//         $vv .= view('questions.question1')->with('ques1', $ques1)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question1')->render();
-//         return $vv;
-//       } 
-//     }else{
-//       $vv .= view('questions.question1')->render();
-//       return $vv;
-//     }
-// 	}
-	
-// 	public function ques2(){
-// 		$vv = '';
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques2 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
-//       if(count($ques2)){
-//        $vv .= view('questions.question2')->with('ques2', $ques2)->render();
-//         return $vv;
-//       }else{
-//        $vv .= view('questions.question2')->render();
-//         return $vv;
-//       }
-     
-//     }else{
-//       $vv .= view('questions.question2')->render();
-//       return $vv;
-//     }	
-// 	}
-
-
-// 	public function ques3(){
-//     $vv = '';
-// 		//$vv = $this->ques2();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques3 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','3')->get();
-//       if(count($ques3)){
-//        $vv .= view('questions.question3')->with('ques3', $ques3)->render();
-//         return $vv;
-//       }else{
-//        $vv .= view('questions.question3')->render();
-//         return $vv;
-//       }  
-//     }else{
-//       $vv .= view('questions.question3')->render();
-//       return $vv;
-//     }
-// 	}
-
-
-
-// 	public function ques4(){
-// 		$vv = '';
-//     //$vv = $this->ques3();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques4 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','4')->get();
-//       if(count($ques4)){
-//        $vv .= view('questions.question4')->with('ques4', $ques4)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question4')->render();
-//         return $vv;
-//       }  
-//     }else{
-//      $vv .= view('questions.question4')->render();
-//      return $vv;
-//     }	
-// 	}
-
-
-//     public function ques5(){
-//     $vv = '';
-//     //$vv = $this->ques4();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques5 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','5')->get();
-//       if(count($ques5)){
-//        $vv .= view('questions.question5')->with('ques5', $ques5)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question5')->render();
-//         return $vv;
-//       }  
-//     }else{
-//       $vv .= view('questions.question5')->render();
-//       return $vv;
-//     }
-//   }
-
-//   public function ques6(){
-//     $vv = '';
-//     //$vv = $this->ques5();
-//      /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques6 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','6')->get();
-//       if(count($ques6)){
-//        $vv .= view('questions.question6')->with('ques6', $ques6)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question6')->render();
-//         return $vv;
-//       }  
-//     }else{
-//       $vv .= view('questions.question6')->render();
-//       return $vv;
-//     }
-//   }
-//   public function ques7(){
-//     $vv = '';
-//     //$vv = $this->ques6();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques7 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','7')->get();
-//       if(count($ques7)){
-//        $vv .= view('questions.question7')->with('ques7', $ques7)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question7')->render();
-//         return $vv;
-//       }  
-//     }else{
-//       $vv .= view('questions.question7')->render();
-//       return $vv;
-//     }
-//   }
-//   public function ques8(){
-//     $vv = '';
-//     //$vv = $this->ques7();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques8 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-//       if(count($ques8)){
-//        $vv .= view('questions.question8')->with('ques8', $ques8)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question8')->render();
-//         return $vv;
-//       }  
-//     }else{
-//       $vv .= view('questions.question8')->render();
-//       return $vv;
-//     }
-//   }
-
-
-//   public function ques9(){
-//     $vv = '';
-//     //$vv = $this->ques8();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques8 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-//       $ques9 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','9')->get();
-//       if(count($ques9)){
-//        $vv .= view('questions.question9')->with('ques9', $ques9)->with('ques8', $ques8)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question9')->with('ques8', $ques8)->render();
-//         return $vv;
-//       }  
-//     }else{
-//       $vv .= view('questions.question9')->render();
-//       return $vv;
-//     }
-//   }
-
-
-
-//   public function ques10(){
-//     $vv = '';
-//     //$vv = $this->ques9();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques8 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-//       $ques10 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','10')->get();
-//       if(count($ques10)){
-//         $vv .= view('questions.question10')->with('ques10', $ques10)->with('ques8', $ques8)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question10')->with('ques8', $ques8)->render();
-//         return $vv;
-//       }  
-//     }else{
-//       $vv .= view('questions.question10')->render();
-//       return $vv;
-//     }
-    
-//   }
-
-//   public function ques11(){
-//     $vv = $this->ques10();
-//      /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques1 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','1')->get();
-//       $ques2 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
-//       $ques8 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-//       $ques9 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','9')->get();
-//       $ques11 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','11')->get();
-
-//     if(count($ques11)){
-
-//       $value8 = $ques8[0]->meta_value;
-//       $value9 = $ques9[0]->meta_value;
-//       $value1 = $ques1[0]->meta_value;
-//       $value2 = $ques2[0]->meta_value;
-//       $x_value_1 = $ques11[0]->meta_value;
-//        $x_value_1 = str_replace(",","",$x_value_1);
-//       $x_value_2 = $ques11[1]->meta_value;
-//        $x_value_2 = str_replace(",","",$x_value_2);
-//       $x_value_4 = $ques11[3]->meta_value;
-//        $x_value_4 = str_replace(",","",$x_value_4);
-
-//       $survey = banks_regulation::where('options',$value8)->get();
-//       $survey = $survey[0][$value1];
-
-//       if($survey == 'b'){
-//         $survey = banks_regulation_relation::where('options',$value9)->get();
-//         $survey_value = $survey[0]['programe'];
-//       }else{
-//         $survey_value = $survey;
-//       }
-
-//       $x_value = $x_value_2 / $x_value_1 * 100;
-//       $y_value = 100 - $survey_value;
-//       $x_value = number_format($x_value, 2, '.', '');
-
-//         //dd($x_value_4);
-
-
-//             if(45 < $x_value_4 && $x_value_4 <= 49){
-//                 $prop_value = $x_value_1 * 0.45;
-//                 $vv .= view('questions.question11')->with('ques11', $ques11)->with('ques8', $ques8)->with('survey', $survey_value)->with('x_value', $x_value)->with('y_value', $y_value)->with('value2', $value2)->with('z_value', $prop_value)->render();
-
-//             }elseif(60 < $x_value_4 && $x_value_4 <= 64){
-//                 $prop_value = $x_value_1 * 0.60;
-//                 $vv .= view('questions.question11')->with('ques11', $ques11)->with('ques8', $ques8)->with('survey', $survey_value)->with('x_value', $x_value)->with('y_value', $y_value)->with('value2', $value2)->with('z_value', $prop_value)->render();
-
-//             }elseif(75 < $x_value_4 && $x_value_4 <= 79){
-//                 $prop_value = $x_value_1 * 0.75;
-//                 $vv .= view('questions.question11')->with('ques11', $ques11)->with('ques8', $ques8)->with('survey', $survey_value)->with('x_value', $x_value)->with('y_value', $y_value)->with('value2', $value2)->with('z_value', $prop_value)->render();
-
-//             }else{
-//                 $prop_value = "0";
-//                 $vv .= view('questions.question11')->with('ques11', $ques11)->with('ques8', $ques8)->with('survey', $survey_value)->with('x_value', $x_value)->with('y_value', $y_value)->with('value2', $value2)->with('z_value', $prop_value)->render();  
-//             }
-
-//       //dd($y_value);
-        
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question11')->with('ques8', $ques8)->render();
-//     return $vv;
-//       }  
-//     }else{
-//         $vv .= view('questions.question11')->render();
-//     return $vv;
-//     }
-  
-//   }
-
-//   public function ques11_2(){
-//     $vv = $this->ques11();
-//      /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques8 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-//       $ques11= question_survey::where('user_id',\Auth::user()->id)->where('question_id','11')->get();
-//       $ques2 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
-
-//       if(count($ques11)){
-//         $x_value_1 = $ques11[0]->meta_value;
-//         $x_value_1 = str_replace(",","",$x_value_1);
-//         $x_value_2 = $ques11[1]->meta_value;
-//         $x_value_2 = str_replace(",","",$x_value_2);
-//         $x_value_5 = $ques11[4]->meta_value;
-//         $x_value_5 = str_replace(",","",$x_value_5);
-
-//         $value2 = $ques2[0]->meta_value;
-//         $x_value = $x_value_2 / $x_value_1 * 100;
-//         $x_value = number_format($x_value, 2, '.', '');
-
-//             if(45 < $x_value_5 && $x_value_5 <= 49){
-//                 $prop_value = $x_value_1 * 0.45;
-//             }elseif(60 < $x_value_5 && $x_value_5 <= 64){
-//                 $prop_value = $x_value_1 * 0.60;
-//             }elseif(75 < $x_value_5 && $x_value_5 <= 79){
-//                 $prop_value = $x_value_1 * 0.75;
-//             }else{
-//                 $prop_value = "0";  
-//             }
-
-//         $vv .= view('questions.question11_2')->with('ques11_2', $ques11)->with('ques8', $ques8)->with('x_value', $x_value)->with('value2', $value2)->with('z_value', $prop_value)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question11_2')->with('ques8', $ques8)->render();
-//         return $vv;
-//       } 
-
-
-//     }else{
-//         $vv .= view('questions.question11_2')->render();
-//     return $vv;
-//     }
-    
-//   }
-
-//   public function ques11_3(){
-//     $vv = $this->ques11_2();
-//      /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques8 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-//       $ques11_3 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','11')->get();
-//       $ques2 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
-
-//       if(count($ques11_3)){
-//         $value2 = $ques2[0]->meta_value;
-//         $x_value_1 = $ques11_3[0]->meta_value;
-//         $x_value_1 = str_replace(",","",$x_value_1);
-//         $x_value_2 = $ques11_3[1]->meta_value;
-//         $x_value_2 = str_replace(",","",$x_value_2);
-//         $x_value_3 = $ques11_3[2]->meta_value;
-//         $x_value_3 = str_replace(",","",$x_value_3);
-            
-//             if(45 < $x_value_3 && $x_value_3 <= 49){
-//                 $prop_value = $x_value_1 * 0.45;
-//             }elseif(60 < $x_value_3 && $x_value_3 <= 64){
-//                 $prop_value = $x_value_1 * 0.60;
-//             }elseif(75 < $x_value_3 && $x_value_3 <= 79){
-//                 $prop_value = $x_value_1 * 0.75;
-//             }else{
-//                 $prop_value = "0";  
-//             }
-
-//         $vv .= view('questions.question11_3')->with('ques11_3', $ques11_3)->with('value2', $value2)->with('ques8', $ques8)->with('z_value', $prop_value)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question11_3')->with('ques8', $ques8)->render();
-//         return $vv;
-//       }  
-
-
-//     }else{
-//         $vv .= view('questions.question11_3')->render();
-//     return $vv;
-//     }
-    
-//   }
-
-//     public function ques13(){
-//     $vv = $this->ques11_3();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-    //   $ques13 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','14')->get();
-    //   $ques11 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','11')->get();
-    //   $ques7 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','7')->get();
-    //   $ques8 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-    //   $ques4 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','4')->get();
-    //   $ques4 = $ques4[0]->meta_value;
-    //   $ques2 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
-    //   $ques2 = $ques2[0]->meta_value;
-
-    //   //dd($ques2);
-
-    //   if($ques8[0]->meta_value == 'any_cause'){
-    //     $ques11_data = $ques11[1]->meta_value;
-    //   }elseif($ques8[0]->meta_value == 'mistaken_program'){
-    //      $ques11_data = $ques11[3]->meta_value;
-    //   }else{
-    //     $ques11_data = $ques11[2]->meta_value;
-    //   }
-
-    //   if(count($ques13)){
-    //     $vv .= view('questions.question13')->with('ques13', $ques13)->with('ques4', $ques4)->with('ques7', $ques7)->with('ques11', $ques11_data)->with('ques2', $ques2)->render();
-    //     return $vv;
-    //   }else{
-    //     $vv .= view('questions.question13')->with('ques4', $ques4)->with('ques11', $ques11_data)->with('ques2', $ques2)->render();
-    // return $vv;
-    //   }  
-    // }else{
-    //     $vv .= view('questions.question13')->render();
-    // return $vv;
-    // }
-    
-//   }
-//   public function ques14(){
-//     $vv = $this->ques13();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques14 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','15')->get();
-//       if(count($ques14)){
-//         $vv .= view('questions.question14')->with('ques14', $ques14)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question14')->render();
-//         return $vv;
-//       }  
-//     }else{
-//         $vv .= view('questions.question14')->render();
-//         return $vv;
-//     }
-//   }
-//   public function ques15(){
-//     $vv = $this->ques14();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques15 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','16')->get();
-//       if(count($ques15)){
-//         $vv .= view('questions.question15')->with('ques15', $ques15)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question15')->render();
-//     return $vv;
-//       }  
-//     }else{
-//         $vv .= view('questions.question15')->render();
-//     return $vv;
-//     }
-    
-//   }
-//   public function ques16(){
-//     $vv = $this->ques15();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques16 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','17')->get();
-//       if(count($ques16)){
-//         $vv .= view('questions.question16')->with('ques16', $ques16)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question16')->render();
-//     return $vv;
-//       }  
-//     }else{
-//         $vv .= view('questions.question16')->render();
-//     return $vv;
-//     }
-    
-//   }
-//   public function ques17(){
-//     $vv = $this->ques16();
-//     /*conditions to check*/
-//     $auth = \Auth::user();
-//     if(!empty($auth)){
-//       $ques17 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','18')->get();
-//       $ques2 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
-//       if(count($ques17)){
-//         $vv .= view('questions.question17')->with('ques17', $ques17)->with('ques2', $ques2)->render();
-//         return $vv;
-//       }else{
-//         $vv .= view('questions.question17')->with('ques2', $ques2)->render();
-//     return $vv;
-//       }  
-//     }else{
-//         $vv .= view('questions.question17')->with('ques2', $ques2)->render();
-//     return $vv;
-//     }
-    
-//   }
-
-//   public function ques18(){
-//     $vv = $this->ques17();
-//     $vv .= view('questions.question18')->render();
-//     return $vv;
-//   }
-
 
   public function final_ques(){
      $vv = '';
@@ -771,22 +83,27 @@ class QuestionSurveyController extends Controller
     */
     public function questionOnePost(Request $request)
     {
+
+
+      $user_id_edit = $this->auth_checker();
+
     	$v = \Validator::make($request->all(),[
-               'que1' => 'required',
-               'rent' => 'required_if:que1,==,rental_aprt|min:0',
-    	],
-    [
-        'rent.numeric' => 'Enter value should be a Number and Min value upto 0 only',
-    ]);
+           'que1' => 'required',
+           'rent' => 'required_if:que1,==,rental_aprt|min:0',
+    	],[
+            'rent.numeric' => 'חסר ערך מספרי‎',
+            'rent.required_if' => 'חסר ערך מספרי‎',
+        ]);
     	if($v->fails()){
     		return response()->json([
               'status' => 0,
               'errors' => $v->errors()
     		]);
     	}else{
+
              $result = question_survey::where('question_id','1')
                       // ->orWhere('meta_key','ques1Option')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             $id = $this->saveAndUpdate('ques1',$request->que1,0,1);
@@ -808,7 +125,7 @@ class QuestionSurveyController extends Controller
     */
     public function questionTwoPost(Request $request)
     {
-
+      $user_id_edit = $this->auth_checker();
     	$v = \Validator::make($request->all(),[
                'que2' => 'required',
                'property_1'=>'required',
@@ -817,36 +134,74 @@ class QuestionSurveyController extends Controller
                'property_value_2'=>'required',
                'mortgage_balance'=>'required',
                'bank'=>'required',
-    	]);
+    	],
+        [
+            'que2.required' => 'חסר ערך מספרי‎',
+            'property_1.required' => 'חסר ערך מספרי‎',
+            'property_value.required' => 'חסר ערך מספרי‎',
+            'monthly_income.required' => 'חסר ערך מספרי‎',
+            'property_value_2.required' => 'חסר ערך מספרי‎',
+            'mortgage_balance.required' => 'חסר ערך מספרי‎',
+            'bank.required' => 'חסר ערך מספרי‎',
+        ]);
+
+
+
+
+        $pro_value1 = $request->property_1;
+        $pro_value1 =in_array(null, $pro_value1, true);
+
+        $pro_value = $request->property_value;
+        $pro_value =in_array(null, $pro_value, true);
+
+        $pro_value2 = $request->property_value_2;
+        $pro_value2 =in_array(null, $pro_value2, true);
+
+        $monthly_income = $request->monthly_income;
+        $monthly_income =in_array(null, $monthly_income, true);
+
+        $mortgage_balance = $request->mortgage_balance;
+        $mortgage_balance =in_array(null, $mortgage_balance, true);
+
+        $bank = $request->bank;
+        $bank =in_array(null, $bank, true);
+
+
 
     	if($v->fails()){
+
     		return response()->json([
           'status' => 0,
           'errors' => $v->errors()
     		]);
-    	}else{
-        $result = question_survey::where('question_id','2')
-                  ->where('user_id',\Auth::user()->id)
-                  ->delete();
 
-                  if($request->que2 == "No"){
-                    $ques2 = $this->saveAndUpdate('ques2',$request->que2,0,2);
-                    $ques2_1 = $this->saveAndUpdate('property_1','[null]',0,2);
-                    $ques2_2 = $this->saveAndUpdate('property_value','[null]',0,2);
-                    $ques2_3 = $this->saveAndUpdate('monthly_income','[null]',0,2);
-                    $ques2_5 = $this->saveAndUpdate('property_value_2','[null]',0,2);
-                    $ques2_6 = $this->saveAndUpdate('mortgage_balance','[null]',0,2);
-                    $ques2_9 = $this->saveAndUpdate('bank','[null]',0,2);
-                  }else{
+    	}elseif($bank == 'false' || $pro_value1 == 'false' || $pro_value == 'false' || $monthly_income == 'false' || $mortgage_balance == 'false' || $pro_value2 == 'false'){
 
-                    $ques2 = $this->saveAndUpdate('ques2',$request->que2,0,2);
-                    $ques2_1 = $this->saveAndUpdate('property_1',json_encode($request->property_1),0,2);
-                    $ques2_2 = $this->saveAndUpdate('property_value',json_encode($request->property_value),0,2);
-                    $ques2_3 = $this->saveAndUpdate('monthly_income',json_encode($request->monthly_income),0,2);
-                    $ques2_5 = $this->saveAndUpdate('property_value_2',json_encode($request->property_value_2),0,2);
-                    $ques2_6 = $this->saveAndUpdate('mortgage_balance',json_encode($request->mortgage_balance),0,2);
-                    $ques2_9 = $this->saveAndUpdate('bank',json_encode($request->bank),0,2);
-                  }
+        return response()->json([
+          'status' => 2,
+        ]);
+
+      }else{
+        $result = question_survey::where('question_id','2')->where('user_id',$user_id_edit)->delete();
+
+          if($request->que2 == "No"){
+            $ques2 = $this->saveAndUpdate('ques2',$request->que2,0,2);
+            $ques2_1 = $this->saveAndUpdate('property_1','[null]',0,2);
+            $ques2_2 = $this->saveAndUpdate('property_value','[null]',0,2);
+            $ques2_3 = $this->saveAndUpdate('monthly_income','[null]',0,2);
+            $ques2_5 = $this->saveAndUpdate('property_value_2','[null]',0,2);
+            $ques2_6 = $this->saveAndUpdate('mortgage_balance','[null]',0,2);
+            $ques2_9 = $this->saveAndUpdate('bank','[null]',0,2);
+          }else{
+
+            $ques2 = $this->saveAndUpdate('ques2',$request->que2,0,2);
+            $ques2_1 = $this->saveAndUpdate('property_1',json_encode($request->property_1),0,2);
+            $ques2_2 = $this->saveAndUpdate('property_value',json_encode($request->property_value),0,2);
+            $ques2_3 = $this->saveAndUpdate('monthly_income',json_encode($request->monthly_income),0,2);
+            $ques2_5 = $this->saveAndUpdate('property_value_2',json_encode($request->property_value_2),0,2);
+            $ques2_6 = $this->saveAndUpdate('mortgage_balance',json_encode($request->mortgage_balance),0,2);
+            $ques2_9 = $this->saveAndUpdate('bank',json_encode($request->bank),0,2);
+          }
         return response()->json([
           'status' => 1,
           //'htmls' => $this->ques3()
@@ -862,18 +217,31 @@ class QuestionSurveyController extends Controller
     */
     public function questionThreePost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
     	$v = \Validator::make($request->all(),[
                'gender' => 'required',
-    	]);
-      //dd($request);
-    	if($v->fails()){
+    	],
+        [
+            'gender.required' => 'חסר ערך מספרי‎',
+           
+        ]);
+
+    	if($v->fails() ){
+
+
+
+
     		return response()->json([
               'status' => 0,
               'errors' => $v->errors()
     		]);
+
+
+
+
     	}else{
         $result = question_survey::where('question_id','3')
-                  ->where('user_id',\Auth::user()->id)
+                  ->where('user_id',$user_id_edit)
                   ->delete();
 
         $ques3 = $this->saveAndUpdate('gender',$request->gender,0,3);
@@ -891,9 +259,14 @@ class QuestionSurveyController extends Controller
     */
     public function questionFourPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
     	$v = \Validator::make($request->all(),[
                'net_income' => 'required',
-    	]);
+    	],
+        [
+            'net_income.required' => 'חסר ערך מספרי‎',
+           
+        ]);
 
     	if($v->fails()){
     		return response()->json([
@@ -902,7 +275,7 @@ class QuestionSurveyController extends Controller
     		]);
     	}else{
             $result = question_survey::where('question_id','4')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
             $ques4 = $this->saveAndUpdate('family_income',$request->net_income,0,4);
             return response()->json([
@@ -919,9 +292,14 @@ class QuestionSurveyController extends Controller
     */
     public function questionFivePost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
     	$v = \Validator::make($request->all(),[
-               'stable_status_fee' => '',
-    	]);
+               'stable_status_fee' => 'required',
+    	],
+        [
+            'stable_status_fee.required' => 'חסר ערך מספרי‎',
+           
+        ]);
 
     	if($v->fails()){
     		return response()->json([
@@ -930,7 +308,7 @@ class QuestionSurveyController extends Controller
     		]);
     	}else{
             $result = question_survey::where('question_id','5')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
                       //dd($request->stable_statuss);
@@ -952,9 +330,14 @@ class QuestionSurveyController extends Controller
     */
     public function questionSixPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
                'bank_name' => 'required',
-      ]);
+      ],
+        [
+            'bank_name.required' => 'חסר ערך מספרי‎',
+           
+        ]);
 
       if($v->fails()){
         return response()->json([
@@ -963,13 +346,8 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','6')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
-
-
-                      //dd($request->bank_name);
-
-
 
             $ques5 = $this->saveAndUpdate('bank_name',json_encode($request->bank_name),0,6);
             return response()->json([
@@ -986,19 +364,30 @@ class QuestionSurveyController extends Controller
     */
     public function questionSevenPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
         'other_banks_benifits' => 'required',
          'browser_age' =>'required',
-      ]);
+      ],
+    [
+        'browser_age.required' => 'חסר ערך מספרי‎',
+         'other_banks_benifits.required' => 'חסר ערך מספרי‎',
+    ]);
+
 
       if($v->fails()){
         return response()->json([
-              'status' => 0,
-              'errors' => $v->errors()
+          'status' => 0,
+          'errors' => $v->errors()    
+        ]);
+      }elseif($request->browser_age < 18 || $request->browser_age > 120){
+        return response()->json([
+          'status' => 5,
+          //'errors' => 'Check input number',   
         ]);
       }else{
             $result = question_survey::where('question_id','7')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
                       //dd($request->browser_age);
@@ -1019,9 +408,13 @@ class QuestionSurveyController extends Controller
     */
     public function questionEightPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
                'why_mortgage' => 'required',
-      ]);
+      ],
+    [
+         'why_mortgage.required' => 'חסר ערך מספרי‎',
+    ]);
 
       if($v->fails()){
         return response()->json([
@@ -1030,8 +423,21 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','8')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
+
+            $result = question_survey::where('question_id','9')
+                      ->where('user_id',$user_id_edit)
+                      ->delete();
+
+            $result = question_survey::where('question_id','10')
+                      ->where('user_id',$user_id_edit)
+                      ->delete();
+
+           // $result = question_survey::where('question_id','11')->where('user_id',\Auth::user()->id)->delete();
+
+
+
             $ques5 = $this->saveAndUpdate('why_mortgage',$request->why_mortgage,0,8);
 
 
@@ -1067,9 +473,13 @@ class QuestionSurveyController extends Controller
     */
     public function questionNinePost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
                'status_of_mortgage' => 'required',
-      ]);
+      ],
+    [
+         'status_of_mortgage.required' => 'חסר ערך מספרי‎',
+    ]);
 
       if($v->fails()){
         return response()->json([
@@ -1078,7 +488,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','9')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
             $ques5 = $this->saveAndUpdate('status_of_mortgage',$request->status_of_mortgage,0,9);
             return response()->json([
@@ -1095,8 +505,9 @@ class QuestionSurveyController extends Controller
     */
     public function questionTenPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
-          'grace' => 'required',
+          //'grace' => 'required',
       ]);
 
       if($v->fails()){
@@ -1107,12 +518,17 @@ class QuestionSurveyController extends Controller
       }else{
 
             $result = question_survey::where('question_id','10')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
+
+
+
+                      $ques5 = $this->saveAndUpdate('Grace_req',$request->grace1,0,10);
             $ques5 = $this->saveAndUpdate('Grace',$request->grace,0,10);
+            
 
             /*question no.8 value*/
-            $ques8 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
+            $ques8 = question_survey::where('user_id',$user_id_edit)->where('question_id','8')->get();
 
             if($ques8[0]->meta_value == "mistaken_program"){
               return response()->json([
@@ -1137,13 +553,14 @@ class QuestionSurveyController extends Controller
     */
     public function questionElevenOnePost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'incoming_cost' => 'required',
           'equity_cost' => 'required',
       ],
     [
-        'incoming_cost.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'equity_cost.required' => 'ERROR - Missing Field 2: Equity Cost'
+        'incoming_cost.required' => 'חסר ערך מספרי‎',
+        'equity_cost.required' => 'חסר ערך מספרי‎'
     ]);
 
       if($v->fails()){
@@ -1153,7 +570,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','11')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             // $prop_value = $request->incoming_cost;
@@ -1169,11 +586,11 @@ class QuestionSurveyController extends Controller
             $mortgage_fee = $prop_value - $self_funding;
             $morg_ratio = $mortgage_fee/$prop_value * 100;
                       
-            $ques5_0 = $this->saveAndUpdate('property_value',$request->incoming_cost,0,11);
-            $ques5_1 = $this->saveAndUpdate('self_funding',$request->equity_cost,0,11);
-            $ques5_2 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,0,11);
-            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
-            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',0,11);
+            $ques5_0 = $this->saveAndUpdate('property_value',$request->incoming_cost,111,11);
+            $ques5_1 = $this->saveAndUpdate('self_funding',$request->equity_cost,111,11);
+            $ques5_2 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,111,11);
+            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,111,11);
+            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',111,11);
 
 
               if(45 < $morg_ratio && $morg_ratio <= 49){
@@ -1210,14 +627,15 @@ class QuestionSurveyController extends Controller
     /**FOR YES ANSWER POPUP**/
     public function questionElevenOneTwoPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'incoming_cost' => 'required',
           'equity_cost' => 'required',
       ],
     [
-        'incoming_cost.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'equity_cost.required' => 'ERROR - Missing Field 2: Equity Cost'
-    ]);
+        'incoming_cost.required' => 'חסר ערך מספרי‎',
+        'equity_cost.required' => 'חסר ערך מספרי‎'  
+      ]);
 
       if($v->fails()){
         return response()->json([
@@ -1226,7 +644,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
         $result = question_survey::where('question_id','11')
-                  ->where('user_id',\Auth::user()->id)
+                  ->where('user_id',$user_id_edit)
                   ->delete();
 
        $prop_value = $request->incoming_cost;
@@ -1247,11 +665,11 @@ class QuestionSurveyController extends Controller
             $prop_value = $prop_value;  
         }
     
-        $ques5_0 = $this->saveAndUpdate('property_value',$prop_value,0,11);
-        $ques5_1 = $this->saveAndUpdate('self_funding',$request->equity_cost,0,11);
-        $ques5_2 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,0,11);
-        $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
-        $ques5_4 = $this->saveAndUpdate('morg_testing1','0',0,11);
+        $ques5_0 = $this->saveAndUpdate('property_value',$prop_value,111,11);
+        $ques5_1 = $this->saveAndUpdate('self_funding',$request->equity_cost,111,11);
+        $ques5_2 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,111,11);
+        $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,111,11);
+        $ques5_4 = $this->saveAndUpdate('morg_testing1','0',111,11);
 
         return response()->json([
           'status' => 1,
@@ -1262,13 +680,14 @@ class QuestionSurveyController extends Controller
     /**NO ANSWER CLICKED**/
     public function questionElevenOneThreePost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'incoming_cost' => 'required',
           'equity_cost' => 'required',
       ],
     [
-        'incoming_cost.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'equity_cost.required' => 'ERROR - Missing Field 2: Equity Cost'
+        'incoming_cost.required' => 'חסר ערך מספרי‎',
+        'equity_cost.required' => 'חסר ערך מספרי‎'
     ]);
 
       if($v->fails()){
@@ -1278,7 +697,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','11')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             $prop_value = $request->incoming_cost;
@@ -1288,11 +707,11 @@ class QuestionSurveyController extends Controller
             $mortgage_fee = $prop_value - $self_funding;
             $morg_ratio = $mortgage_fee/$prop_value * 100;
                       
-            $ques5_0 = $this->saveAndUpdate('property_value',$request->incoming_cost,0,11);
-            $ques5_1 = $this->saveAndUpdate('self_funding',$request->equity_cost,0,11);
-            $ques5_2 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,0,11);
-            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
-            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',0,11);
+            $ques5_0 = $this->saveAndUpdate('property_value',$request->incoming_cost,111,11);
+            $ques5_1 = $this->saveAndUpdate('self_funding',$request->equity_cost,111,11);
+            $ques5_2 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,111,11);
+            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,111,11);
+            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',111,11);
 
             return response()->json([
               'status' => 1,
@@ -1310,15 +729,16 @@ class QuestionSurveyController extends Controller
     */
     public function questionElevenTwoPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'incoming_cost_1' => 'required',
           'required_height' => 'required',
           'property_market_value' => 'required',
       ],
     [
-        'incoming_cost_1.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'required_height.required' => 'ERROR - Missing Field 2: Required Height',
-         'property_market_value.required' => 'ERROR - Missing Field 3: Property Market Value'
+       'incoming_cost_1.required' => 'חסר ערך מספרי‎',
+        'required_height.required' => 'חסר ערך מספרי‎',
+        'property_market_value.required' => 'חסר ערך מספרי‎'
     ]);
 
       if($v->fails()){
@@ -1328,7 +748,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','11')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             $prop_value = $request->incoming_cost_1;
@@ -1341,11 +761,11 @@ class QuestionSurveyController extends Controller
             $morg_ratio = $mortgage_fee/$prop_market_value * 100;
 
 
-            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_1,0,11);
-            $ques5_1 = $this->saveAndUpdate('property_market_value',$request->required_height,0,11);
-            $ques5_2 = $this->saveAndUpdate('self_funding',$request->property_market_value,0,11);
-            $ques5_3 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,0,11);
-            $ques5_4 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
+            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_1,112,11);
+            $ques5_1 = $this->saveAndUpdate('property_market_value',$request->required_height,112,11);
+            $ques5_2 = $this->saveAndUpdate('self_funding',$request->property_market_value,112,11);
+            $ques5_3 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,112,11);
+            $ques5_4 = $this->saveAndUpdate('morg_ratio',$morg_ratio,112,11);
 
 
             if(45 < $morg_ratio && $morg_ratio <= 49){
@@ -1387,9 +807,9 @@ class QuestionSurveyController extends Controller
           'property_market_value' => 'required',
       ],
     [
-        'incoming_cost_1.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'required_height.required' => 'ERROR - Missing Field 2: Required Height',
-         'property_market_value.required' => 'ERROR - Missing Field 3: Property Market Value'
+        'incoming_cost_1.required' => 'חסר ערך מספרי‎',
+        'required_height.required' => 'חסר ערך מספרי‎',
+        'property_market_value.required' => 'חסר ערך מספרי‎'
     ]);
 
       if($v->fails()){
@@ -1399,7 +819,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','11')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             // $prop_value = $request->incoming_cost_1;
@@ -1430,11 +850,11 @@ class QuestionSurveyController extends Controller
             }
 
 
-            $ques5 = $this->saveAndUpdate('property_value',$prop_value,0,11);
-            $ques5_1 = $this->saveAndUpdate('property_market_value',$request->required_height,0,11);
-            $ques5_2 = $this->saveAndUpdate('self_funding',$request->property_market_value,0,11);
-            $ques5_3 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,0,11);
-            $ques5_4 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
+            $ques5 = $this->saveAndUpdate('property_value',$prop_value,112,11);
+            $ques5_1 = $this->saveAndUpdate('property_market_value',$request->required_height,112,11);
+            $ques5_2 = $this->saveAndUpdate('self_funding',$request->property_market_value,112,11);
+            $ques5_3 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,112,11);
+            $ques5_4 = $this->saveAndUpdate('morg_ratio',$morg_ratio,112,11);
 
             return response()->json([
               'status' => 1,
@@ -1446,15 +866,16 @@ class QuestionSurveyController extends Controller
     /*IF POP UP NO*/
     public function questionElevenTwoThreePost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'incoming_cost_1' => 'required',
           'required_height' => 'required',
           'property_market_value' => 'required',
       ],
     [
-        'incoming_cost_1.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'required_height.required' => 'ERROR - Missing Field 2: Required Height',
-         'property_market_value.required' => 'ERROR - Missing Field 3: Property Market Value'
+        'incoming_cost_1.required' => 'חסר ערך מספרי‎',
+        'required_height.required' => 'חסר ערך מספרי‎',
+        'property_market_value.required' => 'חסר ערך מספרי‎'
     ]);
 
       if($v->fails()){
@@ -1464,7 +885,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','11')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             // $prop_value = $request->incoming_cost_1;
@@ -1484,11 +905,11 @@ class QuestionSurveyController extends Controller
             $morg_ratio = $mortgage_fee/$prop_market_value * 100;
 
 
-            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_1,0,11);
-            $ques5_1 = $this->saveAndUpdate('property_market_value',$request->required_height,0,11);
-            $ques5_2 = $this->saveAndUpdate('self_funding',$request->property_market_value,0,11);
-            $ques5_3 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,0,11);
-            $ques5_4 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
+            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_1,112,11);
+            $ques5_1 = $this->saveAndUpdate('property_market_value',$request->required_height,112,11);
+            $ques5_2 = $this->saveAndUpdate('self_funding',$request->property_market_value,112,11);
+            $ques5_3 = $this->saveAndUpdate('mortgage_fee',$mortgage_fee,112,11);
+            $ques5_4 = $this->saveAndUpdate('morg_ratio',$morg_ratio,112,11);
 
             return response()->json([
               'status' => 1,
@@ -1506,13 +927,14 @@ class QuestionSurveyController extends Controller
     */
     public function questionthirteenPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'incoming_cost_2' => 'required',
           'equity_height' => 'required',
       ],
     [
-        'incoming_cost_2.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'equity_height.required' => 'ERROR - Missing Field 2: Equity Height'
+         'incoming_cost_2.required' => 'חסר ערך מספרי‎',
+        'equity_cost.required' => 'חסר ערך מספרי‎'
     ]);
 
       if($v->fails()){
@@ -1522,7 +944,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','11')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             $prop_value = $request->incoming_cost_2;
@@ -1531,11 +953,11 @@ class QuestionSurveyController extends Controller
             $mortgage_fee = str_replace(",","",$mortgage_fee);
             $morg_ratio = $mortgage_fee/$prop_value * 100;
 
-            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_2,0,11);
-            $ques5_1 = $this->saveAndUpdate('mortgage_fee',$request->equity_height,0,11);
-            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
-            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',0,11);
-            $ques5_5 = $this->saveAndUpdate('morg_testing2','0',0,11);
+            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_2,113,11);
+            $ques5_1 = $this->saveAndUpdate('mortgage_fee',$request->equity_height,113,11);
+            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,113,11);
+            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',113,11);
+            $ques5_5 = $this->saveAndUpdate('morg_testing2','0',113,11);
 
 
             if(45 < $morg_ratio && $morg_ratio <= 49){
@@ -1570,13 +992,14 @@ class QuestionSurveyController extends Controller
 
     public function questionthirteenTwoPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'incoming_cost_2' => 'required',
           'equity_height' => 'required',
       ],
     [
-        'incoming_cost_2.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'equity_height.required' => 'ERROR - Missing Field 2: Equity Height'
+         'incoming_cost_2.required' => 'חסר ערך מספרי‎',
+        'equity_cost.required' => 'חסר ערך מספרי‎'
     ]);
 
       if($v->fails()){
@@ -1586,7 +1009,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','11')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             // $prop_value = $request->incoming_cost_2;
@@ -1608,15 +1031,17 @@ class QuestionSurveyController extends Controller
 
 
 
-            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_2,0,11);
-            $ques5_1 = $this->saveAndUpdate('mortgage_fee',$request->equity_height,0,11);
-            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
-            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',0,11);
-            $ques5_5 = $this->saveAndUpdate('morg_testing2','0',0,11);
+            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_2,113,11);
+            //$ques5_1 = $this->saveAndUpdate('mortgage_fee',$request->equity_height,113,11);
+
+            $ques5_1 = $this->saveAndUpdate('mortgage_fee',$prop_value,113,11);
+            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,113,11);
+            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',113,11);
+            $ques5_5 = $this->saveAndUpdate('morg_testing2','0',113,11);
 
             return response()->json([
               'status' => 1,
-              'htmls' => $this->ques13()
+              //'htmls' => $this->ques13()
         ]);  
       }
     }
@@ -1624,13 +1049,14 @@ class QuestionSurveyController extends Controller
 
     public function questionthirteenThreePost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'incoming_cost_2' => 'required',
           'equity_height' => 'required',
       ],
     [
-        'incoming_cost_2.required' => 'ERROR - Missing Field 1: Incoming Cost',
-        'equity_height.required' => 'ERROR - Missing Field 2: Equity Height'
+        'incoming_cost_2.required' => 'חסר ערך מספרי‎',
+        'equity_cost.required' => 'חסר ערך מספרי‎'
     ]);
 
       if($v->fails()){
@@ -1640,7 +1066,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','11')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
             // $prop_value = $request->incoming_cost_2;
@@ -1654,11 +1080,11 @@ class QuestionSurveyController extends Controller
             $mortgage_fee = str_replace(",","",$mortgage_fee);
             $morg_ratio = $mortgage_fee/$prop_value * 100;
 
-            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_2,0,11);
-            $ques5_1 = $this->saveAndUpdate('mortgage_fee',$request->equity_height,0,11);
-            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,0,11);
-            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',0,11);
-            $ques5_5 = $this->saveAndUpdate('morg_testing2','0',0,11);
+            $ques5 = $this->saveAndUpdate('property_value',$request->incoming_cost_2,113,11);
+            $ques5_1 = $this->saveAndUpdate('mortgage_fee',$request->equity_height,113,11);
+            $ques5_3 = $this->saveAndUpdate('morg_ratio',$morg_ratio,113,11);
+            $ques5_4 = $this->saveAndUpdate('morg_testing1','0',113,11);
+            $ques5_5 = $this->saveAndUpdate('morg_testing2','0',113,11);
 
             return response()->json([
               'status' => 1,
@@ -1675,10 +1101,15 @@ class QuestionSurveyController extends Controller
     */
     public function questionfourteenPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'monthly_refund_input' => 'required',
           'lower_mortgage_input' => 'required',
-      ]);
+      ],
+    [
+         'monthly_refund_input.required' => 'חסר ערך מספרי‎',
+         'lower_mortgage_input.required' => 'חסר ערך מספרי‎',
+    ]);
 
       if($v->fails()){
         return response()->json([
@@ -1687,17 +1118,17 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','14')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
-            $ques7 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','7')->get();
+            $ques7 = question_survey::where('user_id',$user_id_edit)->where('question_id','7')->get();
 
             $lower_mortgage_input = $request->lower_mortgage_input;
             $lower_mortgage_input = str_replace(",","",$lower_mortgage_input);
 
-            $fix = $ques7[1]->meta_value + $lower_mortgage_input;
+            $fix = (int)$ques7[1]->meta_value + (int)$lower_mortgage_input;
 
 
-            $ques11 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','11')->where('meta_key','mortgage_fee')->first();
+            $ques11 = question_survey::where('user_id',$user_id_edit)->where('question_id','11')->where('meta_key','mortgage_fee')->first();
 
 
             
@@ -1825,10 +1256,15 @@ class QuestionSurveyController extends Controller
 
     public function questionfourteendoublePost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'monthly_refund_input' => 'required',
           'lower_mortgage_input' => 'required',
-      ]);
+      ],
+    [
+         'monthly_refund_input.required' => 'חסר ערך מספרי‎',
+         'lower_mortgage_input.required' => 'חסר ערך מספרי‎',
+    ]);
 
       if($v->fails()){
         return response()->json([
@@ -1837,7 +1273,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','14')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
             $ques5 = $this->saveAndUpdate('monthly_refund_input',$request->monthly_refund_input,0,14);
             $ques5_1 = $this->saveAndUpdate('lower_mortgage_input',$request->lower_mortgage_input,0,14);
@@ -1887,28 +1323,36 @@ class QuestionSurveyController extends Controller
     */
     public function questionfifteenPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
 
           'ques14' => 'required',
-          //'investment_amount' => 'required',
-          //'repay_another' => 'required',
+      ],
+    [
+         'ques14.required' => 'חסר ערך מספרי‎',
+    ]);
 
+        $pro_value1 = $request->investment_amount;
+        $pro_value1 =in_array(null, $pro_value1, true);
 
-          // 'redeemed' => 'required',
-          //'loan_balance_percentage' => 'required',
-          //'monthly_repayments_percentage' => 'required',
-          //'investment_amount_1' => 'required',
-      ]);
+        $pro_value = $request->repay_another;
+        $pro_value =in_array(null, $pro_value, true);
 
       if($v->fails()){
         return response()->json([
               'status' => 0,
               'errors' => $v->errors()
         ]);
+      }elseif($pro_value1 == 'false' || $pro_value == 'false' ){
+
+        return response()->json([
+          'status' => 2,
+        ]);
+
       }else{
             
             $result = question_survey::where('question_id','15')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
             $ques13 = $this->saveAndUpdate('money_in_the_future',$request->ques14,0,15);
             $ques13 = $this->saveAndUpdate('investment_amount',json_encode($request->investment_amount),0,15);
@@ -1932,27 +1376,43 @@ class QuestionSurveyController extends Controller
     */
     public function questionsixteenPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'other_loan' => 'required',
-          //'loan_balance_1' => 'required',
-          //'Month_refund' => 'required',
+      ],
+    [
+         'other_loan.required' => 'חסר ערך מספרי‎',
+    ]);
 
-          //'loan_balance_2' => 'required',
-          // 'termination_of_the_loan_1' => 'required',
-          // 'termination_of_the_loan_2' => 'required',
-          //'Monthly_repayments' => 'required',
-    
-      ]);
+
+        $pro_value1 = $request->Month_refund;
+        $pro_value1 =in_array(null, $pro_value1, true);
+
+        $pro_value = $request->loan_balance_1;
+        $pro_value =in_array(null, $pro_value, true);
+
+        $redemmed = $request->redemmed;
+        $redemmed =in_array(null, $redemmed, true);
+
+
+
+
 
       if($v->fails()){
         return response()->json([
               'status' => 0,
               'errors' => $v->errors()
         ]);
+      }elseif($pro_value1 == 'false' || $pro_value == 'false' || $redemmed == 'false' ){
+
+        return response()->json([
+          'status' => 2,
+        ]);
+
       }else{
              
             $result = question_survey::where('question_id','16')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
              $ques13 = $this->saveAndUpdate('other_loan',$request->other_loan,0,16);
             $ques13 = $this->saveAndUpdate('loan_balance_1',json_encode($request->loan_balance_1),0,16);
@@ -1977,23 +1437,50 @@ class QuestionSurveyController extends Controller
     */
     public function questionseventeenPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
           'additional_loans' => 'required',
-      ]);
+      ],
+    [
+         'additional_loans.required' => 'חסר ערך מספרי‎',
+    ]);
+
+
+        $pro_value1 = $request->loan_balance_1_1;
+        $pro_value1 =in_array(null, $pro_value1, true);
+
+        $pro_value = $request->Month_refund_1;
+        $pro_value =in_array(null, $pro_value, true);
+
+        $redemmed = $request->termination_of_the_loan_1_1;
+        $redemmed =in_array(null, $redemmed, true);
+
+
+
 
       if($v->fails()){
         return response()->json([
               'status' => 0,
               'errors' => $v->errors()
         ]);
+      }elseif($pro_value1 == 'false' || $pro_value == 'false' || $redemmed == 'false' ){
+
+        return response()->json([
+          'status' => 2,
+        ]);
+
       }else{
             $result = question_survey::where('question_id','17')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
-            $ques2 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
+            $ques2 = question_survey::where('user_id',$user_id_edit)->where('question_id','2')->get();
 
-             $ques13 = $this->saveAndUpdate('additional_loans',$request->additional_loans,0,17);
+
+            // print_r($ques2);
+            // die();
+
+            $ques13 = $this->saveAndUpdate('additional_loans',$request->additional_loans,0,17);
             $ques13 = $this->saveAndUpdate('loan_balance_1_1',json_encode($request->loan_balance_1_1),0,17);
             $ques13 = $this->saveAndUpdate('loan_balance_2_1',json_encode($request->loan_balance_2_1),0,17);
             $ques13 = $this->saveAndUpdate('termination_of_the_loan_1_1',json_encode($request->termination_of_the_loan_1_1),0,17);
@@ -2027,6 +1514,7 @@ class QuestionSurveyController extends Controller
     */
     public function questioneightteenPost(Request $request)
     {
+      $user_id_edit = $this->auth_checker();
       $v = \Validator::make($request->all(),[
     
           'military_service_time_women' => 'required',
@@ -2035,7 +1523,14 @@ class QuestionSurveyController extends Controller
           'children' => 'required',
           'current_marriage' => 'required',
           
-      ]);
+      ],
+    [
+         'military_service_time_women.required' => 'חסר ערך מספרי‎',
+         'national_service_time.required' => 'חסר ערך מספרי‎',
+         'siblings.required' => 'חסר ערך מספרי‎',
+         'children.required' => 'חסר ערך מספרי‎',
+         'current_marriage.required' => 'חסר ערך מספרי‎',
+    ]);
 
       if($v->fails()){
         return response()->json([
@@ -2044,7 +1539,7 @@ class QuestionSurveyController extends Controller
         ]);
       }else{
             $result = question_survey::where('question_id','18')
-                      ->where('user_id',\Auth::user()->id)
+                      ->where('user_id',$user_id_edit)
                       ->delete();
 
 
@@ -2166,9 +1661,11 @@ class QuestionSurveyController extends Controller
   public function questioneightteen_valuePost(Request $request)
     {
          
-        $ques12 = question_survey::where('user_id',\Auth::user()->id)->where('question_id','14')->where('meta_key','saving_calculations')->first();
+      $user_id_edit = $this->auth_checker();
 
-        $saving_calculations = $ques12->meta_value;
+        $ques12 = question_survey::where('user_id',$user_id_edit)->where('question_id','14')->where('meta_key','saving_calculations')->first();
+
+        $saving_calculations = number_format($ques12->meta_value);
 
         return response()->json([
           'status' => 1,
@@ -2176,22 +1673,14 @@ class QuestionSurveyController extends Controller
         ]);  
       
     }
-
-
-
-
-
-    
-
-
-
-    
+   
 
 /**************************************************************************/
     public function saveAndUpdate($k,$value,$parent,$no)
     {
-        $survey = new question_survey(); 
-      $survey->user_id = \Auth::user()->id;
+      $user_id_edit = $this->auth_checker();
+      $survey = new question_survey(); 
+      $survey->user_id = $user_id_edit;
       $survey->meta_key = $k;
       $survey->question_id = $no;
       $survey->meta_value = $value;
@@ -2217,7 +1706,8 @@ $email_comment = $request->comments;
 $email_time = $request->time;
 
   Mail::send('mails.contact_email', ["data_title"=>$email_title,"data_subject"=>$email_subject,"data_date"=>$email_date, "data_comment"=>$email_comment, "fname"=>$fname, "lname"=>$lname, "phone"=>$phone, "email"=>$email, "time"=>$email_time ], function ($message) use($email_subject) {
-      $message->to('online.mashkanta@gmail.com');
+      //$message->to('online.mashkanta@gmail.com');
+      $message->to('teamphp00@gmail.com');
       $message->subject($email_subject);
   });
 
@@ -2231,13 +1721,24 @@ $email_time = $request->time;
 /**************************Delete User entries****************************/
 
 public function deleteforuser(){
-  $result = question_survey::where('user_id',\Auth::user()->id)->delete();
+  $user_id_edit = $this->auth_checker();
+  $result = question_survey::where('user_id',$user_id_edit)->delete();
   return redirect()->route('get_flow');
 }
 
 
 
+ public function pmt_slider_ajax(){
 
+        $prime_deltas = Bank_interest::where('bank_name','AA')->where('funding_type','FundingA')->get();
+
+
+        return response()->json([
+            'status' => 1, 
+            'data'=>$prime_deltas
+        ]);
+
+    }
 
 
 }

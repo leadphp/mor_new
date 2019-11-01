@@ -81,10 +81,10 @@
 								  <label>שם בעל/ת הכרטיס (באנגלית בלבד)</label>
 								  <input type="text">
 							  </div>
-							  <div class="row-group">
-								  <label>מספר כרטיס אשראי</label>
-								  <input class="visa-crd" type="text" placeholder="0000 - 0000 - 0000 - 0000">
-								  <img src="images/visa.png" class="visa-img" />
+							  <div class="row-group idIcon">
+								  <label>תעודת זהות</label>
+								  <input class="visa-crd" type="text" placeholder="123456789">
+								  <img src="images/id-icon-7.jpg" class="visa-img" />
 							  </div>
 							  
 							  <div class="row-group text-flex">

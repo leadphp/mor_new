@@ -1,4 +1,13 @@
+<?php 
+$ques12 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','14')->get();
 
+if(count($ques12) != 0){
+$first = $ques12[3]->meta_value;
+
+}else{
+$first = '0';	
+}
+?>
 @include('layouts.head')
 <body>
     <div class="main-wrapper steps payment-step pay-step-3 send-offer done-reg">
@@ -7,17 +16,24 @@
             <div class="container">
 			    
                 <div class="reg logo">
-					<a href="#">
+					<a href="{{url('')}}">
 					  <img src="images/logo.png" />
 					</a>
 				</div>
+
+				<!-- <div class="backbutton">
+					
+					<a href="{{url('/questions_flow')}}">
+					  < Back
+					</a>
+				</div> -->
                 <div class="mortgage-offers-border">
 					<div class="mortgage-offers-inner">
 						 <div class="inner-success-data text-center">
 						   <h1>
 						     תודה, הצעתך נשלחה ברגעים אלו<br>
-וכבר נגלה לך שאנחנו יכולים לחסוך לך <br>
-                             לפחות  <span>46,500 <img src="images/step_3_icon.png" /> !</span>
+וכבר נגלה לך שאנחנו יכולים לחסוך  <br>
+                             לפחות  <span><?php echo number_format($first); ?> <img src="images/step_3_icon.png" /> !</span>
 						   </h1>
 						   <div class="col-md-12">
 						     <img src="{{ URL:: asset('images/pointer-icon.png') }}" class="col-img_" />
@@ -61,4 +77,11 @@
 			  </div>
 		</footer>
 
+
+
       @include('layouts.footer-scripts')
+<script type="text/javascript">
+	window.onhashchange = function(e) {
+	    window.location.replace("www.google.com");
+    }
+</script>

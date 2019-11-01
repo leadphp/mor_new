@@ -10,6 +10,23 @@
         width: calc(16% - 60px);
     }
 }
+@media(max-width: 1920px) {
+.col-2.a2 input[type="text"] {
+    max-width: 120px;
+}
+.col-2.a2 span {
+    width: calc(100% - 240px);
+}
+.col-2.a3 span {
+    font-size: 11px;
+}
+.A_final_mr .suggested-offers-table th, .A_final_mr .database-offers-table th, .A_final_mr .online-clerk-table th, .online-customers-table th, .A_final_mr .compare-offers-table th, .A_final_mr .mortgage-linked-table th {
+    min-width: 79px;
+}
+.redio-design .form-group {
+    width: 122px;
+}
+}
 @media(max-width: 1800px) {
 	.form-group-container .file-upload-container {
 		min-width: 262px;
@@ -23,8 +40,55 @@
 	.col-2.a4.last h3 {
 		font-size: 15px;
 	}
+    #current-loans .A_table-input {
+    margin-top: 25px;
+}
+.A_table-input .form-group {
+    margin-bottom: 20px;
+}
+}
+
+@media(min-width: 1500px) {
+.d-flix {
+    display: flex;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #ddd;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+.col-2.a2 {
+    width: 38%;
+}
+.col-2.a3 {
+    width: 18%;
+}
+.col-2.a3 span {
+    font-size: 12px;
+}
+.funding-tree.tree_right .col-2.a2 {
+    width: 39%;
+}
 }
 @media(max-width: 1600px) {
+.owner-monthly-container.question-3 li i {
+    left: -30px;
+}
+.selection label {
+    margin-left: 0px;
+    font-size: 12px;
+}
+.col-2.a4 {
+    bottom: 0;
+}
+.report-online2  .col-2.a4 {
+    bottom: -30px;
+}
+.question-1-7 .form-submittion >input[type="submit"] {
+    position: absolute;
+    bottom: -40px;
+    left: 12px;
+    margin: 0;
+}
 	.upload-excel-btn label.a-time-selection {
 		max-width: 310px;
 		min-height: 40px;
@@ -389,4 +453,4 @@
     .a-rightside .a-main .tab-pane {
         min-height: 695px;
     }
-}
+}       

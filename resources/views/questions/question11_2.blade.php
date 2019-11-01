@@ -1,8 +1,8 @@
 @php
 
-$ques8 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-$ques11= \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','11')->get();
-$ques2 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
+$ques8 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','8')->get();
+$ques11= \App\question_survey::where('user_id',$user_to_edit)->where('question_id','11')->get();
+$ques2 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','2')->get();
 
   if(count($ques11)){
     $x_value_1 = $ques11[0]->meta_value;
@@ -63,8 +63,8 @@ $ques11_2 = $ques11;
 					<div>
 						<div class="d-i-f f-d-c">
 							<div class="form-group">
-								<label for="incoming-cost-1">עלות הנכנס:</label>
-								<input type="text" id="incoming-cost-1" class="form-control" name="incoming_cost_1" value="<?php if(count($ques11_2)){ echo $ques11_2[0]->meta_value; }else{ echo"2,200,000";} ?>" onkeyup="this.value=addCommas(this.value);"/>
+								<label for="incoming-cost-1">עלות הנכס:</label>
+								<input type="text" id="incoming-cost-1" class="form-control" name="incoming_cost_1" value="<?php if(count($ques11_2)){ echo $ques11_2[0]->meta_value; }else{ echo"1,200,000";} ?>" onkeyup="this.value=addCommas(this.value);"/>
 								<img src="images/placeholder-icon.png" alt="" class="placeholder-icon"/>
 							</div>
 							<div class="form-group">
@@ -82,16 +82,16 @@ $ques11_2 = $ques11;
 							<button type="submit" class="prop_mark main-button eleven-two-submit">אישור</button>
 						</div>
 						<br />
-						<p>חשוב שתשים לב שההון העצמי שציינת הוא עבור רכישת הנכס בלבד!
+						<p id="error-msg-1" style="display: none; color: red;">עלות הנכס צריכה להיות גדולה מגובה ההון העצמי שלך</p>
+						<p id="error-msg-2" style="display: none; color: red;">שווי שוק של הנכס צריך להיות גדול מעלות הנכס</p>
+						<p class="male_female_eleven">חשוב שתשים לב שההון העצמי שציינת הוא עבור רכישת הנכס בלבד!
 						הסכום לא יכול לכלול הוצאות נילוות כמו ריהוט,שיפוצים ואגרותת נלוות.</p>
-						@php
-						if($mort_ratio > 75 && $value2 == 'No' ){ 
-						@endphp
-						<p class="alert-text">ההון העצמי שלך מהווה @php echo $x_value; @endphp% משווי שוק של הנכס ! 
+						
+						<p class=" after_25_percent" style="display:none;">ההון העצמי שלך מהווה % משווי שוק של הנכס ! 
 						לא תוכל לקבל משכנתא אם ההון העצמי לא מהווה לפחות 25% מעלות הנכס.</p>
-						@php
-						}
-						@endphp
+						
+						
+						
 
 					</div>
 					{{ csrf_field() }}
@@ -140,31 +140,86 @@ $ques11_2 = $ques11;
 <script>
 	window.location.hash = '#formQuestionEleven_Two';
 
-	$('body').on('keyup','#incoming-cost-1',function(){
-	  if ($(this).val() < 10000){ 
-	  		$(this).val('10,000');
-	  }
+
+	$('body').on('keyup','#required-height, #incoming-cost-1',function(){
+		twentfive_fun();
+	  	var first_ = $("#incoming-cost-1").val();
+	 	var second_ = $("#required-height").val();
+	  	var val1 = first_.split(',').join('');
+		var val2 = second_.split(',').join('');
+
+		if(parseInt(val2) < parseInt(val1)){
+		  $("#error-msg-2").show();
+		  $(".eleven-two-submit").attr('disabled','disabled');
+		}else{
+		  $("#error-msg-2").hide();
+		  $(".eleven-two-submit").removeAttr('disabled','disabled');
+		}
 	});
 
-	$('body').on('keyup','#required-height',function(){
-	  if ($(this).val() < 10000){ 
-	  		$(this).val('10,000');
-	  }
-	});
-
-
-
-	$('#property-market-value').on('keyup keydown keypress blur',function(){
+	$('#property-market-value, #incoming-cost-1').on('keyup keydown keypress blur',function(){
+		twentfive_fun();
 		var yy = $('#incoming-cost-1').val();
-		var rr = $(this).val();
+		var rr = $('#property-market-value').val();
 		var val1 = yy.split(',').join('');
 		var val2 = rr.split(',').join('');
-	  	if (parseInt(val2) > parseInt(val1)){ 
-	  		$(this).val(yy);
+		var val3 = parseInt(val1) - parseInt(val2);
+		twelve_change_eleven_a(addCommasDirect(val3));
+
+	  	if (parseInt(val2) > parseInt(val1) || parseInt(val2) == parseInt(val1)  ){ 
+	  		$("#error-msg-1").show();
+	  		$(".eleven-two-submit").addClass('make_it_disabled');
+	  	}else{
+	  		$("#error-msg-1").hide();
+	  		$(".eleven-two-submit").removeClass('make_it_disabled');
 	  	}
 	});
 
 
 
 
+
+
+
+
+
+
+	/*------------------------------------------------------------------------------*/
+
+	$('#incoming-cost-1').on('keyup',function(){
+		var incoming_cost= $(this).val();
+		var property_val = $('#property-market-value').val();
+		var property_val = property_val.split(',').join('');
+		var incoming_cost = incoming_cost.split(',').join('');
+		var val3 = parseInt(incoming_cost) - parseInt(property_val);
+
+		twelve_change_eleven_a(addCommasDirect(val3));
+	});
+
+	/*****************************************************************************/
+function twentfive_fun(){
+	var one = $('#property-market-value').val();
+	//var hhh = $('#property-market-value').val(addCommasDirect(one));
+	//alert(one);
+	var two = $('#required-height').val();
+	//alert(two);
+	var one = one.split(',').join('');
+	//alert(one);
+	var two = two.split(',').join('');
+	//alert(two);
+	var final = (parseInt(one)/parseInt(two))*100;
+	//alert(final);
+	if(parseInt(final) > 25){
+		$('.after_25_percent').hide();
+		$('.after_25_percent').html('ההון העצמי שלך מהווה '+final.toFixed(2)+'% משווי שוק של הנכס !<br>לא תוכל לקבל משכנתא אם ההון העצמי לא מהווה לפחות 25% מעלות הנכס.');
+	}else{
+		$('.after_25_percent').show();
+		$('.after_25_percent').html('ההון העצמי שלך מהווה '+final.toFixed(2)+'% משווי שוק של הנכס !<br>לא תוכל לקבל משכנתא אם ההון העצמי לא מהווה לפחות 25% מעלות הנכס.');
+
+	}
+
+}
+twentfive_fun();
+
+	
 </script>

@@ -87,7 +87,7 @@
 					<div class="Submit-section">
 					  <p class="text-right">
 					     <input type="checkbox" checked>
-						 <label>וכן את <a href="terms-and-conditions.html"> מדיניות הפרטיות </a> של האתר ואני מסכים.</label>
+						 <label>אני מאשר את <a href="/terms-and-condition"> תנאי השימוש  </a> וכן את <a href="/privacy">מדיניות הפרטיות </a> המופיעים בקישור.</label>
 					  </p>
 					  
 					  

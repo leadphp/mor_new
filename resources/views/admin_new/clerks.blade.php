@@ -24,7 +24,7 @@
         <div class="container-fluid">
             <div class="online-clerk-wrap">
                 <div class="table-container online-clerk-table" id="appe-table-filter">
-                    <table style="white-space: nowrap;" id="clerkTable">
+                    <table style="white-space: nowrap;" id="clerkTable" class="clerkTable">
                         <thead>
                             <tr>
                                 <th>Number# <i class="fa fa-sort" aria-hidden="true"></i></th>
@@ -41,7 +41,9 @@
                         </thead>
                         <tbody class="cff" >
                            
-                                @php $cc = 1; @endphp
+                                @php $cc = 1;
+
+                                @endphp
                                 @foreach($clerk_data as $clerk)
                                 <tr>
                                     <td>@php echo $cc; @endphp</td>
@@ -53,7 +55,7 @@
                                     <td>@php echo $clerk->clerk_name; @endphp</td>
                                     <td>@php echo $clerk->main_phone; @endphp</td>
                                     <td>@php echo $clerk->fax; @endphp</td>
-                                    <td>@php echo $clerk->mail; @endphp</td>
+                                    <td class="remove_capital_letter">@php echo $clerk->mail; @endphp</td>
                                 </tr>
                                 @php $cc++; @endphp
                                 @endforeach
@@ -65,11 +67,7 @@
                     
 
                 </div>
-                <div class="pagination-container">
-                    <nav aria-label="Page navigation">
-                        {{ $clerk_data->links() }}
-                    </nav>
-                </div>
+                 
             </div>
         </div>
     </div>
@@ -100,109 +98,48 @@
     </div>
 @include('layouts.footer_admin')
 <!-- filter-by-bank ends here -->
+
 <script type="text/javascript">
-    
-$(document).ready( function () {
-    $('#clerkTable').DataTable({
-        language: {
-                    paginate: {
-                        next: '>>',
-                        previous: '<<'
-                    }
-                },
-                "bPaginate": true,
-        //pagingType: "numbers",
-       // searching: false,
-        bInfo: false,
-        //"dom": 't<"pagination"p>',
-    });
-    
-    var oTable = $('#clerkTable').DataTable(); 
-    $('#searchuser').on( 'keyup', function () {
-        oTable.search( this.value, true, false ).draw();
-    } );
-    
 
-    $('#customerTable_filter').hide();
-
-
-    $('.main-button').on('click', function(e){
-        e.preventDefault();
-        var startDate = $('#from-register-time').val(),
-            endDate = $('#to-register-time').val();
-
-
-        filterByDate(8, startDate, endDate); // We call our filter function
-
-        oTable.draw(); // Manually redraw the table after filtering
-    });
-      
-      // Clear the filter. Unlike normal filters in Datatables,
-      // custom filters need to be removed from the afnFiltering array.
-      // $('#clearFilter').on('click', function(e){
-      //   e.preventDefault();
-      //   $.fn.dataTableExt.afnFiltering.length = 0;
-      //   $tableSel.dataTable().fnDraw();
-      // });
-      
+    $('#loader-global').show();
   
-
-    /* Our main filter function
-     * We pass the column location, the start date, and the end date
-     */
-    var filterByDate = function(column, startDate, endDate) {
-      // Custom filter syntax requires pushing the new filter to the global filter array
-            $.fn.dataTableExt.afnFiltering.push(
-                function( oSettings, aData, iDataIndex ) {
-       
-                    var nk=aData[column];
-                      //console.log(nk);
-
-                    var rowDate = normalizeDate(aData[column]),
-                  start = normalizeDate(startDate),
-                  end = normalizeDate(endDate);
-                             
-              
-              // If our date from the row is between the start and end
-              if (start <= rowDate && rowDate <= end) {
-                return true;
-              } else if (rowDate >= start && end === '' && start !== ''){
-                return true;
-              } else if (rowDate <= end && start === '' && end !== ''){
-                return true;
-              } else {
-                return false;
-              }
-            }
-            );
-        };
-
-    // converts date strings to a Date object, then normalized into a YYYYMMMDD format (ex: 20131220). Makes comparing dates easier. ex: 20131220 > 20121220
-    var normalizeDate = function(dateString) {
-      var date = new Date(dateString);
-      console.log(date);
-      var normalized = date.getFullYear() + '' + (("0" + (date.getMonth() + 1)).slice(-2)) + '' + ("0" + date.getDate()).slice(-2);
-      return normalized;
-    }
-
-} );
-
- 
-</script>  
-
-
-<script type="text/javascript">
     $(document).ready(function() {
+
+          
+
+            $('#loader-global').hide();
+
+          $('#clerkTable').DataTable({
+                        language: {
+                                    paginate: {
+                                        next: '>>',
+                                        previous: '<<'
+                                    }
+                                },
+                                "bPaginate": true,
+                                //pagingType: "numbers",
+                                // searching: false,
+                                bInfo: false,
+                                //"dom": 't<"pagination"p>',
+                            });
+                    
+                        var oTable = $('#clerkTable').DataTable(); 
+                        $('#searchuser').on( 'keyup', function () {
+                            oTable.search( this.value, true, false ).draw();
+                        });
+    
         $('select[name="clerkFilter"]').on('change', function() {
             var bankval = $(this).val();
             if(bankval == "Show All"){
                 window.location.href = '{{url("admin/clerks")}}';
+                
             }
             // else{
             //     window.location.href = '{{url("admin/clerks")}}?bank_name='+bankval;
             // }
             url = '<?= url("/admin/clerk_filter") ?>/'+bankval;
             if(bankval) {
+
                 $.ajax({
                     url: url,
                     type: "GET",
@@ -212,7 +149,10 @@ $(document).ready( function () {
                     success:function(response) {
                         tt = response.data; 
                         //$('.cff').html();
+                        
+                       
                         $("#clerkTable").remove();
+                        $('#clerkTable_paginate').remove();
 
                         $("#appe-table-filter").append('<table style="white-space: nowrap;" id="clerkTable"><thead><tr><th>Number# <i class="fa fa-sort" aria-hidden="true"></i></th><th>Bank Type <i class="fa fa-sort" aria-hidden="true"></i></th><th>Bank <i class="fa fa-sort" aria-hidden="true"></i></th><th>Branch <i class="fa fa-sort" aria-hidden="true"></i></th><th>City <i class="fa fa-sort" aria-hidden="true"></i></th><th>Address <i class="fa fa-sort" aria-hidden="true"></i></th><th>Clerk Name <i class="fa fa-sort" aria-hidden="true"></i></th><th>Main Phone <i class="fa fa-sort" aria-hidden="true"></i></th><th>Fax <i class="fa fa-sort" aria-hidden="true"></i></th><th>Mail <i class="fa fa-sort" aria-hidden="true"></i></th></tr></thead><tbody class="cff" >');
 

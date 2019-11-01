@@ -1,6 +1,6 @@
 
  <?php
-$ques16 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','17')->get();
+$ques16 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','17')->get();
 
 if(count($ques16)){
 
@@ -27,7 +27,7 @@ $Monthly_repayments_1 = json_decode($ques16[6]->meta_value);
 	    <div class="message d-i-f f-d-c">
 		  <span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
 		  <p>האם יש לך אפשרות לקחת הלוואות נוספות לצורך רכישת הנכס?
-				כגון: הלוואות חוץ בנקאיות, הלוואות חשכ”ל , משפחה או הלוואה 
+				כגון: הלוואות חוץ בנקאיות, הלוואות חשכ”ל, משפחה או הלוואה 
 			מיוחדת בהתאם למקום העבודה?</p>
 		  <span class="message-timing">18:20</span>
 		</div>
@@ -56,7 +56,7 @@ $Monthly_repayments_1 = json_decode($ques16[6]->meta_value);
 <div class="hide_16" <?php if(count($ques16) && $ques16[0]->meta_value == "Yes"){ ?> style=""; <?php  }else{  ?> style="display:none"; <?php } ?>>
 		<div class="message d-i-f f-d-c">
 		  <span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-		  <p>פרט את כל ההלוואות המיוחדות
+		  <p class="male_female_fifteem">פרט את כל ההלוואות המיוחדות
 			אשר באפשרותך לקחת</p>
 		  <span class="message-timing">18:26</span>
 		</div>
@@ -96,10 +96,10 @@ $Monthly_repayments_1 = json_decode($ques16[6]->meta_value);
 			<div class="form-group">
 			<label> תקופה בשנים:</label>
 
+
+
 		      	<select class="" name="termination_of_the_loan_1_1[]">
-				  <option value="1_30-1" <?php if(count($ques16)){ if($termination_of_the_loan_1_1[$count] == '1_30-1' ){ echo 'selected="selected"'; } } ?>>1_30-1 שנים</option>
-
-
+				  
 				 <option value="1" <?php if(count($ques16)){ if($termination_of_the_loan_1_1[$count] == '1' ){ echo 'selected="selected"'; } } ?> >1</option>
 				  <option value="2" <?php if(count($ques16)){ if($termination_of_the_loan_1_1[$count] == '2' ){ echo 'selected="selected"'; } } ?> >2</option>
 				  <option value="3" <?php if(count($ques16)){ if($termination_of_the_loan_1_1[$count] == '3' ){ echo 'selected="selected"'; } } ?> >3</option>
@@ -132,13 +132,19 @@ $Monthly_repayments_1 = json_decode($ques16[6]->meta_value);
 				  <option value="30" <?php if(count($ques16)){ if($termination_of_the_loan_1_1[$count] == '30' ){ echo 'selected="selected"'; } } ?> >30</option>
 				</select>
 
+
+
+
+
+
+
 			</div>
 			</div>
 			<div>
 			<div class="form-group">
 			<label for="Month_refund_<?php echo $ss; ?>">אחוז ריבית:</label>
 		      
-		      <input type="text" id="Month_refund_<?php echo $ss; ?>" class="form-control" name="Month_refund_1[]" value="<?php if(count($ques16)){ echo $Month_refund_1[$count]; } ?>" onkeyup="this.value=addCommas(this.value);">
+		      <input type="text" id="Month_refund_<?php echo $ss; ?>" class="form-control" name="Month_refund_1[]" value="<?php if(count($ques16)){ echo $Month_refund_1[$count]; } ?>" >
 
 			  <img src="images/pers.png" alt="" class="placeholder-icon">
 			</div>
@@ -211,7 +217,7 @@ $Monthly_repayments_1 = json_decode($ques16[6]->meta_value);
 			<div>
 			<div class="form-group">
 			<label for="Month_refund_1">אחוז ריבית:</label>
-		      <input type="text" id="Month_refund_1" class="form-control" name="Month_refund_1[]" value="1" onkeyup="this.value=addCommas(this.value);">
+		      <input type="text" id="Month_refund_1" class="form-control" name="Month_refund_1[]" value="1" >
 			  <img src="images/pers.png" alt="" class="placeholder-icon">
 			</div>
 
@@ -232,11 +238,12 @@ $Monthly_repayments_1 = json_decode($ques16[6]->meta_value);
 		    <a href="javascript:void(0);" class="add add_new_repeated_fields_16 run_upto_max_16_<?php echo $current_count_16; ?>"><i class="fa fa-plus"></i>הוסף</a>
 		  </div>
 		   <button type="submit" class="ok_btn main-button1">אישור</button>
+		   <div class="errMsg"></div>
 
 		     {{ csrf_field() }}
 		</div>
 	</div>
-	  		<div class="errMsg"></div>
+	  		
 	  	</form>
 	</div>
 
@@ -264,7 +271,7 @@ $Monthly_repayments_1 = json_decode($ques16[6]->meta_value);
 		$(this).removeClass('run_upto_max_16_'+row16);
 		row16++;
 
-	$('.repeated_fields_16').append('<div class="form-inline multiple-dropdown" id="dlt_16_'+row16+'"><div><div class="form-group"><label  class="d" for="loan-balance_'+row16+'">'+row16+'. אפשרות להלוואה <br> מיוחדת בסך:</label><input type="text" id="loan-balance_'+row16+'" class="form-control" name="loan_balance_1_1[]" value="140,000" onkeyup="this.value=addCommas(this.value);"><img src="images/placeholder-icon.png" alt="" class="placeholder-icon"></div></div><div><div class="form-group"><label> תקופה בשנים:</label><select class="" name="termination_of_the_loan_1_1[]"><option value="1"> 1</option><option value="2" > 2</option><option value="3"> 3</option><option value="4"> 4</option><option value="5"> 5</option><option value="6"> 6</option><option value="7"> 7</option><option value="8"> 8</option><option value="9"> 9</option><option value="10"> 10</option><option value="11"> 11</option><option value="12"> 12</option><option value="13"> 13</option><option value="14"> 14</option><option value="15">שנים 15</option><option value="16"> 16</option><option value="17"> 17</option><option value="18"> 18</option><option value="19"> 19</option><option value="20"> 20</option><option value="21"> 21</option><option value="22"> 22</option><option value="23"> 23</option><option value="24"> 24</option><option value="25"> 25</option><option value="26"> 26</option><option value="27"> 27</option><option value="28"> 28</option><option value="29"> 29</option><option value="30"> 30</option></select></div></div><div><div class="form-group"><label for="Month_refund_'+row16+'">אחוז ריבית:</label><input type="text" id="Month_refund_'+row16+'" class="form-control" name="Month_refund_1[]" value="" onkeyup="this.value=addCommas(this.value);"><img src="images/pers.png" alt="" class="placeholder-icon"></div></div><div class="section-4"><a href="javascript:void(0);" class="delete-button dlt_btn_16" data-id="dlt_16_'+row16+'"><i class="fa fa-minus"></i>מחק</a></div></div>'); 
+	$('.repeated_fields_16').append('<div class="form-inline multiple-dropdown" id="dlt_16_'+row16+'"><div><div class="form-group"><label  class="d" for="loan-balance_'+row16+'">'+row16+'. אפשרות להלוואה <br> מיוחדת בסך:</label><input type="text" id="loan-balance_'+row16+'" class="form-control" name="loan_balance_1_1[]" value="140,000" onkeyup="this.value=addCommas(this.value);"><img src="images/placeholder-icon.png" alt="" class="placeholder-icon"></div></div><div><div class="form-group"><label> תקופה בשנים:</label><select class="" name="termination_of_the_loan_1_1[]"><option value="1"> 1</option><option value="2" > 2</option><option value="3"> 3</option><option value="4"> 4</option><option value="5"> 5</option><option value="6"> 6</option><option value="7"> 7</option><option value="8"> 8</option><option value="9"> 9</option><option value="10"> 10</option><option value="11"> 11</option><option value="12"> 12</option><option value="13"> 13</option><option value="14"> 14</option><option value="15"> 15</option><option value="16"> 16</option><option value="17"> 17</option><option value="18"> 18</option><option value="19"> 19</option><option value="20"> 20</option><option value="21"> 21</option><option value="22"> 22</option><option value="23"> 23</option><option value="24"> 24</option><option value="25"> 25</option><option value="26"> 26</option><option value="27"> 27</option><option value="28"> 28</option><option value="29"> 29</option><option value="30"> 30</option></select></div></div><div><div class="form-group"><label for="Month_refund_'+row16+'">אחוז ריבית:</label><input type="text" id="Month_refund_'+row16+'" class="form-control" name="Month_refund_1[]" value="2"><img src="images/pers.png" alt="" class="placeholder-icon"></div></div><div class="section-4"><a href="javascript:void(0);" class="delete-button dlt_btn_16" data-id="dlt_16_'+row16+'"><i class="fa fa-minus"></i>מחק</a></div></div>'); 
 
 		$(this).addClass('run_upto_max_16_'+row16);
 		$('.dlt_btn_16').addClass('run_upto_min_16_'+row16);
@@ -301,19 +308,19 @@ $Monthly_repayments_1 = json_decode($ques16[6]->meta_value);
 
 	$('body').on('keyup','#Month_refund_1',function(){
 	  if ($(this).val() < 1){ 
-	  		$(this).val('1');
+	  		// $(this).val('1');
 	  }
 	});
 
 	$('body').on('keyup','#Month_refund_2',function(){
 	  if ($(this).val() < 1){ 
-	  		$(this).val('1');
+	  		// $(this).val('1');
 	  }
 	});
 
 	$('body').on('keyup','#Month_refund_3',function(){
 	  if ($(this).val() < 1){ 
-	  		$(this).val('1');
+	  		// $(this).val('1');
 	  }
 	});
 

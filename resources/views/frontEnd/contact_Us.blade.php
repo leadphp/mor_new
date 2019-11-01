@@ -43,7 +43,7 @@
             <div class="col-sm-4">
                <div class="overlay-boxIn">
                  <h2>טלפון</h2>
-                 <p>08-123456</p>
+                 <p>073-2112687 </p>
                  <div class="icon-contact">
                    <i class="fa fa-phone"></i>
                  </div>
@@ -52,7 +52,7 @@
             <div class="col-sm-4">
                  <div class="overlay-boxIn">
                  <h2>אימייל</h2>
-                 <p>info@examplae.co.il</p>
+                 <p>info@mashkantaOnline.co.il</p>
                  <div class="icon-contact">
                    <i class="fa fa-envelope"></i>
                  </div>
@@ -61,7 +61,7 @@
             <div class="col-sm-4">
                  <div class="overlay-boxIn">
                  <h2>כתובתנו</h2>
-                 <p>התאנה 13 תל אביב</p>
+                 <p>יצחק שדה 17, תל אביב</p>
                  <div class="icon-contact">
                    <i class="fa fa-map-marker"></i>
                  </div>
@@ -117,7 +117,7 @@
                      <div class="row clear">
                         <div class="col-sm-4">
                            <div class="form-group">
-                              <input type="text" class="form-control" id="full-name" placeholder="שם מלא" name="full-name" value="">
+                              <input type="text" class="form-control" id="phone" placeholder="טלפון" name="phone" value="">
                            </div>
                         </div>
                         <div class="col-sm-4">
@@ -125,9 +125,10 @@
                               <input type="email" class="form-control" id="email" placeholder="אימייל" name="email" value="">
                            </div>
                         </div>
-                        <div class="col-sm-4">
+                        
+						<div class="col-sm-4">
                            <div class="form-group">
-                              <input type="text" class="form-control" id="phone" placeholder="טלפון" name="phone" value="">
+                              <input type="text" class="form-control" id="full-name" placeholder="שם מלא" name="full-name" value="">
                            </div>
                         </div>
                         <div class="col-sm-12">

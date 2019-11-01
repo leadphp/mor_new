@@ -14,15 +14,47 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 </head>
-
 <body>
+	    <!-- header starts here -->
+        <header class="offerCompare">
+            <nav class="navbar">
+                <div class="container-fluid d-f f-d-c-r a-i-c j-c-s-b">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    @include('layouts.navoptionsfrontend')
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+                <div class="reg logo comp-offer">
+				    <a href="#">
+				      <img src="images/logo.png">
+				    </a>
+				</div>
+            </nav>
+        </header>
+        <!-- header ends here -->
     <div class="main-wrapper steps payment-step pay-step-2 offer-compare">
+
+
+    	
+
+
         <!-- mortgage offers starts here -->
         <section class="mortgage-offers">
             <div class="container">
+            	
                 <div class="mortgage-offers-border">
 					<div class="pament-starting-div">
-					   <div class="mortgage-offers-heading">
+					   <div class="mortgage-offers-heading dddd">
 							<p>בדיקת הצעה קיימת למשכנתא :<br>
 							   <small>בדוק וראה כמה תכול לחסוך</small>
 							</p>
@@ -31,10 +63,11 @@
 					   <div class="row">
 					     <div class="col-md-5">
 						   <div class="file-design">
+						   <h3>בכל חודש נגריל<br> 
+ארוחת בוקר זוגית מתנה</h3>
 						      <p>צרף את דו”ח המשכנתא <br> 
 שקיבלת בבנק </p>
-						      <h3>בכל חודש נגריל<br> 
-ארוחת בוקר זוגית מתנה</h3>
+						      
 
 <div class="file-upload-container">
     <input id="up-label" type="file" accept="image/*">
@@ -44,18 +77,23 @@
 </div>
 
 <div class="img-formet">
-  <p>:ניתן לצרף קבצים מהסוגים הבאים בלבד<br>Word, PDF , JPEG , PNG</p>
-  <p> אנו מתחייבים כי דו”ח המשכנתא שלך ישאר אנונימי 
- נמחק את כל הפרטים האישיים) ובאמצעותו נוכל) 
-לעזור לך ולאחרים לקבל את המשכנתא הטובה ביותר</p>
+  <p>ניתן לצרף קבצים מהסוגים הבאים בלבד<br>Word, PDF , JPEG , PNG</p>
+  <p> אנו מתחייבים כי דו”ח המשכנתא שלך ישאר אנונימי. 
+ נמחק את כל הפרטים האישיים ובאמצעותו נוכל 
+לעזור לך ולאחרים לקבל את המשכנתא הטובה ביותר.</p>
 </div>
 						   </div>
+						    <div class="mortgage-offers-heading mmmm">
+							<p>בדיקת הצעה קיימת למשכנתא :<br>
+							   <small>בדוק וראה כמה תכול לחסוך</small>
+							</p>
+					   </div>
 						 </div>
 						 <div class="col-md-7">
 						  <form class="payment-form">
 							 <div class="form-group">
 							   <div class="main-form">
-								  <div class="row-group">
+								  <div class="row-group fullMobile">
 									  <label>שווי נכס נרכש</label>
 									  <input type="text" placeholder="1,000,000">
 									  <img src="images/placeholder-icon.png" alt="" class="placeholder-icon">
@@ -71,11 +109,8 @@
 								  <div class="row-group text-flex">
 								     <div>
 									 <label>ריבית %</label>
-									  <select class="align-left">
-										 <option>0.9</option>
-										 <option>0.8</option>
-										 <option>0.7</option>
-									  </select>
+									   <input type="text" placeholder="0.9" />
+									   <img src="images/pers.png" alt="" class="placeholder-icon">
 									 </div>
 								     <div class="space-btw">
 									  <label>יתרת שנים</label>
@@ -102,11 +137,8 @@
 								  <div class="row-group text-flex">
 								     <div>
 									 <label>ריבית %</label>
-									  <select class="align-left">
-										 <option>0.9</option>
-										 <option>0.8</option>
-										 <option>0.7</option>
-									  </select>
+									   <input type="text" placeholder="0.9" />
+									   <img src="images/pers.png" alt="" class="placeholder-icon">
 									 </div>
 								     <div class="space-btw">
 									  <label>יתרת שנים</label>
@@ -146,7 +178,7 @@
         <!-- footer starts here -->
 
        <footer class="no-bg-footer">
-		  <div class="container-fluid">
+		
 		 @include('layouts.footer')
 		</footer>
 

@@ -1,7 +1,7 @@
 @php
 $auth = \Auth::user();
 if(!empty($auth)){
-    $ques = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','3')->get();
+    $ques = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','3')->get();
     if(count($ques)){
     $ques3 = $ques;
 	}

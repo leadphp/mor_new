@@ -1,15 +1,15 @@
 @php
-$ques8 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-$ques11_3 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','11')->get();
-$ques2 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
+$ques8 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','8')->get();
+$ques11_3 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','11')->get();
+$ques2 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','2')->get();
 
        if(count($ques11_3)){
-         $value2 = $ques2[0]->meta_value;
-         $x_value_1 = $ques11_3[0]->meta_value;
-        $x_value_1 = str_replace(",","",$x_value_1);
+     	$value2 = $ques2[0]->meta_value;
+     	$x_value_1 = $ques11_3[0]->meta_value;
+    	$x_value_1 = str_replace(",","",$x_value_1);
         $x_value_2 = $ques11_3[1]->meta_value;
         $x_value_2 = str_replace(",","",$x_value_2);
-         $x_value_3 = $ques11_3[2]->meta_value;
+     	$x_value_3 = $ques11_3[2]->meta_value;
         $x_value_3 = str_replace(",","",$x_value_3);
             
              if(45 < $x_value_3 && $x_value_3 <= 49){
@@ -53,7 +53,7 @@ if(count($ques11_3)){
 			<form class="form-inline multiple-dropdown chat-equity-cost d-f" method="post" id="formQuestionThirteen">
 				<div>
 					<div class="form-group">
-						<label for="incoming-cost-2">עלות הנכנס:</label>
+						<label for="incoming-cost-2">עלות הנכס:</label>
 						<input type="text" id="incoming-cost-2" class="form-control" name="incoming_cost_2" value="<?php if(count($ques11_3)){ echo $ques11_3[0]->meta_value; }else{ echo"3,200,000";} ?>" onkeyup="this.value=addCommas(this.value);">
 						<img src="images/placeholder-icon.png" alt="" class="placeholder-icon">
 					</div>
@@ -66,7 +66,8 @@ if(count($ques11_3)){
 						<button type="submit" class="purp_buy main-button eleven-three-submit">אישור</button>
 					</div>
 					<br>
-
+					<p id="error-msg-3" style="display: none; color: red;">עלות הנכס צריכה להיות גדולה מגובה המשכנתא שלך</p>
+					
 					@php
 					if($mort_ratio > 50 && $value2 == 'No' ){ 
 					@endphp
@@ -94,8 +95,8 @@ if(count($ques11_3)){
 						<div class="imp-info-text">
 							<span class="question d-f j-c-c a-i-c"><i class="fa fa-question" aria-hidden="true"></i></span>
 							<p>ביקשת משכנתא בסך של '.$mortgage_fee.' שקלים, 
-								על דירה בשווי '.$mort_property.' שקלים. 
-								אם תוריד את גובה המשכנתא ל- '.$z.' שקלים, 
+								על דירה בשווי '.$mort_property.' שקלים.
+								אם תוריד את גובה המשכנתא ל- <span class="extra_question_work">'.$z.'</span> שקלים, 
 								תוכל לקבל ריביות יותר טובות על המשכנתא שלך!
 							האם אתה מעונין להוריד את גובה המשכנתא?</p>
 						</div>
@@ -129,23 +130,47 @@ if(count($ques11_3)){
 		//$('body').addClass('bubble_direct_eleven');
 	});
 
-	$('body').on('keyup','#incoming-cost-2',function(){
-	  if ($(this).val() < 10000){ 
-	  		$(this).val('10,000');
-	  }
-	});
-
-
-
-	$('#equity-height').on('keyup keydown keypress blur',function(){
+	$('#equity-height, #incoming-cost-2').on('keyup keydown keypress blur',function(){
 		var yy = $('#incoming-cost-2').val();
-		var rr = $(this).val();
+		var rr = $('#equity-height').val();
 		var val1 = yy.split(',').join('');
 		var val2 = rr.split(',').join('');
-	  	if (parseInt(val2) > parseInt(val1)){ 
-	  		$(this).val(yy);
+
+		//twelve_change_eleven_a(addCommasDirect(val2));
+
+		alert_wala_fun();
+
+	  	if (parseInt(val2) > parseInt(val1) || parseInt(val2) == parseInt(val1)  ){ 
+	  		//$(this).val(yy);
+	  		$("#error-msg-3").show();
+	  		$(".eleven-three-submit").hide();
+	  	}
+	  	else{
+	  		$("#error-msg-3").hide();
+	  		$(".eleven-three-submit").show();
 	  	}
 	});
+
+
+
+	function alert_wala_fun(){
+		var yy = $('#incoming-cost-2').val();
+		var rr = $('#equity-height').val();
+		var val1 = yy.split(',').join('');
+		var val2 = rr.split(',').join('');
+		var divide = parseInt(val2) / parseInt(val1);
+		//alert(divide);
+		if(divide > 0.5){
+			$(".alert-text").show();
+		}else{
+
+			$(".alert-text").hide();	
+		}
+	}
+alert_wala_fun();
+
+
+
 
 
 </script> 

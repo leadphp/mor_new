@@ -1,28 +1,73 @@
+// $(document).ready(function(){
+//   if($('.prop_mark').hasClass('make_it_disabled')){
+//       $('.make_it_disabled').attr('disabled', 'disabled');
+//   }
+//   else{
+//       $('.make_it_disabled').removeAttr('disabled', 'disabled');
+//   }
+// });
+
+
+
+
+
+
+
+$(window).scroll(function() {    
+var scroll = $(window).scrollTop();
+if (scroll > 50) {
+	$("nav.navbar").addClass("fixedheader");
+    $(".headerPayment").addClass("fixedheader");
+}else{
+	$("nav.navbar").removeClass("fixedheader");
+    $(".headerPayment").removeClass("fixedheader");      
+}
+});
+$(function() {
+  // contact form animations
+  $('.phone_icon').click(function() {
+    $('#contactForm').toggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#contactForm");
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+});
+
 $('body').on('click', '.my_question li label', function() {
   $(this).parent().parent().addClass('click-color-change');
 });
+$('body').on('click', '.chat-buttons a', function() {
+  $(this).parent().addClass('click-color-change');
+});
 
 $('.chat-buttons a').click(function(){
-   $(this).addClass('active').siblings().removeClass('active');
+  $(this).addClass('active').siblings().removeClass('active');
 });
-$(".toggle_bar").click(function(){
-  $(".nav-main").toggle();
+
+$(document).click(function (e) {
+      $('.navbar-collapse').removeClass('in');
+    if($(e.target).attr('class') === 'fa fa-bars') {
+      $('.nav-main').toggleClass('show');
+      $('.advisor-nav.t').toggleClass('show');
+      $("#exTab2").toggleClass('show');
+    } else {
+      $('.nav-main').removeClass('show');
+      $('.advisor-nav.t').removeClass('show');
+      $("#exTab2").removeClass('show');
+    }    
+    
 });
-$(".report-toggle_bar").click(function(){
-  $("#exTab2").toggle();
-});
-$(".reg-header .toggle_bar").click(function(){
-  $(".reg-header .nav-main").toggle();
-});
-$('.advisor-toggle_bar').click(function(){
-    $('.advisor-nav.t').toggle();
-    $('.level.step-2').toggle();
-});
+
 $('.owl-testimonials').owlCarousel({
     loop:true,
     autoplay: true,
     margin:0,
-    nav:false,
+    nav:true,
     rtl:true,
     responsive:{
         0:{
@@ -39,7 +84,7 @@ $('.owl-testimonials').owlCarousel({
 $('.owl-choose-us').owlCarousel({
     loop:true,
     margin:0,
-    nav:false,
+    nav:true,
     rtl:true,
     responsive:{
         0:{
@@ -53,10 +98,27 @@ $('.owl-choose-us').owlCarousel({
         }
     }
 })
-$('.owl-logos').owlCarousel({
-     loop:true,
+$('.tenQues').owlCarousel({
     margin:0,
-    nav:false,
+    loop:false,
+	nav: true,
+    rtl:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        601:{
+            items:1
+        },
+        992:{
+            items:1
+        }
+    }
+})
+$('.owl-logos').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:true,
     rtl:true,
     responsive:{
         0:{
@@ -64,19 +126,19 @@ $('.owl-logos').owlCarousel({
             nav:true
         },
         601:{
-            items:2,
+            items:1,
             nav:true
         },
         992:{
-            items:8
+            items:1
         }
     }
 })
-
 $('.bank-steps').owlCarousel({
-     loop:false,
+    loop:false,
     margin:35,
     nav:false,
+	dots: true,
     rtl:true,
     responsive:{
         0:{
@@ -95,9 +157,8 @@ $('.bank-steps').owlCarousel({
         }
     }
 })
-
 $('.why-us-owl').owlCarousel({
-     loop:false,
+    loop:false,
     nav:false,
     rtl:true,
     responsive:{
@@ -117,36 +178,50 @@ $('.why-us-owl').owlCarousel({
         }
     }
 })
-
-
-
+/*POP UP FORMS FOR CALL AND MENU*/
+$(function() {  
+  // contact form animations
+  $('.button-call-global-payment').click(function() {
+    $('#contactForm').toggle();
+  })
+  $('.close_btnP').click(function() {
+    $('#contactForm').hide();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#contactForm");
+    if (!container.is(e.target) // if the target of the click isn't the container...
+      && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+      container.fadeOut();
+    }
+  });
+});
 $(".qna-question-left").click(function(){
-    $(this).parents(".qna-container").addClass("show");
+  $(this).parents(".qna-container").addClass("show");
 });
 $(".qna-answer-right").click(function(){
-    $(this).parents(".qna-container").removeClass("show");
+  $(this).parents(".qna-container").removeClass("show");
 });
-
-
 //Our patner slider for how it works page
 $(window).bind("resize", function () {
-    console.log($(this).width())
-    if ($(this).width() > 767) {
-        $('.owl-logos').addClass('owl-logos-desktop');
-        $('.bank-steps').addClass('owl-bank-desktop');
-        $('.why-us-owl').addClass('why-us-owl-desktop');
-    } else {
-        $('.owl-logos').removeClass('owl-logos-desktop');
-        $('.bank-steps').removeClass('owl-bank-desktop');
-        $('.why-us-owl').removeClass('why-us-owl-desktop');
-    }
+console.log($(this).width())
+if ($(this).width() > 767) {
+    $('.owl-logos').addClass('owl-logos-desktop');
+    $('.bank-steps').addClass('owl-bank-desktop');
+    $('.why-us-owl').addClass('why-us-owl-desktop');
+    $('.tenQues').addClass('yesTenQues');
+    $('.phone_icon').attr('href','javascript:void(0);');
+    $('.button-call-global-payment').attr('href','javascript:void(0);');
+}
+else {
+    $('.owl-logos').removeClass('owl-logos-desktop');
+    $('.bank-steps').removeClass('owl-bank-desktop');
+    $('.why-us-owl').removeClass('why-us-owl-desktop');
+    $('.tenQues').removeClass('yesTenQues');
+    $('.phone_icon').attr('href','tel:073-2112687');
+    $('.button-call-global-payment').attr('href', 'tel:073-2112687');
+}
 }).trigger('resize');
-//Our patner slider for how it works page End
-
-
-// range slider
-
-
 function showValue(event, ui) {
 	var value = $(this).slider('option', 'range') === true ? $(this).slider('values') : $(this).slider('value');
 	value = $.isArray(value) ? value[0] + ' to ' + value[1] : value;
@@ -157,7 +232,6 @@ function showValue(event, ui) {
 		$('.slider .sliderValue').text(value);
 	}
 }
-
 function highlightLines(code, start, end) {
 	var lines = code.html().split(/<br>|\n/i);
 	var newLines = '';
@@ -168,47 +242,44 @@ function highlightLines(code, start, end) {
 	code.html(newLines);
 }
 $(".sliderValue").appendTo(".ui-slider-handle");
-
-
 /*
 |--------------------------------------------------------------------------
 | Register form validation
 |--------------------------------------------------------------------------
 */
-    jQuery('#register_form_validation').validate({ // initialize the plugin
-        rules: {
-            first_name: {
-                required: true,
-                minlength: 1,
-                maxlength:50,
-            },
-            last_name: {
-                required: true,
-                minlength: 1,
-                maxlength:50,
-            },
-            email: {
-                required: true,
-                email:true,
-            },
-            phone_number: {
-                required: true,
-                number:true,
-                maxlength:14,
-                minlength:8,
-            },
-            password: {
-                required: true,
-                minlength: 6,
-            },
-            password_confirmation: {
-                required: true,
-                minlength: 6,
-                equalTo: "#password",
-            },
+jQuery('#register_form_validation').validate({ // initialize the plugin
+    rules: {
+        first_name: {
+            required: true,
+            minlength: 1,
+            maxlength:5,
         },
-        
-    });
+        last_name: {
+            required: true,
+            minlength: 1,
+            maxlength:50,
+        },
+        email: {
+            required: true,
+            email:true,
+        },
+        phone_number: {
+            required: true,
+            number:true,
+            maxlength:14,
+            minlength:8,
+        },
+        password: {
+            required: true,
+            minlength: 6,
+        },
+        password_confirmation: {
+            required: true,
+            minlength: 6,
+            equalTo: "#password",
+        },
+    }
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -224,18 +295,10 @@ $(".sliderValue").appendTo(".ui-slider-handle");
     //     }
     // });
 
-
-
-
-
-
-
-
 /**************************************************************************
 EXCEL UPLOADING FUNCTION
 **************************************************************************/
 function excel(button,url){
-
     $('#'+button).on('change', function(){
         //alert('786');
       var name = document.getElementById("file").files[0].name;
@@ -247,7 +310,6 @@ function excel(button,url){
       }else{
         form_data.append("file", document.getElementById('file').files[0]);
         //url = '<?= url("/ajax/clerk_tabel_excel_upload") ?>';
-
         $.ajax({
             type: "POST",
             url: url,
@@ -262,31 +324,35 @@ function excel(button,url){
                 }
             }
         });
-
       }
     });
 }
-
-
 /*ADMIN CLERKS TABLE EXCEL UPLOAD BUTTON CLICK*/
-    $(document).ready(function(){
-        excel('clerk_file','<?= url("/ajax/clerk_tabel_excel_upload") ?>');
-    });
-
-
-
-
-
-
-
-
-
-
-
+$(document).ready(function(){
+    excel('clerk_file','<?= url("/ajax/clerk_tabel_excel_upload") ?>');
+});
 /*CUSTOM COMMA FOR INPUT FIELDS REGISTARTION FORM*/
-
 function addCommas(nStr) {
-      return nStr.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return nStr.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+function addCommasDirect(nStr){
+  return nStr.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 
+/*ADD COMMAS*/
+function abc_comma_pao(){
+
+    var one = $('#property-market-value').val();
+    var hhh = $('#property-market-value').val(addCommasDirect(one));
+}
+abc_comma_pao();
+
+
+
+
+function twelve_change_eleven_a(xyz){
+   // alert(xyz);
+    $('.twelveth_value').html('');
+    $('.twelveth_value').html('<p>אם כך, גובה המשכתא שאותו אתה מבקש מהבנק הוא: <br>'+xyz+' ש”ח.</p>');
+}

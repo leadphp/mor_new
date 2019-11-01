@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+@php use Carbon\Carbon; @endphp
+
 <html lang="he">
 
 <head>
@@ -29,19 +30,19 @@
             <nav class="navbar d-f j-c-c a-i-c">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <a class="navbar-brand" href="javascript:void(0);">
+                    <a class="navbar-brand" href="{{url('')}}" target="_blank">
                         <img src="{{ URL::asset('admin_new/images/logo.png') }}" alt="" />
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/admin/dashboard">Customers</a></li>
-                        <li><a href="/admin/bank_interest">Bank interest tables</a></li>
-                        <li><a href="/admin/clerks">Clerk tables</a></li>
-                        <li><a href="/admin/settings">settings</a></li>
+                        <li class="{{ (request()->is('admin/dashboard')) ? 'active' : '' }}" ><a href="/admin/dashboard">Customers</a></li>
+                        <li class="{{ (request()->is('admin/bank_interest')) ? 'active' : '' }}"><a href="/admin/bank_interest">Bank interest tables</a></li>
+                        <li class="{{ (request()->is('admin/clerks')) ? 'active' : '' }}"><a href="/admin/clerks">Clerk tables</a></li>
+                        <li class="{{ (request()->is('admin/settings')) ? 'active' : '' }}"><a href="/admin/settings">settings</a></li>
                     </ul>
                 </div>
-                <div class="date-n-time-container">System Date & Time: <span class="date">30-4-2019</span><span class="time"> |  14:32</span></div>
+                <div class="date-n-time-container">System Date & Time: <span class="date">{{Carbon::now('Israel')}}</span><span class="time"></span></div>
                 <div class="notifications-container d-f">
                     <a href="javascript:void(0);"> <i class="fa fa-envelope"></i> <span class="notificaions-badge"></span> </a>
                     <a href="javascript:void(0);"> <i class="fa fa-bell"></i> <span class="notificaions-badge"></span> </a>
@@ -50,11 +51,11 @@
                     <div class="user-img">
                         <div> <i class="fa fa-user"></i> </div>
                     </div>
-                    <div class="user-name"> <a href="javascript:void(0);" class="dropdown-toggle d-f a-i-c" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <div class="user-name"> <a href="javascript:void(0);" class="dropdown-toggle d-f a-i-c" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-email="{{Auth::user()->email}}">{{Auth::user()->email}} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="javascript:void(0);">Action</a></li>
-                            <li><a href="javascript:void(0);">Another action</a></li>
-                            <li><a href="javascript:void(0);">Something else here</a></li>
+                            <li><a href="/admin/logout">Log Out</a></li>
+                           <!--  <li><a href="javascript:void(0);">Another action</a></li>
+                            <li><a href="javascript:void(0);">Something else here</a></li> -->
                         </ul>
                     </div>
                 </div>

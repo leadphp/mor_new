@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="form-group">
                                     <input id="radio2" type="radio" name="bank_name" value="BB">
-                                    <label for="radio2">BB-Discount</label>
+                                    <label for="radio2">BB - Discount</label>
                                 </div>
                                 <div class="form-group">
                                     <input id="radio3" type="radio" name="bank_name" value="CC">
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="form-group">
                                     <input id="radio4" type="radio" name="bank_name" value="DD">
-                                    <label for="radio4">DD- Hapolaim</label>
+                                    <label for="radio4">DD - Hapolaim</label>
                                 </div>
                                 <div class="form-group">
                                     <input id="radio5" type="radio" name="bank_name" value="EE">
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="form-group">
                                     <input id="radio7" type="radio" name="bank_name" value="GG">
-                                    <label for="radio7">GG- Jerusalem</label>
+                                    <label for="radio7">GG - Jerusalem</label>
                                 </div>
                                 <div class="form-group">
                                     <input id="radio8" type="radio" name="bank_name" value="HH">
@@ -88,24 +88,36 @@
                                     <div class="controls-container">
                                         <div class="toggle-switch">
                                             <label class="switch">
+                                                <?php 
+                                                if(!empty($discount_status) && $discount_status == 1){
+
+                                                    echo'<input type="checkbox" checked name="bank_discount_avail" id="bank_discount_avail" value="'.$discount_status.'" data-id="1">';
+                                                
+                                                }else{
+                                                    echo'<input type="checkbox"  name="bank_discount_avail" id="bank_discount_avail" value="'.$discount_status.'" data-id="2">';
+                                                }
+                                               ?>
 
 
-
-                                    <input type="checkbox" name="bank_discount_avail" id="bank_discount_avail">
-
-
-
-
-                                    <span class="slider round"></span> </label>
+                                                <span class="slider round"></span>
+                                            </label>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
-                                    Discount (For the bank Customers)
+                                    Discount (For the bank Customers)%
                                 </li>
                                 <li>
                                     <div class="form-group">
-                                        <input type="text" name="bank_discount" id="bank_discount" value="" placeholder="-0.5%">
+                                        @php
+                                        if(!empty($discount)){
+                                            echo'<input type="text" name="bank_discount" id="bank_discount" value="'.$discount.'">';
+                                        
+                                        }else{
+                                            echo'<input type="text" name="bank_discount" id="bank_discount" value="0">';
+                                        }
+                                        @endphp
+                                        
                                     </div>
                                 </li>
                             </ul>
@@ -126,63 +138,64 @@
                                         <th>Loan Type</th>
                                         <th>Loan Years</th>
                                         @foreach($details as $data2)
-                                        <th @php if( $data2->years < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data2->years; @endphp</th>
+
+                                        <th @php if( $data2->years < 0){ echo'class="red-make-it"'; } @endphp>@php echo $data2->years; @endphp</th>
                                         @endforeach
                                     </tr>
                                     <tr>
                                         <td>Prime</td>
                                         <td>A</td>
                                         @foreach($details as $data3)
-                                        <td @php if( $data3->prime < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data3->prime; @endphp%</td>
+                                        <td @php if( $data3->prime <= 0){ echo'class="red-make-it"'; } @endphp>@php echo $data3->prime; @endphp%</td>
                                         @endforeach
                                     </tr>
                                     <tr>
                                         <td>Const_Inter_Linked</td>
                                         <td>B</td>
                                         @foreach($details as $data4)
-                                        <td @php if( $data4->const_inter_linked < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data4->const_inter_linked; @endphp%</td>
+                                        <td @php if( $data4->const_inter_linked <= 0){ echo'class="red-make-it"'; } @endphp>@php echo $data4->const_inter_linked; @endphp%</td>
                                         @endforeach
                                     </tr>
                                     <tr>
                                         <td>Const_Inter_Unlinked</td>
                                         <td>C</td>
                                         @foreach($details as $data5)
-                                        <td @php if( $data5->const_inter_unlinked < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data5->const_inter_unlinked; @endphp%</td>
+                                        <td @php if( $data5->const_inter_unlinked <= 0){ echo'class="red-make-it"'; } @endphp>@php echo $data5->const_inter_unlinked; @endphp%</td>
                                         @endforeach
                                     </tr>
                                      <tr>
                                         <td>Var_inter_5year_linked</td>
                                         <td>D</td>
                                         @foreach($details as $data5)
-                                        <td @php if( $data5->var_inter_5year_linked < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data5->var_inter_5year_linked; @endphp%</td>
+                                        <td @php if( $data5->var_inter_5year_linked <= 0){ echo'class="red-make-it"'; } @endphp>@php echo $data5->var_inter_5year_linked; @endphp%</td>
                                         @endforeach
                                     </tr>
                                      <tr>
                                         <td>Var_inter_5year_Unlinked</td>
                                         <td>E</td>
                                         @foreach($details as $data5)
-                                        <td @php if( $data5->var_inter_5year_unlinked < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data5->var_inter_5year_unlinked; @endphp%</td>
+                                        <td @php if( $data5->var_inter_5year_unlinked <= 0){ echo'class="red-make-it"'; } @endphp>@php echo $data5->var_inter_5year_unlinked; @endphp%</td>
                                         @endforeach
                                     </tr>
                                     <tr>
                                         <td>Euro_Inter</td>
                                         <td>F</td>
                                         @foreach($details as $data6)
-                                        <td @php if( $data6->euro_inter < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data6->euro_inter; @endphp%</td>
+                                        <td @php if( $data6->euro_inter <= 0){ echo'class="red-make-it"'; } @endphp>@php echo $data6->euro_inter; @endphp%</td>
                                         @endforeach
                                     </tr>
                                     <tr>
                                         <td>Dollar_inter</td>
                                         <td>G</td>
                                         @foreach($details as $data7)
-                                        <td @php if( $data7->dollar_inter < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data7->dollar_inter; @endphp%</td>
+                                        <td @php if( $data7->dollar_inter <= 0){ echo'class="red-make-it"'; } @endphp>@php echo $data7->dollar_inter; @endphp%</td>
                                         @endforeach
                                     </tr>
                                     <tr>
                                         <td>Elegibility_Inter</td>
                                         <td>H</td>
                                         @foreach($details as $data8)
-                                        <td @php if( $data8->eligibility_inter < 1){ echo'class="red-make-it"'; } @endphp>@php echo $data8->eligibility_inter; @endphp%</td>
+                                        <td @php if( $data8->eligibility_inter <= 0){ echo'class="red-make-it"'; } @endphp>@php echo $data8->eligibility_inter; @endphp%</td>
                                         @endforeach
                                     </tr>
                                 </tbody>
@@ -206,12 +219,12 @@
                             <label>Bank Table</label>
                             <select class="selectpicker bank_picker">
                                <option value="AA">AA - Mizrahi</option>
-                               <option value="BB">BB-Discount</option>
+                               <option value="BB">BB - Discount</option>
                                <option value="CC">CC - Igud</option>
-                               <option value="DD">DD- Hapolaim</option>
-                               <option value="EE">EE - Leu</option>
+                               <option value="DD">DD - Hapolaim</option>
+                               <option value="EE">EE - Leumi</option>
                                <option value="FF">FF - Otsar Hahayal</option>
-                               <option value="GG">GG- Jerusalem</option>
+                               <option value="GG">GG - Jerusalem</option>
                                <option value="HH">HH - Habenleumi</option> 
                             </select>
                         </div>
@@ -295,6 +308,7 @@
 
                                         $prime_value = $prime->prime;
                                         $total = $prime_value + $prime_delta;
+                                        $total = number_format((float)$total, 3, '.', '');
                                         $ss[] = $prime_value + $prime_delta;
 
                                     @endphp
@@ -335,11 +349,12 @@
 
 
                     <div class="prime_months_table">
-                        <table class="table table-striped" id="prime_months_table">
+                        <table class="table table-striped prime_months_table_works" id="prime_months_table" >
                             <thead>
                                 <tr>
                                     <th scope="col">Month</th>
-                                    <th scope="col">Prime Month</th>
+                                    <th scope="col">Prime DELTA</th>
+                                   <!--  <th scope="col">Prime Months</th> -->
                                 </tr>
                             </thead>
                             <tbody class="test_prime_table dnd">
@@ -350,9 +365,9 @@
                                     for($i=1;$i<=360;$i++){
                                         if(count($ss) != 0){
                                             $value = $ss[$bb] / 12;
-                                            $value = number_format((float)$value, 2, '.', '');
+                                            $value = number_format((float)$value, 3, '.', '');
 
-                                            echo '<tr class="select_prime_all select_prime_'.$dd.'" ><td>'.$i.'</td><td>'.$value.'</td></tr>';
+                                            echo '<tr class="select_prime_all select_prime_'.$dd.'" ><td>'.$i.'</td><td>'.$value.'%</td></tr>';
                                             if($i % 12 == 0){
                                             $dd++;
                                             $bb++;
@@ -379,24 +394,24 @@
                         <input type="file" name="bank_madad_file" id="bank_madad_file">
                         <label class="a-time-selection" for="bank_madad_file">Upload Excel: Bank Madad.xlsx <i class="fa fa-file-excel-o" aria-hidden="true"></i></label>
                     </div>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Years</th>
-                                <th scope="col">Madad Years(+0)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            @foreach($bank_madad as $bank_m)
-                            <tr>
-                                <td>@php echo $bank_m->years; @endphp</td>
-                                <td>@php echo $bank_m->madad; @endphp%</td>
-                            </tr>
-                            @endforeach
-                            
-                        </tbody>
-                    </table>
+                    <div class="madad_years_div">
+                        <table class="table table-striped" id="madad_years_table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Years</th>
+                                    <th scope="col">Madad Years(+0)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="madad_years">
+                                @foreach($bank_madad as $bank_m)
+                                    <tr>
+                                        <td>@php echo $bank_m->years; @endphp</td>
+                                        <td>@php echo $bank_m->madad; @endphp%</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <!--maded-table-month-p-->
                 <div class="maded-table-month-p">
@@ -421,55 +436,59 @@
                             </li>
                         </ul>
                     </div>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Month</th>
-                                <th scope="col">Madad Mult</th>
-                                <th scope="col">Madad Month</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            @php
-                            $dd = 1;
-                            $ff = 1;
-                            $madad_month = 0; 
-                                for($i=1;$i<=360;$i++){
+                    <div class="madad_months_div">
+                        <table class="table table-striped" id="madad_months_table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Month</th>
+                                    <th scope="col">Madad Mult</th>
+                                    <th scope="col">Madad Month</th>
+                                </tr>
+                            </thead>
+                            <tbody class="madad_months">
+                                
+                                @php
+                                $dd = 1;
+                                $ff = 1;
+                                $madad_month = 0; 
+                                    for($i=1;$i<=360;$i++){
 
-                                    $bank_prime = \App\Bank_madad::where('years',$ff)->get();
+                                        $bank_prime = \App\Bank_madad::where('years',$ff)->get();
 
-                                    if(count($bank_prime) != 0){
-                                    $final_prime_val = $bank_prime[0]->madad / 12;
-                                    $final_prime_val = number_format((float)$final_prime_val, 3, '.', '');
+                                        if(count($bank_prime) != 0){
 
-                                    if($i == 1){
-                                    $madad_month = $final_prime_val;
-                                    }else{
-                                    $madad_val1 = 1 + $final_prime_val / 100;
+                                            $final_prime_val = $bank_prime[0]->madad / 12;
 
-                                    $madad_val2 = 1 + $madad_month / 100;
+                                            $final_prime_val = number_format((float)$final_prime_val, 3, '.', '');
 
-                                    $madad_val3 = $madad_val1 * $madad_val2;
+                                            if($i == 1){
+                                                $madad_month = $final_prime_val;
+                                            }else{
+                                                $madad_val1 = 1 + $final_prime_val / 100;
 
-                                    $madad_month1 = $madad_val3 - 1;
+                                                $madad_val2 = 1 + $madad_month / 100;
 
-                                    $madad_month = $madad_month1 * 100;
-                                    $madad_month = number_format((float)$madad_month, 3, '.', '');
+                                                $madad_val3 = $madad_val1 * $madad_val2;
+
+                                                $madad_month1 = $madad_val3 - 1;
+
+                                                $madad_month = $madad_month1 * 100;
+                                                $madad_month = number_format((float)$madad_month, 3, '.', '');
+                                            }
+
+                                            echo '<tr class="select_madad_all select_madad_'.$dd.'"><td>'.$i.'</td><td>'.$final_prime_val.'%</td><td>'.$madad_month.'%</td></tr>';
+
+                                            if($i % 12 == 0){
+                                                $dd++;
+                                                $ff++;
+                                            }
+                                        }
                                     }
+                                @endphp
 
-                                    echo '<tr class="select_madad_all select_madad_'.$dd.'"><td>'.$i.'</td><td>'.$final_prime_val.'%</td><td>'.$madad_month.'%</td></tr>';
-
-                                    if($i % 12 == 0){
-                                    $dd++;
-                                    $ff++;
-                                    }
-                                }
-                                }
-                            @endphp
-
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="to-create-link-p">
                         <a><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
                         <p>To create linked column at final table use this for Madad (B+D+H)</p>

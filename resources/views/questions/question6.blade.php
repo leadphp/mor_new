@@ -1,7 +1,7 @@
 @php
 $auth = \Auth::user();
 if(!empty($auth)){
-    $ques = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','6')->get();
+    $ques = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','6')->get();
 
     if(count($ques)){
 	    $ques6 = $ques;
@@ -19,7 +19,7 @@ if(!empty($auth)){
 			</div>
 			<div class="message d-i-f f-d-c">
 				<span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-				<p>באיזה בנק אתה מנהל את החשבון הראשי
+				<p class="male_female_six">באיזה בנק אתה מנהל את החשבון הראשי
 				שלך?</p>
 				<span class="message-timing">18:26</span>
 			</div>

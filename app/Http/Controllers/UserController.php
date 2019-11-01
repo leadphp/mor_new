@@ -10,13 +10,37 @@ class UserController extends Controller
 
     public function register_data(Request $request)
     {
+
+        //dd($request->terms_and_condition);
+
+
             $v=\Validator($request->all(),[
-                    'first_name'    => 'required|string|max:255',
-                    'last_name'     => 'required|string|max:255',
-                    'email'         => 'required|string|email|max:255|unique:users',
-                    'phone_number'  => 'required|string|max:255',
+                    'first_name'    => 'required|string|max:50',
+                    'last_name'     => 'required|string|max:50',
+                    'email'         => 'required|string|email|max:50|unique:users',
+                    'phone_number'  => 'required|string|max:15',
                     'password'      => 'required|string|min:6|confirmed',
-             ]);
+                    'terms_and_condition' => 'required',
+            ],
+            [
+                'first_name.required' => 'שדה השם הפרטי נדרש.',
+                'first_name.max' => 'ייתכן שהשם הפרטי לא יעלה על 50 תווים.',
+                'last_name.required' => 'שדה שם משפחה נדרש.',
+                'last_name.max' => 'שם המשפחה עשוי לא להיות גדול מ- 50 תווים.',
+                'email.required' => 'שדה הדוא"ל נדרש.',
+                'email.max' => 'יתכן שהדוא"ל לא יעלה על 50 תווים.',
+                'email.email' => 'כתובת הדוא"ל חייבת להיות כתובת דוא"ל חוקית.',
+                // 'email.unique' => 'הדוא"ל כבר נלקח.',
+                'email.unique' => 'המייל כבר קיים במערכת',
+                'phone_number.required' => 'שדה מספר הטלפון נדרש.',
+                'phone_number.max' => 'ייתכן שמספר הטלפון לא יעלה על 15 תווים.',
+                'password.required' => 'שדה הסיסמה נדרש.',
+                'password.min' => 'הסיסמה חייבת לכלול לפחות 6 תווים',
+                'password.confirmed' => 'אישור הסיסמה אינו תואם.',
+                'terms_and_condition.required' => 'נדרש שדה התנאים וההגבלות.',
+
+
+            ]);
 
              if($v->fails()){
                 return response()->json(['status'=>0,'errors' => $v->errors()]);

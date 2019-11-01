@@ -1,15 +1,19 @@
 @php
-$ques1 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','1')->get();
-$ques2 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','2')->get();
-$ques8 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-$ques9 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','9')->get();
-$ques11 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','11')->get();
+$ques1 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','1')->get();
+$ques2 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','2')->get();
+$ques8 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','8')->get();
+$ques9 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','9')->get();
+$ques11 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','11')->get();
 
 
 
 if(count($ques11)){
        $value8 = $ques8[0]->meta_value;
+       if(count($ques9) > '0'){
        $value9 = $ques9[0]->meta_value;
+  		}else{
+  		 $value9 = "";
+  		}
        $value1 = $ques1[0]->meta_value;
        $value2 = $ques2[0]->meta_value;
        $x_value_1 = $ques11[0]->meta_value;
@@ -88,20 +92,22 @@ $z_value = 0;
 				<form class="form-inline multiple-dropdown chat-equity-cost d-f" method="post" id="formQuestionEleven_One">
 					<div>
 						<div class="form-group">
-							<label for="incoming-cost">עלות הנכנס:</label>
-							<input type="text" id="incoming-cost" class="form-control" name="incoming_cost" value="<?php if(count($ques11)){ echo $ques11[0]->meta_value; }else{ echo"10,000"; } ?>" onkeyup="this.value=addCommas(this.value);"/>
+							<label for="incoming-cost">עלות הנכס:</label>
+							<input type="text" id="incoming-cost" class="form-control" name="incoming_cost" value="<?php if(count($ques11)){ echo $ques11[0]->meta_value; }else{ echo"2,000,000"; } ?>" onkeyup="this.value=addCommas(this.value);"/>
 							<img src="images/placeholder-icon.png" alt="" class="placeholder-icon"/>
 						</div>
 						<div class="d-f">
 							<div class="form-group">
 								<label for="equity-cost">גובה ההון העצמי שלך:</label>
-								<input type="text" id="equity-cost" class="form-control" name="equity_cost" value="<?php if(count($ques11)){ echo $ques11[1]->meta_value; }else{ echo""; } ?>" onkeyup="this.value=addCommas(this.value);"/>
-								<img src="images/placeholder-icon.png" alt="" class="placeholder-icon"/>
+								<input type="text" id="equity-cost" class="form-control" name="equity_cost" value="<?php if(count($ques11)){ echo $ques11[1]->meta_value; }else{ echo"1,000,000"; } ?>" onkeyup="this.value=addCommas(this.value);"/>
+								<img src="images/placeholder-icon.png" alt="" class="placeholder-icon"/> <br>
+								<!-- <label id="errors_lable_one" style="display: none;"></label> -->
 							</div>
 							<button type="submit" class="acquisition main-button eleven-one-submit">אישור</button>
 						</div>
 						<br />
-						<p>חשוב שתשים לב שההון העצמי שציינת הוא עבור רכישת הנכס בלבד!
+						<p id="errors_lable_one" style="display: none; color: red;">עלות הנכס צריכה להיות גדולה מגובה ההון העצמי שלך</p>
+						<p class="male_female_eleven">חשוב שתשים לב שההון העצמי שציינת הוא עבור רכישת הנכס בלבד!
 						הסכום לא יכול לכלול הוצאות נילוות כמו ריהוט,שיפוצים ואגרותת נלוות.</p>
 
 
@@ -179,26 +185,47 @@ echo'<div class="imp-info imp-info-else-condition"></div>';
 
 	
 
-	$('body').on('keyup','#incoming-cost',function(){
-	  if ($(this).val() < 10000){ 
-	  		$(this).val('10,000');
-	  }
-	});
+	// $('body').on('keyup','#incoming-cost',function(){
+	//   if ($(this).val() < 10000){ 
+	//   		$(this).val('10,000');
+	//   }
+	// });
+
+	// $('body').on("keyup", "#equity-cost", function(){
+	// 	var first = $("#incoming-cost").val();
+	// 	var second = $("#equity-cost").val();
+	// 	if(second <= first){
+	// 		$("#errors_lable_one").val("עלות הנכס צריכה להיות גדולה מגובה ההון העצמי שלך");
+	// 		$("#errors_lable_one").show();
+	// 	}
+	// });
 
 
-	$('#equity-cost').on('keyup keydown keypress blur',function(){
+	$('#equity-cost, #incoming-cost').on('keyup keydown keypress blur',function(){
 		var yy = $('#incoming-cost').val();
-		var rr = $(this).val();
+		var rr = $('#equity-cost').val();
 		var val1 = yy.split(',').join('');
 		var val2 = rr.split(',').join('');
-	  	if (parseInt(val2) > parseInt(val1)){ 
-	  		$(this).val(yy);
+		var val3 = parseInt(val1) - parseInt(val2);
+		twelve_change_eleven_a(addCommasDirect(val3));
+	  	if (parseInt(val2) > parseInt(val1) || parseInt(val2) == parseInt(val1)  ){ 
+	  		$("#errors_lable_one").show();
+	  		$(".eleven-one-submit").hide();
+	  	}else{
+	  		$("#errors_lable_one").hide();
+	  		$(".eleven-one-submit").show();
 	  	}
 	});
 
 
+	$('#incoming-cost, #equity-cost').on('keyup',function(){
+		var rr = $('#equity-cost').val();
+		var yy = $('#incoming-cost').val();
+		var val1 = yy.split(',').join('');
+		var val2 = rr.split(',').join('');
+		var val3 = parseInt(val1) - parseInt(val2);
+		twelve_change_eleven_a(addCommasDirect(val3));
 
-
-
+	});
 
 </script>

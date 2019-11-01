@@ -1,0 +1,41 @@
+@media(min-width: 1800px) {
+    .customer-filters form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .customer-filters form ul+ul {
+        margin-right: 30px;
+    }
+    .customer-filters .d-b-selects>ul>li {
+        width: calc(16% - 60px);
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .left-table tr th,
+    .left-table tr td {
+        font-size: 11px;
+    }
+    form.A_loan_qa {
+        width: 100%;
+        float: right;
+    }
+    form.A_table-input {
+        width: 100%;
+        float: left;
+    }
+    form.A_table-input .form-group {
+        margin-bottom: 115px;
+    }
+    p.A-title_center {
+        width: 100%;
+        font-size: 14px;
+        margin-top: -15px;
+    }
+    .A_future_loan a.A_title_table {
+        margin-bottom: 27px;
+    }
+    .a-rightside .a-main .tab-pane {
+        min-height: 842px;
+    }
+}

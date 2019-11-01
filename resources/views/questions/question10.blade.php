@@ -1,8 +1,8 @@
 @php
 $auth = \Auth::user();
 if(!empty($auth)){
-	$ques8 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-    $ques = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','10')->get();
+	$ques8 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','8')->get();
+    $ques = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','10')->get();
     if(count($ques)){
     $ques10 = $ques;
 	}
@@ -17,13 +17,14 @@ if(!empty($auth)){
 		</div>
 		<div class="message d-i-f f-d-c">
 			<span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-			<p>אם כך, בעוד כמה חודשים תיכנס לדירה?</p>
+			<p class="male_female_ten">אם כך, בעוד כמה חודשים תיכנס לדירה?</p>
 			<span class="message-timing">18:26</span>
 		</div>
 
 		<div class="form-inline range-form cs-r-f">
 			<form method="post" id="formQuestionTen_option1">
 				<input type="hidden" name="grace" value="3">
+				<input type="hidden" name="grace1" value="3">
 				<button type="submit" class="main-button tenth-right">כניסה באופן מיידי</button>
 				{{ csrf_field() }}
 			</form>
@@ -33,7 +34,8 @@ if(!empty($auth)){
 				<div class="form-group range-group">
 					<div class="slidecontainer">
 						<div class="text_value"><?php if(isset($ques10)){ echo $ques10[0]->meta_value; }else{ echo "3"; } ?></div>
-						<input  name="grace" type="range" placeholder ="*************" min="3" max="36" value="<?php if(isset($ques10)){ echo $ques10[0]->meta_value; }else{ } ?>" class="slider" id="myRange">
+						<input  name="grace1" type="range" placeholder ="*************" min="3" max="36" value="<?php if(isset($ques10)){ echo $ques10[0]->meta_value; }else{ echo"1";} ?>" class="slider" id="myRange">
+						<input type="hidden" name="grace" value="0">
 						{{ csrf_field() }}	
 					</div>
 					<span class="slider-icon d-f j-c-c a-i-c">

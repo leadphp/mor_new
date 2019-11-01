@@ -1,8 +1,9 @@
 <?php 
-$ques12 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','14')->get();
+$ques12 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','14')->get();
 
-if(count($ques12)){
+if(count($ques12) != 0){
 $first = $ques12[3]->meta_value;
+
 }else{
 $first = '0';	
 }
@@ -16,13 +17,13 @@ $first = '0';
 			  </div>
 		    <div class="message d-i-f f-d-c">
 			  <span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-			  <p>תודה ליאור!
+			  <p>תודה!
 				יש לי מספיק מידע איתו אפשר לייצר תמהיל משכנתא ולייעץ עבורך על המשכנתא הטובה ביותר</p>
 			  <span class="message-timing">18:20</span>
 			</div>
 			<div class="message d-i-f f-d-c">
 			  <span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-			  <p class="data-to-render-at-last">כבר בשלב הנוכחי אני  יכול לגלות לך שהדוח חוסך לך מעל <span class="make_it_green">ל <?php echo $first; ?> אלף ש"ח</span>
+			  <p class="data-to-render-at-last">כבר בשלב הנוכחי אני  יכול לגלות לך שהדוח חוסך לך מעל <span class="make_it_green"> <?php echo number_format($first); ?> </span>
 				מעלות המשכנתא הממוצעת לאנשים עם נתונים דומים לשלך.</p>
 			  <span class="message-timing">18:20</span>
 			</div>
@@ -44,4 +45,13 @@ $first = '0';
 </div>
 <script>
 	//window.location.hash = '#formQuestionNineteenDIV';
+
+
+	
+
+
+
+
+
+	
 </script>

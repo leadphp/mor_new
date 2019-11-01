@@ -527,7 +527,6 @@ img {
 .owl-carousel .item {
     position: relative;
 }
-
 .main-button {
     color: #fff;
     border: 0;
@@ -541,6 +540,16 @@ img {
     border-radius: 5px;
     min-width: 210px;
     font-weight: bold;
+	position: relative;
+}
+
+.navbar-button a.main-button {
+    top: -9px;
+    margin-top: -30px;
+    padding: 10px 20px 11px 20px;
+}
+.loggedin a.main-button {
+    margin-top: 50px;
 }
 .main-button i {
     float: right;
@@ -708,6 +717,7 @@ h4 {
     font-size: 35px;
     white-space: pre-line;
 }
+
 a.logo-container img {
     max-width: 140px;
     margin-right: 0;
@@ -771,7 +781,7 @@ a.logo-container img {
     background-color: #f4de23;
     color: #000;
     position: absolute;
-    top: 100px;
+    top: 12px;
     left: 15px;
     max-width: 172px;
     line-height: 1.2;
@@ -887,7 +897,7 @@ h3 {font-size: 24px;color: #898989;display: inline-block;}
 }
 .banner-buttons .button-orange span {
     position: absolute;
-    right: 0;
+    right: 33px;
     top: 0;
     width: 105px;
     height: 105px;
@@ -895,8 +905,8 @@ h3 {font-size: 24px;color: #898989;display: inline-block;}
     border-radius: 100%;
     background-color: #d87e00;
     transform: translate(50%, -17px);
-  box-shadow: 0 0 24px rgba(0,0,0,0.3);
-  -webkit-transition: 0.3s ease;
+    box-shadow: 0 0 24px rgba(0,0,0,0.3);
+    -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
@@ -904,16 +914,20 @@ h3 {font-size: 24px;color: #898989;display: inline-block;}
   background-color: #af6600;
 }
 .banner-buttons .button-orange {
-  padding-right: 65px;
+    padding-right: 95px;
 }
 .service-steps-content {
     max-width: 1175px;
-    margin: 0 auto;
+    margin: 0 auto ;
     margin-top: 229px;
 }
 .purchase {
     background-color: #5eced0;
     padding: 130px 0 130px;
+    background-image: url(../images/savings-background.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 .purchase .heading-container h2::after {
     display: none;
@@ -1252,12 +1266,15 @@ footer::before {
     background-position: left center;
     color: #5dced0;
 }
-.qna-question-center,
-.qna-answer-left {
+.qna-question-center, .qna-answer-left {
     width: calc(100% - 110px);
-  flex: 0 0 calc(100% - 110px);
+    flex: 0 0 calc(100% - 110px);
     color: #5dced0;
-  padding-left: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+.qna-left .owl-stage {
+    margin-top: -20px;
 }
 .qna-answer-left {
     width: calc(100% - 70px);
@@ -1324,8 +1341,9 @@ footer::before {
     margin-top: 15px;
 }
 .qna-right p {
-    line-height: 1.2;
-  margin-bottom: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-size: 17px;
 }
 .qna .col-sm-6 {
   position:relative;
@@ -1377,12 +1395,13 @@ footer::before {
     padding: 20px 0;
 }
 .advisor-image img {
-    max-width: 110px;
+    max-width: 108px;
 }
 
 .advisor-nav a {
     color: #fff;
     line-height: 29px;
+    width: 100%;
 }
 .advisor-nav {
     padding-right: 40px;
@@ -1704,7 +1723,7 @@ input#browser-age {
     height: 17px;
     transform: translate(-50%, -50%);
 }
-.slider::after {
+.slidecontainer::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -2088,31 +2107,31 @@ footer .created-by .footer-logo {
   color: #7d7d7d!important;
 }
 .custom-check label::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 15px;
-  height: 15px;
-  border: 1px solid #60cecf;
-  z-index: -1;
-  border-radius: 2px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 18px;
+    height: 16px;
+    border: 1px solid #60cecf;
+    z-index: -1;
+    border-radius: 2px;
 }
 .custom-check label::after {
-  content: "";
-  position: absolute;
-  right: 5px;
-    top: 1px;
-    width: 5px;
-    height: 11px;
+    content: "";
+    position: absolute;
+    right: 6px;
+    top: -1px;
+    width: 6px;
+    height: 15px;
     border: 0;
-  z-index: -1;
-  border-right: 2px solid #60cecf;
-  border-bottom: 2px solid #60cecf;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  opacity: 0;
+    z-index: -1;
+    border-right: 2px solid #60cecf;
+    border-bottom: 2px solid #60cecf;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    opacity: 0;
 }
 .custom-check input {
   position: relative;
@@ -2126,7 +2145,7 @@ footer .created-by .footer-logo {
 }
 /* custom check */
 #loginModal .modal-dialog {
-    max-width: 530px;
+    max-width: 560px;
     width: 100%;
     text-align: center;
     margin-top: 5%;
@@ -2288,14 +2307,19 @@ footer .created-by .footer-logo {
     padding: 15px 40px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding-bottom: 150px;
+    padding-bottom: 60px;
 }
 .mortgage-offers-border {
     background-color: #f0f0f0;
     border-radius: 10px;
     padding: 15px 15px;
     position: relative;
-    margin: 0 150px;
+    margin: 0;
+    border: 11px solid #46c0c3;
+}
+.mortgage-offers-wrap h2 {
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 .mortgage-offers-heading {
     text-align: center;
@@ -2303,6 +2327,17 @@ footer .created-by .footer-logo {
     padding: 10px 40px;
     border-radius: 10px;
 }
+.stepTwo .mortgage-offers-inner {
+    margin: 35px 70px;
+    background: #fff;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+.stepTwo .bank-selected {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 .mortgage-offers-heading ul li {
     border-radius: 8px;
     background: #3e67bf;
@@ -2636,6 +2671,16 @@ footer.footer-steps {
     text-align: right;
     direction: rtl;
 }
+.form-group table td input {
+    height: 39px;
+    width: 100%;
+    border: 1px solid #aadddf;
+    padding: 0 10px;
+    min-width: 200px;
+    border-radius: 5px;
+    text-align: right;
+    direction: rtl;
+}
 .form-group table  td .chat-buttons {
     margin-bottom: 0;
 }
@@ -2652,6 +2697,11 @@ td .chat-buttons a:first-child {
 td .chat-buttons .main-button {
     min-width: calc(50% - 7px );
     margin-top: 0;
+    padding: 7px 20px;
+}
+.bankinfoStep3 td .main-button i {
+    top: 4px;
+    position: relative;
 }
 
 td .input-group {
@@ -2679,7 +2729,7 @@ td .bootstrap-select button {
     background-position: 9px center;
 }
 td button.quantity-right-plus.btn-number {
-    font-size: 34px;
+    font-size: 26px;
     background: #5eced0;
     border: none;
     color: #fff;
@@ -2687,7 +2737,7 @@ td button.quantity-right-plus.btn-number {
   border-bottom-right-radius: 7px;
 }
 td button.quantity-left-minus.btn-number {
-    font-size: 34px;
+    font-size: 26px;
     background: #5eced0;
     border: none;
     color: #fff;
@@ -2729,6 +2779,22 @@ td .input-group.last-input {
     background: #1f9ea0;
     text-align: right;
     line-height: 27px;
+}
+.buttons-group .chat-buttons p {
+    min-height: 60px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100px;
+    float: right;
+    text-align: right;
+    line-height: 27px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.chat-group.buttons-group.w-input.form-mob-design .chat-buttons p {
+    min-height: 30px;
+    width: 100px;
 }
 .buttons-group .chat-buttons a:first-child {
     background: none;
@@ -2882,6 +2948,9 @@ span.chat-icon {
     margin-bottom: 20px;
     width: 100%;
 }
+.qna-answer-left.d-f.j-c-c.a-i-c a {
+    display: initial;
+}
 .step-4_5 p.show-info {
     position: relative;
     top: -30px;
@@ -2946,9 +3015,13 @@ p.half-disc {
     height: 50px;
     color: #fff;
 }
-.chat-group.last-div-b a.main-button:first-child {
+.last-div-b a.main-button:first-child {
     background: #fff;
     color: #26b0b3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+section.chat.step_4_4.bankinfoStep3.stepstepCenter.stepOne.stepThree .last-btns .main-button {
+    margin-right: 115px;
 }
 a.main-button.button-yellow.top-btn_A {
     background: #fff;
@@ -2957,7 +3030,10 @@ a.main-button.button-yellow.top-btn_A {
     font-size: 16px;
     padding: 17px 34px 17px 5px;
     max-width: 132px;
-    margin-top: -15px;
+    margin-top: 0;
+}
+.reg-header ul.nav-main li:last-child a {
+    color: red;
 }
 a.main-button.button-yellow.top-btn_A img {
     position: absolute;
@@ -3048,7 +3124,7 @@ button.custom4_6 {
     border-color: #fff;
     font-size: 20px;
     line-height: 28px;
-    padding: 0 30px;
+    padding: 0 10px;
     border-radius: 8px;
     box-shadow: 0 0 7px #aaa;
     margin: 30px 0;
@@ -3224,6 +3300,8 @@ img.custom-arrow {
 }
 .register-page .slider {
     height: 48px;
+    opacity: 1;
+    background: transparent !important;
 }
 .register-page .slider-icon {
     left: 5px;
@@ -3252,10 +3330,19 @@ background: linear-gradient(to right,  rgba(255,255,255,0.6) 0%,rgba(255,255,255
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
 
 }
-a.main-button.active {
-    background-color: #e8e8e8;
+.click-color-change a.main-button.active {
+    background-color: #1f9ea0;
     box-shadow: 0 2px rgba(0,0,0,0.2);
-    color: #ababab;
+    color: #fff;
+}
+.buttons-group .click-color-change  a {
+    background: #e8e8e8;
+    color:#7d7d7d;
+}
+
+.chat-group.last-btns .click-color-change a.main-button.active {
+    background: #e8e8e8;
+    color:#7d7d7d;
 }
 
 /*--------4.5--------*/
@@ -3263,7 +3350,7 @@ a.main-button.active {
 
 
 section.chat.step_4_4 {
-    padding: 60px 0 110px 0;
+    padding: 60px 0 0 0;
 }
 .bg-step {
     background: #60cecf;
@@ -3297,7 +3384,14 @@ section.qna.qna-about {
 }
 .up-fo a.delete-button {
     width: 70px;
-    margin: 24px 160px 0 0 !important;
+    margin: 1px 50px 0 0 !important;
+}
+#formQuestionTwo .form-inline.multiple-dropdown .second .btn-group.bootstrap-select, 
+#formQuestionTwo .form-inline.multiple-dropdown .second select.selectpicker{
+    margin-bottom: 30px;
+}
+ {
+    margin-bottom: 30px;
 }
 .form-group.empty {
     min-height: 48px;
@@ -3456,6 +3550,7 @@ section.qna.qna-about p {
 
 .step-4-0 .mortgage-offers {
     padding-top: 120px;
+    padding-bottom: 60px;
 }
 
 .step-4-0 .navbar-brand {
@@ -3467,9 +3562,9 @@ section.qna.qna-about p {
     padding: 35px 70px;
     position: relative;
     margin: 0;
-  border: 11px solid #46c0c3;
+    border: 11px solid #46c0c3;
+    margin-bottom: 0;
 }
-
 .step-4-0 p {
     font-size: 21px;
 }
@@ -3505,15 +3600,15 @@ section.qna.qna-about p {
 .step-4-0 footer p {
     font-size: 16px;
 }
-.step-4-0 .mortgage-offers-steps>.row>.col-sm-4:first-child>div {
+.step-4-0 .mortgage-offers-steps>.row>div:first-child>a {
     background-color: #64d5ff;
 }
 
-.step-4-0 .mortgage-offers-steps>.row>.col-sm-4:nth-child(2)>div {
+.step-4-0 .mortgage-offers-steps>.row>div:nth-child(2)>a {
     background-color: #34d9df;
 }
 
-.step-4-0 .mortgage-offers-steps>.row>.col-sm-4:last-child>div {
+.step-4-0 .mortgage-offers-steps>.row>div:last-child>a {
     background-color: #11d376;
 }
 
@@ -3522,12 +3617,14 @@ section.qna.qna-about p {
     position: relative;
     overflow: visible;
     box-shadow: none;
-    min-height: 347px;
+    min-height: 275px;
+    display: flex;
+    flex-direction: column;
 }
-.step-4-0 .m-o-s-container-text a {
+.step-4-0 .m-o-s-container-text span {
     color: #566d6d;
     background-color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 30px;
     position: absolute;
     left: 50%;
@@ -3588,10 +3685,10 @@ section.qna.qna-about p {
 .step-4-0 .best-mix-mortgage h3 span:last-child {
     width: calc(100% - 140px);
 }
-.step-4-0 .mortgage-offers-steps>.row>.col-sm-4>div a.main-button.button-dark  {
+.step-4-0 .mortgage-offers-steps>.row>div>a .main-button.button-dark  {
     border: 2px solid #34d9df;
 }
-.step-4-0 .mortgage-offers-steps>.row>.col-sm-4:last-child>div a.main-button.button-dark {
+.step-4-0 .mortgage-offers-steps>.row>div:last-child>a .main-button.button-dark {
     border: 2px solid #11d376;
 }
 
@@ -3718,7 +3815,7 @@ select {
 }
 .q9 .main-button {
     margin-top: 0;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 .errMsg {
     color: red;
@@ -3726,6 +3823,8 @@ select {
 .slidecontainer {
     width: 100%;
     position: relative;
+    background: #fff;
+    z-index: 9;
 }
 
 .slider {
@@ -3860,21 +3959,18 @@ div#formQuestionFifteenDIV {
     background-color: #5eced0;
     border-radius: 5px;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     min-width: 210px;
 }
 div#formQuestionSixteenDIV {
     width: 100%;
     float: right;
-    margin-top: 40px;
+    margin-top: 90px;
 }
-
-
-
 div#formQuestionFifteenDIV {
     width: 100%;
     float: right;
-    margin-top: 80px;
+    margin-top: 70px;
 }
 #formQuestionSixteenDIV .message.no-background.d-i-f.f-d-c {
     width: 100%;
@@ -3933,8 +4029,10 @@ div#formQuestionSeventeenDIV {
 }
 div#formQuestionSeventeenDIV .message.no-background.d-i-f.f-d-c {
     width: 100%;
+    margin-top: 0;
+    padding-top: 0 !important;
+    padding-bottom: 0;
 }
-
 form#formQuestionseventeen .form-inline.multiple-dropdown > div > div a.delete-button {
     display: block;
     width: 70px;
@@ -3958,7 +4056,7 @@ form#formQuestionseventeen button.ok_btn.main-button1 {
     background-color: #5eced0;
     border-radius: 5px;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     min-width: 210px;
 }
 #formQuestionseventeen > .chat-buttons {
@@ -3972,7 +4070,7 @@ form#formQuestionseventeen button.ok_btn.main-button1 {
 }
 div#formQuestionSeventeenDIV {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
     float: left;
     margin-bottom: 60px;
 }
@@ -3990,7 +4088,7 @@ div#formQuestionEighteenDIV select.selectpicker {
 div#formQuestionNineteenDIV {
     width: 100%;
     float: left;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 0;
 }
 
@@ -4009,9 +4107,10 @@ div#formQuestionFivePointOneDIV {
 form#formQuestionSix {
     margin-top: 110px;
 }
-.register-page form#formQuestionFive input.form-control:not([type="checkbox"]):not([type="radio"]){
+.register-page form#formQuestionFive input.form-control:not([type="checkbox"]):not([type="radio"]) {
     max-width: 660px;
-    width: 380px;
+    width: 250px;
+    text-align: center;
 }
 
 
@@ -4131,7 +4230,7 @@ form#formQuestionSix {
 #formQuestionSeventeenDIV .form-inline.multiple-dropdown {
     width: 100%;
     float: right;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 .text_value {
     position: absolute;
@@ -4219,6 +4318,7 @@ form#formQuestionTen {
 div#formQuestionEleven {
     margin-top: 60px;
 }
+
 form#formQuestionEight {
     margin-bottom: 120px;
 }
@@ -4228,7 +4328,7 @@ form#formQuestionEight {
     float: right;
 }
 #formQuestionfourteen .errMsg {
-    margin-top: 40px;
+    margin-top: 0;
 }
 .message.d-i-f.f-d-c.width-auto {
     width: 50%;
@@ -4262,7 +4362,13 @@ ul.steps-bar li {
     margin: 0 10px;
 }
 .payment-step .mortgage-offers {
-    padding-top: 40px;
+    padding-top: 90px;
+}
+header.offerCompare {
+    padding: 30px 0 0;
+}
+header.offerCompare .navbar-nav>li>a::before {
+    color: #fff;
 }
 .close-btn {
     position: absolute;
@@ -4388,11 +4494,17 @@ ul.steps-bar li {
     font-size: 20px;
 }
 .coupon-code input[type="text"] {
-    border: 1px solid #5eced0;
+    border: 1px solid green;
     text-align: center;
-    height: 40px;
+    height: 41px;
     margin-right: 7px;
     width: 150px;
+    outline: none !important;
+    color: green;
+}
+.coupon-code input::placeholder {
+    color: green !important;
+	opacity: 0.7
 }
 .coupon-code label {
     position: relative;
@@ -4496,7 +4608,7 @@ input.submit-box {
 }
 .Submit-section p {
     width: 50%;
-    font-size: 20px;
+    font-size: 15px;
 }
 form.payment-form label {
     color: #978989;
@@ -4566,8 +4678,13 @@ input.visa-crd {
 }
 img.visa-img {
     position: absolute;
-    bottom: 13px;
+    bottom: 16px;
     right: 21px;
+    width: 47px;
+}
+.idIcon img.visa-img {
+    bottom: 11px;
+    width: 42px;
 }
 .row-group select {
     background-size: auto 17px;
@@ -4900,9 +5017,25 @@ footer.no-bg-footer::before {
     text-align: center;
     line-height: 24px;
 }
+.file-design > p {
+    width: 100%;
+}
+.offer-compare .main-form .row-group:first-child {
+    width: 50%;
+}
+.row-group.text-flex div {
+    position: relative;
+}
+.add-route form.payment-form {
+    padding-bottom: 120px;
+}
+.file-design > p {
+    margin-bottom: 22px;
+    MARGIN-TOP: 10PX;
+}
 .file-design > h3 {
     color: #25c21d;
-    margin-bottom: 40px;
+    margin-bottom: 9px;
     margin-top: 20px;
     font-size: 20px;
     line-height: 28px;
@@ -4959,8 +5092,10 @@ footer.no-bg-footer::before {
 img.delete-green {
     width: 30px;
     float: left;
-    margin-left: -15px;
+    margin-left: 0;
     margin-top: 11px;
+    position: relative;
+    left: 20px;
 }
 .right-route {
     width: calc(100% - 30px);
@@ -5023,15 +5158,13 @@ img.delete-green {
 .header-area ul li {
     float: right;
     background: #fff;
-    margin: 0 5px;
+    margin: 0 4px;
     min-width: 13.5%;
 }
 .header-area ul li:first-child {
     margin-right: 0;
 }
-.header-area ul li:nth-child(7) {
-    margin-left: 0;
-}
+
 .header-area ul li a{
   color: #666666;
   border-right: none;
@@ -5190,11 +5323,14 @@ img.delete-green {
     position: relative;
     margin-top: 30px;
 }
-.tab-inner-content.orange-tab table {
+/*.tab-inner-content.orange-tab table {
     margin: 20px 50px;
     width: calc(100% - 100px);
+}*/
+.tab-inner-content.orange-tab table {
+    margin: 20px 0;
+    width: 100%;
 }
-
 .tab-inner-content.orange-tab table tr > th {
     background: #919191;
     color: #fff;
@@ -5549,6 +5685,7 @@ a.canvasjs-chart-credit {
 }
 canvas#myChart4 {
     z-index: 9;
+    max-width: 100%;
 }
 .tree ul li {
     display: inline-block;
@@ -5792,8 +5929,9 @@ ul.tree-bottom:after {
 }
 .overlay-boxIn p {
     color: #5eced0;
-  font-size: 30px;
+    font-size: 24px;
 }
+
 
 /*---------report-mini-site-lower-end--------*/
 
@@ -6531,9 +6669,11 @@ ul.nav_reg li a {
 
 
 .reg.logo {
-  position: absolute;
-  right: 41px;
+    position: absolute;
+    right: 41px;
+    top: 10px;
 }
+
 .register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
   max-width: 180px;
 }
@@ -6619,6 +6759,10 @@ div.contactForm small {
     margin: 10px 0;
     width: 100%;
     float: left;
+    line-height: 24px;
+}
+div.contactForm h5 {
+    margin: 10px 0;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -6652,8 +6796,9 @@ span.make_it_green {
 .question-ul li{
   display: inline-block;   
 }
-.question-ul li input{
-  opacity: 0;
+.question-ul li input {
+    opacity: 0;
+    position: absolute;
 }
 
 .question-ul li label{
@@ -6692,8 +6837,9 @@ span.make_it_green {
 .question3-ul li{
   display: inline-block;   
 }
-.question3-ul li input{
-  opacity: 0;
+.question3-ul li input {
+    opacity: 0;
+    position: absolute;
 }
 
 .question3-ul li label{
@@ -6748,8 +6894,9 @@ span.make_it_green {
 .question7-ul li{
   display: inline-block;   
 }
-.question7-ul li input{
-  opacity: 0;
+.question7-ul li input {
+    opacity: 0;
+    position: absolute;
 }
 .question7-ul li label{
   display: block;
@@ -6784,8 +6931,9 @@ span.make_it_green {
 .question9-ul li{
   display: inline-block;   
 }
-.question9-ul li input{
-  opacity: 0;
+.question9-ul li input {
+    opacity: 0;
+    position: absolute;
 }
 .question9-ul li label{
   display: block;
@@ -6799,10 +6947,15 @@ span.make_it_green {
     margin-top: 29px;
 }
 .sticky-header-full .advisor {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 99;
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+    left: 0;
+    width: 100%;
+}
+div#loadQuestions {
+    margin-top: 220px;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
 .bottom-slider input#lower_mortgage_input_slide {
     direction: ltr;
@@ -6815,7 +6968,7 @@ span.make_it_green {
     margin-top: 0 !important;
 }
 .register-page form#formQuestionTwo .second-sec-options.questiontwoOption .chat-buttons {
-    margin-top: -50px;
+    margin-top: -20px;
 }
 div#loadQuestions > br {
     display: none;
@@ -6836,7 +6989,7 @@ div#ques_4 {
     margin-bottom: 100px;
 }
 div#ques_5 {
-    margin-bottom: 110px;
+    margin-bottom: 100px;
 }
 div#ques_7 {
     margin-bottom: 110px;
@@ -6851,7 +7004,7 @@ div#ques_10 {
     margin-bottom: 110px;
 }
 div#formQuestionEleven {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 div#ques_11 {
     margin-bottom: 20px;
@@ -6868,9 +7021,10 @@ div#ques_1 {
 }
 .q9.chat-container.d-f.f-d-c.a-i-f-s.questionsevenOption {
     margin-top: 100px;
+    float: right;
 }
 div#loadQuestions > div .message.d-i-f.f-d-c.spinner1.spinner-ques-16 {
-    width: 230px;
+    width: 160px;
     float: right;
     margin-top: -30px;
     margin-bottom: 60px;
@@ -6892,23 +7046,23 @@ div#ques_2 .spinner {
     margin-bottom: 45px;
 }
 div#ques_2 .spinner {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 div#ques_13 .spinner {
     margin-top: 0;
     margin-bottom: 20px;
   }
 div#ques_11 .spinner {
-    margin-bottom: 30px;
-    margin-top: 0;
+    margin-bottom: 40px;
+    margin-top: -10px;
 }
 div#ques_14 .spinner {
     margin-top: 10px;
-    margin-bottom: 55px;
+    margin-bottom: 15px;
 }
 div#ques_15 .spinner {
-    margin-top: 10px;
-    margin-bottom: 55px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 div#ques_17 {
     width: 100%;
@@ -7009,4 +7163,527 @@ section.term-content a {
 }
 .bank-steps .owl-item img {
     width: auto;
+}
+.owl-testimonials .owl-nav {
+    text-align: center;
+}
+img.custom-arrow {
+    position: absolute;
+    left: -10px;
+    right: unset;
+    top: unset;
+    bottom: 51px;
+    transform: rotate(95deg);
+    width: 60px;
+}
+div#formQuestionThirteenDIV {
+    margin-top: 0;
+    margin-top: -30px;
+}
+.go-grey{
+    background-color: #e8e8e8 !important;
+    box-shadow: 0 2px rgba(0,0,0,0.2) !important;
+    color: #ababab !important;
+}
+.alert-text .green {
+    color: #059928;
+}
+.alert-text .red {
+    color: #f85151;
+}
+#formQuestionfourteen .alert-text.alert-monthly-refund {
+    max-width: 70%;
+}
+
+#formQuestionFourteenDIV .success-text {
+    margin: 0;
+    float: right;
+    margin-top: 40px;
+}
+
+#formQuestionFourteenDIV input#lower_mortgage_input {
+    margin-right: 45px;
+    text-align: center;
+    padding-left: 10px;
+}
+
+#formQuestionFourteenDIV input#monthly_refund_input{
+    margin-right: 45px;
+    text-align: center;
+    padding-left: 30px;
+}
+#formQuestionfourteen .range-group.monthly-refund::after {
+	content: "Min";
+    top: -20px;
+    left: 12px;
+}
+#formQuestionfourteen .range-group.monthly-refund::before {
+    content: "Max";
+    left: calc(100% - 17px);
+    top: -20px;
+}
+.range-group.lower-mortgage::after {
+    content: "4";
+    left: 20px;
+    top: -20px;
+}
+.range-group.lower-mortgage::before {
+    content: "30";
+    top: -20px;
+}
+
+#formQuestionfifteen .form-inline.multiple-dropdown > div a.delete-button {
+    margin-bottom: 0;
+}
+#formQuestionfifteen .form-inline label {
+   min-width: 130px;
+}
+.register-page #formQuestionSixteenDIV label {
+    width: auto;
+}
+.contactForm form input[type="date"] {
+    width: 49%;
+    float: right;
+}
+.contactForm form select {
+    width: 49%;
+    float: right;
+    padding: 13px 9px;
+    margin-top: 6px;
+    float: left;
+}
+
+#formQuestionseventeen select {
+    min-width: 120px;
+}
+
+
+
+div#ques_1,
+div#ques_2 {
+    position: relative;;
+}
+
+div#ques_1:before {
+    position: absolute;
+    right: -80px;
+    width: 1px;
+    height: calc(100% + 30px);
+    top: 0;
+    background: #ccc;
+    content: "";
+}
+
+div#ques_1:after {
+    position: absolute;
+    right: -85px;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    content: "";
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+div#ques_2:after {
+    position: absolute;
+    right: -85px;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    content: "";
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+.reg-header ul.nav-main {
+    top: 90px;
+    min-height: 170px;
+}
+.register-page .ques_3 form input.form-control:not([type="checkbox"]):not([type="radio"]), 
+.register-page .ques_3 textarea.form-control {
+    max-width: 190px;
+}
+
+
+
+
+.yesTenQues .owl-stage .owl-item:last-child .item .steps-container::before{
+  display: none;
+}
+.yesTenQues .owl-stage-outer {
+    overflow: visible;
+}
+.yesTenQues .owl-item img {
+    width: auto;
+}
+.yesTenQues .owl-stage {
+    transform: none !important;
+    width: 100% !important;
+}
+.yesTenQues .owl-item {
+    float: right;
+    min-width: 100%;
+}
+.yesTenQues .owl-carousel.owl-rtl .owl-item {
+    float: right;
+    min-width: 100%;
+}
+.yesTenQues .owl-nav {
+    display: none;
+}
+.tenQues  .owl-nav {
+    text-align: center;
+	margin-top: 20px;
+}
+.yesTenQues .owl-item {
+    margin-top: 20px;
+}
+
+
+.bottom-line-popup-login{
+color:#000;
+}
+
+#loginModal h4.modal-title {
+    text-align: center;
+}
+.owl-logos-desktop .owl-item {
+    max-width: 50%;
+    float: left;
+}
+
+.offerCompare .navbar-nav>li>a {
+    color: #fff;
+}
+.main-wrapper.steps.payment-step {
+    padding-bottom: 150px;
+}
+.header-area ul .clsoe {
+   display: none;
+}
+.upperText h3 {
+    color: #46b3b5;
+    margin-bottom: 15px;
+}
+.upperText li span{
+    color: #46b3b5;
+}
+
+.upperText li {
+    font-size: 16px;
+    line-height: 38px;
+    color: #7d7d7d;
+    line-height: 1.8;
+  }
+.upperText ol {
+    list-style: hebrew;
+    margin-right: 20px;
+    padding: 10px 0;
+}
+.reg-header .advisor-image {
+    margin-top: 6px;
+}
+img.case-of-login {
+    float: left;
+    position: relative;
+    top: 18px;
+    margin-right: 10px;
+}
+.fixedheader img.case-of-login {
+    position: relative;
+    top: 29px;
+    margin-right: 10px;
+    width: 33px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.mortgage-offers-heading.mmmm {
+    display: none;
+}
+.stepstepCenter .message p {
+    font-size: 18px;
+}
+.wrapTitle {
+    width: 80px;
+    float: right;
+    margin-top: 20px;
+}
+.chat-wrap.step-4_5 .margin-30 .chat-group {
+    margin-top: 0;
+}
+section.chat.stepstepCenter {
+    position: relative;
+ /*   z-index: -1;*/
+}
+.forMobileH{
+	display: none;
+}
+
+.step-4_5 .parlerBanks p.show-info {
+    position: unset;
+    width: 490px;
+    margin-top: -30px;
+    float: right;
+    position: relative;
+    top: -10px;
+}
+.step-4_5 .parlerBanks .form-group+.form-group {
+    margin-right: 0;
+}
+.parlerBanks {
+    margin-bottom: 40px;
+        -webkit-box-align: start;
+    -webkit-align-items: start;
+    -ms-flex-align:start;
+    align-items: start;
+}
+.colBankLeft {
+    width: 375px;
+    float: left;
+    margin-left: 35px;
+}
+.step-4_5 .margin-30 .colBankLeft .form-group {
+    float: left;
+    margin-bottom: 60px;
+}
+.step-4_5 .margin-30 .colBankLeft .form-group:last-child {
+    margin-bottom: 0;
+}
+.top-call-section > a {
+    display: initial;
+}
+section.mortgage-offers {
+    background: #53cbcb;
+    padding-top: 30px;
+}
+.main-wrapper.steps.payment-step.pay-step-3.send-offer.done-reg section.mortgage-offers {
+    background: #60cecf;
+}
+
+.comp-offer{
+  display: none;
+}
+.hideDesk {
+    display: none;
+}
+input[type="text"]{
+  -webkit-appearance: none;
+}
+.repeated_div_second_question {
+    display: inline-grid;
+}
+.register-page .endButton #formQuestionFivePointOne label,
+.startButton .main-button {
+    background-color: #e8e8e8 !important;
+    box-shadow: 0 2px rgba(0,0,0,0.2) !important;
+    color: #ababab !important;
+}
+
+.register-page .startButton #formQuestionFivePointOne label {
+    background-color: #5eced0 !important;
+    box-shadow: 0 2px rgba(0,0,0,0.2) !important;
+    color: #fff !important;
+}
+
+.showSection{
+  display: block !important;
+}
+.table-responsive {
+    width: 100%;
+}
+.tab2Table tr td:first-child {
+    font-weight: bold;
+}
+.tab2Table tr:last-child td {
+    font-weight: bold;
+    border-bottom: 1px solid #5dced0;
+}
+.stepThree select {
+    background: url(../images/dropdown-icon-blue.png) #fff;
+    width: 100%;
+    height: 39px;
+    margin-top: 0;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: 7px 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.stepOne select {
+    min-width: 200px;
+    margin-top: 7px;
+}
+.stepTwo_ {
+    padding-top: 70px;
+}
+#formQuestionEighteen .message p {
+    line-height: 32px;
+}
+.sixteen_error p {
+    color: green;
+}
+
+.sixteen_error .elegibility-scorer {
+    margin-top: -50px;
+    width: 70%;
+    float: left;
+    text-align: center;
+}
+.toggle_bar i.fa.fa-bars {
+    color: #5dced0;
+}
+.reg-header .toggle_bar i.fa.fa-bars {
+    color: #fff;
+}
+.close_btnP {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #53cbcb;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+}
+.errMsg.for_question_one {
+    margin-bottom: 10px;
+}
+#formQuestionfifteen .form-inline .section-2 label {
+    margin-right: 20px;
+}
+.algorithm .carousel-indicators {
+    z-index: 0;
+}
+.done-reg .backbutton {
+    text-align: left;
+    color: #fff;
+    position: relative;
+    bottom: 40px;
+    left: 20px;
+}
+.done-reg .backbutton a {
+    color: #fff;
+}
+
+
+.reg-header .toggle_bar.close {
+    opacity: 1;
+}
+
+#formQuestionFive .errMsg {
+    width: 100%;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+}
+#formQuestionSix .chat-buttons button.ok_btn.main-button6.main-button {
+    min-width: 200px;
+}
+.register-page form#formQuestionfourteen input.form-control:not([type="checkbox"]):not([type="radio"]) {
+    max-width: 140px;
+    margin-right: 60px;
+}
+#formQuestionfifteen .errMsg{
+    position: absolute;
+    bottom: 70px;
+    right: 0px;
+}
+#formQuestionsixteen .errMsg{
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+}
+
+.ques_16 .errMsg{
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+}
+
+.make_it_disabled{
+  pointer-events: none;
+}
+a.main-button.button-yellow.top-btn_A {
+    margin-top: 68px;
+}
+.hideDesktop {
+    display: none;
+}
+.ques_3 .errMsg {
+    margin-top: 15px;
+}
+.register-page .ques_8  .message {
+    margin-bottom: 0px;
+}
+.register-page #formQuestionEight .spinner {
+    margin-bottom: 100px;
+}
+.ques_12_3 .chat-buttons .main-button {
+    background-color: #5eced0 !important;
+}
+.ques_12_3 .click-color-change a.main-button  {
+    background-color: #e8e8e8 !important;
+    box-shadow: 0 2px rgba(0,0,0,0.2) !important;
+    color: #ababab !important;
+
+}
+.ques_12_3 .click-color-change a.chnage-color{
+    
+    background: #52cbcb !important;
+    color: #fff !important;
+}
+
+.register-page .ques_12_2 .message {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+#formQuestionsixteen .message.d-i-f.f-d-c.width-auto {
+    max-width: 400px;
+}
+
+.ques_8 .errMsg {
+    margin-top: 10px;
+}
+.stickyBar {
+    display: none;
+}
+.ques_4 .chat-buttons .main-button,
+.ques_8 .chat-buttons .main-button,
+.ques_10 .chat-buttons .main-button,
+.ques_14 .chat-buttons .main-button,
+.ques_15 .chat-buttons .main-button,
+.ques_16 .chat-buttons .main-button{
+    margin-left: 7px;
+}
+.ques_6 button.not_stable.main-button {
+    margin-right: 7px;
+}
+.ques_14 .full-section .chat-buttons {
+    margin-top: 15px;
+}
+.ques_12_2 .spinner-ques-11_2 {
+    margin-top: -40px !important;
+}
+.ques_12_3 .spinner {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.ques_12_1 div#formQuestionEleven {
+    margin-top: 40px;
+    margin-bottom: 40px !important;
+}
+.ques_15 .add,
+.ques_14 .add{
+    margin-top: 0;
+}
+.ques_16 .add {
+    margin-top: 25px;
+}
+#formQuestionSixteenDIV button.ok_btn.main-button1 {
+    margin-bottom: 0;
 }

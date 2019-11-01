@@ -25,16 +25,7 @@
             </div>
             
                <!-- Collect the nav links, forms, and other content for toggling -->
-               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right d-f">
-                     <li><a href="{{url('')}}">ראשי</a></li>
-                     <li><a href="{{url('/how-it-works')}}">איך זה עובד</a></li>
-                     <li><a href="{{url('/questions_flow')}}">יעוץ משכנתא אונליין</a></li>
-                     <li><a href="{{url('/compare-offers')}}">השווה להצעה קיימת</a></li>
-                     <li><a href="{{url('/about-us')}}">אודות   </a></li>
-                     <li><a href="{{url('/contact-us')}}">יצירת קשר</a></li>
-                  </ul>
-               </div>
+              @include('layouts.navoptionsfrontend')
                <!-- /.navbar-collapse -->
                <div class="navbar-button">
                   <a href="javascript:void(0);" class="main-button" data-toggle="modal" data-target="#loginModal">הרשמה והתחברות  

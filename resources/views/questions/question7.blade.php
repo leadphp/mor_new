@@ -1,7 +1,7 @@
 @php
 $auth = \Auth::user();
 if(!empty($auth)){
-    $ques = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','7')->get();
+    $ques = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','7')->get();
     if(count($ques)){
     $ques7 = $ques;
 	}
@@ -17,7 +17,7 @@ if(!empty($auth)){
 			</div>
 			<div class="message d-i-f f-d-c">
 				<span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-				<p>במידה וישנן הטבות הצטרפות בבנקים אחרים, האם תיהיה
+				<p class="male_female_seven">במידה וישנן הטבות הצטרפות בבנקים אחרים, האם תיהיה
 				מוכן לקחת משכנתא בבנק אחר?</p>
 				<span class="message-timing">18:26</span>
 			</div>
@@ -36,7 +36,14 @@ if(!empty($auth)){
 
 			</div>
 		</div>
-
+		<div class="width-full">
+			<div class="message d-i-f f-d-c spinner spinner-ques-71" style="display:none;">
+				<span class="chat-icon"><img src="images/chat-icon.png" alt=""/></span>
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+		</div>
 
 		<div class="q9 chat-container d-f f-d-c a-i-f-s questionsevenOption" <?php if(isset($ques7)){ ?> style=""; <?php  }else{  ?> style="display:none"; <?php } ?> >
 			<div class="chat-number">7.1</div>
@@ -51,15 +58,18 @@ if(!empty($auth)){
 			<div class="message no-background d-i-f f-d-c">
 				<div class="form-inline">
 					<div class="form-group">
-						<input type="text" id="browser-age" class="form-control browser_age" name="browser_age" min="20" max="80" value="<?php if(isset($ques7)){ echo $ques7[1]->meta_value; }else{ echo"60";} ?>" placeholder="" onkeyup="this.value=addCommas(this.value);"/>
+						<input type="text" id="browser-age" class="form-control browser_age" name="browser_age" value="<?php if(isset($ques7)){ echo $ques7[1]->meta_value; }else{ echo"60";} ?>" placeholder=""/>
 					</div>
-					<button type="submit" class="age_btn main-button">אישור</button>
+					<input type="submit" class="age_btn main-button"value="אישור">
 				</div>
+				<div class="errMsg"></div>
 			</div>
 		</div>
 		{{ csrf_field() }}
-		<div class="custom-error" style="display:none;">Enter Value in between 18-120</div>
-		<div class="errMsg"></div>
+		<div class="custom-error" style="display:none;"></div>
+		
+
+		<div class="errMsg_age" style="display:none;" >מגבלת הגיל היא 18 עד 120</div>
 
 		<div class="width-full">
 			<div class="message d-i-f f-d-c spinner spinner-ques-7" style="display:none;">
@@ -73,16 +83,20 @@ if(!empty($auth)){
 </div>
 <script>
 //window.location.hash = '#formQuestionSeven';
-	$(document).ready(function(){
-		$('#browser-age').keyup(function(){
-			var val = $(this).val();
-			if(val > 17 && val <= 120){
-				$('.custom-error').hide();
-				$('.age_btn').show();
-			}else{
-				$('.custom-error').show();
-				$('.age_btn').hide();
-			}
-		});
-	});
+	// $(document).ready(function(){
+	// 	function submit(){
+	// 			var val = $('#browser-age').val();
+	// 			if(val > 17 && val <= 120){
+	// 				$('.custom-error').hide();
+
+	// 				return true;
+					
+	// 			}else{
+	// 				alert('888');
+	// 				$('.custom-error').show();
+	// 				return false;
+	// 			}
+	// 	}
+
+	// });
 </script>

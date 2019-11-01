@@ -12,10 +12,10 @@ $dd[] = $check->meta_key;
             <form class="d-f a-i-c j-c-s-b">
                 <div class="form-group">
                     <label>Language support</label>
-                    <select class="selectpicker">
+                    <select class="selectpicker" id="langsel">
                       <option>Admin English</option>
-                      <option>Admin English-1</option>
-                      <option>Admin English-2</option>
+                      <option>Admin Hebrew</option>
+                      
                     </select>
                 </div>
                 <!-- <button type="submit" class="main-button button-large" /> Save Settings
@@ -141,8 +141,9 @@ $dd[] = $check->meta_key;
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Coupon code</th>
+                                    <th>Coupon Code</th>
                                     <th>Coupon Price</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -150,6 +151,7 @@ $dd[] = $check->meta_key;
                                 <tr>
                                     <td>{{$coupon->coupon_code}}</td>
                                     <td>{{$coupon->amount}}</td>
+                                    <td><a href="/admin/delete-coupon/{{$coupon->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
                                 </tr>
                                 @endforeach
                                
@@ -161,10 +163,10 @@ $dd[] = $check->meta_key;
                      <form method="POST" action="/admin/save_coupon" class="coupon-cc">
                      {{ csrf_field() }}
                     <div class="form-group">
-                        <input type="text" name="cc" id="cc" placeholder="coupon Code"> 
+                        <input type="text" name="cc" id="cc" placeholder="Coupon Code"> 
                     </div>
                     <div class="form-group">
-                        <input type="text" name="cp" id="cp" placeholder="coupon Price"> 
+                        <input type="text" name="cp" id="cp" placeholder="Coupon Price"> 
                     </div>
                     <div class="form-group">
                         <input type="submit" name="sb" value="Submit"> 
@@ -195,7 +197,7 @@ $dd[] = $check->meta_key;
                                 </tr>
                                 <tr>
 
-                                    <td>15.9 interest</td>
+                                    <td>15.9 interest(%)</td>
                                     
                                 </tr>
                                 <tr>
@@ -240,7 +242,9 @@ $dd[] = $check->meta_key;
                                     </tr>
                                    
                                     <tr>
-                                        <td>ANS: 100000</td>
+
+                                        <td id="mr_one"></td>
+                                        <input type="hidden"  name="loan1pmt_" id="mr_one">
                                         
                                     </tr>
                                      
@@ -283,7 +287,7 @@ $dd[] = $check->meta_key;
                                     </tr>
                                    
                                     <tr>
-                                        <td>ANS: 100000</td>
+                                        <td id="mr_two"></td>
                                         
                                     </tr>
                                      
@@ -325,7 +329,7 @@ $dd[] = $check->meta_key;
                                     </tr>
                                    
                                     <tr>
-                                        <td>ANS: 100000</td>
+                                        <td id="mr_three"></td>
                                         
                                     </tr>
                                      
@@ -404,7 +408,55 @@ $dd[] = $check->meta_key;
 
 </body>
 
+
 </html>
 
 
 @include('layouts.footer_admin')
+<script type="text/javascript">
+    $(document).ready(function(){
+           
+        var loan = $("#loanfee_aa").val();  
+        var apr = $("#interest_aa").val();
+       
+        var term = $("#loantime_aa").val();
+      
+        apr = apr/1200;
+        term = term*12;
+
+        var amount = apr * -loan * Math.pow((1 + apr), term) / (1 - Math.pow((1 + apr), term));
+        $("#mr_one").html(amount.toFixed(2));
+
+
+        var loan1 = $("#loanfee_dd").val();  
+        var apr1 = $("#interest_dd").val();
+       
+        var term1 = $("#loantime_dd").val();
+      
+        apr1 = apr1/1200;
+        term1 = term1*12;
+
+        var amount1 = apr1 * -loan1 * Math.pow((1 + apr1), term1) / (1 - Math.pow((1 + apr1), term1));
+        $("#mr_two").html(amount1.toFixed(2));
+
+
+        
+
+
+        var loan2 = $("#loanfee_ee").val(); 
+
+
+        var apr2 = $("#interest_ee").val();
+       
+        var term2 = $("#loantime_ee").val();
+      
+        apr2 = apr2/1200;
+        term2 = term2*12;
+
+        var amount2 = apr2 * -loan2 * Math.pow((1 + apr2), term2) / (1 - Math.pow((1 + apr2), term2));
+        $("#mr_three").html(amount2.toFixed(2));
+
+
+     });
+  
+</script>

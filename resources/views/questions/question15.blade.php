@@ -1,12 +1,13 @@
 <?php
-$ques15 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','16')->get();
+$ques15 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','16')->get();
 if(count($ques15)){
 $loan_balance_1 = json_decode($ques15[1]->meta_value);
 //$loan_balance_1  = $loan_balance_1[0];
 $Month_refund = json_decode($ques15[2]->meta_value);
 //$Month_refund  = $Month_refund[0];
-$redemmed = json_decode($ques15[3]->redemmed);
+$redemmed = json_decode($ques15[3]->meta_value);
 //$redemmed  = $redemmed[0];
+
 }
 ?>
 <div class="ques_15" id="ques_15" <?php if(count($ques15)){ }else{ echo'style="display:none"'; } ?>>
@@ -18,7 +19,7 @@ $redemmed = json_decode($ques15[3]->redemmed);
 	</div>
 	<div class="message d-i-f f-d-c">
 		<span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-		<p>אודה לך אם תוכל לפרט לגבי הלואות קיימות שאתה עדיין משלם,
+		<p class="male_female_fourteen">אודה לך אם תוכל לפרט לגבי הלואות קיימות שאתה עדיין משלם,
 		כדי שנוכל לתת לך תחשיב משכנתא אופטימלי.
 		אנו מתחשבים בכל הנתונים שאתה ממלא.
 		</p>
@@ -76,26 +77,36 @@ $redemmed = json_decode($ques15[3]->redemmed);
 						<label> ניתן לפרוע הלוואה <br>בעוד מספר שנים:</label>
 					      <select class="" name="redemmed[]" >
 								  
-								 		<option value="1" <?php if(count($ques15)){ if($redemmed[$count] == '1' ){ echo 'selected="selected"'; } } ?> >שנים 1</option>
-										  <option value="2" <?php if(count($ques15)){ if($redemmed[$count] == '2' ){ echo 'selected="selected"'; } } ?> >שנים 2</option>
-										  <option value="3" <?php if(count($ques15)){ if($redemmed[$count] == '3' ){ echo 'selected="selected"'; } } ?> >שנים 3</option>
-										  <option value="4" <?php if(count($ques15)){ if($redemmed[$count] == '4' ){ echo 'selected="selected"'; } } ?> >שנים 4</option>
-										  <option value="5" <?php if(count($ques15)){ if($redemmed[$count] == '5' ){ echo 'selected="selected"'; } } ?> >שנים 5</option>
-										  <option value="6" <?php if(count($ques15)){ if($redemmed[$count] == '6' ){ echo 'selected="selected"'; } } ?>>שנים 6</option>
-										  <option value="7" <?php if(count($ques15)){ if($redemmed[$count] == '7' ){ echo 'selected="selected"'; } } ?> >שנים 7</option>
-										  <option value="8" <?php if(count($ques15)){ if($redemmed[$count] == '8' ){ echo 'selected="selected"'; } } ?> >שנים 8</option>
-										  <option value="9" <?php if(count($ques15)){ if($redemmed[$count] == '9' ){ echo 'selected="selected"'; } } ?> >שנים 9</option>
-										  <option value="10" <?php if(count($ques15)){ if($redemmed[$count] == '10' ){ echo 'selected="selected"'; } } ?> >שנים 10</option>
-										<option value="11" <?php if(count($ques15)){ if($redemmed[$count] == '11' ){ echo 'selected="selected"'; } } ?> >שנים 11</option>
-										  <option value="12" <?php if(count($ques15)){ if($redemmed[$count] == '12' ){ echo 'selected="selected"'; } } ?> >שנים 12</option>
-										  <option value="13" <?php if(count($ques15)){ if($redemmed[$count] == '13' ){ echo 'selected="selected"'; } } ?> >שנים 13</option>
-										  <option value="14" <?php if(count($ques15)){ if($redemmed[$count] == '14' ){ echo 'selected="selected"'; } } ?> >שנים 14</option>
-										  <option value="15" <?php if(count($ques15)){ if($redemmed[$count] == '15' ){ echo 'selected="selected"'; } } ?> >שנים 15</option>
-										  <option value="16" <?php if(count($ques15)){ if($redemmed[$count] == '16' ){ echo 'selected="selected"'; } } ?> >שנים 16</option>
-										  <option value="17" <?php if(count($ques15)){ if($redemmed[$count] == '17' ){ echo 'selected="selected"'; } } ?> >שנים 17</option>
-										  <option value="18" <?php if(count($ques15)){ if($redemmed[$count] == '18' ){ echo 'selected="selected"'; } } ?> >שנים 18</option>
-										  <option value="19" <?php if(count($ques15)){ if($redemmed[$count] == '19' ){ echo 'selected="selected"'; } } ?> >שנים 19</option>
-										  <option value="20" <?php if(count($ques15)){ if($redemmed[$count] == '20' ){ echo 'selected="selected"'; } } ?> >שנים 20</option>
+								 		<option value="1" <?php if(count($ques15)){ if($redemmed[$count] == '1' ){ echo 'selected="selected"'; } } ?> > 1</option>
+										  <option value="2" <?php if(count($ques15)){ if($redemmed[$count] == '2' ){ echo 'selected="selected"'; } } ?> > 2</option>
+										  <option value="3" <?php if(count($ques15)){ if($redemmed[$count] == '3' ){ echo 'selected="selected"'; } } ?> > 3</option>
+										  <option value="4" <?php if(count($ques15)){ if($redemmed[$count] == '4' ){ echo 'selected="selected"'; } } ?> > 4</option>
+										  <option value="5" <?php if(count($ques15)){ if($redemmed[$count] == '5' ){ echo 'selected="selected"'; } } ?> > 5</option>
+										  <option value="6" <?php if(count($ques15)){ if($redemmed[$count] == '6' ){ echo 'selected="selected"'; } } ?>> 6</option>
+										  <option value="7" <?php if(count($ques15)){ if($redemmed[$count] == '7' ){ echo 'selected="selected"'; } } ?> > 7</option>
+										  <option value="8" <?php if(count($ques15)){ if($redemmed[$count] == '8' ){ echo 'selected="selected"'; } } ?> > 8</option>
+										  <option value="9" <?php if(count($ques15)){ if($redemmed[$count] == '9' ){ echo 'selected="selected"'; } } ?> > 9</option>
+										  <option value="10" <?php if(count($ques15)){ if($redemmed[$count] == '10' ){ echo 'selected="selected"'; } } ?> > 10</option>
+										<option value="11" <?php if(count($ques15)){ if($redemmed[$count] == '11' ){ echo 'selected="selected"'; } } ?> > 11</option>
+										  <option value="12" <?php if(count($ques15)){ if($redemmed[$count] == '12' ){ echo 'selected="selected"'; } } ?> > 12</option>
+										  <option value="13" <?php if(count($ques15)){ if($redemmed[$count] == '13' ){ echo 'selected="selected"'; } } ?> > 13</option>
+										  <option value="14" <?php if(count($ques15)){ if($redemmed[$count] == '14' ){ echo 'selected="selected"'; } } ?> > 14</option>
+										  <option value="15" <?php if(count($ques15)){ if($redemmed[$count] == '15' ){ echo 'selected="selected"'; } } ?> > 15</option>
+										  <option value="16" <?php if(count($ques15)){ if($redemmed[$count] == '16' ){ echo 'selected="selected"'; } } ?> > 16</option>
+										  <option value="17" <?php if(count($ques15)){ if($redemmed[$count] == '17' ){ echo 'selected="selected"'; } } ?> > 17</option>
+										  <option value="18" <?php if(count($ques15)){ if($redemmed[$count] == '18' ){ echo 'selected="selected"'; } } ?> > 18</option>
+										  <option value="19" <?php if(count($ques15)){ if($redemmed[$count] == '19' ){ echo 'selected="selected"'; } } ?> > 19</option>
+										  <option value="20" <?php if(count($ques15)){ if($redemmed[$count] == '20' ){ echo 'selected="selected"'; } } ?> > 20</option>
+										  <option value="21" <?php if(count($ques15)){ if($redemmed[$count] == '21' ){ echo 'selected="selected"'; } } ?> > 21</option> 
+										  <option value="22" <?php if(count($ques15)){ if($redemmed[$count] == '22' ){ echo 'selected="selected"'; } } ?> > 22</option> 
+										  <option value="23" <?php if(count($ques15)){ if($redemmed[$count] == '23' ){ echo 'selected="selected"'; } } ?> > 23</option> 
+										  <option value="24" <?php if(count($ques15)){ if($redemmed[$count] == '24' ){ echo 'selected="selected"'; } } ?> > 24</option> 
+										  <option value="25" <?php if(count($ques15)){ if($redemmed[$count] == '25' ){ echo 'selected="selected"'; } } ?> > 25</option> 
+										  <option value="26" <?php if(count($ques15)){ if($redemmed[$count] == '26' ){ echo 'selected="selected"'; } } ?> > 26</option> 
+										  <option value="27" <?php if(count($ques15)){ if($redemmed[$count] == '27' ){ echo 'selected="selected"'; } } ?> > 27</option> 
+										  <option value="28" <?php if(count($ques15)){ if($redemmed[$count] == '28' ){ echo 'selected="selected"'; } } ?> > 28</option> 
+										  <option value="29" <?php if(count($ques15)){ if($redemmed[$count] == '29' ){ echo 'selected="selected"'; } } ?> > 29</option> 
+										  <option value="30" <?php if(count($ques15)){ if($redemmed[$count] == '30' ){ echo 'selected="selected"'; } } ?> > 30</option>
 							</select>
 						</div>
 					</div>
@@ -137,33 +148,43 @@ $redemmed = json_decode($ques15[3]->redemmed);
 							<div class="form-group">
 							<label> ניתן לפרוע הלוואה <br>בעוד מספר שנים:  </label>
 						      <select class="" name="redemmed[]" >
-									  	<option value="1">שנים 1</option>
-										<option value="2" >שנים 2</option>
-										<option value="3">שנים 3</option>
-										<option value="4">שנים 4</option>
-										<option value="5">שנים 5</option>
-										<option value="6">שנים 6</option>
-										<option value="7">שנים 7</option>
-										<option value="8">שנים 8</option>
-										<option value="9">שנים 9</option>
-										<option value="10">שנים 10</option>
-										<option value="11">שנים 11</option>
-										<option value="12">שנים 12</option>
-										<option value="13">שנים 13</option>
-										<option value="14">שנים 14</option>
-										<option value="15">שנים 15</option>
-										<option value="16">שנים 16</option>
-										<option value="17">שנים 17</option>
-										<option value="18">שנים 18</option>
-										<option value="19">שנים 19</option>
-										<option value="20">שנים 20</option>
+									  	<option value="1"> 1</option>
+										<option value="2" > 2</option>
+										<option value="3"> 3</option>
+										<option value="4"> 4</option>
+										<option value="5"> 5</option>
+										<option value="6"> 6</option>
+										<option value="7"> 7</option>
+										<option value="8"> 8</option>
+										<option value="9"> 9</option>
+										<option value="10"> 10</option>
+										<option value="11"> 11</option>
+										<option value="12"> 12</option>
+										<option value="13"> 13</option>
+										<option value="14"> 14</option>
+										<option value="15"> 15</option>
+										<option value="16"> 16</option>
+										<option value="17"> 17</option>
+										<option value="18"> 18</option>
+										<option value="19"> 19</option>
+										<option value="20"> 20</option>
+										<option value="21"> 21</option>
+										<option value="22"> 22</option>
+										<option value="23"> 23</option>
+										<option value="24"> 24</option>
+										<option value="25"> 25</option>
+										<option value="26"> 26</option>
+										<option value="27"> 27</option>
+										<option value="28"> 28</option>
+										<option value="29"> 29</option>
+										<option value="30"> 30</option>
 								</select>
 							</div>
 						</div>
 						<div class="section-3">
 							<div class="form-group">
 								<label for="Month_refund1">החזר חודשי:</label>
-								<input type="text" id="Month_refund1" class="form-control" name="Month_refund[]" value="1" onkeyup="this.value=addCommas(this.value);">
+								<input type="text" id="Month_refund1" class="form-control" name="Month_refund[]" value="1,000" onkeyup="this.value=addCommas(this.value);">
 								<img src="images/placeholder-icon.png" alt="" class="placeholder-icon">
 							</div>
 						</div>
@@ -209,7 +230,7 @@ $redemmed = json_decode($ques15[3]->redemmed);
 		$(this).removeClass('run_upto_max_15_'+row15);
 		row15++;
 
-	$('.repeated_div_14').append('<div class="form-inline multiple-dropdown" id="dlt_15_'+row15+'"><div class="section-1"><div class="form-group"><label class="c" for="loan-balance'+row15+'">'+row15+'. יתרת הלוואה</label><input type="text" id="loan-balance'+row15+'" class="form-control" name="loan_balance_1[]" value="120,000" onkeyup="this.value=addCommas(this.value);"><img src="images/placeholder-icon.png" alt="" class="placeholder-icon"></div></div><div class="section-2"><div class="form-group"><label>ניתן לפרוע הלוואה <br>בעוד מספר שנים:</label><select class="" name="redemmed[]" ><option value="1">שנים 1</option><option value="2" >שנים 2</option><option value="3">שנים 3</option><option value="4">שנים 4</option><option value="5">שנים 5</option><option value="6">שנים 6</option><option value="7">שנים 7</option><option value="8">שנים 8</option><option value="9">שנים 9</option><option value="10">שנים 10</option><option value="11">שנים 11</option><option value="12">שנים 12</option><option value="13">שנים 13</option><option value="14">שנים 14</option><option value="15">שנים 15</option><option value="16">שנים 16</option><option value="17">שנים 17</option><option value="18">שנים 18</option><option value="19">שנים 19</option><option value="20">שנים 20</option></select></div></div><div class="section-3"><div class="form-group"><label for="Month_refund'+row15+'">החזר חודשי:</label><input type="text" id="Month_refund'+row15+'" class="form-control" name="Month_refund[]" value="" onkeyup="this.value=addCommas(this.value);"><img src="images/placeholder-icon.png" alt="" class="placeholder-icon"></div></div><div class="section-4"><a href="javascript:void(0);" class="delete-button dlt_btn_15" data-id="dlt_15_'+row15+'" data-id="dlt_15_'+row15+'"><i class="fa fa-minus"></i>מחק</a></div></div>'); 
+	$('.repeated_div_14').append('<div class="form-inline multiple-dropdown" id="dlt_15_'+row15+'"><div class="section-1"><div class="form-group"><label class="c" for="loan-balance'+row15+'">'+row15+'. יתרת הלוואה</label><input type="text" id="loan-balance'+row15+'" class="form-control" name="loan_balance_1[]" value="120,000" onkeyup="this.value=addCommas(this.value);"><img src="images/placeholder-icon.png" alt="" class="placeholder-icon"></div></div><div class="section-2"><div class="form-group"><label>ניתן לפרוע הלוואה <br>בעוד מספר שנים:</label><select class="" name="redemmed[]" ><option value="1"> 1</option><option value="2" > 2</option><option value="3"> 3</option><option value="4"> 4</option><option value="5"> 5</option><option value="6"> 6</option><option value="7"> 7</option><option value="8"> 8</option><option value="9"> 9</option><option value="10"> 10</option><option value="11"> 11</option><option value="12"> 12</option><option value="13"> 13</option><option value="14"> 14</option><option value="15"> 15</option><option value="16"> 16</option><option value="17"> 17</option><option value="18"> 18</option><option value="19"> 19</option><option value="20"> 20</option><option value="21"> 21</option><option value="22"> 22</option><option value="23"> 23</option><option value="24"> 24</option><option value="25"> 25</option><option value="26"> 26</option><option value="27"> 27</option><option value="28"> 28</option><option value="29"> 29</option><option value="30"> 30</option></select></div></div><div class="section-3"><div class="form-group"><label for="Month_refund'+row15+'">החזר חודשי:</label><input type="text" id="Month_refund'+row15+'" class="form-control" name="Month_refund[]" value="2,000" onkeyup="this.value=addCommas(this.value);"><img src="images/placeholder-icon.png" alt="" class="placeholder-icon"></div></div><div class="section-4"><a href="javascript:void(0);" class="delete-button dlt_btn_15" data-id="dlt_15_'+row15+'" data-id="dlt_15_'+row15+'"><i class="fa fa-minus"></i>מחק</a></div></div>'); 
 
 		$(this).addClass('run_upto_max_15_'+row15);
 		$('.dlt_btn_15').addClass('run_upto_min_15_'+row15);
@@ -261,19 +282,19 @@ $redemmed = json_decode($ques15[3]->redemmed);
 
 	$('body').on('keyup','#Month_refund1',function(){
 	  if ($(this).val() < 1){ 
-	  		$(this).val('1');
+	  		// $(this).val('1');
 	  }
 	});
 
 	$('body').on('keyup','#Month_refund2',function(){
 	  if ($(this).val() < 1){ 
-	  		$(this).val('1');
+	  		// $(this).val('1');
 	  }
 	});
 
 	$('body').on('keyup','#Month_refund3',function(){
 	  if ($(this).val() < 1){ 
-	  		$(this).val('1');
+	  		// $(this).val('1');
 	  }
 	});
 

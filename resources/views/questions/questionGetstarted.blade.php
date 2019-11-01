@@ -62,7 +62,7 @@
  	
 
      @php
-         $no = \App\question_survey::where('user_id',\Auth::user()->id)->latest()->first();   
+         $no = \App\question_survey::where('user_id',$user_to_edit)->latest()->first();   
      @endphp
 
      @if(!empty($no) && $no->question_id >= 1)

@@ -1,6 +1,6 @@
 <?php
 
-$ques14 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','15')->get();
+$ques14 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','15')->get();
 
 if(count($ques14)){
 $investment_amount = json_decode($ques14[1]->meta_value);
@@ -35,7 +35,7 @@ $monthly_repayments_percentage = json_decode($ques14[6]->meta_value);
 	</div>
 	<div class="message d-i-f f-d-c">
 	  <span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-	  <p>האם אתה מצפה לקבל סכומי כסף משמעותיים בעתיד
+	  <p class="male_female_thirteen">האם אתה מצפה לקבל סכומי כסף משמעותיים בעתיד
 		איתם תוכל לפרוע חלק או את כל המשכנתא?</p>
 		<p>לדוגמא, חסכון או קרנות שאתה יכול לפתוח, ירושה, 
 		השקעות ועוד...</p>
@@ -241,19 +241,19 @@ $monthly_repayments_percentage = json_decode($ques14[6]->meta_value);
 
 	$('body').on('keyup','#investment-amount1',function(){
 	  if ($(this).val() < 10000){ 
-	  		$(this).val('10,000');
+	  		// $(this).val('10,000');
 	  }
 	});
 
 	$('body').on('keyup','#investment-amount2',function(){
 	  if ($(this).val() < 10000){ 
-	  		$(this).val('10,000');
+	  		// $(this).val('10,000');
 	  }
 	});
 
 	$('body').on('keyup','#investment-amount3',function(){
 	  if ($(this).val() < 10000){ 
-	  		$(this).val('10,000');
+	  		// $(this).val('10,000');
 	  }
 	});
 

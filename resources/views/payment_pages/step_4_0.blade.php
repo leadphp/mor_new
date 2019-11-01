@@ -14,7 +14,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
 </head>
-
+ 
 <body>
     <div class="main-wrapper steps step-4-0">
         <!-- header starts here -->
@@ -34,23 +34,28 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right d-f">
-                            <li><a href="javascript:void(0);">ראשי</a></li>
-                            <li><a href="javascript:void(0);">איך זה עובד</a></li>
-                            <li><a href="javascript:void(0);">יעוץ משכנתא אונליין</a></li>
-                            <li><a href="javascript:void(0);">השווה להצעה קיימת</a></li>
-                            <li><a href="javascript:void(0);">מי אנחנו ?</a></li>
-                            <li><a href="javascript:void(0);">יצירת קשר</a></li>
+                            <li><a href="{{url('')}}">ראשי</a></li>
+                            <li><a href="{{url('/how-it-works')}}">איך זה עובד</a></li>
+                            <li><a href="{{url('/questions_flow')}}">יעוץ משכנתא אונליין</a></li>
+                            <li><a href="{{url('/compare-offers')}}">השווה להצעה קיימת</a></li>
+                            <li><a href="{{url('/about-us')}}">מי אנחנו ?</a></li>
+                            <li><a href="{{url('/contact-us')}}">יצירת קשר</a></li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
                 </div>
                 <!-- /.container-fluid -->
+                 <div class="reg logo comp-offer">
+                    <a href="#">
+                      <img src="images/logo.png">
+                    </a>
+                </div>
             </nav>
         </header>
         <!-- header ends here -->
 
         <!-- mortgage offers starts here -->
-
+       
         <section class="mortgage-offers">
             <div class="container">
                 <div class="mortgage-offers-border">
@@ -58,8 +63,10 @@
                         <div class="mortgage-offers-wrap">
                             <div class="mortgage-offers-heading">
 							    <div class="top-call-section">
-								   <img src="images/phone-icon-white.png" /> 
-								   <p>בכל שבוע נגריל ארוחת בוקר זוגית <b>במתנה בין כל המשתפים</b></p>
+                                    <a href="#" class="button-call-global-payment">
+    								   <img src="images/phone-icon-white.png" /> 
+                                    </a>
+								   <p>לתיאום פגישה עם יועץ <b>לחצו כאן</b></p>
 								</div>
                                 <p>בכל שבוע נגריל <a href="javascript:vois(0);">ארוחת בוקר זוגית במתנה</a> בין כל המשתפים <br> אז שתפו אותנו ועזרו גם לחבריכם לחסוך ולקבל את הצעת המשכנתא המשתלמת ביותר !</p>
                                 <ul class="d-i-f">
@@ -79,41 +86,41 @@
                             </div>
                             <div class="mortgage-offers-steps clearfix">
                                 <div class="row d-f">
-                                    <div class="col-sm-4">
-                                        <div class="m-o-s-container">
+                                    <div class="col-md-4">
+                                        <a href="/report" class="m-o-s-container">
                                             <div class="m-o-s-container-img">
                                                 <img src="images/steps-icon-2.png" alt="" />
                                             </div>
                                             <div class="m-o-s-container-text">
                                                 <p>צפה בדו”ח המשכנתא שהופק עבורך ונשמח לענות בכל שאלה בצור קשר</p>
-                                                <a href="javascript:void(0);" class="main-button button-dark">צפה בדו”ח המשכנתא האישי שלך</a>
+                                                <span  class="main-button button-dark">צפה בדו”ח המשכנתא האישי שלך</span>
                                             </div>
                                             <span class="m-o-s-number">1</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="m-o-s-container">
+                                    <div class="col-md-4">
+                                        <a href="/bankinfoStep1" class="m-o-s-container">
                                             <div class="m-o-s-container-img">
                                                 <img src="images/steps-icon-3.png" alt="" />
                                             </div>
                                             <div class="m-o-s-container-text">
                                                 <p>השלם נתונים נדרשים לבנק ואנו נפנה אותך לפקיד הבנק הרלוונטי שייתן לך את המשכנתא </p>
-                                                <a href="javascript:void(0);" class="main-button button-dark">השלמת נתונים נדרשים וקישור לבנק </a>
+                                                <span  class="main-button button-dark">השלמת נתונים נדרשים וקישור לבנק </span>
                                             </div>
                                             <span class="m-o-s-number">2</span>
-                                        </div>
+                                        </a>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="m-o-s-container">
+                                    <div class="col-md-4">
+                                        <a href="/bankinfoStep7" class="m-o-s-container" onclick="/bankinfoStep7">
                                             <div class="m-o-s-container-img">
                                                 <img src="images/steps-icon-4.png" alt="" />
                                             </div>
                                             <div class="m-o-s-container-text">
                                                 <p>איתרנו עבורך הצעות משכנתא דומות מומלץ שתציג אותם בהגיעך לסניף הבנק</p>
-                                                <a href="javascript:void(0);" class="main-button button-dark">הדפסה של הצעות משכנתא דומות</a>
+                                                <span  class="main-button button-dark">הדפסה של הצעות משכנתא דומות</span>
                                             </div>
                                             <span class="m-o-s-number">3</span>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -163,40 +170,39 @@
                 </div>
             </div>
         </section>
+        <div id="contactForm" class="contactForm">
+            <div class="close_btnP"> X </div>
+  <?php
+    $datetime = new DateTime('tomorrow');
+    $date = $datetime->format('Y-m-d');
+  ?>
+  <h1>יצירת קשר עם משכנתא דיגיטלית</h1>
+  <small>אשמח שתחזרו אלי טלפונית לקבלת סיוע, מענה על מספר שאלות והדרכה.</small>
+  <form action="{{route('user.contact.email')}}" method="post" enctype="multipart/form-data">
+    {!! csrf_field() !!}
+    <input placeholder="כותרת" type="text" name="title" required />
+    <!-- <input placeholder="מהות הפניה" type="text" name="subject" required /> -->
+    <input type="date" id="date" name="date" value="<?php echo $date; ?>" min="<?php echo $date; ?>" required >
+       <select name="time">
+          <option value="8:00">8:00</option>
+          <option value="9:00">9:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+          <option value="18:00">18:00</option>
+          <option value="19:00">19:00</option>
+       </select>
+    <textarea placeholder="הודעה" name="comments">אשמח אם תחזרו אלי מחר בשעה המצוינת לעיל</textarea>
+    <input class="formBtn" type="submit" />
+  </form>
+</div>
 
         <!-- mortgage offers ends here -->
 
         <!-- footer starts here -->
-
-       <footer class="no-bg-footer">
-		  <div class="container-fluid">
-			<div class="footer-content d-f a-i-c j-c-s-b">
-			  <div class="footer-nav">
-			   <ul class="d-f">
-				 <li><a href="about-us.html">איך זה עובד?</a></li>
-				 <li><a href="javascript:void(0);">ייעוץ משכנתא אונליין </a></li>
-				 <li><a href="javascript:void(0);">דוח משכנתא לדוגמא</a></li>
-				 <li><a href="javascript:void(0);">השווה להצעה קיימת שקיבלת</a></li>
-				 <li><a href="javascript:void(0);">אודות</a></li>
-				 <li><a href="javascript:void(0);">צור קשר</a></li>
-			   </ul>
-			  </div>
-			  <div class="copyright-container">
-				<p>כל הזכויות שמורות 2016  מתן חברה לייעוץ משכנתאות בע”מ</p>
-			  </div>
-			</div>
-		  </div>
-			  <div class="created-by">
-				<p>Created with <img src="images/heart-icon.png" alt=""> by <span>StartTECH</span></p>
-			  </div>
-		</footer>
-    
-	<!-- footer ends here -->
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-</body>
-
-</html>
+@include('layouts.paymentfooter')

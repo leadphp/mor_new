@@ -1,7 +1,7 @@
 @php
 $auth = \Auth::user();
 if(!empty($auth)){
-    $ques = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','4')->get();
+    $ques = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','4')->get();
     if(count($ques)){
     $ques4 = $ques;
 	}
@@ -17,7 +17,7 @@ if(!empty($auth)){
 			<div class="message d-i-f f-d-c">
 				<span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
 				<p>בכמה מסתכמות ההכנסות החודשיות שלכם בבית?
-				ההכנסה כוללת נטו למשפחה, בעל ואישה ביחד.</p>
+				הכנסה כוללת נטו למשפחה, בעל ואישה ביחד.</p>
 				<span class="message-timing">18:26</span>
 			</div>
 			<div class="message no-background d-i-f f-d-c">
@@ -50,7 +50,7 @@ if(!empty($auth)){
 	
 	$('body').on('keyup','#net_income',function(){
 		  if ($(this).val() < 1){ 
-		  		$(this).val('1');
+		  		// $(this).val('1');
 		  }
 		});
  </script>

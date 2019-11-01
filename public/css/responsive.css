@@ -1,4 +1,10 @@
 @media only screen and (min-width: 1440px){
+    .con {
+        top: -48px;
+    }
+    .step-4-0 .mortgage-offers {
+        padding-bottom: 170px;
+    }
     .main-wrapper {
         min-height: 100vh;
     }
@@ -20,9 +26,22 @@
     .pay-step-3 .mortgage-offers-border {
         margin-bottom: 100px;
     }
+    .main-wrapper.steps.payment-step.pay-step-3.send-offer.done-reg .mortgage-offers-border {
+        margin-bottom: 0;
+    }
+.reg-header ul.nav-main {
+    top: 120px;
+}
+}
+@media only screen and (min-width: 1199px){
+
 
 }
 @media(max-width: 1600px) {
+
+    .header-area ul li {
+        min-width: 12.5%;
+    }
     .page-container {
         max-width: 1130px;
     }
@@ -51,25 +70,92 @@
         max-width: 111px;
         margin-right: 0;
     }
-    .advisor-image img {
-        max-width: 80px;
-    }
-    ul.nav_reg {
+.advisor-image img {
+    max-width: 72px;
+}
+  ul.nav_reg {
         margin-top: 2px;
         margin-bottom: 2px;
     }
+	div#loadQuestions {
+		margin-top: 150px;
+	}
 }
+@media(max-width: 1400px) {
+   .main-wrapper.steps.payment-step.pay-step-3.send-offer.done-reg  {
+        padding-bottom: 0; 
+    }
+    }
 @media(max-width: 1199px) {
+#formQuestionfifteen .errMsg {
+    bottom: 30px;
+}
+a.main-button.button-yellow.top-btn_A {
+    margin-top: 48px;
+}
+.navbar-button a.main-button {
+    top: 0;
+}
+.register-page .questiontwoOption .form-inline.multiple-dropdown.up-fo > div > select {
+    min-width: 99%;
+}
+	.register-page .questiontwoOption .form-inline.multiple-dropdown.up-fo > div.second div .btn-group.bootstrap-select {
+		width: 98% !important;
+	}
+	.register-page #formQuestionTwo .up-fo a.delete-button {
+		margin: 0 57px 0 0 !important;
+		float: right;
+	}
+.reg.logo img {
+    width: 130px;
+}
+.bankinfoStep3 .chat-group .message {
+    width: 100%;
+}
+.loggedin a.main-button {
+    min-width: 120px;
+}
+
+ div#loadQuestions > div .message.d-i-f.f-d-c.spinner1.spinner-ques-16 {
+    margin-top: 10px;
+}
+.header-area ul li {
+    min-width: 11.5%;
+}
+.header-area ul li a {
+    font-size: 15px;
+}
+img.visa-img {
+    top: 42px;
+}
+.Submit-section p {
+    display: flex;
+}
+.register-page form#formQuestionTwo .second-sec-options.questiontwoOption .chat-buttons {
+    margin-top: 0; 
+}
+div#loadQuestions {
+    margin-top: 220px;
+}
+#formQuestionseventeen .form-inline.multiple-dropdown > div:nth-child(3) input {
+    max-width: 100%;
+}
+.register-page form#formQuestionTwo .form-group.empty {
+    min-height: 0;
+    margin-top: 0;
+}
+div#ques_3 a.delete-button.dlt_btn_2.run_upto_min2 {
+    margin-bottom: 0 !important;
+}
 .reg-header ul.nav-main {
-    top: 65px;
+    top: 45px;
     right: 0;
     width: 270px;
     min-height: 165px;
 }
-.fixedheader  ul.nav-main {
-    top: 20px;
+.fixedheader ul.nav-main {
+    top: 17px;
 }
-
 .banner-content .banner-buttons {
     margin-right: 47px;
 }
@@ -122,7 +208,7 @@ div#ques_14 input#investment-amount1 {
 ul.nav_reg li a {
     width: 100px;
     padding-top: 0;
-    HEIGHT: 100px;
+    height: 100px;
     align-items: center;
     justify-content: center;
     font-size: 13px;
@@ -141,11 +227,11 @@ td .chat-buttons .main-button {
     min-width: 90px;
 }
 td .chat-buttons a:first-child {
-    min-width: 90px;
+    min-width: 84px;
 }
   .navbar-brand {
-    max-width: 130px;
-  }
+    max-width: 150px;
+}
   .navbar-nav>li+li {
     margin-right: 26px;
   }
@@ -202,7 +288,7 @@ td .chat-buttons a:first-child {
 }
 .current-loans .form-inline > div:nth-child(3), .current-loans .form-inline > div:last-child,
 .future-loans .form-inline > div:nth-child(3), .future-loans .form-inline > div:last-child {
-    margin-top: 30px!important;
+    margin-top: !important;
     margin-right: 0;
 }
 .eligibility-text {
@@ -245,10 +331,6 @@ td .chat-buttons a:first-child {
 }
 
 /*  070619*/
-.margin-30 td .chat-buttons .main-button {
-    min-width: 90px;
-    padding: 15px 13px
-}
 
 .buttons-group .chat-buttons a:first-child {
     margin-bottom: 30px;
@@ -294,8 +376,381 @@ div#algorithm-slider {
 ul.nav-main {
     bottom: -150px;
 }
+form#formQuestionEleven_One > div >div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+}
+form#formQuestionEleven_One > div >div {
+    float: right;
+}
+form#formQuestionEleven_One > div >div:nth-child(2) .acquisition {
+	margin-left: 0 !important;
+}
+.register-page .ques2 .main-button {
+    margin-top: 15px;
+}
+}
+@media(max-width: 1024px) {
+
+div#bs-example-navbar-collapse-1 {
+    right: 0;
+}
+.offerCompare div#bs-example-navbar-collapse-1 {
+    width: 100%;
+    top: 30px;
+    right: 0;
+}
+.navbar-nav>li+li {
+    margin-right: 21px;
+}
+.step_4_4 .margin-30 td .chat-buttons .main-button {
+    min-width: auto;
+}
 }
 @media(max-width: 991px) {
+.banner .navbar-brand {
+    max-width: 175px;
+}
+.stickyBar{
+    display:none;
+}
+.fixedheader .stickyBar{
+ display:block;
+}
+.fixedheader .normalBar{
+ display:none;
+}
+
+
+
+    div#ques_17 .spinner {
+    margin-top: -0;
+    margin-bottom: 0;
+} 
+ .navbar-button a.main-button {
+    top: 0;
+    margin-top: 50px;
+}
+.navbar-button.loggedin a.main-button {
+    top: 0;
+    margin-top: 95px;
+}
+ .banner-content h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ .hideDesktop {
+    display: block;
+}
+.hideMobile {
+    display: none;
+}
+.pnga-mobile-ka-ques-two {
+    position: relative !important;
+}
+.pnga-mobile-ka-ques-two > .third {
+    position: absolute !important;
+    bottom: 0 !important;
+    max-width: 100px !important;
+    left: 0;
+}
+#formQuestionTwo .pnga-mobile-ka-ques-two .second .btn-group.bootstrap-select, 
+#formQuestionTwo .pnga-mobile-ka-ques-two .second select.selectpicker {
+    margin-bottom: 0 !important;
+}
+
+.register-page #formQuestionFivePointOne label {
+    font-size: 17px;
+}
+.reg-header .toggle_bar i.fa.fa-bars {
+    color: #53cbcb;
+}
+.reg.logo {
+    width: 60%;
+    text-align: center;
+    right: 20%;
+}
+.steps .navbar-toggle {
+    top: 40px;
+}
+.step-4-0 div#bs-example-navbar-collapse-1 {
+    top: 70px;
+    z-index: 9;
+}
+.step-4-0 .fixedheader div#bs-example-navbar-collapse-1 {
+    top: 37px;
+}
+ form#formQuestionfourteen > .mobile-order {
+    display: flex;
+    flex-direction: column;
+}
+form#formQuestionfourteen > .mobile-order .success-text {
+    order: 1;
+    margin-bottom: 30px;
+}
+.register-page .mobile-order .range-group {
+    margin-bottom: 0;
+}
+form#formQuestionfourteen > .mobile-order button.main-button.questwelvesubmit {
+    order: 3;
+}
+  .hideDesk {
+        display: block;
+    }
+ .comp-offer{
+  display: block;
+} 
+.step-4_5 .parlerBanks p.show-info {
+    width: auto;
+    margin-top: 0;
+    top: -10px;
+}
+.parlerBanks {
+    margin-bottom: 0;
+}
+.colBankLeft {
+    width: auto;
+    margin-left: 0;
+}
+.step-4_5 .margin-30 .colBankLeft .form-group {
+    float: right;
+    margin-bottom: 30px;
+}
+.step-4_5 .margin-30 .colBankLeft .form-group:last-child {
+    margin-bottom: 30px;
+}
+td .chat-buttons a + a {
+    margin-right: 3px!important;
+}
+.step_4_4 .margin-30 td .chat-buttons .main-button {
+    min-width: auto;
+}
+.bankinfoStep3 .chat-wrap tr td:first-child {
+    min-width: 130px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+    .bankinfoStep3 .chat-wrap {
+        width: 100%;
+    }
+    .mortgage-offers-steps > .row > div[class*="col-"] {
+        margin-bottom: 40px;
+    }
+    .mortgage-offers-steps > .row > div[class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+    .offer-compare .main-form .row-group.fullMobile {
+        width: 100%;
+    }
+    .row-group.text-flex {
+        display: block;
+    }
+    .offer-compare .row-group.text-flex > div:nth-child(1) {
+        width: 50%;
+        float: right;
+    }
+    .offer-compare .row-group.text-flex > div:nth-child(2) {
+        width: 48%;
+        float: left;
+        margin: 0 0 20px 0;
+    }
+    .offer-compare .row-group select {
+        min-height: 60px;
+    }
+    .offer-compare .row-group.text-flex > div {
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .Submit-sections.sec-page {
+    width: 100%;
+}
+.main-wrapper.steps.payment-step.pay-step-2.offer-compare .main-form {
+    padding: 0 0 130px 0;
+    float: left;
+}
+.offer-compare .pament-starting-div {
+    margin: 0;
+}
+    .mortgage-offers-heading.mmmm {
+        display: block;
+    }
+    .mortgage-offers-heading.dddd {
+        display: none;
+    }
+    .offer-compare .pament-starting-div {
+            padding-top: 40px;
+    }
+    .heading-container img {
+        margin-bottom: 5px;
+    }
+    
+    .banner-content {
+        padding: 160px 0 195px;
+    }
+    .owl-logos .owl-dots {
+        display: block;
+    }
+    .how_it_works .inner-banner-content {
+        padding: 140px 0 30px;
+    }
+    .service-steps .bank-steps .owl-dots {
+        top: -31px;
+    }
+    .rowReverse {
+        display: flex;
+        flex-direction: column;
+    }
+    .rowReverse > div:first-child{
+        order: 2;
+    }
+    section.qna.qna-about {
+        padding-bottom: 0;
+    }
+    .qna-about .qna-right {
+        margin-bottom: 50px;
+    }
+    img.forWhite{
+        display: none;
+    }
+    .bottom-nav li.active img.forNormal{
+        display: none;
+    }
+    .bottom-nav li.active img.forWhite{
+        display: block;
+    }
+ .qna-left .owl-stage {
+    margin-top: 0;
+}
+.reg-header .advisor-image {
+    margin-top: 0;
+}
+.header-area ul .clsoe {
+   display: block;
+}
+.idIcon img.visa-img {
+    bottom: 31px;
+}
+.table-responsive>.table>tbody>tr>td, .table-responsive>.table>tbody>tr>th, .table-responsive>.table>tfoot>tr>td, .table-responsive>.table>tfoot>tr>th, .table-responsive>.table>thead>tr>td, .table-responsive>.table>thead>tr>th {
+    white-space: normal;
+}
+.file-tab .tab-inner-content {
+    padding: 19px 45px;
+}
+.header-area ul .clsoe {
+    position: absolute;
+    TOP: 2px;
+    RIGHT: 2px;
+    Z-INDEX: 99;
+    WIDTH: 30PX;
+    height: 30px;
+    background: #4eb3b4;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.page-report .level-content.d-f.a-i-c.j-c-s-b {
+    position: absolute;
+    left: 50px;
+    top: 23px;
+}
+.about-page .advisor-nav {
+    display: none;
+}
+.why-us-content {
+    padding-top: 0;
+}
+.page-contact .box_3 {
+    margin-bottom: 40px;
+}
+nav.navbar.fixedheader {
+    position: fixed;
+    width: 100%;
+    background: #5eced0;
+    top: 0;
+    min-height: 33px;
+}
+
+nav.navbar.fixedheader .navbar-toggle {
+    top: 8px;
+    right: 14px;
+    border-radius: 0;
+}
+nav.navbar.fixedheader .navbar-brand {
+    max-width: 38px;
+    height: auto;
+    margin-right: 60px !important;
+    margin-top: 1px !important;
+    margin-bottom: 5px !important;
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+}
+nav.navbar.fixedheader a.main-button.button-yellow.top-btn_A span {
+    display: none;
+}
+nav.navbar.fixedheader .navbar-button a.main-button {
+    margin-top: 31px;
+    padding: 8px 0;
+    text-align: left;
+    font-size: 17px;
+    margin-left: 40px;
+    min-width: 10px;
+}
+nav.navbar.fixedheader .navbar-button a:first-child {
+    margin: 0;
+    min-width: 28px;
+    background: no-repeat;
+    left: 13px;
+    border: 1px solid #fff;
+    padding: 0;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+nav.navbar.fixedheader .navbar-button.loggedin  a:first-child {
+    left: 0;
+    top: 14px;
+    border: none;
+    width: auto;
+}
+nav.navbar.fixedheader .navbar-button a:first-child img {
+    position: unset;
+    margin: 0;
+}
+
+nav.navbar.fixedheader .navbar-button {
+    margin-top: -32px;
+}
+nav.navbar.fixedheader .loggedin a.main-button {
+    padding-left: 0;
+    text-align: left;
+    margin-top: 27px !important;
+    font-size: 17px !important;
+}
+nav.navbar.fixedheader .icon-bar {
+    background-color: #fff;
+}
+nav.navbar.fixedheader .navbar-collapse.collapse, nav.navbar.fixedheader .navbar-collapse.collapsing {
+    top: 34px;
+}
+
+
+
+
+
+.banner-buttons .button-orange span {
+    right: 0;
+}
 .page-contact .advisor-nav {
     display: none;
 }
@@ -304,6 +759,10 @@ section.how_it_works .toggle_bar {
 }
 .fixedheader .advisor-header .logo-container {
     max-height: 27px;
+    top: 0;
+}
+.advisor.reg-header.fixedheader .advisor-container {
+    padding: 0 0;
 }
 .main-button.for-mob{
     display: block;
@@ -357,16 +816,22 @@ form#formQuestionTen {
 .header-area ul li a {
     height: 75px;
     border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+}
+.header-area ul li a span {
+    width: 120px;
 }
 #exTab2 {
     position: absolute;
     z-index: 99;
     width: 50%;
-    left: 0;
+    right: 0;
     min-width: 240px;
+    top: 115px;
 }
-.header-area ul li a img {
-    margin-right: 20px;
+.header-area ul.bottom-nav li a img {
+    margin-bottom: 0;
 }
 .header-area ul.bottom-nav li:last-child a {
     color: #7f7f7f;
@@ -375,7 +840,18 @@ form#formQuestionTen {
     background: #ffffff;
     color: #7f7f7f;
 }
-.page-report .level-content.d-f.a-i-c.j-c-s-b {
+
+.page-report .level-content.d-f.a-i-c.j-c-s-b .navigate-steps{
+    display: none;
+}
+.page-main .step-2 .level-call {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 999;
+}
+
+.page-main .navigate-steps h4, .page-main .management-panel h4 {
     display: none;
 }
 .page-report .bottom-bar .items-list.text-left {
@@ -405,8 +881,8 @@ form#formQuestionTen {
     color: #fff;
     font-size: 24px;
     position: absolute;
-    left: 20px;
-    top: 20px;
+    right: 130px;
+    top: 44px;
 }
 .page-report .header-area {
     margin-top: 0;
@@ -430,7 +906,7 @@ ul.nav.nav-tabs.bottom-nav {
 }
 .tab-inner-content.orange-tab table {
     margin: 0;
-    width: 100%;
+    min-width: 490px;
 }
 .char-title {
     width: 100%;
@@ -510,8 +986,19 @@ section.our-partner > div > div {
     padding: 10px 70px 80px 70px;
 }
 
-.reg.logo {
-    display: none;
+.offerCompare .reg.logo {
+    top: -20px;
+}
+.reg.logo img {
+    width: 100px;
+    margin-right: 0;
+    height: 65px;
+}
+.fixedheader .reg.logo img {
+    height: 23px;
+}
+.fixedheader .reg.logo {
+    top: 3px;
 }
 .overlay-boxIn p {
     font-size: 18px;
@@ -520,7 +1007,13 @@ section.our-partner > div > div {
     font-size: 28px;
 }
 .main-form input {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+}
+.row-group select {
+    margin-bottom: 0;
+}
+.main-wrapper.steps.payment-step.pay-step-2 .align-left {
+    margin-right: 0;
 }
 .route-add {
     width: 100%;
@@ -544,7 +1037,7 @@ img.delete-green {
 }
 
 .offer-compare .placeholder-icon {
-    top: 55%;
+    top: 56px;
 }
 .pay-step-4 .inner-success-data {
     width: 98%;
@@ -586,16 +1079,22 @@ ul.nav-main {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
-  .navbar-collapse.collapse,
-.navbar-collapse.collapsing  {
+ .navbar-collapse.collapse, .navbar-collapse.collapsing {
     display: none!important;
     width: calc(100% - 30px);
-    background: #fff;
+    background: #5eced0;
     position: absolute;
     top: 120px;
     left: 15px;
     right: 15px;
-  }
+}
+.homeHeader .navbar-collapse.collapse, .homeHeader .navbar-collapse.collapsing {
+    right: 15px;
+    left: 0;
+}
+.navbar-nav>li>a {
+    color: #fff;
+}
   .navbar-collapse.collapse.in {
     display: block!important;
 }
@@ -603,14 +1102,17 @@ ul.nav-main {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  .navbar-toggle {
+.navbar-toggle {
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 50px;
-    right: 170px;
+    top: 55px;
+    right: 180px;
     border-radius: 0;
-  }
+}
+.homeHeader .navbar-toggle {
+    right: 15px;
+}
   .icon-bar {
     background-color: #5dced0;
   }
@@ -627,12 +1129,12 @@ ul.nav-main {
 .navbar-nav {
     width: 100%;
 }
-.button-yellow {
-    top: 130px;
-    left: 17px;
-}
+
 .banner-content {
-    padding-top: 240px;
+    padding-top: 110px;
+}
+.banner-content h1 {
+    margin-bottom: 15px;
 }
 .service-steps-content {
     max-width: 810px;
@@ -694,6 +1196,10 @@ ul.nav-main {
 }
 .qna-right {
     padding-top: 40px;
+    text-align: center;
+}
+.qna .heading-container {
+    margin-bottom: 30px;
 }
 .algorithm-container + .algorithm-container {
     margin-top: 30px;
@@ -773,7 +1279,7 @@ ul.nav-main {
     top: 80px;
 }
 .steps .navbar-nav>li>a {
-    color: #60cecf;
+    color: #fff;
 }
 .steps .navbar-nav>li>a:hover,
 .steps .navbar-nav>li>a:focus {
@@ -784,7 +1290,7 @@ ul.nav-main {
 }
 .mortgage-offers-wrap {
     padding: 15px 20px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
 }
 .m-o-s-container {
     padding: 20px 10px;
@@ -880,6 +1386,21 @@ button.custom4_6 {
 .margin-30 .chat-group {
     margin-top: 50px;
 }
+
+.step_4_4  .margin-30 .chat-group {
+    margin-top: 20px;
+}
+.step_4_4  .chat-group.buttons-group.w-input.form-mob-design .chat-buttons p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.step_4_4 section.chat.step_4_4 .chat-container.d-f.f-d-c.a-i-f-s.margin-30 .chat-group.buttons-group {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.step_4_4  .margin-30 .chat-group {
+    margin-bottom: 0;
+}
 .main-form {
     padding: 30px 0;
 }
@@ -900,6 +1421,9 @@ ul.egally-secure {
 .offer-compare .pament-starting-div {
     max-height: unset;
     background-position: bottom -130px left 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 }
 .steps-container::before {
     display: none;
@@ -914,21 +1438,33 @@ p.top-padding {
     line-height: 24px;
 }
 .register-page #formQuestionseventeen label {
-    width: 87px;
+
     height: 45px;
 }
-.register-page form input.form-control:not([type="checkbox"]):not([type="radio"]), .register-page textarea.form-control {
-    max-width: 95px;
-}
+
 #formQuestionFourteenDIV input#monthly_refund_input {
     padding-left: 35px;
 }
 form#formQuestionseventeen button.ok_btn.main-button1 {
     min-width: 200px;
 }
-.message-pic {
-    width: 45px;
-    height: 45px;
+.reg-header .advisor-nav {
+    background: #fff;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.fixedheader .advisor-nav {
+    background: transparent;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.fixedheader .toggle_bar i.fa.fa-bars {
+    color: #fff;
+    padding: 0;
+    background: transparent;
+    margin-top: 0;
 }
 .chat-number {
     top: 24px;
@@ -954,9 +1490,321 @@ form#formQuestionseventeen button.ok_btn.main-button1 {
 .register-page .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
     width: 160px;
 }
-
+.offerCompare .navbar-toggle {
+    right: 16px;
+    top: 4px;
+}
+.offerCompare .icon-bar {
+    background-color: #fff;
+}
+.step-4-0 .mortgage-offers-border {
+    margin-bottom: 20px;
+}
+.reg-header .advisor-header .logo-container {
+    max-width: 160px;
+    max-height: 120px;
+    margin-right: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 16px;
+    max-height: 70px;
+}
+.advisor.reg-header.fixedheader .advisor-header .logo-container {
+    top: 0;
+}
+section.chat.step_4_4 .chat-container.d-f.f-d-c.a-i-f-s.margin-30 .chat-group.buttons-group {
+    margin-bottom: 10px;
+}
+section.chat.step_4_4 section.chat.stepstepCenter {
+    padding: 40px 0 0 0;
+}
 }
 @media(max-width: 767px) {
+.register-page .ques_12_2 .message {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.ques_12_2 .spinner-ques-11_2 {
+    margin-top: 0 !important;
+    margin-bottom: 40px;
+}
+div#formQuestionSixteenDIV {
+    margin-top: 40px;
+}
+div#formQuestionSeventeenDIV {
+    margin-top: 70px;
+}
+.homeHeader .navbar-collapse.collapse, .homeHeader .navbar-collapse.collapsing {
+    top: 70px;
+}
+.register-page .container {
+    max-width: 460px;
+ }
+ .register-page #formQuestionFifteenDIV .message p {
+    white-space: normal;
+}
+.sweet-alert h2 {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    line-height: 26px !important;
+}
+.sweet-alert {
+    width: 80% !important;
+    left: 10% !important;
+    right: auto !important;
+}
+.sweet-alert button {
+    margin: 0 5px 0 5px !important;
+}
+ .advisor.reg-header.fixedheader a.logo-container img {
+    top: 8px;
+}
+/*#formQuestionFourteenDIV .success-text {
+    margin-top: 0;
+}*/
+.register-page .imp-info-text p br {
+    display: none;
+}
+ .reg-header .advisor-nav {
+    margin-bottom: 0;
+}
+.btnTable input[type="button"], input[type="submit"], 
+.btnTable input[type="reset"], 
+.btnTable input[type="file"]::-webkit-file-upload-button, button {
+	padding: 0 10px;
+}
+	.responsiveTable{
+        min-width: 600px;
+	}
+	.step_4_4 table.table {
+	    margin-top: 20px;
+	}
+    .buttons-group .chat-buttons p {
+        min-height: 30px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .stepTwo_ {
+	    padding-top: 220px;
+	}
+    .chat-group.buttons-group.w-input.form-mob-design .chat-buttons p {
+        margin-top: 0;
+    }
+    section.chat.step_4_4 .chat-container.d-f.f-d-c.a-i-f-s.margin-30 .chat-group.buttons-group.btn-mob-design {
+        margin-top: 0;
+    }
+    section.chat.step_4_4 .chat-container.d-f.f-d-c.a-i-f-s.margin-30 .form-mob-design {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .stepTwo .mortgage-offers-inner {
+        margin: 0;
+        padding-bottom: 30px;
+    }
+	div#formQuestionFourteenDIV .p.success-text{
+		order: 5;
+	}
+	div#formQuestionFourteenDIV{
+		display: flex;
+	}
+    .advisor.reg-header.fixedheader .advisor-header .logo-container {
+        height: 21px;
+    }
+    .fixedheader .navbar-header .navbar-brand img {
+        height: 22px;
+    }
+       .advisor-header .logo-container{
+      max-height: 60px;
+    }
+    .reg-header .advisor-header .logo-container {
+    top: 10px;
+}
+.forMobileH{
+	display: block;
+}
+.forLargeH{
+	display: none;
+}
+.mobileTtop img.forMobileH {
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+ .mortgage-offers-inner {
+    width: 100%;
+}
+.pageMargin {
+    margin-top: 190px;
+}
+ nav.headerPayment.fixedheader .advisor-header .logo-container {
+    margin-right: 7px;
+}
+section.chat.stepstepCenter {
+    margin-top: 200px;
+}
+nav.headerPayment.fixedheader .advisor-toggle_bar {
+    right: 0;
+    margin-top: 10px;
+    background: transparent;
+    color: #fff;
+}
+nav.headerPayment.fixedheader a.logo-container img {
+    max-width: 111px;
+    margin-right: 0;
+    position: relative;
+    top: 3px;
+}
+
+nav.headerPayment {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.headerPayment .advisor-header.d-f.a-i-c {
+    margin-bottom: 14px;
+}
+nav.headerPayment.fixedheader .advisor-header.d-f.a-i-c {
+    margin-bottom: 10px;
+}
+ .mobileTtop {
+    position: absolute;
+    left: -0;
+}
+.step-4_5 p.show-info {
+    font-size: 16px;
+    margin-top: 30px;
+}
+.step-4_5 .b-i-steps-content * p.half-disc {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+.centerMobile {
+    text-align: center;
+}
+ .stepstepCenter .chat-container p> br {
+    display: none;
+}
+section.chat.stepstepCenter {
+    padding: 40px 0;
+}
+ .bankinfoStep3 td .main-button i {
+    margin-left: 6px;
+}
+img.case-of-login {
+    top: 32px;
+} 
+div#contactForm {
+    display: none !important;
+}
+.top-call-section p {
+    font-size: 20px;
+}
+.top-call-section img {
+    width: 35px;
+}
+input.submit-box {
+    margin-right: 11px;
+}
+img.visa-img {
+    top: 42px;
+}
+.idIcon img.visa-img {
+    top: 35px;
+}
+.row-group.text-flex .align-right {
+    position: relative;
+}
+.coupon-code label.green-botton {
+	position: unset;
+}
+.reverseRow {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0;
+}
+.page-report .level-content.d-f.a-i-c.j-c-s-b {
+    top: -9px;
+}
+.bankinfoStep3 .form-group table td input {
+    float: right; 
+}
+.bankinfoStep3 td .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    float: right;
+}
+.bankinfoStep3 td .chat-buttons a {
+    margin-top: 0 !important;
+    padding: 7px 10px;
+}
+.bankinfoStep3 .margin-30 td .chat-buttons .main-button {
+    padding: 5px 13px;
+}
+.offerCompare .chat-buttons a {
+    margin-top: 0!important;
+}
+.step-4-0 .m-o-s-container {
+    min-height: auto;
+}
+.m-o-s-container-text p {
+    margin-bottom: 10px;
+}
+button.owl-prev {
+    float:right;
+}
+button.owl-next {
+    float:left;
+}
+button.owl-dot {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000 !important;
+    border-radius: 50%;
+}
+.owl-dots {
+    float: left;
+    width: 100%;
+    position: relative;
+    top: -23px;
+    text-align: center;
+    z-index: -1;
+}
+
+.service-steps .owl-dots {
+    top: -33px;
+}
+button.owl-dot.active {
+    background: #000;
+}
+.modal-header .close {
+    right: -1px;
+    top: -10px;
+    font-size: 50px;
+    color: #666;
+    font-size: 24px;
+    padding: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid;
+    background: #fff;
+}
+.navbar-button a.main-button {
+    padding: 8px 20px 9px 20px;
+}
+.loggedin a.main-button {
+    min-width: 120px;
+}
+.banner-content .banner-buttons {
+    margin-right: 0;
+}
+.report .heading-container {
+    width: 100%;
+}
 .why-us-owl .owl-item {
     display: flex;
     justify-content: center;
@@ -987,6 +1835,9 @@ form#formQuestionseventeen button.ok_btn.main-button1 {
 }
 .front-service-con .bank-steps .owl-nav {
     margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    float: left;
 }
 .bank-steps .owl-stage-outer {
     overflow: hidden;
@@ -997,14 +1848,7 @@ form#formQuestionseventeen button.ok_btn.main-button1 {
     margin-top: 50px;
 }
 .advisor-image img {
-    max-width: 65px;
-}
-.reg-header .advisor-nav {
-    position: relative;
-    right: -240px;
-    background: #fff;
-    padding: 30px 30px;
-    margin-top: 10px;
+    max-width: 60px;
 }
 .fixedheader .advisor-nav {
     right: -170px;
@@ -1016,7 +1860,10 @@ form#formQuestionseventeen button.ok_btn.main-button1 {
     color: #ffffff;
 }
 .reg-header .advisor-header .logo-container {
-    margin-right: 150px;
+    margin-top: 10px;
+}
+.fixedheader .advisor-header .logo-container {
+    margin-top: 0;
 }
  form#formQuestionfourteen .message.d-i-f.f-d-c {
     margin-bottom: 60px;
@@ -1063,7 +1910,7 @@ form#formQuestionseventeen .form-inline.multiple-dropdown > div:last-child {
     width: 100%;
 }
 div#formQuestionSixteenDIV ul.question-ul.my_question.click-color-change li {
-    float: left;
+    float: right;
 }
 div#formQuestionSixteenDIV ul.question-ul.my_question.click-color-change {
     margin-bottom: 30px;
@@ -1272,15 +2119,43 @@ ul.left-s-list li {
 .top-call-section {
     padding: 8px 10px;
     margin: 5px 0;
+    display: flex;
+    justify-content: center;
 }
 .advisor-nav.t {
     display: none;
     position: absolute;
-    left: 40px;
+    left: 0;
+    width: 100%;
+    top: 81px;
+    background: #53cbcb;
+    z-index: 99;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
-.level.step-2 {
-    display: none;
+nav.headerPayment.fixedheader .advisor-nav.t {
+    top: 37px;
+    right: 0;
+    padding: 10px 20px;
 }
+.advisor-header {
+    padding: 0;
+    background: transparent;
+}
+.step-2 .level-call {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    left: 4px;
+    border: 1px solid #bbb;
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+}
+.level-content.d-f.a-i-c.j-c-s-b img{
+    max-width: 25px;
+}
+
 .page-report .level.step-2 {
     display: block;
 }
@@ -1320,6 +2195,12 @@ h1 {
 .form-group table td {
     width: 100%;
     float: left;
+}
+.bankinfoStep3 .form-group table td {
+    float: none;
+}
+.bankinfoStep3 .form-group {
+    width: 100%;
 }
 .button-big {
     font-size: 16px;
@@ -1369,49 +2250,7 @@ h1 {
     padding-bottom: 40px;
 }
 
-.advisor-header {
-    justify-content: right;
-    padding: 40px 20px;
-    margin-left: -15px;
-    margin-right: -15px;
-}
-.level-content ul {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-.level ul li + li {
-    margin-right: 0;
-    margin-top: 30px;
-}
-.level-content ul::before {
-    width: 4px;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.level-call {
-    margin: 0 auto!important;
-    margin-bottom: 30px;
-}
-.chat .container {
-    max-width: 460px;
-}
-.advisor .row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-}
-.advisor .row .col-sm-9 {
-    width: 100%;
-    margin-bottom: 10px;
-}
-.advisor-container {
-    padding-top: 0;
-}
+
 .appartments-chat .delete-button {
     display: block;
     width: 60px;
@@ -1436,8 +2275,8 @@ form input.form-control:not([type="checkbox"]):not([type="radio"]), textarea.for
     width: 100%;
 }
 .chat-buttons a {
-    margin: initial!important;
-    margin-top: 30px!important;
+    margin: 2px!important;
+    margin-top: 11px!important;
 }
 .chat-buttons a + a,
 .entry-month .form-group + .main-button,
@@ -1512,12 +2351,8 @@ form input.form-control:not([type="checkbox"]):not([type="radio"]), textarea.for
     align-self: center;
     margin-top: 30px;
 }
-.level-content {
-    flex-direction: column;
-}
-.navigate-steps {
-    margin-top: 30px;
-}
+
+
 .mortgage-proposal-heading span:first-child {
     width: 100%;
     margin-bottom: 15px;
@@ -1539,8 +2374,11 @@ form input.form-control:not([type="checkbox"]):not([type="radio"]), textarea.for
 
 .mortgage-proposal-content-left {
     width: 100%;
+    font-weight: bold;
 }
-
+.chat-buttons {
+    text-align: center;
+}
 /*  070619*/
 .margin-30 td .chat-buttons .main-button {
     min-width: 138px;
@@ -1555,9 +2393,19 @@ form input.form-control:not([type="checkbox"]):not([type="radio"]), textarea.for
 }
 
 .w-input input[type="text"] {
-    width: 100%
+    width: 100%;
+    margin: 0;
 }
 
+.stepstepCenter .chat-buttons {
+    text-align: center;
+}
+.form-group table td .chat-buttons {
+    text-align: right;
+}
+.bankinfoStep3 .form-group table td .chat-buttons {
+    width: auto;
+}
 .chat-buttons {
     display: block;
 }
@@ -1567,19 +2415,22 @@ form input.form-control:not([type="checkbox"]):not([type="radio"]), textarea.for
 }
 .chat-group.last-div-b a.main-button {
     width: unset;
-    Font-size: 19px;
-    Background: #60cecf;
-    Box-shadow: 0px 14px 7px -12px #63616157;
-    Border: none;
+    font-size: 19px;
+    border: none;
     height: 45px;
 }
 .bottom-bg h3 {
     font-size: 20px;
 }
 
-.bottom-bg p {
-    font-size: 16px;
+
+.bottom-bg p br {
+    display: none;
 }
+.bottom-bg p br:nth-child(3) {
+    display: block;
+}
+
 
 .inner-success-data > p {
     padding: 0 10px;
@@ -1662,12 +2513,7 @@ a.main-button.button-yellow.top-btn_A {
     padding: 10px 80px 10px 20px;
     max-width: unset;
 }
-.qna-right h4 {
-    display: none;
-}
-.qna-right p {
-    display: none;
-}
+
 .qna-right :nth-child(2) {
     display: block;
 }
@@ -1679,11 +2525,8 @@ label.green-botton {
     top: 10px;
 }
 
-a.main-button.button-yellow.top-btn_A {
-    padding: 10px 50px 10px 20px;
-    max-width: unset;
-    width: 170px;
-    min-width: unset;
+.main-button {
+    margin-top: 20px;
 }
 a.main-button.button-yellow.top-btn_A img {
     top: 0;
@@ -1779,9 +2622,7 @@ ul.question2-ul.my_question li {
     float: right;
     margin: 0 1%;
 }
-.chat-buttons.ques2 {
-    margin-top: 20px;
-}
+
 ul.question2-ul.my_question li:first-child {
     margin-right: 0;
 }
@@ -1790,6 +2631,9 @@ ul.question2-ul.my_question li:first-child {
 }
 .register-page .main-button {
     min-width: 100px;
+}
+.register-page .questionsevenOption .main-button {
+    min-height: 48px;
 }
 .chat-buttons .main-button img {
     margin-left: 5px;
@@ -1879,8 +2723,12 @@ div#ques_11 .form-inline.range-form.cs-r-f > label {
 }
 form#formQuestionThirteen > div > div {
     width: 48%;
-    float: left;
+    float: right;
     margin: 0 1%;
+    direction: ltr;
+}
+form#formQuestionThirteen label {
+    direction: rtl;
 }
 form#formQuestionThirteen label {
     margin-bottom: 0;
@@ -1930,8 +2778,8 @@ form#formQuestionfourteen .full-section.nd-div-jugaad > div:nth-child(2) {
     margin-bottom: 0;
 }
 #formQuestionfourteen .errMsg {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .register-page .div#formQuestionThirteenDIV .message p {
     text-align: center;
@@ -1978,7 +2826,7 @@ form#formQuestionfifteen {
 .repeated_div_second_question .form-inline.multiple-dropdown > div {
     max-width: 48%;
     float: right;
-    margin: 0 1%;
+    margin: 0 !important;
 }
 .repeated_div_second_question .form-inline.multiple-dropdown > div  select{
    padding: 15px 10px;
@@ -1993,7 +2841,7 @@ input#property-value1 {
     margin-bottom: 0;
 }
 .register-page #formQuestionTwo .form-inline .form-group {
-    float: left;
+    float: right;
 }
 .register-page #formQuestionTwo .up-fo a.delete-button {
     width: 70px;
@@ -2050,9 +2898,11 @@ input#property-value1 {
     width: calc(100% - 49px);
     font-size: 12px;
     margin-right: 49px!important;
+    margin-top: 15px !important;
 }
 .register-page #formQuestionTwo .up-fo a.delete-button {
-    margin: 0 !important;
+    margin: 0 57px 0 7px !important;
+    float: left;
 }
 .form-inline.multiple-dropdown.up-fo .third > div {
     max-width: 48%;
@@ -2065,8 +2915,12 @@ input#property-value1 {
 }
 form#formQuestionEleven_One > div >div {
     width: 48%;
-    float: left;
+    float: right;
     margin: 0 1% !important;
+}
+form#formQuestionEleven_One > div >div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
 }
 form#formQuestionEleven_One > div > p {
     text-align: center;
@@ -2081,8 +2935,9 @@ form#formQuestionEleven_One > div >div label {
 }
 
 .register-page .message {
-    padding-left: 30px;
+    padding-left: 0;
 }
+
 .register-page .range-form {
     width: 100%;
 }
@@ -2105,6 +2960,8 @@ form#formQuestionfifteen ul.question-ul.my_question li label {
 form#formQuestionsixteen ul.question-ul.my_question li label {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    min-width: 100% !important;
+    margin: 0;
 }
 .register-page #formQuestionfifteen .form-inline.multiple-dropdown > div select {
     height: 48px;
@@ -2118,6 +2975,8 @@ form#formQuestionsixteen ul.question-ul.my_question li label {
 }
 #formQuestionfifteen .chat-buttons a {
     margin-top: 0px!important;
+    float: right;
+    margin-bottom: 15px !important;
 }
 .register-page #formQuestionfifteen .chat-buttons {
     margin-bottom: 15px;
@@ -2148,8 +3007,10 @@ div#formQuestionSixteenDIV ul.question-ul.my_question{
     margin-bottom: 20px;
     width: 100%;
 }
+
 #formQuestionsixteen .chat-buttons a {
     margin-top: 0px!important;
+    float: right;
 }
 #formQuestionSixteenDIV button.ok_btn.main-button1 {
     width: 100%;
@@ -2169,6 +3030,10 @@ form#formQuestionsixteen .form-inline.multiple-dropdown {
 }
 #formQuestionSixteenDIV .form-inline.multiple-dropdown div {
     float: right;
+    width: 100%;
+}
+#formQuestionSixteenDIV .form-inline.multiple-dropdown > div {
+    margin-top: 0 !important;
 }
 #formQuestionSixteenDIV .form-inline.multiple-dropdown > div:last-child {
     margin-top: 50px !important;
@@ -2211,8 +3076,10 @@ form#formQuestionseventeen button.ok_btn.main-button1 {
 form#formQuestionseventeen .repeated_fields_16 .form-group {
     margin-bottom: 0;
 }
-form#formQuestionseventeen  .chat-buttons a {
-    margin-top: 10px!important;
+form#formQuestionseventeen .chat-buttons a {
+    margin-top: 0px!important;
+    float: right;
+    margin-bottom: 15px !important;
 }
 form#formQuestionseventeen .repeated_fields_16 .form-group > input {
     margin-bottom: 0;
@@ -2223,13 +3090,66 @@ form#formQuestionseventeen .repeated_fields_16 .form-group > input {
 form#formQuestionseventeen .form-inline.multiple-dropdown > div:last-child {
     margin-right: 0;
     float: left;
-    margin-left: 12px;
+    margin-left: 4px;
     margin-top: 40px;
 }
 .register-page #formQuestionEighteen .eligibility-dropdown {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+}
+div#ques_2 .spinner {
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+div#ques_3 .spinner {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+div#ques_4 .spinner {
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+.ques_5 .spinner {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.ques_6 .spinner {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ques_7 .spinner {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.ques_8 .spinner {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+.ques_8 .spinner {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.ques_12_1 .spinner {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+div#formQuestionFourteenDIV {
+    margin-top: 30px;
+}
+div#ques_13 .spinner {
+    margin-top: 20px;
+}
+div#ques_14 .spinner {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#formQuestionsixteen select {
+    min-width: 100%;
+}
+div#ques_11 .spinner {
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 .register-page #formQuestionEighteen .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
     width: 210px;
@@ -2244,9 +3164,7 @@ div#formQuestionSeventeenDIV {
 div#formQuestionEighteenDIV {
     margin-bottom: 50px;
 }
-div#ques_18 {
-    margin-top: 60px;
-}
+
 form#formQuestionEighteen ul {
     margin-bottom: 10px;
 }
@@ -2257,8 +3175,8 @@ span.chat-icon {
     top: 7px;
 }
 div#ques_9 .message.d-i-f.f-d-c.spinner.spinner-ques-8 {
-    margin-top: 0;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 70px;
 }
 #formQuestionEleven_Two > div  {
         width: 100%;
@@ -2300,14 +3218,14 @@ div#ques_12_2 .double-chat-container .chat-container + .chat-container {
 .register-page #formQuestionTwo .form-inline .third div:nth-child(2) {
     position: absolute;
     top: -102px;
-    right: 0;
+    left: 0;
     width: 47%;
 }
 .register-page #formQuestionTwo .form-inline .third div:nth-child(3) {
-    min-width: 97%;
-    margin-bottom: 20px !important;
+    min-width: 98%;
+    /* margin-bottom: 33px !important; */
     float: right;
-    margin-top: -5px !important;
+    margin-top: 0 !important;
 }
 .register-page #formQuestionTwo .form-inline .third  {
     position: relative;
@@ -2354,7 +3272,7 @@ button.custom4_6 {
     padding: 0;
 }
 .step-4-0 .mortgage-offers {
-    padding-top: 60px;
+    padding-top: 90px;
 }
 .step-4-0 .mortgage-offers-border {
     border: none;
@@ -2370,23 +3288,156 @@ button.custom4_6 {
 .owl-logos .owl-nav button.owl-next, 
 .owl-logos .owl-nav button.owl-prev, 
 .owl-logos button.owl-dot {
-    font-size: 35px;
-    margin: 0 10px;
-    color: #000;
-    z-index: 999;
-    cursor: pointer;
+        margin: 0 4px;
+}   
+
+
+
+.reg-header .advisor-header .logo-container {
+    margin: 0;
+}
+.mortgage-offers .mortgage-offers-border {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+	align-items: flex-start;
 }
 
-.owl-logos .owl-dots{
+.mortgage-offers .mortgage-offers-border .coupon-code {
+    order: 3;
+}
+
+.mortgage-offers .mortgage-offers-border .Submit-section {
+    order: 5;
+}
+.mortgage-offers .mortgage-offers-border .discounted-p {
+	order: 4;
+	width: 100%;
+}
+
+.advisor-header .logo-container {
+    margin-right: 115px;
+    margin-top: 7px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.advisor-toggle_bar {
+    cursor: pointer;
+    position: relative;
+    right: 0;
+    background: #fff;
+    padding: 15px 17px;
+    margin-top: 20px;
+    color: #53cbcb;
+    margin-right: 0;
+}
+.fixedheader .advisor-toggle_bar {
+    padding: 0;
+}
+.fixedheader .advisor-container {
+    width: 185px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.fixedheader .mobileTtop .advisor-image img {
+    max-width: 26px;
+}
+.fixedheader .mobileTtop .advisor-text {
+    margin-left: 11px;
+    padding-top: 6px;
+}
+.fixedheader .advisor-container {
+    width: 185px;
+}
+.headerPayment .management-panel {
     display: none;
 }
+.headerPayment .advisor-container {
+    padding: 4px 0;
+    width: 61px;
+}
+.fixedheader .advisor-container {
+    width: auto;
+}
+nav.headerPayment.fixedheader .advisor-container {
+    padding: 5px 0;
+}
+.headerPayment .advisor-text {
+    font-size: 14px;
+    color: #fff;
+}
+.headerPayment .j-c-s-b {
+    justify-content: center;
+}
+.headerPayment .navigate-steps h4 {
+    display: none;
+}
+.headerPayment .level {
+    padding: 7px 0;
+}
+.advisor-header.d-f.a-i-c {
+    margin-bottom: 10px;
+}
+ul.nav_reg {
+    top: 0;
+}
+.reg-header .advisor-nav {
+    right: 0;
+    right: 0;
+    position: relative;
+    margin-top: 23px;
+}
+.reg-header .advisor-nav i.fa.fa-bars{
+    padding: 15px 17px;
+    background: #fff;
+}
+.fixedheader .advisor-nav i.fa.fa-bars{
+    padding: 0;
+    background: transparent;
+}
+
+
+.advisor.reg-header.fixedheader .advisor-nav {
+    right: 0;
+    padding: 0;
+    background: transparent;
+    right: 0;
+    margin-top: 2px;
+}
+.step_4_4 .margin-30 td .chat-buttons .main-button {
+    width: 100%;
+}
+.form-group table td input {
+    min-width: 50px;
+    width: 200px;
+}
+.stepOne select {
+    min-width: 50px;
+    width: 200px;
+}
+.step_4_4 .margin-30 td .chat-buttons .main-button {
+    min-width: 35px;
+    width: 200px;
+    margin: 0;
+}
+
+.form-group table td label {
+    width: 200px;
+}
+.form-group table td {
+    max-width: 220px;
+}
+section.chat.bankinfoStep3.stepstepCenter.pageMargin.stepOne.stepThree .chat-wrap .chat-container > div:first-child {
+    margin-bottom: 45px;
+}
+
 
 
 }
 @media(max-width: 600px) {
-
-.chat-buttons .main-button {
-    padding: 13px 11px;
+.copyright-container {
+    margin-top: 9px;
 }
 .offer-compare .pament-starting-div {
     background-position: bottom -60px left 0;
@@ -2400,7 +3451,7 @@ button.custom4_6 {
 }
 
 .banner-buttons a + a {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-right: 0;
 }
 .purchase-content .banner-buttons a {
@@ -2421,9 +3472,11 @@ button.custom4_6 {
 .chat .container {
     max-width: 400px;
 }
+.mortgage-proposal-heading span + span {
+    font-weight: bold;
+}
 .chat-container p {
-    font-size: 18px;
-    line-height: 20px;
+    line-height: 24px;
 }
 form input.form-control:not([type="checkbox"]):not([type="radio"]), textarea.form-control {
     max-width: 100%;
@@ -2511,6 +3564,8 @@ p.half-disc {
 input.submit-box {
     float: right;
     margin-top: 18px;
+    min-width: 96%;
+    margin: 0 2%;
 }
 .pay-step-3 .inner-success-data.text-center img {
     margin-bottom: 0;
@@ -2568,7 +3623,7 @@ input.submit-box {
 }
 .register-page .slider-icon {
     left: 6px;
-    top: -16px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    top: -16px;                                                                                                               
 }
 .register-page .range-group {
     max-width: unset;
@@ -2576,8 +3631,135 @@ input.submit-box {
 }
 }
 @media(max-width: 480px) {
+.navbar-button.loggedin a.main-button {
+    margin-top: 41px;
+}
+.banner-content h4 {
+    font-size: 15px;
+}
+#formQuestionfifteen .errMsg {
+    bottom: 0;
+    width:100%;
+}
+#formQuestionsixteen .errMsg{
+    bottom: 0;
+}
+.advisor-nav.t {
+    top: 84px;
+}
+.headerPayment .advisor-nav.t {
+    top: 81px;
+    padding: 10px 20px !important;
+}
+.step-4_5 .download-button {
+    padding: 10px 10px;
+    width: calc(100% - 80px);
+    display: flex;
+    justify-content: center;
+}
+.step-4_5 .download-button {
+    float: left;
+}
+img.case-of-login {
+    top: 40px;
+    width: 48px;
+}
+img.visa-img {
+    bottom: 31px;
+}
+.loggedin a.main-button {
+    min-width: 80px;
+}
+ul.steps-bar li .div-w p {
+    font-size: 13px;
+}
+form.payment-form label {
+    font-size: 13px;
+}
+.payment-step .mortgage-offers-heading ul li + li {
+    margin: 0 0 8px 0;
+}
+.payment-step ul.steps-bar li {
+    margin-bottom: 8px;
+}
+.mortgage-offers-heading ul {
+    margin: 5px 13px 0 13px;
+}
+#exTab2 {
+    top: 94px;
+}
+.step-4-0 .bank-selected h2 {
+    font-size: 20px;
+}
+.step-4-0 p {
+    font-size: 14px;
+    float: right;
+}
+.mortgage-offers-inner {
+    width: 100%;
+}
+.step-4-0 footer p {
+    font-size: 13px;
+    width: 100%;
+}
+.step-4-0 .best-mix-mortgage h3 {
+    text-align: center;
+    font-size: 16px;
+}
+.step-4-0 footer .created-by {
+    float: left;
+}
+.step-4-0 .best-mix-mortgage h3 span:first-child {
+    width: 100%;
+    justify-content: center;
+}
+.navbar-collapse.collapse, .navbar-collapse.collapsing {
+    top: 80px;
+}
+.report-text h3, .report-text h3, .report-text h3, .algorithm-container h3 {
+    font-size: 20px;
+}
+.navbar-button a.main-button {
+    margin-top: 18px;
+    font-size: 13px;
+    padding: 5px 20px 6px 20px;
+    top: -1px;
+}
+a.main-button.button-yellow.top-btn_A img {
+    width: 35px;
+}
+a.main-button.button-yellow.top-btn_A {
+    padding: 5px 40px 5px 1px;
+    max-width: 120px;
+    font-size: 11px;
+}
+div#loadQuestions {
+    margin-top: 180px;
+}
+.loggedin a.main-button {
+    margin-top: 40px;
+}
+a.main-button.button-yellow.top-btn_A {
+    padding: 2px 40px 2px 1px;
+    max-width: 120px;
+    font-size: 12px;
+}
+.banner-content h1 b {
+    line-height: 50px;
+    margin-bottom: 17px;
+    float: left;
+}
+.copyright-container p {
+    font-size: 12px;
+}
+.heading-container h2 {
+    font-size: 19px;
+}
+.algorithm-container h3 {
+    font-size: 20px;
+}
 .reg-header ul.nav-main {
-    width: 240px;
+    width: 250px;
 }
 .qna-container {
     height: 90px;
@@ -2616,7 +3798,8 @@ div#formQuestionEleven .q14 {
     margin-top: -27px;
 }
 .report-toggle_bar {
-    top: 10px;
+    top: 26px;
+    right: 94px;
 }
 ul.nav_reg {
     width: 100%;
@@ -2645,32 +3828,27 @@ a.logo-container img {
 .advisor-nav.t {
     padding-right: 0;
 }
-.top-call-section p {
-    font-size: 20px;
-    width: 100%;
-    float: left;
-    text-align: center;
-}
+
 .top-call-section {
     text-align: center;
 }
 .top-call-section img {
-    float: none;
+    float: right;
+    width: 24px;
+    margin-left: 4px;
 }
 .mortgage-offers-steps > .row > div[class*="col-"] + div[class*="col-"] {
     margin-top: 50px;
 }
-.advisor-toggle_bar {
-    margin-right: 5px;
-    margin-top: 25px;
+.col-lg-3.text-center.mobileTtop {
+    position: absolute;
+    left: 0;
 }
 .advisor-nav a {
     margin-left: 8px;
     font-size: 14px;
 }
-.advisor-toggle_bar {
-    margin-right: 12px;
-}
+
 .con span {
     height: 109px;
     width: 109px;
@@ -2693,7 +3871,7 @@ a.logo-container img {
 }
 .file-design > p, .file-design > h3 {
     width: 84%;
-    text-align: left;
+    text-align: center;
 }
 .file-design:after {
     width: 20%;
@@ -2709,9 +3887,7 @@ a.logo-container img {
     margin: 0 !important;
     justify-content: center;
 }
-input.submit-box {
-    font-size: 14px;
-}
+
 .chat-group.no-margin .chat-buttons a {
     min-width: 130px;
     padding: 16px 0;
@@ -2720,14 +3896,21 @@ input.submit-box {
     padding: 12px;
     min-width: 130px;
 }
-.chat-group .message {
-    width: 100%;
+.navbar-toggle {
+    right: 123px;
 }
 .navbar-brand {
-    max-width: 100px;
+    max-width: 86px;
 }
 .navbar-toggle {
-    right: 130px;
+    right: 105px;
+    top: 27px;
+}
+.link-facebook {
+    font-size: 13px;
+}
+.modal-body-inner {
+    padding: 6px 25px;
 }
 .copyright-container p {
     text-align: center;
@@ -2783,9 +3966,12 @@ input.submit-box {
 .banner-buttons .button-orange {
     padding-right: 40px;
 }
-.purchase-content .banner-buttons .button-orange,
-.banner-buttons .button-orange {
+.purchase-content .banner-buttons .button-orange, .banner-buttons .button-orange {
     margin-right: 30px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main-button {
     font-weight: normal;
@@ -2800,8 +3986,12 @@ input.submit-box {
 }
 .mortgage-offers-wrap {
     padding: 10px;
-    padding-bottom: 150px;
+    padding-bottom: 70px;
 }
+.step-4-0 .m-o-s-container-text a {
+    bottom: -13px;
+}
+
 .bank-selected {
     padding: 10px;
     padding-bottom: 10px;
@@ -2816,29 +4006,29 @@ input.submit-box {
     padding-right: 10px;
     width: 100%;
 }
-.margin-30 td .chat-buttons .main-button {
-    width: 100%;
-    margin-bottom: 10px !important;
-}
+
 
 .step-4_5 .b-i-steps-content * {
-    font-size: 11px;
+    font-size: 10px;
 }
-
+.step-4_5 .b-i-steps-content .form-title-S {
+    font-size: 19px ;
+    color: #60d3d5 ;
+    font-weight: bold;
+}
 .step-4_5 .form-group-container .file-upload-container {
     width: 82%;
 }
 
 .step-4_5 p.show-info {
-    width: 57%;
+    width: 100%;
 }
-
 .step-4_5 .b-i-steps-heading h3 {
     width: 61%;
 }
 
 p.half-disc {
-    width: 82%;
+    width: 100%;
 }
 
 .step-4_5 .form-group-container label {
@@ -2856,9 +4046,7 @@ p.half-disc {
     font-size: 18px;
 }
 
-.bottom-bg p {
-    margin-bottom: 10px;
-}
+
 .step-4_5 .margin-30 .cols-3 .form-group {
     width: 100%;
 }
@@ -2886,8 +4074,18 @@ p.half-disc {
     right: 0;
 }
 .coupon-code label {
-    margin-bottom: 10px;
     width: 100%;
+    margin-bottom: 20px;
+}
+.coupon-code label.green-botton {
+    margin-bottom: 0;
+    width: 127px;
+    position: unset;
+    padding-left: 0;
+    padding-right: 0;
+}
+.coupon-code input[type="text"] {
+    width: 100px;
 }
 .payment-step .mortgage-offers-heading > p {
     font-size: 18px;
@@ -2895,6 +4093,9 @@ p.half-disc {
 .row-group select {
     width: 100%;
     margin-bottom: 16px;
+}
+.main-wrapper.steps.payment-step.pay-step-2 .row-group select {
+    margin-bottom: 0;
 }
 .row-group select.align-left {
     width: 100%;
@@ -2964,10 +4165,10 @@ div#stop {
 footer .created-by span {
     font-size: 13px;
 }
- ul.nav_reg li a {
-    width: 76px;
+ul.nav_reg li a {
+    width: 72px;
     padding-top: 0;
-    HEIGHT: 76px;
+    HEIGHT: 72px;
     align-items: center;
     justify-content: center;
     font-size: 10px;
@@ -2978,15 +4179,89 @@ footer .created-by span {
 
 }
 @media(max-width: 480px) {
+    .register-page .ques_4 .message p {
+        font-size: 13px;
+    }
+    .navbar-button {
+        margin-top: -18px;
+    }
+    .register-page #formQuestionTwo .up-fo a.delete-button {
+        margin: 0 57px 0 3px !important;
+    }
+    a.main-button.button-yellow.top-btn_A {
+        margin-top: 30px;
+    }
+    .register-page .message p {
+        font-size: 15px;
+    }
+    .register-page .message p.male_female_seven br {
+        display: none;
+    }
+	form#formQuestionseventeen .chat-buttons a {
+	    margin-top: 15px!important;
+	}
+.register-page .form-inline label {
+    font-size: 12px;
+}
+.tab-inner-content.orange-tab .spc-point h3 {
+    font-size: 18px;
+}
+.navbar-header .navbar-brand img {
+    width: auto;
+    height: 60px;
+}
+    .navbar-header .navbar-brand {
+        width: 100%;
+    }
+
+.fixedheader .advisor-text {
+    font-size: 14px;
+}
+.step-4_5 .b-i-steps-content * .wrapTitle {
+    font-size: 15px;
+}
+ 
+.level ul li + li {
+    margin-right: 44px;
+}
+.step-4-0 .m-o-s-container-text span {
+    font-size: 16px;
+    padding: 10px 10px;
+}
+.mortgage-offers-steps > .row > div[class*="col-"] + div[class*="col-"] {
+    margin-top: 0px;
+}
+.Submit-sections.sec-page > p.text-center {
+  width: 100%;
+}
+.management-panel > img {
+    min-width: 54px;
+}
+.step-4_6 .bottom-bg p {
+    display: inline;
+}
+.step-4_6 .bottom-bg {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.banner-content h1 {
+    font-size: 24px;
+    line-height: 25px;
+}
+.button-big {
+    font-size: 17px;
+}
 .advisor-image img {
-    max-width: 68px;
+    max-width: 62px;
+}
+.headerPayment .advisor-image img {
+    max-width: 60px;
 }   
-.reg-header .advisor-header .logo-container {
-    margin-right: 110px;
+.headerPayment .mobileTtop {
+    position: absolute;
+    left: 0px;
 }
-.reg-header .advisor-nav {
-    right: -200px;
-}
+
 .mobile-h-top {
     left: -30px;
 }
@@ -2996,14 +4271,60 @@ footer .created-by span {
 .fixedheader .advisor-nav {
     right: -120px;
 }
+.step-4-0 p br {
+    display: none;
+}
+.headerPayment .advisor-header {
+    padding: 0;
+}
 }   
 @media(max-width: 420px) {
+.fixedheader .advisor-text {
+    font-size: 11px;
+}
+.fixedheader .advisor-nav {
+    padding: 0;
+}
+.reg-header .toggle_bar i.fa.fa-bars {
+    font-size: 16px;
+}
+.fixedheader .advisor-nav {
+    right: -117px;
+}
+ .level ul li + li {
+    margin-right: 15px;
+}
+ .step-4_5 .margin-30 .form-group h3 {
+    font-size: 14px;
+}
 #algorithm-slider ol.carousel-indicators {
     bottom: -33px;
+}
+.step-4_5 .b-i-steps-heading h3 {
+    width: 100%;
+    font-size: 14px;
 }
 
 }
 @media(max-width: 360px) {
+
+.headerPayment .advisor-header .logo-container {
+    margin-right: 92px;
+}
+ .level ul li + li {
+    margin-right: 5px;
+    width: 90px;
+    height: 90px;
+}
+ .chat-buttons .main-button {
+    padding: 13px 11px;
+}
+  .top-call-section {
+    padding: 8px 2px;
+} 
+.report-text h3, .report-text h3, .report-text h3, .algorithm-container h3 {
+    font-size: 17px;
+}
 #algorithm-slider ol.carousel-indicators {
     bottom: -31px;
 }
@@ -3018,9 +4339,11 @@ footer .created-by span {
     top: 80px;
 }
 .fixedheader .advisor-header .logo-container {
-    margin-right: 70px;
+    margin-right: 40px;
 }
 .fixedheader .advisor-nav {
     right: -75px;
 }
 }
+
+

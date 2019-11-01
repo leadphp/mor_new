@@ -1,18 +1,16 @@
 @php
 $auth = \Auth::user();
 if(!empty($auth)){
-	$ques8 = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','8')->get();
-    $ques = \App\question_survey::where('user_id',\Auth::user()->id)->where('question_id','9')->get();
+	$ques8 = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','8')->get();
+    $ques = \App\question_survey::where('user_id',$user_to_edit)->where('question_id','9')->get();
     if(count($ques)){
     $ques9 = $ques;
 	}
 }
 @endphp
-<div class="ques_10" id="ques_10" <?php if(isset($ques9) && isset($ques8) ){ if($ques8[0]->meta_value == "mistaken_program" || $ques8[0]->meta_value == "any_cause"){ echo "style='display:none;'"; }  else{ } }else{ echo "style='display:none;'"; } ?> 
+<div class="ques_10" id="ques_10" <?php if(isset($ques9) && isset($ques8) ){ if($ques8[0]->meta_value == "mistaken_program" || $ques8[0]->meta_value == "any_cause"){ echo "style='display:none;'"; }  else{ } }else{ echo "style='display:none;'"; } ?> >
 
-
-
-	>
+	
 	<form method="post" id="formQuestionNine">
 		<div class="q11 chat-container d-f f-d-c a-i-f-s">
 			<div class="chat-number">9</div>
@@ -21,7 +19,7 @@ if(!empty($auth)){
 			</div>
 			<div class="message d-i-f f-d-c">
 				<span class="chat-icon"><img src="images/chat-icon.png" alt=""></span>
-				<p>תודה לך, ספר לי בבקשה מה הסטטוס שלך מבחינת לקיחת משכנתא?</p>
+				<p class="male_female_nine">תודה לך, ספר לי בבקשה מה הסטטוס שלך מבחינת לקיחת משכנתא?</p>
 				<span class="message-timing">18:26</span>
 			</div>
 			<div class="chat-buttons ques10">

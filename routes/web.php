@@ -12,49 +12,27 @@
 */
 
 
-
-// Route::get('/questions_latest', 'QuestionSurveyController@latestview');
-
-
-// Route::get('/questions_new', 'QuestionSurveyController@view');
-// Route::post('/questionGetstarted','QuestionSurveyController@questionGetstartedPost');
-// Route::post('/question1','QuestionSurveyController@questionOnePost');
-// Route::post('/question2','QuestionSurveyController@questionTwoPost');
-// Route::post('/question3','QuestionSurveyController@questionThreePost');
-// Route::post('/question4','QuestionSurveyController@questionFourPost');
-// Route::post('/question5','QuestionSurveyController@questionFivePost');
-// Route::post('/question6','QuestionSurveyController@questionSixPost');
-// Route::post('/question7','QuestionSurveyController@questionSevenPost');
-// Route::post('/question8','QuestionSurveyController@questionEightPost');
-// Route::post('/question9','QuestionSurveyController@questionNinePost');
-// Route::post('/question10','QuestionSurveyController@questionTenPost');
-// Route::post('/question11_1','QuestionSurveyController@questionElevenOnePost');
-// Route::post('/question11_2','QuestionSurveyController@questionElevenTwoPost');
-// Route::post('/question13','QuestionSurveyController@questionthirteenPost');
-// Route::post('/question14','QuestionSurveyController@questionfourteenPost');
-// Route::post('/question14_2','QuestionSurveyController@questionfourteendoublePost');
-
-
-// Route::post('/question15','QuestionSurveyController@questionfifteenPost');
-// Route::post('/question16','QuestionSurveyController@questionsixteenPost');
-// Route::post('/question17','QuestionSurveyController@questionseventeenPost');
-// Route::post('/question18','QuestionSurveyController@questioneightteenPost');
-
-
 /*forntend pages route*/
-Route::get('/contact-us', 'HomeController@contact_us');
-Route::get('/how-it-works', 'HomeController@how_it_works');
-Route::get('/about-us', 'HomeController@about_us');
-Route::get('/compare-offers', 'HomeController@compare_offers');
+	Route::get('/contact-us', 'HomeController@contact_us');
+	Route::get('/how-it-works', 'HomeController@how_it_works');
+	Route::get('/about-us', 'HomeController@about_us');
+	Route::get('/compare-offers', 'HomeController@compare_offers');
+	Route::get('/privacy', 'HomeController@privacy');
+	Route::get('/terms-and-condition', 'HomeController@terms_and_condition');
+	Route::get('/report/{id}', 'HomeController@report')->name('forntend_report');
+	Route::get('/add-route', 'HomeController@add_route');
+	Route:: get('/questions_flow','HomeController@question_flow')->name('get_flow');
 
-
-
-Route::group(['middleware' =>'\App\Http\Middleware\checkuser'], function () {
+/*QUESTIONS_FLOW PAGE*/
+	Route::group(['middleware' =>'\App\Http\Middleware\checkuser'], function () {
 
 	Route::get('/questions', 'HomeController@questions');
 	//Route::get('/questions_new', 'QuestionSurveyController@view');
 	Route::post('/questionGetstarted','QuestionSurveyController@questionGetstartedPost');
 	Route::post('/survey_answers','QuestionSurveyController@survey_results');
+
+
+	
 	Route::post('/question1','QuestionSurveyController@questionOnePost');
 	Route::post('/question2','QuestionSurveyController@questionTwoPost');
 	Route::post('/question3','QuestionSurveyController@questionThreePost');
@@ -89,12 +67,9 @@ Route::group(['middleware' =>'\App\Http\Middleware\checkuser'], function () {
 
 	//Route::post('/ajax/clerk_tabel_excel_upload','QuestionSurveyController@clerk_table_excel');
 
-
-	Route:: get('/questions_flow','QuestionSurveyController@question_flow')->name('get_flow');
+	// Route:: get('/questions_flow','QuestionSurveyController@question_flow')->name('get_flow');
 	Route::get('/delete_entries','QuestionSurveyController@deleteforuser');
-
-
-
+	Route::post('/pmt_slider_ajax_frontend','QuestionSurveyController@pmt_slider_ajax');
 
 });
 
@@ -158,40 +133,135 @@ Route::group(['prefix' => 'admin','middleware' =>'\App\Http\Middleware\AdminMidd
 | Admin Dashboard Routes
 |--------------------------------------------------------------------------
 */
+
+ Route::get('/logout', 'AdminimgController@logout');
+
+
+
 Route::get('/dashboard', 'AdminimgController@users');
 //customer-detail-page
-Route::get('/customer-detail', function () {
-    return view('admin_new.customer_detail');
-});
+Route::get('/customer-detail/{id}', 'AdminimgController@customer_details')->name('admin.customer.details');
+
+Route::get('/bank-info/{id}','AdminimgController@bank_info')->name('bank_info');
+Route::get('/compare-offers/{id}','AdminimgController@compare_offers')->name('compare_offers');
 Route::get('/clerks', 'AdminimgController@clerks')->name('admin.clerks');
 Route::get('/clerk_filter/{id}','AdminimgController@clerk_filter')->name('cf');
+Route::get('/status_filter/{id}','AdminimgController@custom_status')->name('cf');
 //Route::get('/clerk_filter','AdminimgController@clerk_filter')->name('cf');
 Route::post('/ajax/clerk_tabel_excel_upload','AdminimgController@clerk_table_excel');
 Route::post('/ajax/bank_interest_tabel_excel_upload','AdminimgController@bank_interest_table_excel');
-
 Route::post('/ajax/bank_prime_excel_upload','AdminimgController@bank_prime_excel');
-
 Route::post('/ajax/bank_madad_excel_upload','AdminimgController@bank_madad_excel');
-
-Route::get('/report1','AdminimgController@report1');
-Route::get('/report2','AdminimgController@report2');
+Route::get('/report1/{id}','AdminimgController@report1')->name('report1');
+Route::get('/report2/{id}','AdminimgController@report2')->name('report2');
 Route::get('/bank_interest','AdminimgController@bank_interest');
 Route::post('/bank_interest_table_data','AdminimgController@bank_interest_table_data');
-
 Route::post('/bank_interest_prime_data','AdminimgController@bank_interest_prime_data');
+Route::post('/bank_interest_madad_data','AdminimgController@bank_interest_madad_data');
+Route::get('/customer-delete/{id}', 'AdminimgController@delete_customer');
+
 /*settings page save coupons*/
 Route::post('/save_coupon','AdminimgController@save_coupon');
+Route::get('/delete-coupon/{id}','AdminimgController@delete_coupon')->name('deletecoupons');
 /*settings page report*/
 Route::post('/save_report','AdminimgController@save_report');
 /*settings page constant*/
 Route::post('/save_constant','AdminimgController@save_constant');
+
 /*settings checkbox_button_values*/
 Route::post('/check_box_value','AdminimgController@check_box_value');
-
 Route::get('/settings','AdminimgController@settings')->name('get_settings');
-Route::get('/registration','AdminimgController@registration');
 
-Route::get('/bank_info','AdminimgController@bank_info');
+
+
+
+Route::get('/registration/{id}','AdminimgController@registration')->name('admin_registration');
+
+
+// Admin Dashboard Routes FOR HEBREW
+
+Route::get('/dashboard-hr', 'AdminimgController@users_hr');
+
+Route::get('/registration-hr/{id}','AdminimgController@registration_hr');
+Route::get('/customer-detail-hr/{id}','AdminimgController@customer_details_hr');
+
+Route::get('/bank-info-hr','AdminimgController@bank_info_hr');
+Route::get('/bank_interest-hr','AdminimgController@bank_interest_hr');
+Route::post('/bank_interest_table_data_hr','AdminimgController@bank_interest_table_data_hr');
+Route::post('/bank_interest_prime_data_hr','AdminimgController@bank_interest_prime_data_hr');
+Route::post('/bank_interest_madad_data_hr','AdminimgController@bank_interest_madad_data_hr');
+
+Route::get('/clerks-hr', 'AdminimgController@clerks_hr');
+Route::get('/clerk_filter-hr/{id}','AdminimgController@clerk_filter_hr')->name('cf');
+
+Route::get('/settings-hr','AdminimgController@settings_hr')->name('get_settings_hr');
+Route::post('/save_report-hr','AdminimgController@save_report_hr');
+Route::post('/save_coupon-hr','AdminimgController@save_coupon_hr');
+Route::get('/delete-coupon-hr/{id}','AdminimgController@delete_coupon_hr')->name('deletecoupons');
+Route::post('/save_constant-hr','AdminimgController@save_constant_hr');
+Route::post('/check_box_value_hr','AdminimgController@check_box_value_hr');
+
+Route::get('/report1-hr','AdminimgController@report1_hr');
+Route::get('/report2-hr','AdminimgController@report2_hr');
+Route::get('/compare-offer-hr','AdminimgController@compare_offer_hr');
+Route::get('/customer-delete-hr/{id}', 'AdminimgController@delete_customer_hr');
+
+//excel upload  for hr
+Route::post('/ajax/clerk_tabel_excel_upload_hr','AdminimgController@clerk_table_excel_hr');
+Route::post('/ajax/bank_interest_tabel_excel_upload_hr','AdminimgController@bank_interest_table_excel_hr');
+Route::post('/ajax/bank_prime_excel_upload_hr','AdminimgController@bank_prime_excel_hr');
+Route::post('/ajax/bank_madad_excel_upload_hr','AdminimgController@bank_madad_excel_hr');
+
+
+
+
+/*ADMIN REGISTRATION QUESTIONS ROUTE*/
+
+	Route::post('/question1','AdminimgController@questionOnePost');
+	Route::post('/question2','AdminimgController@questionTwoPost');
+	Route::post('/question3','AdminimgController@questionThreePost');
+	Route::post('/question4','AdminimgController@questionFourPost');
+	Route::post('/question5','AdminimgController@questionFivePost');
+	Route::post('/question6','AdminimgController@questionSixPost');
+	Route::post('/question7','AdminimgController@questionSevenPost');
+	Route::post('/question8','AdminimgController@questionEightPost');
+	Route::post('/question9','AdminimgController@questionNinePost');
+	Route::post('/question10','AdminimgController@questionTenPost');
+	Route::post('/question11_1','AdminimgController@questionElevenOnePost');
+	Route::post('/question11_2','AdminimgController@questionElevenTwoPost');
+	Route::post('/question11_3','AdminimgController@questionthirteenPost');
+
+	Route::post('/question12','AdminimgController@questionthirteenTwoPost');
+	Route::post('/question14','AdminimgController@questionfourteenPost');
+
+	Route::post('/question15','AdminimgController@questionfifteenPost');
+
+	Route::post('/question16','AdminimgController@questionsixteenPost');
+
+	Route::post('/question17','AdminimgController@questionseventeenPost');
+
+
+	Route::post('/question18','AdminimgController@questioneightteenPost');
+
+
+
+	Route::post('/admin_ques_six_ajax','AdminimgController@admin_ques_six_ajax');
+
+	Route::post('/admin_ques_report_inte_ajax','AdminimgController@admin_ques_report_inte_ajax');
+	
+
+
+
+	Route::post('/ajax_question_twelve','AdminimgController@ajax_question_twelve');
+	Route::post('/pmt_slider_ajax','AdminimgController@pmt_slider_ajax');
+
+
+	Route::post('/table_best_bank_algo','AdminimgController@table_best_bank_algo');
+
+
+	Route::post('/bank_table_discounts','AdminimgController@bank_table_discounts');
+
+
 
 
 /*
@@ -395,6 +465,7 @@ Route::get('/adminimgs/edit/{id}', 'AdminimgController@edit');
 Route::post('/adminimgs/edit/{id}', 'AdminimgController@update');
 Route::get('/adminimgs/del/{id}', 'AdminimgController@del');
 Route::get('/adminimgs/view/{id}', 'AdminimgController@view');
+Route::get('/adminimgs/customer-delete/{id}', 'AdminimgController@delete_customer');
 
 /*
 |--------------------------------------------------------------------------
@@ -525,5 +596,7 @@ Route::get('/bankinfoStep4','PaymentController@bankStep_four');
 Route::get('/bankinfoStep5','PaymentController@bankStep_five');
 Route::get('/bankinfoStep6','PaymentController@bankStep_six');
 Route::get('/bankinfoStep7','PaymentController@bankStep_seven');
+
+
 
 

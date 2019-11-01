@@ -1,5 +1,5 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
-  <nav class="navbar">
+  <nav class="navbar homeHeader">
   <div class="container-fluid d-f a-i-c j-c-s-b">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -9,31 +9,32 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{url('')}}"><img src="images/logo.png" alt=""/></a>
+      <a class="navbar-brand hideMobile" href="{{url('')}}"><img src="images/logo.png" alt=""/></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right d-f">
-          <li><a href="{{url('')}}">ראשי</a></li>
-        <li><a href="{{url('/how-it-works')}}">איך זה עובד</a></li>
-        <li><a href="{{url('/questions_flow')}}">יעוץ משכנתא אונליין</a></li>
-        <li><a href="{{url('/compare-offers')}}">השווה להצעה קיימת</a></li>
-        <li><a href="{{url('/about-us')}}">אודות </a></li>
-        <li><a href="{{url('/contact-us')}}">יצירת קשר</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-
-    <div class="navbar-button">
+     @include('layouts.navoptionsfrontend')
+   <!-- /.navbar-collapse -->
+  
+    <div class="navbar-button @guest loggedin @else @endguest">
     <!-- Trigger the modal with a button -->
+
         @guest
-            <a data-toggle="modal" data-toggle="modal" data-target="#loginModal" class="main-button">הרשמה והתחברות</a>
+           <!-- <img src="images/setting-top.png" class="case-of-login" /> --> <a data-toggle="modal" data-toggle="modal" data-target="#loginModal" class="main-button">התחברות והרשמה</a>
         @else
-            <a class="main-button" href="{{ route('logout') }}"
+            <a href="/bankinfoStep" class="main-button button-yellow top-btn_A"><span>פאנל ניהול <br>המשכנתא שלי </span><img src="images/setting-top.png" /></a>
+<a class="main-button normalBar" href="{{ route('logout') }}"
               onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">
-            <span>להתנתק</span>
+            <span >התנתקות</span>
+            <!-- <span>פאנל ניהול</span> -->
             </a>
+            <a class="main-button stickyBar" href="{{url('')}}">
+            <span>פאנל ניהול </span>
+            <!-- <span>פאנל ניהול</span> -->
+            </a>
+           
+            
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
               {{ csrf_field() }}
             </form>
